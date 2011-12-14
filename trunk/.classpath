@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Uzytkownik/workspace/Compare/lib/axis.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Uzytkownik/workspace/Compare/lib/commons-discovery-0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Uzytkownik/workspace/Compare/lib/commons-discovery-0.4.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Uzytkownik/workspace/Compare/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Uzytkownik/workspace/Compare/lib/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Uzytkownik/workspace/Compare/lib/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Uzytkownik/workspace/Compare/lib/org.apache.commons.logging_1.0.4.v200706111724.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Uzytkownik/workspace/Compare/lib/saaj.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Uzytkownik/workspace/Compare/lib/wsdl4j-1.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Uzytkownik/workspace/Compare/lib/jexcelapi_2_6_12/jexcelapi/jxl.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

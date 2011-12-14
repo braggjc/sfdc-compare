@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<config>
+	<general>
+		<key>1stPath</key><!-- 1stPath -->
+		<value>C:\Documents and Settings\Uzytkownik\Desktop\test compare\data\prod_env</value>
+	</general>
+	<general>
+		<key>2ndPath</key><!-- 2ndPath -->
+		<value>C:\Documents and Settings\Uzytkownik\Desktop\test compare\data\test_env</value>
+	</general>
+		<general>
+		<key>resultPath</key><!-- resultPath -->
+		<value>C:\comp_test</value>
+	</general>
+	<general>
+		<key>printFiles</key>
+		<value>no</value><!--  print file names? -->
+	</general>
+	<general>
+		<key>objects</key><!-- objects; "*"=all objects; -->
+		<value>*</value><!-- be sure to write EXACT name of the file! -->
+	</general>
+	<general><!-- Specify mods. As key use "mode".As value use name of Section Type. Only those sections will be compare. -->
+		<key>mode</key><!-- mode -->
+		<value>ASDfields</value>
+	</general>
+	<general>
+		<key>mode</key><!-- mode -->
+		<value>ASDrecordTypes</value>
+	</general>
+	<general>
+		<key>mode</key><!-- mode -->
+		<value>ASDvalidationRules</value>
+	</general>
+	<general>
+		<key>mode</key><!-- mode -->
+		<value>workflows</value>
+	</general>
+	<general>
+		<key>mode</key><!-- mode -->
+		<value>customSettings</value>
+	</general>
+	<fields><!-- Specify in properties which tags will be compare -->
+		<masterTag>fullName</masterTag>
+		<properties>label</properties>
+		<properties>description</properties>
+		<properties>picklist</properties>
+		<inputFolder>objects</inputFolder>
+		<resultFile>fields</resultFile>
+		<fileExtension>object</fileExtension><!-- CASE SENSITIVE !!! -->
+	</fields>
+	<recordTypes><!-- Specify in properties which tags will be compare -->
+		<masterTag>fullName</masterTag>
+		<properties>active</properties>
+		<properties>description</properties>
+		<properties>picklist</properties>
+		<inputFolder>objects</inputFolder>
+		<resultFile>recordTypes</resultFile>
+		<fileExtension>object</fileExtension><!-- CASE SENSITIVE !!! -->
+	</recordTypes>
+	<validationRules><!-- Specify in properties which tags will be compare -->
+		<masterTag>fullName</masterTag>
+		<properties>active</properties>
+		<properties>description</properties>
+		<properties>errorConditionFormula</properties>
+		<properties>errorDisplayField</properties>
+		<properties>errorMessage</properties>
+		<inputFolder>Objects</inputFolder>
+		<resultFile>validationRules</resultFile>
+		<fileExtension>object</fileExtension><!-- CASE SENSITIVE !!! -->
+	</validationRules>  
+	<workflows><!-- Specify in template which tags of workflow will be compare -->
+		<tag>
+			<template>fieldUpdates</template>
+			<masterTag>fullName</masterTag>
+			<properties>description</properties>
+			<properties>literalValue</properties>
+			<properties>name</properties>
+			<properties>notifyAssignee</properties>
+			<properties>operation</properties>
+		</tag>
+		<tag>
+			<template>rules</template>
+			<masterTag>fullName</masterTag>
+			<properties>description</properties>
+			<properties>active</properties>
+			<properties>triggerType</properties>
+			<properties>actions</properties>
+			<properties>criteriaItems</properties>
+		</tag>
+		<inputFolder>workflows</inputFolder>
+		<resultFile>workflows</resultFile>
+		<fileExtension>workflow</fileExtension><!-- CASE SENSITIVE !!! -->
+	</workflows>
+	<webLinks><!-- Specify in properties which tags will be compare -->
+		<masterTag>fullName</masterTag>
+		<properties>url</properties>
+		<resultFile>weblinks</resultFile>
+		<inputFolder>objects</inputFolder>
+		<resultFile>weblinks</resultFile>
+		<fileExtension>object</fileExtension><!-- CASE SENSITIVE !!! -->
+	</webLinks>
+	<customSettings>
+		<masterTag>fullName</masterTag>
+		<properties>tagList.xml</properties>
+		<resultFile>customSettings</resultFile>
+		<inputFolder>customSettings_test</inputFolder>
+		<fileExtension>customSetting</fileExtension><!-- CASE SENSITIVE !!! -->
+	</customSettings>
+</config>
