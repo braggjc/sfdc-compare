@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Limitations in Discounts for Directions in relation to specified Tariff – store information how big discount can be given for Direction within specified Tariff</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Direction_ID__c</fullName>
+        <description>Direction Record Id for which selected Tariff is available</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Direction Record Id for which selected Tariff is available</inlineHelpText>
+        <label>Direction</label>
+        <referenceTo>Direction__c</referenceTo>
+        <relationshipName>DirectionDiscounts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Maximal_Discount__c</fullName>
+        <description>Maximal value of Discount [%]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximal value of Discount [%]</inlineHelpText>
+        <label>Maximal Discount</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Minimal_Price__c</fullName>
+        <description>Minimal value that can be assigned in case of discount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Minimal value that can be assigned in case of discount</inlineHelpText>
+        <label>Minimal Price</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Unique record identifier which can be used for data synchronization between different systems</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Unique record identifier which can be used for data synchronization between different systems</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Tariff_ID__c</fullName>
+        <description>Tariff Record Id for selected Direction</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tariff Record Id for selected Direction</inlineHelpText>
+        <label>Tariff</label>
+        <referenceTo>Tariff__c</referenceTo>
+        <relationshipName>DirectionDiscounts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <label>Direction Discount</label>
+    <nameField>
+        <label>Direction Discount Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Direction Discounts</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

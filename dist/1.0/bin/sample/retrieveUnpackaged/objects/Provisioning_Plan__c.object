@@ -1,0 +1,2038 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Provisioning Plan definition</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Assigned_Product_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Assigned Bundle</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bandwidth__c</fullName>
+        <description>Bandwidth</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bandwidth</inlineHelpText>
+        <label>Bandwidth</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1000Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>100Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2.5G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>200Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>300Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>30Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>400Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>45Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>500Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>50Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>600Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>700Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>800Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>900Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DS0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DS1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DS3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OC3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OC12</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OC48</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OC192</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DS3 (Coax)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FE (Cat5)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fiber Pair</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CAssigned_Product__c</fullName>
+        <description>Indicates, for what Product was the Plan configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates, for what Product was the Plan configured</inlineHelpText>
+        <label>Assigned Product (custom)</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Provisioning Plans</relationshipLabel>
+        <relationshipName>Provisioning_Plans</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Provisioning Plan&apos;s Description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provisioning Plan&apos;s Description</inlineHelpText>
+        <label>Description</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date_Field_Name__c</fullName>
+        <defaultValue>&quot;Customer_Expected_Delivery__c&quot;</defaultValue>
+        <description>Field name for field containing due date (ie. Due_Date__c).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter field name for field containing due date (ie. Due_Date__c).</inlineHelpText>
+        <label>Due Date Field Name</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Extranet_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Provisioning Plan applicable for Extranet Orders</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provisioning Plan applicable for Extranet Orders</inlineHelpText>
+        <label>Extranet Order</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FTT__c</fullName>
+        <description>FTT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>FTT</inlineHelpText>
+        <label>FTT</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BOD Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-BOD Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>GTS Location</description>
+        <externalId>false</externalId>
+        <inlineHelpText>GTS Location</inlineHelpText>
+        <label>GTS Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ICB_Type__c</fullName>
+        <description>ICB Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ICB Type</inlineHelpText>
+        <label>ICB Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Capacity Augment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price Not Available/Capacity Check</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Collocation Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Extended DMARC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fiber to the Cell</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Special Price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Build</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non Standard Product/Product Configuration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Type 2 Cost</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Custom Solution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Instance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this is definition or instance of the plan</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this is definition or instance of the plan</inlineHelpText>
+        <label>Instance</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Master_Object__c</fullName>
+        <description>Add objects to the translateMasterObject map in the ProvisioningPlan.cls APEX class.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field</inlineHelpText>
+        <label>Master Object</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OSS_Technology_Plan__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Plan is part of automatically assigned OSS Technology</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Plan is part of automatically assigned OSS Technology</inlineHelpText>
+        <label>OSS Technology Plan</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Object_Record_Type__c</fullName>
+        <description>Object Record Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Object Record Type</inlineHelpText>
+        <label>Object Record Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Fiber to the Tower</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OrderLine_Type__c</fullName>
+        <description>Indicates, for what OrderLine Types was the Plan configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates, for what OrderLine Types was the Plan configured</inlineHelpText>
+        <label>OrderLine Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Suspend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Release</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disconnection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Soft Disconnection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Migration Installation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Update</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cession</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Change BA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Migration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Numbers Transfer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Numbers Cession</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Order_Id__c</fullName>
+        <description>Order Id</description>
+        <externalId>false</externalId>
+        <formula>Order_Line__r.OrderLookup__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Order Id</inlineHelpText>
+        <label>Order Id</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Line_Status__c</fullName>
+        <description>Order Line Status</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Order_Line__r.Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Order Line Status</inlineHelpText>
+        <label>Order Line Status</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Line__c</fullName>
+        <description>Order Line, for which this Instance of Plan has been configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order Line, for which this Instance of Plan has been configured</inlineHelpText>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>Provisioning Plans</relationshipLabel>
+        <relationshipName>Provisioning_Plans</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order_Type__c</fullName>
+        <description>Order Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order Type</inlineHelpText>
+        <label>Order Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disconnect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Move</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OSP Underground Build</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OSP Aerial Build</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OSP Relocation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RMA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Order Spares</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Request Part</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Plan_Interval__c</fullName>
+        <description>Actual Plan Interval (length) in Business Days. Calculated automatically based on Tasks&apos; Due Dates.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Plan Interval (length) in Business Days. Calculated automatically based on Tasks&apos; Due Dates.</inlineHelpText>
+        <label>Plan Interval</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Plan_Name__c</fullName>
+        <description>Provisioning Plan&apos;s Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provisioning Plan&apos;s Name</inlineHelpText>
+        <label>Plan Name</label>
+        <length>155</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <description>Product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product</inlineHelpText>
+        <label>Product</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Private Line</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dedicated Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Colocation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wavelengths</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DIA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dark Fiber</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Telephone Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Managed Modem</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Various Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Custom Bundle</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Interconnect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Global Gateway Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Switch Partition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Switched Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Provisioning_Method__c</fullName>
+        <description>Provisioning Method</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provisioning Method</inlineHelpText>
+        <label>Provisioning Method</label>
+        <picklist>
+            <picklistValues>
+                <fullName>On-Net</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Type II</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Provisioning_Plan__c</fullName>
+        <description>Link to Provisioning Plan</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;/&apos; +  Id , Plan_Name__c , &apos;_top&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Link to Provisioning Plan</inlineHelpText>
+        <label>Provisioning Plan</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_Type__c</fullName>
+        <description>Quote Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Quote Type</inlineHelpText>
+        <label>Quote Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Budgetary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Firm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Reason_of_Delay__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Enforce Reason of Delay</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enforce Reason of Delay setting while performing Provisioning Plan</inlineHelpText>
+        <label>Reason of Delay</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Request__c</fullName>
+        <description>Request Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Request Type</inlineHelpText>
+        <label>Request Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ICB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Special Price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Simplified_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Provisioning Plan applicable for Simplified Orders</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provisioning Plan applicable for Simplified Orders</inlineHelpText>
+        <label>Simplified Order</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>32</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Standard_Interval__c</fullName>
+        <description>Standard Interval (in business days)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the standard interval for the provisioning plan.  The standard interval should be entered in business days.</inlineHelpText>
+        <label>Standard Interval</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Starting_Datetime__c</fullName>
+        <description>Datetime from which Tasks&apos; Due Dates should be calculated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Datetime from which Tasks&apos; Due Dates should be calculated.</inlineHelpText>
+        <label>Starting Datetime</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Provisioning Plan&apos;s Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provisioning Plan&apos;s Status</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In-Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subcircuit_status__c</fullName>
+        <description>Capacity Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Capacity Status</inlineHelpText>
+        <label>Capacity Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Existing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Technology__c</fullName>
+        <description>Indicates, for what Technology was the Plan configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates, for what Technology was the Plan configured</inlineHelpText>
+        <label>Technology</label>
+        <picklist>
+            <picklistValues>
+                <fullName>DSL (Attach DSL Order Form)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leased Line</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Provisioning Plan</label>
+    <listViews>
+        <fullName>Active_Provisioning_Plans</fullName>
+        <columns>NAME</columns>
+        <columns>Plan_Name__c</columns>
+        <columns>OrderLine_Type__c</columns>
+        <columns>Simplified_Order__c</columns>
+        <columns>Assigned_Product_Text__c</columns>
+        <columns>Status__c</columns>
+        <columns>Description__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Instance__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filters>
+        <label>Active Provisioning Plans</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Provisioning_Plans</fullName>
+        <columns>NAME</columns>
+        <columns>Plan_Name__c</columns>
+        <columns>OrderLine_Type__c</columns>
+        <columns>Assigned_Product_Text__c</columns>
+        <columns>Status__c</columns>
+        <columns>Description__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Instance__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>All Provisioning Plans</label>
+    </listViews>
+    <listViews>
+        <fullName>Disconnect_Prov_Plans</fullName>
+        <columns>NAME</columns>
+        <columns>Plan_Name__c</columns>
+        <columns>OrderLine_Type__c</columns>
+        <columns>CAssigned_Product__c</columns>
+        <columns>Status__c</columns>
+        <columns>Description__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OrderLine_Type__c</field>
+            <operation>includes</operation>
+            <value>Disconnection</value>
+        </filters>
+        <filters>
+            <field>Instance__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Disconnect Prov Plans</label>
+    </listViews>
+    <listViews>
+        <fullName>Email_Box_plans</fullName>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Assigned_Product_Text__c</columns>
+        <columns>GTS_Location__c</columns>
+        <columns>OrderLine_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OrderLine_Type__c</field>
+            <operation>includes</operation>
+            <value>New Service</value>
+        </filters>
+        <filters>
+            <field>Instance__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Assigned_Product_Text__c</field>
+            <operation>contains</operation>
+            <value>E-MAIL_BOX</value>
+        </filters>
+        <label>Email Box plans</label>
+    </listViews>
+    <listViews>
+        <fullName>HU_PP_definitions</fullName>
+        <columns>NAME</columns>
+        <columns>Provisioning_Plan__c</columns>
+        <columns>Plan_Name__c</columns>
+        <columns>Status__c</columns>
+        <columns>Assigned_Product_Text__c</columns>
+        <columns>CAssigned_Product__c</columns>
+        <columns>Bandwidth__c</columns>
+        <columns>Subcircuit_status__c</columns>
+        <columns>Description__c</columns>
+        <columns>Due_Date_Field_Name__c</columns>
+        <columns>Extranet_Order__c</columns>
+        <columns>Instance__c</columns>
+        <columns>Master_Object__c</columns>
+        <columns>Object_Record_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Instance__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Plan_Name__c</field>
+            <operation>startsWith</operation>
+            <value>HU_</value>
+        </filters>
+        <label>HU PP definitions</label>
+    </listViews>
+    <listViews>
+        <fullName>PL_Provisioning_Plans</fullName>
+        <columns>Plan_Name__c</columns>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>equals</operation>
+            <value>GTS Poland</value>
+        </filters>
+        <filters>
+            <field>Instance__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>PL Provisioning Plans</label>
+        <sharedTo>
+            <roles>Project Manager PL</roles>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Provisioning_Plan_Definitions</fullName>
+        <columns>Plan_Name__c</columns>
+        <columns>NAME</columns>
+        <columns>OrderLine_Type__c</columns>
+        <columns>Assigned_Product_Text__c</columns>
+        <columns>Status__c</columns>
+        <columns>Description__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Instance__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Provisioning Plan Definitions</label>
+    </listViews>
+    <listViews>
+        <fullName>Service_Order_Plans</fullName>
+        <columns>NAME</columns>
+        <columns>OrderLine_Type__c</columns>
+        <columns>CAssigned_Product__c</columns>
+        <columns>Plan_Name__c</columns>
+        <columns>Description__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OrderLine_Type__c</field>
+            <operation>excludes</operation>
+            <value>New Service</value>
+        </filters>
+        <filters>
+            <field>OrderLine_Type__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Instance__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Service Order Plans</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PPL{000000000}</displayFormat>
+        <label>Provisioning Plan Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <namedFilters>
+        <fullName>nf_01I20000000HVCiEAO_00N20000002hTsIEAU</fullName>
+        <active>true</active>
+        <field>Provisioning_Plan_Task_Selection__c.Provisioning_Plan__c</field>
+        <filterItems>
+            <field>Provisioning_Plan__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Task Plan</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Provisioning Plan Task Selection_Provisi</name>
+    </namedFilters>
+    <pluralLabel>Provisioning Plans</pluralLabel>
+    <recordTypes>
+        <fullName>Order</fullName>
+        <active>true</active>
+        <description>Record Type for Order&apos;s Provisioning Plan</description>
+        <label>Order</label>
+        <picklistValues>
+            <picklist>Bandwidth__c</picklist>
+            <values>
+                <fullName>1000Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E5G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>200Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>300Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>400Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>500Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>600Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>700Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>800Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>900Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DS0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DS1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DS3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DS3 %28Coax%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FE %28Cat5%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fiber Pair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OC12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OC192</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OC3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OC48</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>FTT__c</picklist>
+            <values>
+                <fullName>BOD Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-BOD Approved</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GTS_Location__c</picklist>
+            <values>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ICB_Type__c</picklist>
+            <values>
+                <fullName>Capacity Augment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Collocation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Extended DMARC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fiber to the Cell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Build</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Standard Product%2FProduct Configuration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Not Available%2FCapacity Check</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type 2 Cost</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Master_Object__c</picklist>
+            <values>
+                <fullName>Order</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Object_Record_Type__c</picklist>
+            <values>
+                <fullName>Fiber to the Tower</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OrderLine_Type__c</picklist>
+            <values>
+                <fullName>Cession</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Change BA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disconnection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Migration Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Numbers Cession</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Numbers Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Migration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Soft Disconnection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suspend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Order_Type__c</picklist>
+            <values>
+                <fullName>Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disconnect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Colocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Bundle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dark Fiber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dedicated Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Gateway Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interconnect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Modem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private Line</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Switch Partition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Switched Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Various Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wavelengths</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Provisioning_Method__c</picklist>
+            <values>
+                <fullName>On-Net</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type II</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quote_Type__c</picklist>
+            <values>
+                <fullName>Budgetary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Firm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Request__c</picklist>
+            <values>
+                <fullName>ICB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Price</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-Active</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subcircuit_status__c</picklist>
+            <values>
+                <fullName>Existing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Technology__c</picklist>
+            <values>
+                <fullName>DSL %28Attach DSL Order Form%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leased Line</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Task_Plan</fullName>
+        <active>true</active>
+        <description>Record Type for conditional Plans triggered from Tasks during provisioning</description>
+        <label>Task Plan</label>
+        <picklistValues>
+            <picklist>Bandwidth__c</picklist>
+            <values>
+                <fullName>1000Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>100Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E5G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>200Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>20Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>300Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>30Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>400Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>500Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>600Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>700Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>800Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>900Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DS0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DS1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DS3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DS3 %28Coax%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FE %28Cat5%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fiber Pair</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OC12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OC192</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OC3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OC48</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>FTT__c</picklist>
+            <values>
+                <fullName>BOD Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-BOD Approved</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>GTS_Location__c</picklist>
+            <values>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ICB_Type__c</picklist>
+            <values>
+                <fullName>Capacity Augment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Collocation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Extended DMARC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fiber to the Cell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Build</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Standard Product%2FProduct Configuration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Not Available%2FCapacity Check</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Price</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type 2 Cost</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Master_Object__c</picklist>
+            <values>
+                <fullName>Order</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Object_Record_Type__c</picklist>
+            <values>
+                <fullName>Fiber to the Tower</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OrderLine_Type__c</picklist>
+            <values>
+                <fullName>Data Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disconnection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Migration Installation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Numbers Cession</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Numbers Transfer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Soft Disconnection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suspend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Order_Type__c</picklist>
+            <values>
+                <fullName>Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Disconnect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Move</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OSP Aerial Build</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OSP Relocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OSP Underground Build</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Spares</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RMA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Request Part</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Colocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Bundle</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dark Fiber</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dedicated Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Global Gateway Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Interconnect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Managed Modem</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private Line</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Switch Partition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Switched Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Various Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wavelengths</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Provisioning_Method__c</picklist>
+            <values>
+                <fullName>On-Net</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type II</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quote_Type__c</picklist>
+            <values>
+                <fullName>Budgetary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Firm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Request__c</picklist>
+            <values>
+                <fullName>ICB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Special Price</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-Active</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subcircuit_status__c</picklist>
+            <values>
+                <fullName>Existing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Technology__c</picklist>
+            <values>
+                <fullName>DSL %28Attach DSL Order Form%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leased Line</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Plan_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Order_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Object_Record_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Plan_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OrderLine_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Plan_Name__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Plan_Name__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Reason_of_Delay_flag_change</fullName>
+        <active>false</active>
+        <description>Reason of Delay flag can be changed on Provisioning Plan definition only (not instance).</description>
+        <errorConditionFormula>AND(Instance__c = true, ISCHANGED( Reason_of_Delay__c ) )</errorConditionFormula>
+        <errorDisplayField>Reason_of_Delay__c</errorDisplayField>
+        <errorMessage>Reason of Delay flag can be changed only on Provisioning Plan definition (not instance).</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Starting_Datetime_on_instance</fullName>
+        <active>false</active>
+        <description>Starting Datetime can be set on plan instance only</description>
+        <errorConditionFormula>IF(AND(NOT(ISBLANK(Starting_Datetime__c)), Instance__c=false), true, false)</errorConditionFormula>
+        <errorDisplayField>Starting_Datetime__c</errorDisplayField>
+        <errorMessage>Starting Datetime can be set on Provisioning Plan instance only.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Starting_Datetime_past</fullName>
+        <active>false</active>
+        <description>Starting Datetime can not be set in past.</description>
+        <errorConditionFormula>Starting_Datetime__c &lt; NOW()</errorConditionFormula>
+        <errorDisplayField>Starting_Datetime__c</errorDisplayField>
+        <errorMessage>Starting Datetime can not be set in past.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Back_To_Assignment</fullName>
+        <availability>online</availability>
+        <description>Allows to go back directly to Provisioning Plan Assignment Page</description>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Back To Assignment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>var bInstance = &apos;{!Provisioning_Plan__c.Instance__c}&apos;;
+var sLineStatus = &apos;{!Provisioning_Plan__c.Order_Line_Status__c}&apos;;
+
+if(bInstance == &apos;1&apos;){
+  if(sLineStatus != &apos;Submitted&apos; &amp;&amp; sLineStatus != &apos;Completed&apos;){
+    window.location.href = &apos;apex/AssignProvisioningPlans?ordId={!Provisioning_Plan__c.Order_Id__c}&apos;;
+  } else {
+    alert(&apos;You can go back to Assignment only for not Submitted Orders&apos;);
+  }
+} else {
+  alert(&apos;You can go back to Assignment only from Instance and not Definition&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Calculate_Due_Dates</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Calculate Due Dates</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var provPlanId = &apos;{!Provisioning_Plan__c.Id}&apos;;
+var firstId = &apos;{!Provisioning_Plan__c.Id}&apos;;
+
+var validation_result = sforce.apex.execute(&quot;ProvisioningPlanNew&quot;,&quot;validatePlanStructureBeforeCalculationWS&quot;, {provPlanId:provPlanId});
+
+if(validation_result[0] == &apos;ERROR&apos;){
+alert (validation_result[1]);
+}else{
+var result = sforce.apex.execute(&quot;ProvisioningPlanNew&quot;,&quot;calculateProvisioningPlanTaskDueDatesWS&quot;, {provPlanId:provPlanId});
+if(result == &apos;0&apos;){
+alert(&apos;Due Dates calculated correctly for this plan and other related child/parent plan(s).&apos;);
+window.top.location.href = firstId;
+} else if (result == &apos;1&apos;) {
+alert(&apos;Error. You can calculate Due Dates for Plan instance only.&apos;);
+} else if (result==&apos;2&apos;) {
+alert(&apos;Error. There are no tasks!&apos;);
+} else if (result==&apos;3&apos;) {
+alert(&apos;Error. There are dependencies between tasks!!&apos;);
+}else{
+alert(&apos;Error while calculating Due Dates.&apos;);
+
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Clone</fullName>
+        <availability>online</availability>
+        <description>Clones Plan and related Tasks</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Clone</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var PlanID = &apos;{!Provisioning_Plan__c.Id}&apos;; 
+var result = sforce.apex.execute(&quot;ProvisioningPlanCloning&quot;,&quot;clone&quot;, {sPlanID:PlanID}); 
+
+if(result[0].length == 18){
+window.top.location.href = &quot;https://&quot; + window.top.location.host + &quot;/&quot; + result; 
+} else {
+alert(result);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Delete_Due_Dates</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Delete Due Dates</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var provPlanId = &apos;{!Provisioning_Plan__c.Id}&apos;;
+if (confirm(&apos;Do you really want to delete all Due Dates from Provisioning Plan Tasks?&apos;)) {
+var result = sforce.apex.execute(&quot;ProvisioningPlanNew&quot;,&quot;clearAllDueDatesWS&quot;, {provPlanId:provPlanId});
+if(result[0] == &apos;OK&apos;){
+window.location.reload()
+} else {
+alert(result[1]);
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Run_Validation</fullName>
+        <availability>online</availability>
+        <description>[PROV]_PL_064: PP verification</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Run Validation</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)} 
+
+var ppID = &apos;{!Provisioning_Plan__c.Id}&apos;; 
+
+var resultString = sforce.apex.execute(&quot;ProvisioningPlanMethods_Extension&quot;,&quot;validatePP&quot;, {ppId: ppID}); 
+if(resultString[0]!=&apos;OK&apos;){ 
+alert(resultString[1]); 
+} else { 
+alert(&apos;Provisioning Plan went through the validation succesfully. No problems has been found.&apos;); 
+}</url>
+    </webLinks>
+</CustomObject>

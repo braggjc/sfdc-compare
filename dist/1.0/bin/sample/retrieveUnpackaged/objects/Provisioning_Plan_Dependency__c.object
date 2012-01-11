@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Associated_Child_Object__c</fullName>
+        <description>Associated Child Object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Associated Child Object</inlineHelpText>
+        <label>Associated Child Object</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Order</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Associated_Parent_Object__c</fullName>
+        <description>Associated Parent Object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Associated Parent Object</inlineHelpText>
+        <label>Associated Parent Object</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Order</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Child_Provisioning_Plan__c</fullName>
+        <description>Child Provisioning Plan</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Child Provisioning Plan</inlineHelpText>
+        <label>Child Provisioning Plan</label>
+        <referenceTo>Provisioning_Plan__c</referenceTo>
+        <relationshipLabel>Parent Provisioning Plan</relationshipLabel>
+        <relationshipName>Parent_Provisioning_Plan</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Provisioning_Plan__c</fullName>
+        <description>Parent Provisioning Plan</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Parent Provisioning Plan</inlineHelpText>
+        <label>Parent Provisioning Plan</label>
+        <referenceTo>Provisioning_Plan__c</referenceTo>
+        <relationshipLabel>Child Provisioning Plan</relationshipLabel>
+        <relationshipName>Child_Provisioning_Plan</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>32</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Provisioning Plan Dependency</label>
+    <nameField>
+        <displayFormat>PPD{000000000}</displayFormat>
+        <label>Provisioning Plan Relationship ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Provisioning Plan Dependency</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Get_Tasks_from_OSS</fullName>
+        <availability>online</availability>
+        <description>Retrieves Task list from OSS for appropriate Circuit</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Get Tasks from OSS</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var planId = &quot;{!Provisioning_Plan__c.Id}&quot;; 
+
+var result = sforce.apex.execute(&quot;ProvisioningPlanOSS&quot;,&quot;getListOfTasksFromOSS&quot;, {inProvisioningPlanId:planId}); 
+
+if (result==&apos;OK&apos;) { 
+window.location.href = window.location.href; 
+} else { 
+alert(result); 
+}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>or purposes of business case approval there is a need for clear distinguishing of each costing option of evaluated solution. Therefore a new object is designed in Colorado environment. The current name is “calculation”. The main purpose of this new object is:
+
+    * Link order lines across different orders, representing (and record) one concrete option from technical and costing point of view;
+    * Collect costing items, related to the particular solution. The costing items should list all items, needed for solution delivery.</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Approved</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CBCT_Calculation__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR( ISPICKVAL(Evaluation_Type__c,&apos;BCT&apos;),ISPICKVAL(Evaluation_Type__c,&apos;BCT+Price List&apos;) ),
+IF (OR(ISBLANK( Calculation_Number__c ) ,ISNULL(Calculation_Number__c)) ,&apos;Calculation has not been sent yet&apos;,HYPERLINK(&quot;http://piaskownica.energis.poland:7070/restricted/showCalculationFamily&quot; &amp; &quot;-&quot; &amp;  Opportunity__r.Opportunity_No__c,Calculation_Number__c)),&apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BCT Calculation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calculation_Country__c</fullName>
+        <description>Indicates country, that should be used for Calculation creation in BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates country, that should be used for Calculation creation in BCT</inlineHelpText>
+        <label>Calculation Country</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Czech Republic</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Calculation_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Calculation LoA</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Calculation_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Calculation Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calculation_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Calculation Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Accepted for realization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved financial terms</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved financial terms by CE Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved financial terms by CEO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Budgetary - approved financial terms</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Budgetary - Approved financial terms by CE Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Budgetary - Approved financial terms by CEO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Escalated on LoA5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Escalated on LoA6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In edition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In verification of accordance with contract terms</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In verification of client type (RT/WH)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In verification of financial terms (LoA2)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In verification of financial terms (LoA3)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In verification of financial terms (LoA4)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected (LoA2)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected (LoA3)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected (LoA4)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected (LoA5)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected (LoA6)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected OE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Calculation_Type__c</fullName>
+        <description>Indicates what type of caluclation was used for this Deal</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates what type of caluclation was used for this Deal</inlineHelpText>
+        <label>Calculation Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BCT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Excel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Calculation_Version__c</fullName>
+        <externalId>false</externalId>
+        <label>Calculation Version</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Evaluation_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Evaluation Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BCT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BCT+Price List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Excel Calculation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Margin__c</fullName>
+        <description>Gross Margin value for gived Calculation returned from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gross Margin value for gived Calculation returned from BCT</inlineHelpText>
+        <label>Gross Margin</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Manual_Calculation_Reason__c</fullName>
+        <description>Information why Manual Calculation type has been selected</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Information why Manual Calculation type has been selected</inlineHelpText>
+        <label>Manual Calculation Reason</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Different contract lenghts on Order Lines</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>One_time_price__c</fullName>
+        <externalId>false</externalId>
+        <label>One-time price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Location__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Opportunity__r.GTS_Location__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Location</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>SFDC_Calculations</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>SFDC Calculations</relationshipLabel>
+        <relationshipName>SFDC_Calculations</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Payback__c</fullName>
+        <description>Payback for configured Deal returned from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payback for configured Deal returned from BCT</inlineHelpText>
+        <label>Payback</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Calculation_Number__c</fullName>
+        <description>Number of Calculation being modified by this Calculation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Calculation being modified by this Calculation</inlineHelpText>
+        <label>Previous Calculation Number</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Profitability_Ratio__c</fullName>
+        <description>Value returned by BCT; Used to calculate Sales comission</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value returned by BCT; Used to calculate Sales comission</inlineHelpText>
+        <label>Profitability Ratio</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_cost__c</fullName>
+        <description>Relation to Project Cost used to create this Calculation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Project Cost used to create this Calculation</inlineHelpText>
+        <label>Project cost</label>
+        <referenceTo>Project_cost__c</referenceTo>
+        <relationshipLabel>SFDC Calculations</relationshipLabel>
+        <relationshipName>SFDC_Calculations</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Ready_for_submitting__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Ready for calculating</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Reason_for_Nonstandard_Process__c</fullName>
+        <description>Obligatory when calculation type is Excel or Manual</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Obligatory when calculation type is Excel or Manual</inlineHelpText>
+        <label>Reason for Nonstandard Process</label>
+        <length>8000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Recurring_price__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurring price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Rejection_Reason__c</fullName>
+        <description>Reason of Calculation Rejection</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reason of Calculation Rejection</inlineHelpText>
+        <label>Rejection Reason</label>
+        <length>8000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Source_Calculation__c</fullName>
+        <description>Relation to Calculation, from which this one has been created</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Calculation, from which this one has been created</inlineHelpText>
+        <label>SFDC Calculation</label>
+        <referenceTo>SFDC_Calculation__c</referenceTo>
+        <relationshipLabel>SFDC Calculations</relationshipLabel>
+        <relationshipName>SFDC_Calculations</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Budgetary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Firm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <label>SFDC Calculation</label>
+    <nameField>
+        <displayFormat>CAL-{0000000000}</displayFormat>
+        <label>SFDC Calculation</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>SFDC Calculations</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Domestic</fullName>
+        <active>true</active>
+        <description>Record Type for calculations related to Domestic sales</description>
+        <label>Domestic</label>
+        <picklistValues>
+            <picklist>Calculation_Country__c</picklist>
+            <values>
+                <fullName>Czech Republic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hungary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Romania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slovakia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Calculation_Level__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Calculation_Status__c</picklist>
+            <values>
+                <fullName>Accepted for realization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved financial terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved financial terms by CE Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved financial terms by CEO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Budgetary - Approved financial terms by CE Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Budgetary - Approved financial terms by CEO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Budgetary - approved financial terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalated on LoA5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalated on LoA6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In edition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In verification of accordance with contract terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In verification of client type %28RT%2FWH%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In verification of financial terms %28LoA2%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In verification of financial terms %28LoA3%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In verification of financial terms %28LoA4%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected %28LoA2%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected %28LoA3%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected %28LoA4%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected %28LoA5%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected %28LoA6%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected OE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Calculation_Type__c</picklist>
+            <values>
+                <fullName>BCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Excel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price List</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Evaluation_Type__c</picklist>
+            <values>
+                <fullName>BCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BCT%2BPrice List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Excel Calculation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price List</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Manual_Calculation_Reason__c</picklist>
+            <values>
+                <fullName>Different contract lenghts on Order Lines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Budgetary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Firm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>International_Sales</fullName>
+        <active>true</active>
+        <description>Calculations for IS Business Unit</description>
+        <label>International Sales</label>
+        <picklistValues>
+            <picklist>Calculation_Country__c</picklist>
+            <values>
+                <fullName>Czech Republic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hungary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Romania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Slovakia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Calculation_Level__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Calculation_Status__c</picklist>
+            <values>
+                <fullName>Accepted for realization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved financial terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved financial terms by CE Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved financial terms by CEO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Budgetary - Approved financial terms by CE Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Budgetary - Approved financial terms by CEO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Budgetary - approved financial terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalated on LoA5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Escalated on LoA6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In edition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In verification of accordance with contract terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In verification of client type %28RT%2FWH%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In verification of financial terms %28LoA2%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In verification of financial terms %28LoA3%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In verification of financial terms %28LoA4%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected %28LoA2%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected %28LoA3%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected %28LoA4%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected %28LoA5%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected %28LoA6%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected OE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Calculation_Type__c</picklist>
+            <values>
+                <fullName>BCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Excel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price List</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Evaluation_Type__c</picklist>
+            <values>
+                <fullName>BCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BCT%2BPrice List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Excel Calculation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price List</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Manual_Calculation_Reason__c</picklist>
+            <values>
+                <fullName>Different contract lenghts on Order Lines</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Budgetary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Firm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Prevent_unckeck</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISCHANGED(Ready_for_submitting__c) &amp;&amp; PRIORVALUE(Ready_for_submitting__c)</errorConditionFormula>
+        <errorDisplayField>Ready_for_submitting__c</errorDisplayField>
+        <errorMessage>Calculation was already mark as ready for submitting, AM was notified. Calculation can not be unchecked.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Accept_for_Realization</fullName>
+        <availability>online</availability>
+        <description>Accepts Calculation Version and assigns it to Order Lines</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Accept for Realization</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var status = &quot;{!SFDC_Calculation__c.Calculation_Status__c}&quot;; 
+var calcID = &quot;{!SFDC_Calculation__c.Id}&quot;; 
+
+if(status == &quot;Approved financial terms&quot; || status == &quot;Approved financial terms by CE Management&quot; || status == &quot;Approved financial terms by CEO&quot;){ 
+if(confirm(&quot;This will change status of this Calculation and assign it to Opportunity.\nDo you want to continue?&quot;)){ 
+var result = sforce.apex.execute(&quot;CalculationMethods&quot;,&quot;acceptForRealization&quot;, {calculationId:calcID}); 
+if(result[0] == &apos;OK&apos;){ 
+alert(result[1]); 
+location.reload(true); 
+} else { 
+alert(result[1]); 
+} 
+} 
+} else { 
+alert(&quot;Only Approved Calculation can be accepted for realization &quot;); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Subversion</fullName>
+        <availability>online</availability>
+        <description>Creates subversion for existing Calculation</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create Subversion</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.location = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/apex/CreateNewCalculation?opp_id={!SFDC_Calculation__c.OpportunityId__c}&amp;proj_id={!SFDC_Calculation__c.Project_costId__c}&amp;src_calc={!SFDC_Calculation__c.Id}&quot;;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Export_Manual_Calculation_Data</fullName>
+        <availability>online</availability>
+        <description>Exports template for Manual Calculation</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Export Manual Calculation Data</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.open(window.location.protocol + &quot;//&quot; + window.location.host + &quot;/apex/CalculationDetailsExport?id={!SFDC_Calculation__c.Id}&quot;);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mark_Caluclation_as_Selected_by_Customer</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mark Caluclation as Selected by Customer</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var SFDCCalculationId = &quot;{!SFDC_Calculation__c.Id}&quot;
+var result;
+
+result=sforce.apex.execute(&quot;SFDCCalculation&quot;,&quot;MarkCalculationAsSelectedByCustomer&quot;,{SFDCCalculationId:SFDCCalculationId});
+
+if (result!=&apos;OK&apos;)
+alert(result);
+else
+window.location.href = window.location.href;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mark_Selected_Caluclation_as_Selected_by_Customer</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mark Selected Caluclation as Selected by Customer</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS( $ObjectType.SFDC_Calculation__c )};
+var OpportunityId = &quot;{! Opportunity.Id}&quot;;
+
+var result;
+
+if (records.length != 1)
+alert(&apos;Exactly one Calculation can be marked as Selected.&apos;);
+else{
+result=sforce.apex.execute(&quot;SFDCCalculation&quot;,&quot;MarkCalculationAsSelectedByCustomer&quot;, {SFDCCalculationId:records});
+if (result !=&apos;OK&apos;)
+alert(result);
+else
+window.location.href = window.location.href;
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Select_as_Main_Calculation</fullName>
+        <availability>online</availability>
+        <description>Selects Calculation as Main one</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Select as Main Calculation</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS( $ObjectType.SFDC_Calculation__c )};
+var OpportunityId = &quot;{! Opportunity.Id}&quot;; 
+
+if (records.length != 1)
+   alert(&apos;Exactly one Calculation can be marked as Selected.&apos;);
+else{ 
+
+   var soql_result = sforce.connection.query(&quot;select Id, Calculation_Status__c from SFDC_Calculation__c where Id = &apos;&quot; + records [0] + &quot;&apos;&quot;);
+   var calculations = soql_result.getArray(&apos;records&apos;);  
+
+   var status = calculations[0].Calculation_Status__c;
+   var calcID = calculations[0].Id;
+
+   if(status == &quot;Approved financial terms&quot; || status == &quot;Approved financial terms by CE Management&quot; || status == &quot;Approved financial terms by CEO&quot;){
+      if(confirm(&quot;This will select the Calculation as the main one for this Opportunity.\nDo you want to continue?&quot;)){
+         var result = sforce.apex.execute(&quot;CalculationMethods&quot;,&quot;acceptForRealization&quot;, {calculationId:calcID});
+         if(result[0] == &apos;OK&apos;){
+            alert(result[1]);
+            location.reload(true);
+         } else {
+            alert(result[1]);
+         }
+      }
+   } else {
+      alert(&quot;Only Approved Calculation can be selected&quot;);
+   }
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Submit_Calculation</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Submit Calculation</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var OpportunityId =&quot;{!SFDC_Calculation__c.OpportunityId__c}&quot;;
+var SFDCCalculationId = &quot;{!SFDC_Calculation__c.Id}&quot;
+var result;
+
+result=sforce.apex.execute(&quot;SFDCCalculation&quot;,&quot;SubmitCalculation&quot;, {OpportunityId:OpportunityId,SFDCCalculationId:SFDCCalculationId});
+if (result!=&apos;OK&apos;)
+alert(result);
+window.location.href = window.location.href;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Submit_Selected_Calculation</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Submit Selected Calculation</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS( $ObjectType.SFDC_Calculation__c )};
+var OpportunityId = &quot;{! Opportunity.Id}&quot;;
+
+var result;
+
+if (records.length != 1)
+ alert(&apos;Exactly one Calculation has to be selected to be submitted.&apos;);
+else{
+ result=sforce.apex.execute(&quot;SFDCCalculation&quot;,&quot;SubmitCalculation&quot;, {OpportunityId:OpportunityId,SFDCCalculationId:records});
+if (result!=&apos;OK&apos;)
+alert(result);
+window.location.href = window.location.href;
+}</url>
+    </webLinks>
+</CustomObject>

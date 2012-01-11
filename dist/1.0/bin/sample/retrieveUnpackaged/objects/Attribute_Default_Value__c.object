@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Attribute__c</fullName>
+        <description>Relation to Attribute definition.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Attribute definition.</inlineHelpText>
+        <label>Attribute</label>
+        <referenceTo>Attribute__c</referenceTo>
+        <relationshipLabel>Attribute Default Values</relationshipLabel>
+        <relationshipName>Attribute_Default_Values</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bundle__c</fullName>
+        <description>Realtion to Unified Product (Main Product). Legacy field (not used anymore).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Realtion to Unified Product (Main Product). Legacy field (not used anymore).</inlineHelpText>
+        <label>Unified Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Attribute Default Values</relationshipLabel>
+        <relationshipName>Attribute_Default_Values</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CBundle__c</fullName>
+        <description>Relation to Bundle definition. Context fot this default value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Bundle definition. Context fot this default value.</inlineHelpText>
+        <label>Bundle</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Attribute Default Values</relationshipLabel>
+        <relationshipName>Attribute_Default_Values</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Component__c</fullName>
+        <description>Relation to Component definition. Context fot this default value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Component definition. Context fot this default value.</inlineHelpText>
+        <label>Component</label>
+        <referenceTo>Component__c</referenceTo>
+        <relationshipLabel>Attribute Default Values</relationshipLabel>
+        <relationshipName>Attribute_Default_Values</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this item has been created in Billing system (during Bundle synchronization)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this item has been created in Billing system (during Bundle synchronization)</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Default_Value__c</fullName>
+        <description>Value that should be set as related Attribute&apos;s default.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value that should be set as related Attribute&apos;s default.</inlineHelpText>
+        <label>Default Value</label>
+        <length>7200</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Editable__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Indicates if Attribute with this value assigned is editable. Not used in Product Configurator.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Attribute with this value assigned is editable. Not used in Product Configurator.</inlineHelpText>
+        <label>Editable</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Synchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this definiton matches a definition in Billing system.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this definiton matches a definition in Billing system.</inlineHelpText>
+        <label>Synchronized</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <label>Attribute Default Value</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Component__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Attribute Default Value Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Attribute Default Values</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

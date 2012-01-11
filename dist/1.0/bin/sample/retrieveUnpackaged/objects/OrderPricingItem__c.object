@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Pricing Item configured under Order Line</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Actiontype__c</fullName>
+        <description>Action set by Product Configurator; based on this appropriate actions will be executed in external systems</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Action set by Product Configurator; based on this appropriate actions will be executed in external systems</inlineHelpText>
+        <label>Actiontype</label>
+        <picklist>
+            <picklistValues>
+                <fullName>create</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>update</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>delete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Align_to_Billing_Cycle__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Pricing Item should be aligned to Billing Cycle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Pricing Item should be aligned to Billing Cycle</inlineHelpText>
+        <label>Align to Billing Cycle</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BillingDuration__c</fullName>
+        <description>Duration of charging sequenced Pricing Item instance in Billing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Duration of charging sequenced Pricing Item instance in Billing.</inlineHelpText>
+        <label>Billing Duration</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BillingSequence__c</fullName>
+        <description>Sequence in which this Pricing Item instance should be charged in Billing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sequence in which this Pricing Item instance should be charged in Billing.</inlineHelpText>
+        <label>Billing Sequence</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Cycle_Number__c</fullName>
+        <description>Indicates number of Billing Cycle, to which Pricing Item should be aligned</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates number of Billing Cycle, to which Pricing Item should be aligned</inlineHelpText>
+        <label>Billing Cycle Number</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Cycle__c</fullName>
+        <description>Billing Cycle set for this pricing item (frequency of invoicing)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Billing Cycle set for this pricing item (frequency of invoicing)</inlineHelpText>
+        <label>Billing Cycle</label>
+        <picklist>
+            <picklistValues>
+                <fullName>monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>quarterly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>half-yearly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>yearly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Duration_Unit__c</fullName>
+        <description>Unit in which Billing Duration is provided</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unit in which Billing Duration is provided</inlineHelpText>
+        <label>Billing Duration Unit</label>
+        <picklist>
+            <picklistValues>
+                <fullName>day</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Billing_ID__c</fullName>
+        <description>ID of Pricing Item in Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of Pricing Item in Billing System</inlineHelpText>
+        <label>Billing ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Name__c</fullName>
+        <description>Name of the Bundle, taken from Bundle selected on Order Line</description>
+        <externalId>false</externalId>
+        <formula>OrderLine__r.CProduct__r.Name</formula>
+        <inlineHelpText>Name of the Bundle, taken from Bundle selected on Order Line</inlineHelpText>
+        <label>Bundle Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CSR_ID__c</fullName>
+        <description>ID of Pricing Item in CSR Database</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of Pricing Item in CSR Database</inlineHelpText>
+        <label>CSR ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Component_Name__c</fullName>
+        <description>Name of the Component, to which Pricing Item was assigned to</description>
+        <externalId>false</externalId>
+        <formula>OrderComponent__r.Component__r.Name</formula>
+        <inlineHelpText>Name of the Component, to which Pricing Item was assigned to</inlineHelpText>
+        <label>Component Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Pricing Item has already been installed in Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Pricing Item has already been installed in Billing</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Discount__c</fullName>
+        <description>Percent of discount assigned for this Pricing Item</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Percent of discount assigned for this Pricing Item</inlineHelpText>
+        <label>Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Financial_Product_ID__c</fullName>
+        <description>Financial Product ID / GTS Code calculated for Pricing Item</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Financial Product ID / GTS Code calculated for Pricing Item</inlineHelpText>
+        <label>Financial Product ID</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Financial_Product_Value__c</fullName>
+        <description>Stores attributes, that were used to caluclate Financial Product ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores attributes, that were used to caluclate Financial Product ID</inlineHelpText>
+        <label>Financial Product Value</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Internal_Description__c</fullName>
+        <description>Internal Pricing Item description (not visible on invoices).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Internal Pricing Item description (not visible on invoices).</inlineHelpText>
+        <label>Internal Description</label>
+        <length>384</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Invoice_Description__c</fullName>
+        <description>Pricing Item description that is printed on invoice.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pricing Item description that is printed on invoice.</inlineHelpText>
+        <label>Invoice Description</label>
+        <length>384</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Invoicing_Name__c</fullName>
+        <description>Name of the Pricing Item, that will be printed on Invoice</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the Pricing Item, that will be printed on Invoice</inlineHelpText>
+        <label>Invoicing Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OrderComponent__c</fullName>
+        <description>Lookup to relation between Order and Component (used by Configurator to build tree structure)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to relation between Order and Component (used by Configurator to build tree structure)</inlineHelpText>
+        <label>Order Component</label>
+        <referenceTo>OrderComponent__c</referenceTo>
+        <relationshipLabel>Order Pricing Items</relationshipLabel>
+        <relationshipName>Order_Pricing_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OrderLine__c</fullName>
+        <description>Order Line, under which this Pricing Item was configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order Line, under which this Pricing Item was configured</inlineHelpText>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>Order Pricing Items</relationshipLabel>
+        <relationshipName>Order_Pricing_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Type__c</fullName>
+        <description>Indicates whether Pricing Item should be invoiced in advance</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether Pricing Item should be invoiced in advance</inlineHelpText>
+        <label>Payment Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>in advance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>backwards</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Price__c</fullName>
+        <description>Actual Price selected for Pricing Item (by default it will be Price from definition, but can be modified during configuration)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual Price selected for Pricing Item (by default it will be Price from definition, but can be modified during configuration)</inlineHelpText>
+        <label>Price</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>true</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>PricingItem__c</fullName>
+        <description>Relation to Pricing Item definition from Product Catalog</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Pricing Item definition from Product Catalog</inlineHelpText>
+        <label>Pricing Item</label>
+        <referenceTo>PricingItem__c</referenceTo>
+        <relationshipLabel>Order Pricing Items</relationshipLabel>
+        <relationshipName>Order_Pricing_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>ID assigned by Product Configurator used later to update Pricing Item with any changes</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID assigned by Product Configurator used later to update Pricing Item with any changes</inlineHelpText>
+        <label>SFDC_ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Special_Offer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this Pricing Item instance was copied from Special Offer.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this Pricing Item instance was copied from Special Offer.</inlineHelpText>
+        <label>Special Offer</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>To_Be_Closed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates, that Pricing Item should be closed (Valid To date will be calculated then automatically before sending request to billing system)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates, that Pricing Item should be closed (Valid To date will be calculated then automatically before sending request to billing system)</inlineHelpText>
+        <label>To Be Closed</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Valid_From__c</fullName>
+        <description>Date when billing system should start invoicing this Pricing Item</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when billing system should start invoicing this Pricing Item</inlineHelpText>
+        <label>Valid From</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Valid_To__c</fullName>
+        <description>Date when billing system should stop invoicing this Pricing Item</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when billing system should stop invoicing this Pricing Item</inlineHelpText>
+        <label>Valid To</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <label>Order Pricing Item</label>
+    <nameField>
+        <label>Order Pricing Item Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Order Pricing Items</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Calculate_Dates</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Calculate Dates</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var line_id = &apos;{!OrderLine__c.Id}&apos;; 
+
+sforce.apex.execute(&quot;OrderLineManagement&quot;,&quot;updatePricingItemDates&quot;, {sOrderLineID:line_id}); 
+
+window.location.href = window.location.href;</url>
+    </webLinks>
+</CustomObject>

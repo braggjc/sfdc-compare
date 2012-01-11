@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Information about customer account revenue</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Related Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Account</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Account Revenue</relationshipLabel>
+        <relationshipName>R00N20000001RfazEAC</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <trackHistory>false</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Bundle__c</fullName>
+        <description>Related Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Bundle</inlineHelpText>
+        <label>Product (custom)</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Account Revenues</relationshipLabel>
+        <relationshipName>Account_Revenues</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Integration_Timestamp__c</fullName>
+        <defaultValue>NOW()</defaultValue>
+        <description>Last timestamp from migration or integration</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last timestamp from migration or integration</inlineHelpText>
+        <label>Integration Timestamp</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Month__c</fullName>
+        <description>Month for revenue</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Month for revenue</inlineHelpText>
+        <label>Month</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Family__c</fullName>
+        <description>Product Family</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product Family</inlineHelpText>
+        <label>Product Family</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Data Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internet Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hosting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Voice Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICT Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <description>Related Product (custom)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Product (custom)</inlineHelpText>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Account Revenues</relationshipLabel>
+        <relationshipName>R00N20000001SYWXEA4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Revenue__c</fullName>
+        <description>Revenue for year, month and product LOB</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Revenue for year, month and product LOB</inlineHelpText>
+        <label>Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SourceRecordID__c</fullName>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record ID</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <description>Year for revenue</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Year for revenue</inlineHelpText>
+        <label>Year</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Year_and_Month__c</fullName>
+        <description>Year and Month for Account Revenue</description>
+        <externalId>false</externalId>
+        <formula>IF( Month__c &lt; 10, TEXT( Year__c ) + &quot; - 0&quot; + TEXT( Month__c ), TEXT( Year__c ) + &quot; - &quot; + TEXT( Month__c ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Year and Month for Account Revenue</inlineHelpText>
+        <label>Year and Month</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Account Revenue</label>
+    <nameField>
+        <displayFormat>ACR{000000000}</displayFormat>
+        <label>Account Revenue Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Account Revenues</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

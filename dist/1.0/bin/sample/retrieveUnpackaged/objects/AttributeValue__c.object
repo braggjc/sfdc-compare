@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <content>AttributeValueDelete</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Defines Values of Picklist Attributes and Columns of Grid Attributes</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>For Grids: only Active Attribute Values will be used to define column of a Grid.
+For Picklists/Multiselects: only Active Attribute Values will be available for selection in the Picklist/Multiselect</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For Grids: only Active Attribute Values will be used to define column of a Grid.
+For Picklists/Multiselects: only Active Attribute Values will be available for selection in the Picklist/Multiselect</inlineHelpText>
+        <label>Active</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Attribute__c</fullName>
+        <description>Relation to Attribute definition</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Attribute definition</inlineHelpText>
+        <label>Attribute</label>
+        <referenceTo>Attribute__c</referenceTo>
+        <relationshipLabel>Attribute Values</relationshipLabel>
+        <relationshipName>R00N80000002okADEAY</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <trackHistory>false</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>BCT_Value__c</fullName>
+        <description>Value, that should be sent within Caluclation to BCT for this Attribute Value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value, that should be sent within Caluclation to BCT for this Attribute Value</inlineHelpText>
+        <label>BCT Value</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this item has been created in Billing system (during Bundle synchronization)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this item has been created in Billing system (during Bundle synchronization)</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Grid_Field_Type__c</fullName>
+        <description>For Grids only! Type of data stored in Grid&apos;s column.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For Grids only! Type of data stored in Grid&apos;s column.</inlineHelpText>
+        <label>Grid Column Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EditBox</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Checkbox</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Picklist</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Date</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SearchPicklist</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Hidden__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Grid&apos;s column should be hidden</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Grid&apos;s column should be hidden</inlineHelpText>
+        <label>Hidden</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Label__c</fullName>
+        <description>Label displayed in Product Configurator</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Label displayed in Product Configurator</inlineHelpText>
+        <label>Label</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Language__c</fullName>
+        <description>Product Catalog language for this definition.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product Catalog language for this definition.</inlineHelpText>
+        <label>Language</label>
+        <picklist>
+            <picklistValues>
+                <fullName>SVK</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>POL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ROU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HUN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GBR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Master_Values__c</fullName>
+        <description>Values from Master Picklist that allow showing this particular Attribute Value in Product Configurator. This field is used only when Master Picklist is assigned to the Picklist Attribute.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Values from Master Picklist that allow showing this particular Attribute Value in Product Configurator. This field is used only when Master Picklist is assigned to the Picklist Attribute.</inlineHelpText>
+        <label>Master Values</label>
+        <length>500</length>
+        <trackHistory>true</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Order__c</fullName>
+        <description>Defines a sequence order in which this value will be sorted in Picklist/Grid in Product Configurator.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines a sequence order in which this value will be sorted in Picklist/Grid in Product Configurator.</inlineHelpText>
+        <label>Sequence Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PicklistSourceAttribute__c</fullName>
+        <description>For Grids only: Defines an Attribute that holds Picklist values for this column.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>For Grids only: Defines an Attribute that holds Picklist values for this column.</inlineHelpText>
+        <label>Picklist Source Attribute</label>
+        <referenceTo>Attribute__c</referenceTo>
+        <relationshipLabel>Attribute Values (Picklist Source Attribute)</relationshipLabel>
+        <relationshipName>Attribute_Values</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Synchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this definiton matches a definition in Billing system.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this definiton matches a definition in Billing system.</inlineHelpText>
+        <label>Synchronized</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Unique__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When this field is checked then this grid column will always be verified to have unique values.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When this field is checked then this grid column will always be verified to have unique values.</inlineHelpText>
+        <label>Unique</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <label>Attribute Value</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Label__c</columns>
+        <columns>Order__c</columns>
+        <columns>Grid_Field_Type__c</columns>
+        <columns>PicklistSourceAttribute__c</columns>
+        <columns>Language__c</columns>
+        <columns>Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Value</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Attribute Values</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Label__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Order__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Grid_Field_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>PicklistSourceAttribute__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Language__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Active__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>Add_Multiple_Values</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Add Multiple Values</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/AddAttributeValues?id={!Attribute__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Delete_Values</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Delete Values</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS($ObjectType.AttributeValue__c )};
+if (records.length &lt; 1) alert(&apos;Please select at least one Attribute Value to be deleted.&apos;);
+else {
+  var resultString = sforce.apex.execute(&quot;PC_Webservices_SK&quot;,&quot;deleteAttributeValue&quot;, {avId: records});
+  alert(resultString);
+  location.reload(true);
+}</url>
+    </webLinks>
+</CustomObject>

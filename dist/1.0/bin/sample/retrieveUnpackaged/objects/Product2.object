@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Attribute_Set_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Attribute Set Type</label>
+        <referenceTo>Attribute_Set_Type__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Created in Billing</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_Extranet__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Created in Extranet</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Dimension_Dictionary__c</fullName>
+        <externalId>false</externalId>
+        <label>Dimension Dictionary</label>
+        <referenceTo>Dimension_Dictionary__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Family</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>National Leased Line</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Direct Internet Access</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Voice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Managed Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Direct Other Voice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dark Fiber</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ethernet VPN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ethernet Lines</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP VPN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leased Lines</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADSL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dial-up Internet access</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Internet Access</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Indirect Other Voice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Co-location</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LLU Internet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Back-up Office</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Direct Voice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Free Phone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hosting Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP Transit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP Voice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lambda</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Managed Server</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Premium Rate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shared Costs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Teleconference</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Virtual PBX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Voice Interconnect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internet Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Voice Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>From_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>From Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>Products will be marked with multipicklist field GTS Location (GTS Poland, GTS Slovakia etc. ) mainly to separate Products for SK and other countries</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please choose countires for this product</inlineHelpText>
+        <label>GTS_Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Integration_ID__c</fullName>
+        <displayFormat>1{000000}</displayFormat>
+        <externalId>true</externalId>
+        <label>Integration ID</label>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>International__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Distance zone - International</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Distance zone - International</inlineHelpText>
+        <label>International</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Order__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>DAVO field - it is required in Billing: Indicated the order on which bundle will be printed on invoice document</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicated the order on which bundles will be printed on invoice document</inlineHelpText>
+        <label>Invoice Order</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_CZE__c</fullName>
+        <externalId>false</externalId>
+        <label>Label (Czech)</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_Eng__c</fullName>
+        <externalId>false</externalId>
+        <label>Label (English)</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_HUN__c</fullName>
+        <externalId>false</externalId>
+        <label>Label (Hungarian)</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_POL__c</fullName>
+        <externalId>false</externalId>
+        <label>Label (Polish)</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_ROU__c</fullName>
+        <externalId>false</externalId>
+        <label>Label (Romanian)</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_SVK__c</fullName>
+        <externalId>false</externalId>
+        <label>Label (Slovak)</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_AST__c</fullName>
+        <description>Technical field which will remember the last related AST, which should be disconnected in Durian. The field will be automatically clean after succesfull synchronization</description>
+        <externalId>false</externalId>
+        <label>Last AST</label>
+        <referenceTo>Attribute_Set_Type__c</referenceTo>
+        <relationshipLabel>Products (Last AST)</relationshipLabel>
+        <relationshipName>Products1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Line_of_Business__c</fullName>
+        <externalId>false</externalId>
+        <label>Line of Business</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Modified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies if the definition has been modified or not.</description>
+        <externalId>false</externalId>
+        <label>Modified</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>National__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Distance zone - National</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Distance zone - National</inlineHelpText>
+        <label>National</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Node_A_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check if Address Node A is required on request for this product</description>
+        <externalId>false</externalId>
+        <label>Node A Required</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Node_B_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check if Address Node B is required on request for this product</description>
+        <externalId>false</externalId>
+        <label>Node B Required</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Previous_AST__c</fullName>
+        <description>Technical field, which stores the previously assigned AST</description>
+        <externalId>false</externalId>
+        <label>Previous AST</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Prioritatization_Group__c</fullName>
+        <description>Added during Colorado Sprint 2</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A base for case prioritatization algorithm. Services from K1 group bounded with the case, will have greater priority, than services with K3 value.</inlineHelpText>
+        <label>Prioritatization Group</label>
+        <picklist>
+            <picklistValues>
+                <fullName>K1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>K2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>K3</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Retail__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Product available for Retail</description>
+        <externalId>false</externalId>
+        <label>Retail</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Synchronization_Log__c</fullName>
+        <externalId>false</externalId>
+        <label>Synchronization Log</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Synchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies whether the product definition has been send to external systems or not;</description>
+        <externalId>false</externalId>
+        <label>Synchronized</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>To_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>To Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Type_of_Service_for_Contract__c</fullName>
+        <description>Selected Type Of Service will be presented on printed Contract</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected Type Of Service will be presented on printed Contract</inlineHelpText>
+        <label>Type of Service for Contract</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Direct Voice-Public Telephone Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internet Access-Connection to Internet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leased Line-Lease of Data Circuits</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP VPN-Virtual Private Data Network</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Free Phone-Supp. Telephone Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shared Cost-Supp. Telephone Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Wholesale__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Product available for Wholesale</description>
+        <externalId>false</externalId>
+        <label>Wholesale</label>
+        <type>Checkbox</type>
+    </fields>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>Retail__c</columns>
+        <columns>Wholesale__c</columns>
+        <columns>PRODUCT2.ACTIVE</columns>
+        <columns>GTS_Location__c</columns>
+        <columns>Integration_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>GTS_SK_Products</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>Line_of_Business__c</columns>
+        <columns>Integration_ID__c</columns>
+        <columns>Label_Eng__c</columns>
+        <columns>Label_SVK__c</columns>
+        <columns>Attribute_Set_Type__c</columns>
+        <columns>Synchronized__c</columns>
+        <columns>Created_in_Extranet__c</columns>
+        <columns>PRODUCT2.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>equals</operation>
+            <value>GTS Slovakia</value>
+        </filters>
+        <filters>
+            <field>PRODUCT2.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>GTS SK Products</label>
+    </listViews>
+    <listViews>
+        <fullName>Retail</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>Retail__c</columns>
+        <columns>Wholesale__c</columns>
+        <columns>PRODUCT2.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Retail__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Retail</label>
+    </listViews>
+    <listViews>
+        <fullName>Unified_Products_active</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>PRODUCT2.DESCRIPTION</columns>
+        <columns>Wholesale__c</columns>
+        <columns>Retail__c</columns>
+        <columns>GTS_Location__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRODUCT2.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Unified Products (active)</label>
+    </listViews>
+    <listViews>
+        <fullName>Wholesale</fullName>
+        <columns>PRODUCT2.NAME</columns>
+        <columns>PRODUCT2.FAMILY</columns>
+        <columns>Wholesale__c</columns>
+        <columns>Retail__c</columns>
+        <columns>PRODUCT2.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Wholesale__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Wholesale</label>
+    </listViews>
+    <validationRules>
+        <fullName>From_Date_Check</fullName>
+        <active>true</active>
+        <description>Checks From Date against To Date</description>
+        <errorConditionFormula>IF(AND(IF(ISNULL(To_Date__c), false, true), From_Date__c &gt; To_Date__c), true, false)</errorConditionFormula>
+        <errorDisplayField>From_Date__c</errorDisplayField>
+        <errorMessage>From Date can not be a later date than To Date!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>To_Date_Check</fullName>
+        <active>true</active>
+        <description>Checks To Date against From Date</description>
+        <errorConditionFormula>IF(AND(IF(ISNULL(From_Date__c), false, true), From_Date__c &gt; To_Date__c), true, false)</errorConditionFormula>
+        <errorDisplayField>To_Date__c</errorDisplayField>
+        <errorMessage>To Date can not be an earlier date than From Date!</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Assign_Prices</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Assign Prices</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+location.href=&apos;/apex/RelatePricingItem?bid={!Product2.Id}&apos;;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Configure_Bundle</fullName>
+        <availability>online</availability>
+        <description>Opens page for Offer Structure Configuration (Bundles and Components)</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Configure Bundle</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+if({!INCLUDES( Product2.GTS_Location__c , &apos;GTS Slovakia&apos;)}){
+location.href=&apos;/apex/RelateBundleComponent?id={!Product2.Id}&apos;;
+//location.reload(true);
+} else {
+alert(&apos;Only Slovakian products can be configured.&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Configure_Offer_Structure</fullName>
+        <availability>online</availability>
+        <description>Opens page for Offer Structure Configuration</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Configure Offer Structure</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/Relate_Services?id={!Product2.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Synchronize</fullName>
+        <availability>online</availability>
+        <description>Sends Bundle structure to Extranet and Billing System</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Synchronize</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var prodId = &apos;{!Product2.Id}&apos;; 
+
+var synch = &apos;{!Product2.Synchronized__c}&apos;; 
+
+var a = &apos;false&apos;; 
+
+if(synch == 0) { 
+var resultString = sforce.apex.execute(&quot;Bundle_Synchronization_SK&quot;,&quot;Synchronize_Bundle&quot;, {bundleId: prodId, test: a}); 
+alert(resultString); 
+location.reload(true); 
+} 
+
+if(synch == 1){ 
+alert(&apos;Definition is synchronized.&apos;); 
+}</url>
+    </webLinks>
+</CustomObject>

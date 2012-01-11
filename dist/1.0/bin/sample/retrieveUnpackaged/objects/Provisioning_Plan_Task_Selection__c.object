@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object storing relation between Provisioning Plan Task and Provisionin Plan that can be triggered (or was triggered) from task.</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Provisioning_Plan_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK( &apos;/&apos;+ Provisioning_Plan__c , Provisioning_Plan__r.Name+&apos; - &apos;+Provisioning_Plan__r.Plan_Name__c )</formula>
+        <label>Provisioning Plan Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Provisioning_Plan_Task__c</fullName>
+        <externalId>false</externalId>
+        <label>Provisioning Plan Task</label>
+        <referenceTo>Provisioning_Plan_Task__c</referenceTo>
+        <relationshipLabel>Plans for selection</relationshipLabel>
+        <relationshipName>Plans_for_selection</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Provisioning_Plan__c</fullName>
+        <externalId>false</externalId>
+        <label>Provisioning Plan</label>
+        <referenceTo>Provisioning_Plan__c</referenceTo>
+        <relationshipLabel>Plans for selection</relationshipLabel>
+        <relationshipName>Plans_for_selection</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Selected__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Selected</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Provisioning Plan Task Selection</label>
+    <nameField>
+        <displayFormat>PTS{000000000}</displayFormat>
+        <label>Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Plans for selection</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Automatic_tasks</fullName>
+        <active>true</active>
+        <description>Automatic tasks should not have possibillity to start conditional plans.</description>
+        <errorConditionFormula>OR(
+ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c,&apos;Update of Billing Products&apos;),
+ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c,&apos;Billing Account Creation&apos;),
+ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c,&apos;IP Unregistration&apos;),
+ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c,&apos;IP Activation&apos;),
+ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c,&apos;Phone Number Release&apos;),
+ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c,&apos;Phone Number Activation&apos;),
+ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c,&apos;Automatic Provisioning (ST)&apos;),
+ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c,&apos;Automatic Provisioning&apos;),
+ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c,&apos;Update of CSR Database&apos;)
+)</errorConditionFormula>
+        <errorMessage>Plans for selection can not be set for automatic task.</errorMessage>
+    </validationRules>
+</CustomObject>

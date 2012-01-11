@@ -1,0 +1,3021 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>Roof_Rental_Leased_Lines_Edit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>Roof_Rental_Leased_Lines_Insert</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>Roof_Rental_Leased_Lines_View</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Roof Rental, Leased Line, Crossborder</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>ACC_Account__c</fullName>
+        <description>Z CRMa</description>
+        <externalId>false</externalId>
+        <label>ACC Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>RRLL2Account</relationshipLabel>
+        <relationshipName>RRLL2Account</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACC__c</fullName>
+        <externalId>false</externalId>
+        <label>ACC</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Accrual_account__c</fullName>
+        <externalId>false</externalId>
+        <label>Accrual account</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <description>Informuje czy element jest aktywny.</description>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agreement__c</fullName>
+        <externalId>false</externalId>
+        <label>Agreement</label>
+        <referenceTo>Costs_Agreement__c</referenceTo>
+        <relationshipLabel>RRLL2Agreement</relationshipLabel>
+        <relationshipName>RRLL2Agreement</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Appendix__c</fullName>
+        <description>Appendix associated with this element</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Appendix associated with this element</inlineHelpText>
+        <label>Appendix</label>
+        <referenceTo>Costs_Agreement__c</referenceTo>
+        <relationshipLabel>RRLL2Appendix</relationshipLabel>
+        <relationshipName>RRLL2Appendix</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bandwidth_Description__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Bandwidth Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bandwith__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Bandwith</label>
+        <picklist>
+            <picklistValues>
+                <fullName>128 kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>512 kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1024 kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2048 kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>16 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>18 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>30 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>50 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>100 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>130 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>200 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>500 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15B+D (PRA)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 Gbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>250 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>256 kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2B+D (BRA)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 Gb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>30B+D (PRA)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>32 kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4096 kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>64 kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>64 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DS3 (45 Mbps)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E1 (2 Mbps)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E3 (34 Mbps)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lambda 10G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lambda 1G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lambda 2,5G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-1 (155 Mbps)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-16 (2.4 Gbps)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-4 (622 Mbps)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 GB/ps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 GB/ps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>100 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1024 kbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>128 kbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>18 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2,5 G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>200 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2048 kbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>250 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>256 kbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>300 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>30 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 Mbit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4096 kbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>500 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>50 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>512 kbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>64 kbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>64 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8 Mbit/s</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADSL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>APN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DS3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DS3 (VC3)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DSL 1000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>150 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1/1Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1Mbps/512kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2/2Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2Mbps/256kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 Gb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12 Gb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>35 Gb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>80 Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DSL 250</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DSL 500</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DSL 2000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DSL 4000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DSL 8000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DSL 15000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20/1 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3/1 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>512/ 512 kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 Mbps/512 kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3/3 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10/10 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5/1 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Business Unit</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CID__c</fullName>
+        <externalId>false</externalId>
+        <label>CID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Call__c</fullName>
+        <externalId>false</externalId>
+        <label>Call</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Colocation_rack_piece__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Colocation rack/piece</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comment1__c</fullName>
+        <externalId>false</externalId>
+        <label>Netcontracts Comments</label>
+        <length>2500</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Comment2__c</fullName>
+        <externalId>false</externalId>
+        <label>Controling and Planning Comments</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Comment3__c</fullName>
+        <externalId>false</externalId>
+        <label>Accounting Comments</label>
+        <length>2500</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Comment_Site_A__c</fullName>
+        <externalId>false</externalId>
+        <label>Comment (Site A)</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Comment_Site_B__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Comment (Site B)</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Company_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Company Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Energis</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Polska</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Contract_CR__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Contract CR</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Rome__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Contract Rome</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Termination_Specified_Term__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Contract Termination (Specified Term)</label>
+        <length>2500</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cost_account__c</fullName>
+        <externalId>false</externalId>
+        <label>Cost account</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_of_Signing__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Signing</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Discount_In_Percent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Discount In Percent</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Discount__c</fullName>
+        <externalId>false</externalId>
+        <label>Discount</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Discount_start_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Discount start date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>End_of_Service__c</fullName>
+        <externalId>false</externalId>
+        <label>End of Service</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Expiry_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expiry date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Fee</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Financial_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>Financial Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipLabel>RRLL2User(Financial Owner)</relationshipLabel>
+        <relationshipName>RRLL2User_FO</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Identification_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Identification number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoiced_until__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoiced until</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>KAM__c</fullName>
+        <description>Z CRMa</description>
+        <externalId>false</externalId>
+        <label>KAM</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Length_km__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Length (km)</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lesse_Information__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Lesse Information</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Atom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Atom (BN)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Atom (CORE-CORE)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Atom (CORE-POP)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Atom (CR)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Atom (POP-POP)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Firmowe</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Energis (CR)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Polska</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Polska (CR)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT (BN)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT (CORE-CORE)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT (CORE-POP)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT (CR)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Klient</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>POP-POP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ProNet (DORE-POP)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Licence__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Licence</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Link_ID__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Link ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOR_account__c</fullName>
+        <externalId>false</externalId>
+        <label>MOR account</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_of_One_off__c</fullName>
+        <externalId>false</externalId>
+        <label>Month of One off</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Fee_CUR__c</fullName>
+        <externalId>false</externalId>
+        <label>Monthly Fee CUR</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Fee_PLN__c</fullName>
+        <externalId>false</externalId>
+        <label>Monthly Fee (PLN)</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Monthly Fee</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_discounted__c</fullName>
+        <externalId>false</externalId>
+        <label>Monthly discounted</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NIP__c</fullName>
+        <externalId>false</externalId>
+        <label>NIP</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Node_Sign__c</fullName>
+        <externalId>false</externalId>
+        <label>Node Sign</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Node__c</fullName>
+        <externalId>false</externalId>
+        <label>Node</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Item__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Item</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>One_Off_Fee_PLN__c</fullName>
+        <externalId>false</externalId>
+        <label>One Off Fee PLN</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>One_off_fee_CUR__c</fullName>
+        <externalId>false</externalId>
+        <label>One off fee CUR</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>One_off_fee__c</fullName>
+        <externalId>false</externalId>
+        <label>One off fee</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Our_Customer__c</fullName>
+        <externalId>false</externalId>
+        <label>Our Customer</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Our_Service__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Our Service</label>
+        <picklist>
+            <picklistValues>
+                <fullName>IP VPN Port</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IPL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IPLC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IPVPN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MPLS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MPLS, IP, VPN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SDH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipLabel>LL2User(Owner)</relationshipLabel>
+        <relationshipName>LL2User_O</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PIN__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>PIN</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PUK__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>PUK</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Paym_Since__c</fullName>
+        <externalId>false</externalId>
+        <label>Paym Since</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Payment_for_the_lenght__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Payment for the lenght</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone_Number__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Phone Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Start_of_Service__c</fullName>
+        <externalId>false</externalId>
+        <label>Planned Start of Service</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Position_on_the_invoice__c</fullName>
+        <externalId>false</externalId>
+        <label>Position on the invoice</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Power_CUR__c</fullName>
+        <externalId>false</externalId>
+        <label>Currency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Power__c</fullName>
+        <externalId>false</externalId>
+        <label>Power</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price_per_antenna_CUR__c</fullName>
+        <externalId>false</externalId>
+        <label>Price per antenna CUR</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Price_per_antenna__c</fullName>
+        <externalId>false</externalId>
+        <label>Price per antenna</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price_per_antenna_size__c</fullName>
+        <externalId>false</externalId>
+        <label>Size</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price_per_construction_CUR__c</fullName>
+        <externalId>false</externalId>
+        <label>Price per construction CUR</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Price_per_construction__c</fullName>
+        <externalId>false</externalId>
+        <label>Price per construction</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price_per_construction_quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price_per_m2_CUR__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Price per [m2]  CUR</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Price_per_m2__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Price per [m2]</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price_per_radio_dish_CUR__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Price per radio/dish CUR</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Price_per_radio_dish__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Price per rack/piece</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price_per_riser_CUR__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Price per riser CUR</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Price_per_riser__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Price per riser</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <picklist>
+            <picklistValues>
+                <fullName>511300</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>511800</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>512300</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>513100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>517200</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>521100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>522100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>522200</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>524100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>524200</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>525100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>525200</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>526100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>531100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>533100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>541200</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>541300</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>807837</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>912100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>912160</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>913100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>915100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>917400</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>921100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>922100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>922200</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>924100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>924200</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>925100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>931100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>932100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>941100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>941300</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>942100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>943100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>945100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>952100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>953100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>999999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>900000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>941400</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Project_Manager__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Project Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipLabel>LL2User(Project Manager)</relationshipLabel>
+        <relationshipName>LL2User_PM</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RL_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Nextno</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ROME_Site_Name__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Site Name based on ROME</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RR_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>RR Id</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region_City__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Region City</label>
+        <picklist>
+            <picklistValues>
+                <fullName>dolno�l�skie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>kujawsko-pomorskie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>lubelskie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>lubuskie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>��dzkie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ma�opolskie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>mazowieckie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>opolskie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>podkarpackie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>podlaskie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>pomorskie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>�l�skie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>�wi�tokrzyskie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>warmi�sko-mazurskie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>wielkopolskie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>zachodniopomorskie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Report__c</fullName>
+        <description>Name of the raport</description>
+        <externalId>false</externalId>
+        <label>Report</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Rental Report</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lease Line</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Crossborder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Right_of_way_Price_per_km_CUR__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Right of way/Price per km CUR</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Right_of_way_Price_per_km__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Right of way /Price per km</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Right_of_way__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Right of way</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Riser__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Riser</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SIM_card_number__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>SIM card number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Scala__c</fullName>
+        <externalId>false</externalId>
+        <label>Scala</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Security_CUR__c</fullName>
+        <externalId>false</externalId>
+        <label>Security CUR</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Security__c</fullName>
+        <externalId>false</externalId>
+        <label>Security</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Should_be_paid_till__c</fullName>
+        <externalId>false</externalId>
+        <label>Should be paid till</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Site_A_node__c</fullName>
+        <externalId>false</externalId>
+        <label>Site A (node)</label>
+        <referenceTo>Site_A_B__c</referenceTo>
+        <relationshipLabel>RRLL2SiteA</relationshipLabel>
+        <relationshipName>RRLL2SiteA</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Site_B_Customer__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Site B (Customer)</label>
+        <referenceTo>Site_A_B__c</referenceTo>
+        <relationshipLabel>LL2SiteB</relationshipLabel>
+        <relationshipName>LL2SiteB</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Site_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Site Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Site_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Site Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Glassthrough</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NAP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Office</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>POP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TPSA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Start_of_Service_from_Protocol__c</fullName>
+        <externalId>false</externalId>
+        <label>Start of Service from Protocol</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Surface__c</fullName>
+        <description>Roofs Rental</description>
+        <externalId>false</externalId>
+        <label>Surface [m2]</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task__c</fullName>
+        <externalId>false</externalId>
+        <label>Task</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Termination_months__c</fullName>
+        <externalId>false</externalId>
+        <label>Termination (months)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>The_End_Client__c</fullName>
+        <externalId>false</externalId>
+        <label>The End Client</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type_of_Payment__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of Payment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Monthly Fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quatrely Fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Half of the Year Fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Annualy Fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type_of_Service_Medium__c</fullName>
+        <description>Leased Lines</description>
+        <externalId>false</externalId>
+        <label>Type of Service /Medium</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ADSL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>APN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cabling</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Collocation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Copper</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Copper Pair</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dark fibre</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dark Fibre 2J</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Digital channel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DSL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ducts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fibre</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Frame Relay</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ISDN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Numeration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Patching</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Peering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Peering/Copper pair</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Peering/Dark Fibre (Pair 2J)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Power</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PSTN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Riser</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SIM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upstream</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VLAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dark Fibre 1J</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type_of_Service__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of Service</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Building Access Right</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Collocation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Collocation TP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Exploitation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PKP ground</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Power</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Right of way</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Riser</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Roof Rental</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZDM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Type_of_cloning__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of cloning</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type_of_cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of cost</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BIBN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BILL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BIUP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BNLL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COCR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COTH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CRLL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CRTH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CRUP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICNE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICNP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICOAntel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICODatanet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICONovera</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICONoveraCZK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICONoveraEUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICONoveraSFDC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICORomania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICOSlovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>INB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>INCR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>THBI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>THBN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>THE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OCOR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CROT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Valorization_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Valorization Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Valorization_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Valorization Rate</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Invoice__c</fullName>
+        <externalId>false</externalId>
+        <label>Vendor (Invoice)</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>RRLL (Vendor (Invoice))</relationshipLabel>
+        <relationshipName>RRLL2AccountVendor</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>a_mig__c</fullName>
+        <externalId>false</externalId>
+        <label>a_mig</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>a_mig_acc__c</fullName>
+        <externalId>false</externalId>
+        <label>a_mig_acc</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>a_mig_agr__c</fullName>
+        <externalId>false</externalId>
+        <label>a_mig_agr</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>a_mig_ape__c</fullName>
+        <externalId>false</externalId>
+        <label>a_mig_ape</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>a_mig_fo__c</fullName>
+        <externalId>false</externalId>
+        <label>a_mig_fo</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>a_mig_o__c</fullName>
+        <externalId>false</externalId>
+        <label>a_mig_o</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>a_mig_pm__c</fullName>
+        <externalId>false</externalId>
+        <label>a_mig_pm</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>a_mig_sa__c</fullName>
+        <externalId>false</externalId>
+        <label>a_mig_sa</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>a_mig_sb__c</fullName>
+        <externalId>false</externalId>
+        <label>a_mig_sb</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Roof Rental / Leased Line</label>
+    <listViews>
+        <fullName>ALL</fullName>
+        <columns>NAME</columns>
+        <columns>Link_ID__c</columns>
+        <columns>Owner__c</columns>
+        <columns>Active__c</columns>
+        <columns>RL_ID__c</columns>
+        <columns>Agreement__c</columns>
+        <columns>Vendor_Invoice__c</columns>
+        <columns>Appendix__c</columns>
+        <columns>Date_of_Signing__c</columns>
+        <columns>Monthly_discounted__c</columns>
+        <columns>Monthly_Fee__c</columns>
+        <columns>One_off_fee__c</columns>
+        <columns>One_off_fee_CUR__c</columns>
+        <columns>End_of_Service__c</columns>
+        <columns>Fee__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Vendor_Invoice__c</field>
+            <operation>contains</operation>
+        </filters>
+        <filters>
+            <field>RL_ID__c</field>
+            <operation>contains</operation>
+        </filters>
+        <filters>
+            <field>Link_ID__c</field>
+            <operation>contains</operation>
+            <value>(61) 866 76 10</value>
+        </filters>
+        <filters>
+            <field>Site_B_Customer__c</field>
+            <operation>contains</operation>
+        </filters>
+        <label>ALL</label>
+    </listViews>
+    <listViews>
+        <fullName>All_RR</fullName>
+        <columns>NAME</columns>
+        <columns>Scala__c</columns>
+        <columns>RL_ID__c</columns>
+        <columns>Comment2__c</columns>
+        <columns>Agreement__c</columns>
+        <columns>ACC__c</columns>
+        <columns>Identification_number__c</columns>
+        <columns>Contract__c</columns>
+        <columns>Contract_CR__c</columns>
+        <columns>CID__c</columns>
+        <columns>Site_A_node__c</columns>
+        <columns>One_off_fee__c</columns>
+        <columns>Monthly_Fee__c</columns>
+        <columns>Financial_Owner__c</columns>
+        <columns>End_of_Service__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Vendor_Invoice__c</field>
+            <operation>contains</operation>
+            <value>tp emitel</value>
+        </filters>
+        <filters>
+            <field>Call__c</field>
+            <operation>contains</operation>
+            <value>545497</value>
+        </filters>
+        <label>All_RR</label>
+    </listViews>
+    <listViews>
+        <fullName>NBK_PM</fullName>
+        <columns>NAME</columns>
+        <columns>Vendor_Invoice__c</columns>
+        <columns>Active__c</columns>
+        <columns>Site_A_node__c</columns>
+        <columns>Site_B_Customer__c</columns>
+        <columns>Monthly_Fee__c</columns>
+        <columns>Monthly_Fee_CUR__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Vendor_Invoice__c</field>
+            <operation>contains</operation>
+            <value>ATM</value>
+        </filters>
+        <label>NBK_PM</label>
+    </listViews>
+    <listViews>
+        <fullName>Nextno</fullName>
+        <columns>Company_Name__c</columns>
+        <columns>NAME</columns>
+        <columns>RL_ID__c</columns>
+        <columns>Active__c</columns>
+        <columns>Site_B_Customer__c</columns>
+        <columns>Monthly_Fee__c</columns>
+        <columns>Our_Customer__c</columns>
+        <columns>Agreement__c</columns>
+        <columns>Vendor_Invoice__c</columns>
+        <columns>Site_A_node__c</columns>
+        <columns>CID__c</columns>
+        <columns>Link_ID__c</columns>
+        <columns>Fee__c</columns>
+        <columns>Start_of_Service_from_Protocol__c</columns>
+        <columns>End_of_Service__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CID__c</field>
+            <operation>contains</operation>
+            <value>810796</value>
+        </filters>
+        <label>Nextno</label>
+    </listViews>
+    <listViews>
+        <fullName>OneOff</fullName>
+        <columns>Agreement__c</columns>
+        <columns>NAME</columns>
+        <columns>RL_ID__c</columns>
+        <columns>Planned_Start_of_Service__c</columns>
+        <columns>Monthly_Fee__c</columns>
+        <columns>One_off_fee__c</columns>
+        <columns>Month_of_One_off__c</columns>
+        <columns>One_off_fee_CUR__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Comment2__c</field>
+            <operation>equals</operation>
+            <value>4976</value>
+        </filters>
+        <label>OneOff</label>
+    </listViews>
+    <listViews>
+        <fullName>accrual_account</fullName>
+        <columns>NAME</columns>
+        <columns>Accrual_account__c</columns>
+        <columns>Financial_Owner__c</columns>
+        <columns>Cost_account__c</columns>
+        <columns>MOR_account__c</columns>
+        <columns>Identification_number__c</columns>
+        <columns>Position_on_the_invoice__c</columns>
+        <columns>Fee__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Site_A_node__c</field>
+            <operation>contains</operation>
+            <value>Blocha</value>
+        </filters>
+        <label>accrual account</label>
+    </listViews>
+    <listViews>
+        <fullName>alldt</fullName>
+        <columns>NAME</columns>
+        <columns>Discount__c</columns>
+        <columns>Discount_In_Percent__c</columns>
+        <columns>Discount_start_date__c</columns>
+        <columns>CID__c</columns>
+        <columns>Financial_Owner__c</columns>
+        <columns>Comment_Site_A__c</columns>
+        <columns>Comment_Site_B__c</columns>
+        <columns>Comment1__c</columns>
+        <columns>Contract_Rome__c</columns>
+        <columns>Contract_Termination_Specified_Term__c</columns>
+        <columns>Cost_account__c</columns>
+        <columns>Date_of_Signing__c</columns>
+        <columns>Fee__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Site_Name__c</field>
+            <operation>contains</operation>
+            <value>chwaszczyno</value>
+        </filters>
+        <label>alldt</label>
+    </listViews>
+    <listViews>
+        <fullName>t</fullName>
+        <columns>Agreement__c</columns>
+        <columns>NAME</columns>
+        <columns>Financial_Owner__c</columns>
+        <columns>Fee__c</columns>
+        <columns>Monthly_Fee__c</columns>
+        <columns>Monthly_Fee_PLN__c</columns>
+        <columns>Month_of_One_off__c</columns>
+        <columns>Monthly_Fee_CUR__c</columns>
+        <columns>Business_Unit__c</columns>
+        <columns>Product__c</columns>
+        <columns>Owner__c</columns>
+        <columns>MOR_account__c</columns>
+        <columns>Accrual_account__c</columns>
+        <columns>Appendix__c</columns>
+        <columns>Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RL_ID__c</field>
+            <operation>contains</operation>
+            <value>l05000</value>
+        </filters>
+        <label>t</label>
+    </listViews>
+    <listViews>
+        <fullName>vendorMD</fullName>
+        <columns>Active__c</columns>
+        <columns>Financial_Owner__c</columns>
+        <columns>Company_Name__c</columns>
+        <columns>Identification_number__c</columns>
+        <columns>Link_ID__c</columns>
+        <columns>Cost_account__c</columns>
+        <columns>Old_Item__c</columns>
+        <columns>RL_ID__c</columns>
+        <columns>Start_of_Service_from_Protocol__c</columns>
+        <columns>Monthly_Fee__c</columns>
+        <columns>Product__c</columns>
+        <columns>Agreement__c</columns>
+        <columns>Vendor_Invoice__c</columns>
+        <columns>Scala__c</columns>
+        <columns>Type_of_cost__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Vendor_Invoice__c</field>
+            <operation>contains</operation>
+            <value>optoland</value>
+        </filters>
+        <label>vendorOpiekun</label>
+    </listViews>
+    <nameField>
+        <label>RR/LL Id</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>RRLL</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>RL_ID__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Appendix__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.ALIAS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Our_Customer__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>One_off_fee__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Monthly_Fee__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Monthly_discounted__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Monthly_Fee_CUR__c</customTabListAdditionalFields>
+        <listViewButtons>Planned_Discount</listViewButtons>
+        <listViewButtons>CalculateRate_Invoice</listViewButtons>
+        <listViewButtons>Calculate_Rates</listViewButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Currency_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(
+AND(NOT(ISNULL(Price_per_m2__c)), ISBLANK(TEXT(Price_per_m2_CUR__c))),
+AND(NOT(ISNULL(Price_per_radio_dish__c  )), ISBLANK(TEXT( Price_per_radio_dish_CUR__c ))),
+AND(NOT(ISNULL(Price_per_riser__c )), ISBLANK(TEXT( Price_per_riser_CUR__c))),
+AND(NOT(ISNULL(Right_of_way_Price_per_km__c )), ISBLANK(TEXT( Right_of_way_Price_per_km_CUR__c ))),
+AND(NOT(ISNULL(One_off_fee__c )), ISBLANK(TEXT(One_off_fee_CUR__c ))),
+AND(NOT(ISNULL(Monthly_Fee__c )), ISBLANK(TEXT(Monthly_Fee_CUR__c )))
+)</errorConditionFormula>
+        <errorMessage>ERROR: One or more Currency fields hasn&apos;t been filled.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>DISCOUNT_START_DATE_ISBLANK</fullName>
+        <active>true</active>
+        <description>OR(
+IF(NOT(ISBLANK(Discount__c)),ISBLANK( Discount_start_date__c ),false),
+IF(ISBLANK(Discount_start_date__c),false,MONTH(Discount_start_date__c) &gt; MONTH( TODAY() ) ))
+You must insert a date. Date can not be future.</description>
+        <errorConditionFormula>IF(NOT(ISBLANK(Discount__c)),AND(ISBLANK( Discount_start_date__c),Discount__c &lt;&gt; 0),false)</errorConditionFormula>
+        <errorDisplayField>Discount_start_date__c</errorDisplayField>
+        <errorMessage>You must insert a date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Date_of_Signing_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( Date_of_Signing__c )</errorConditionFormula>
+        <errorDisplayField>Date_of_Signing__c</errorDisplayField>
+        <errorMessage>This date can not be empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>End_Of_Service_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(Date_of_Signing__c &gt; End_of_Service__c,true,false)</errorConditionFormula>
+        <errorDisplayField>End_of_Service__c</errorDisplayField>
+        <errorMessage>End of Service date cannot be before Date of Signing</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Month_of_One_off_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( Month_of_One_off__c )</errorConditionFormula>
+        <errorDisplayField>Month_of_One_off__c</errorDisplayField>
+        <errorMessage>You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Monthly_Fee_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(Monthly_Fee__c)</errorConditionFormula>
+        <errorDisplayField>Monthly_Fee__c</errorDisplayField>
+        <errorMessage>You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>One_Off_Fee_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISNULL(One_off_fee__c),   NOT(ISNULL( Month_of_One_off__c )))</errorConditionFormula>
+        <errorDisplayField>One_off_fee__c</errorDisplayField>
+        <errorMessage>You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PLANED_START_OF_SERVICE_ISBLANK</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( Planned_Start_of_Service__c )</errorConditionFormula>
+        <errorDisplayField>Planned_Start_of_Service__c</errorDisplayField>
+        <errorMessage>You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RRLL_BANDWITH_ISBLANK</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(ISPICKVAL(Report__c,&apos;Rental Report&apos;),false,ISPICKVAL( Bandwith__c,&apos;&apos; ))</errorConditionFormula>
+        <errorDisplayField>Bandwith__c</errorDisplayField>
+        <errorMessage>You must choose a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RRLL_Report_ISPICKLIST</fullName>
+        <active>true</active>
+        <description>Field can&apos;t be empty
+ISPICKVAL( Report__c , &apos;&apos;)</description>
+        <errorConditionFormula>LEN(TEXT(Report__c))&lt;=1</errorConditionFormula>
+        <errorDisplayField>Report__c</errorDisplayField>
+        <errorMessage>You must select a value.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RRLL_SITEA_ISBLANK</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( Site_A_node__c )</errorConditionFormula>
+        <errorDisplayField>Site_A_node__c</errorDisplayField>
+        <errorMessage>You must choose a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RRLL_SITEB_ISBLANK</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(ISPICKVAL(Report__c, &quot;Rental Report&quot;),false, ISBLANK(Site_B_Customer__c))</errorConditionFormula>
+        <errorDisplayField>Site_B_Customer__c</errorDisplayField>
+        <errorMessage>You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TYPE_OF_COST_ISBLANK</fullName>
+        <active>true</active>
+        <description>This filed have to be filled
+ISPICKVAL( Type_of_cost__c, &apos;&apos;)</description>
+        <errorConditionFormula>LEN(TEXT(Type_of_cost__c))&lt;=1</errorConditionFormula>
+        <errorDisplayField>Type_of_cost__c</errorDisplayField>
+        <errorMessage>You have to choose a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TYPE_OF_SERVICE_ISBLANK</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(ISPICKVAL(Report__c, &quot;Rental Report&quot;), ISBLANK( Type_of_Service__c), false)</errorConditionFormula>
+        <errorDisplayField>Type_of_Service__c</errorDisplayField>
+        <errorMessage>You have to choose a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TYPE_OF_SERVICE_MEDIUM_ISBLANK</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( OR(ISPICKVAL(Report__c, &quot;Crossborder&quot;), ISPICKVAL(Report__c, &quot;Lease Line&quot;)) , ISPICKVAL( Type_of_Service_Medium__c, &apos;&apos;), false)</errorConditionFormula>
+        <errorDisplayField>Type_of_Service_Medium__c</errorDisplayField>
+        <errorMessage>You have to choose a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Type_Of_Payment_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(NOT(ISNULL(Monthly_Fee__c)),   ISBLANK(TEXT( Type_of_Payment__c )))</errorConditionFormula>
+        <errorDisplayField>Type_of_Payment__c</errorDisplayField>
+        <errorMessage>You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Valorization_Date_VALIDATION</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(AND(ISBLANK(Valorization_Date__c),NOT(ISBLANK( Valorization_Rate__c ))),true, false)</errorConditionFormula>
+        <errorDisplayField>Valorization_Date__c</errorDisplayField>
+        <errorMessage>You have to choose a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Valorization_Rate_VALIDATION</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(AND(NOT(ISBLANK(Valorization_Date__c)),ISBLANK( Valorization_Rate__c )),true, false)</errorConditionFormula>
+        <errorDisplayField>Valorization_Rate__c</errorDisplayField>
+        <errorMessage>You have to choose a value</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>CalculateRate_Invoice</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>CalculateRate &amp; Invoice</masterLabel>
+        <openType>sidebar</openType>
+        <page>RRLLCalculateRateInvoice</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Calculate_Rates</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Calculate Rates</masterLabel>
+        <openType>sidebar</openType>
+        <page>RRLLCalculateRate</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Calculate_discounted_fee</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Calculate</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/18.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/18.0/apex.js&quot;)}
+sforce.apex.executeAnonymous(&apos;roofRentalExtension.MonthlyDiscounted();&apos;)
+alert(&apos;aaa&apos;);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Clon_as_a_new_object</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Clon as a new object</masterLabel>
+        <openType>sidebar</openType>
+        <page>Roof_Rental_Leased_Lines_Clone_new</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Clone_as_a_continuation</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Clone as a continuation</masterLabel>
+        <openType>sidebar</openType>
+        <page>Roof_Rental_Leased_Lines_Clone_contin</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Export_Selected</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Export Selected</masterLabel>
+        <openType>noSidebar</openType>
+        <page>Roof_Rental_Leased_Lines_Selected</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Invoice</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Invoice</masterLabel>
+        <openType>sidebar</openType>
+        <page>RRLLInvoice</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Planned_Discount</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Planned Discount</masterLabel>
+        <openType>sidebar</openType>
+        <page>RRLL_Planned_Dicount</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

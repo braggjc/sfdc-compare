@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <content>Project_Cost_Clone</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>Project_Cost_Edit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>Project_Cost_New</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>Project_Cost_View</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Solution base</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Project costs</relationshipLabel>
+        <relationshipName>Project_costs</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contract_lenght__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract lenght</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Currency__c</fullName>
+        <externalId>false</externalId>
+        <label>Currency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>10000</length>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>IS_Local__c</fullName>
+        <externalId>false</externalId>
+        <label>IS / Local</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Project costs</relationshipLabel>
+        <relationshipName>Project_costs</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Real__c</fullName>
+        <externalId>false</externalId>
+        <label>Real</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Short_description__c</fullName>
+        <externalId>false</externalId>
+        <label>Short description</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Status_disable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Status_disable</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Task__c</fullName>
+        <externalId>false</externalId>
+        <label>Task</label>
+        <referenceTo>CTask__c</referenceTo>
+        <relationshipLabel>Project costs</relationshipLabel>
+        <relationshipName>Project_costs2Task</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>User2Kam__c</fullName>
+        <externalId>false</externalId>
+        <label>KAM</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Project_costs</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>User2PM__c</fullName>
+        <externalId>false</externalId>
+        <label>PM</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Project_costs1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Version__c</fullName>
+        <defaultValue>TEXT(1)+&apos;.&apos;+TEXT(0)</defaultValue>
+        <externalId>false</externalId>
+        <label>Version</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Project cost</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>IS_Local__c</columns>
+        <columns>Account__c</columns>
+        <columns>Contract_lenght__c</columns>
+        <columns>Short_description__c</columns>
+        <columns>Version__c</columns>
+        <columns>User2Kam__c</columns>
+        <columns>User2PM__c</columns>
+        <columns>Task__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PC{000000000}</displayFormat>
+        <label>Name project cost</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Project costs</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>IS_Local__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Version__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>User2Kam__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>User2PM__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Task__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Short_description__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Account</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(  Account__c )</errorConditionFormula>
+        <errorDisplayField>Account__c</errorDisplayField>
+        <errorMessage>Account can not be empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>KAM</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(   User2Kam__c )</errorConditionFormula>
+        <errorDisplayField>User2Kam__c</errorDisplayField>
+        <errorMessage>KAM can not be empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PM</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(    User2PM__c )</errorConditionFormula>
+        <errorDisplayField>User2PM__c</errorDisplayField>
+        <errorMessage>PM can not be empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Task</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( Task__c)</errorConditionFormula>
+        <errorDisplayField>Task__c</errorDisplayField>
+        <errorMessage>Task can not be empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Version_validation</fullName>
+        <active>true</active>
+        <description>Check if version is numeric value (required because we must use . as decimal separator)</description>
+        <errorConditionFormula>!REGEX(Version__c  , &quot;[0-9]*\\.?[0-9]+&quot;) || ( BEGINS(Version__c, &apos;0&apos;) &amp;&amp; !BEGINS(Version__c, &apos;0.&apos;) )</errorConditionFormula>
+        <errorDisplayField>Version__c</errorDisplayField>
+        <errorMessage>Version field must be a numeric value with . as decimal separator. (Example: 1.1)</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Clone</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Clone</masterLabel>
+        <openType>noSidebar</openType>
+        <page>Project_Cost_Clone</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Calculation</fullName>
+        <availability>online</availability>
+        <description>Opens page allowing to create BCT Caluclation from selected Project</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create Calculation</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS($ObjectType.Project_cost__c)};
+var OpportunityId = &quot;{!Opportunity.Id}&quot;;
+var verified = &quot;{!Opportunity.Sales_Type_Verified__c}&quot;;
+var ProjectId = &quot;&quot;;
+var result;
+
+if(verified == &quot;1&quot;){
+   if (records.length != 1) {
+      alert(&quot;Please select exactly one Project Cost to create Calculation from it&quot;);
+   } else {
+      ProjectId = records[0];
+      window.location = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/apex/CreateNewCalculation?opp_id=&quot; + OpportunityId + &quot;&amp;proj_id=&quot; + ProjectId;
+   }
+} else {
+   alert(&quot;Sales Type must be verified before sending calculation to BCT&quot;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Query</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Create Query</masterLabel>
+        <openType>noSidebar</openType>
+        <page>Project_Cost_Create_Query</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Export</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Export</masterLabel>
+        <openType>noSidebar</openType>
+        <page>Project_Cost_Export_To_Excel</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

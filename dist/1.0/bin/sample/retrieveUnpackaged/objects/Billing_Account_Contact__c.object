@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>List of Contacts related to Billing Account</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Related Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Account</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Billing_Account_Contacts</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Allows to deactivate Contact</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Allows to deactivate Contact</inlineHelpText>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Account__c</fullName>
+        <description>Related Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Billing Account</inlineHelpText>
+        <label>Billing Account</label>
+        <referenceTo>Billing_Accounts__c</referenceTo>
+        <relationshipName>Billing_Account_Contacts</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Contact_Email__c</fullName>
+        <description>Email of Related Contact</description>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK( User__c ),  Contact__r.Email, User__r.Email)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Email of Related Contact</inlineHelpText>
+        <label>Contact Email</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <description>Name of Assigned Contact</description>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK( User__c ),  HYPERLINK(&apos;/&apos; +  Contact__r.Id ,   Contact__r.FirstName + &apos; &apos; + Contact__r.LastName, &apos;_top&apos; ), HYPERLINK(&apos;/&apos; +  User__r.Id , User__r.FirstName + &apos; &apos; + User__r.LastName, &apos;_top&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Name of Assigned Contact</inlineHelpText>
+        <label>Contact Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>Selected Contact</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected Contact</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipName>Billing_Account_Contacts</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Information has already been sent to Billing (no delete after that)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Information has already been sent to Billing</inlineHelpText>
+        <label>Created in Billing</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <description>Role of the Contact</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Role of the Contact</inlineHelpText>
+        <label>Role</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Payments</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regional Director</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>Identifier used during data migration</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Identifier used during data migration</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <description>Selected User</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected User</inlineHelpText>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Billing_Account_Contacts</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>Collection Billing Account Contact</label>
+    <nameField>
+        <displayFormat>BCO{000000000}</displayFormat>
+        <label>Contact ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Collection Billing Account Contacts</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>Billing_Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Role__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>User__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact_Email__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Billing_Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Role__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Contact__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>User__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Contact_Email__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>UPDATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>BillingAccount_Account</fullName>
+        <active>true</active>
+        <description>Selected Billing Account must depend on selected Account</description>
+        <errorConditionFormula>Account__r.Id !=  Billing_Account__r.Account__r.Id</errorConditionFormula>
+        <errorDisplayField>Billing_Account__c</errorDisplayField>
+        <errorMessage>Selected Billing Account does not belong to this Account</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ContactOrUserRequired</fullName>
+        <active>true</active>
+        <description>Contact OR User is required</description>
+        <errorConditionFormula>OR(
+AND(
+NOT(ISBLANK(Contact__c)),
+NOT(ISBLANK(User__c))),
+AND(
+ISBLANK(Contact__c),
+ISBLANK(User__c)))</errorConditionFormula>
+        <errorMessage>Contact OR User must be selected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Contact_Account</fullName>
+        <active>true</active>
+        <description>Verifies if selected Contact belongs to Account or Dealer</description>
+        <errorConditionFormula>AND(
+ Contact__r.AccountId !=  Account__r.Id ,
+ Contact__r.Account.Dealer__c = false
+)</errorConditionFormula>
+        <errorDisplayField>Contact__c</errorDisplayField>
+        <errorMessage>Selected contact must belong to selected Customer or Dealer Account</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Security_Sales_and_Manager</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(NOT(ISNEW()), OR(ISPICKVAL(Role__c, &apos;Sales&apos;), ISPICKVAL(Role__c, &apos;Regional Director&apos;)), $Profile.Name != &apos;Collection&apos;, $Profile.Name != &apos;Billing and Collection&apos;, $Profile.Name != &apos;Billing&apos;, $Profile.Name != &apos;System Administrator&apos;)</errorConditionFormula>
+        <errorMessage>This Type of Contact can be modified only by Collection Department</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Contact</fullName>
+        <availability>online</availability>
+        <description>Selection of new Contact</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Contact</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>window.location.href=&quot;{!URLFOR($Action.Billing_Account_Contact__c.New , null, [CF00NR000000175lB_lkid=Billing_Accounts__c.AccountId__c,CF00NR000000175lB=Billing_Accounts__c.Account__c,CF00NR000000175lA_lkid=Billing_Accounts__c.Id,CF00NR000000175lA=Billing_Accounts__c.Name], true)}&quot;;</url>
+    </webLinks>
+</CustomObject>

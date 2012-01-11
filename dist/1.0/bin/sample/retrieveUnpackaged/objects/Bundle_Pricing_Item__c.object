@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Binding_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Binding Period</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Label_English__c</fullName>
+        <description>Related Bundle&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>CBundle__r.Label_Eng__c</formula>
+        <inlineHelpText>Related Bundle&apos;s label in the language specified.</inlineHelpText>
+        <label>Bundle Label (English)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Label_Hungarian__c</fullName>
+        <description>Related Bundle&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>CBundle__r.Label_HUN__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Related Bundle&apos;s label in the language specified.</inlineHelpText>
+        <label>Bundle Label (Hungarian)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Label_Polish__c</fullName>
+        <description>Related Bundle&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>CBundle__r.Label_POL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Related Bundle&apos;s label in the language specified.</inlineHelpText>
+        <label>Bundle Label (Polish)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Label_Slovak__c</fullName>
+        <description>Related Bundle&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>CBundle__r.Label_SVK__c</formula>
+        <inlineHelpText>Related Bundle&apos;s label in the language specified.</inlineHelpText>
+        <label>Bundle Label (Slovak)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle__c</fullName>
+        <description>Relation to Main Product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Main Product</inlineHelpText>
+        <label>Bundle</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Bundle Pricing Items</relationshipLabel>
+        <relationshipName>Bundle_Pricing_Items</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CBundle__c</fullName>
+        <description>Relation to Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Bundle</inlineHelpText>
+        <label>Bundle</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Bundle Pricing Items</relationshipLabel>
+        <relationshipName>Bundle_Pricing_Items</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this item has been created in Billing system (during Bundle synchronization)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this item has been created in Billing system (during Bundle synchronization)</inlineHelpText>
+        <label>Created in Billing</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Pricing_Item_Label_English__c</fullName>
+        <description>Related Pricing Item&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>Pricing_Item__r.Label_Eng__c</formula>
+        <inlineHelpText>Related Pricing Item&apos;s label in the language specified.</inlineHelpText>
+        <label>Pricing Item Label (English)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pricing_Item_Label_Hungarian__c</fullName>
+        <description>Related Pricing Item&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>Pricing_Item__r.Label_HUN__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Related Pricing Item&apos;s label in the language specified.</inlineHelpText>
+        <label>Pricing Item Label (Hungarian)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pricing_Item_Label_Polish__c</fullName>
+        <description>Related Pricing Item&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>Pricing_Item__r.Label_POL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Related Pricing Item&apos;s label in the language specified.</inlineHelpText>
+        <label>Pricing Item Label (Polish)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pricing_Item_Label_Slovak__c</fullName>
+        <description>Related Pricing Item&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>Pricing_Item__r.Label_SVK__c</formula>
+        <inlineHelpText>Related Pricing Item&apos;s label in the language specified.</inlineHelpText>
+        <label>Pricing Item Label (Slovak)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pricing_Item__c</fullName>
+        <description>Relation to Pricing Item</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Pricing Item</inlineHelpText>
+        <label>Pricing Item</label>
+        <referenceTo>PricingItem__c</referenceTo>
+        <relationshipLabel>Bundle Pricing Items</relationshipLabel>
+        <relationshipName>Bundle_Pricing_Items</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Synchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this definiton matches a definition in Billing system.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this definiton matches a definition in Billing system.</inlineHelpText>
+        <label>Synchronized</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Bundle Pricing Item</label>
+    <nameField>
+        <label>Bundle Pricing Item</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Bundle Pricing Items</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

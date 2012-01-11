@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Pricing for wholesale request quotations</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Bandwidth__c</fullName>
+        <externalId>false</externalId>
+        <label>Bandwidth</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>Comments to pricing line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Add comments to pricing line</inlineHelpText>
+        <label>Comments</label>
+        <length>2048</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contract_Length__c</fullName>
+        <description>Contract Length in months</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract Length in months. 
+for Ask for = 1 year, Contract Length = 12
+for Ask for = 2 years, Contract Length = 24
+etc.</inlineHelpText>
+        <label>Contract Length</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Fixed Period</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unlimited</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>MRC__c</fullName>
+        <description>Monthly Recurring Costs</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Monthly Recurring Costs</inlineHelpText>
+        <label>MRC</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>NRC__c</fullName>
+        <description>Non Recurring Costs</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Non Recurring Costs</inlineHelpText>
+        <label>NRC</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>No_of_Circuits__c</fullName>
+        <externalId>false</externalId>
+        <label>No of Circuits</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Quotation__c</fullName>
+        <externalId>false</externalId>
+        <label>Request Quotation</label>
+        <referenceTo>Request_Quotation__c</referenceTo>
+        <relationshipLabel>Quotation Pricings</relationshipLabel>
+        <relationshipName>PricingsQ</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <trackHistory>false</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Selected_by_Customer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Pricing selected by Customer, should be checked only after Customer selects Firm Pricing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pricing selected by Customer, should be checked only after Customer selects Firm Pricing</inlineHelpText>
+        <label>Selected by Customer</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Total_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(No_of_Circuits__c !=0,No_of_Circuits__c * ( Contract_Length__c * MRC__c + NRC__c ),( Contract_Length__c * MRC__c + NRC__c ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>No_of_Circuits  *  ( Contract_Length  * MRC +  NRC )
+Attention! - If &quot;Ask for&quot; = &quot;0 Years&quot; 12 months will be used to calculate Total Amount</inlineHelpText>
+        <label>Total Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <label>Pricing</label>
+    <nameField>
+        <label>Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Pricings</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>Clone</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Clone</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/apex.js&quot;)} 
+
+var records = {!GETRECORDIDS( $ObjectType.QPricing__c )};
+if (records.length == 0) alert(&apos;Please select at least one request quotation.&apos;);
+else if (records.length &gt; 0) {
+
+sforce.apex.execute(&quot;CloneQPricingQuotation&quot;,&quot;clone&quot;, {QPricingIds:records});
+
+//reload the current page
+window.location.href = window.location.href;
+
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Edit_All</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Edit All</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/apex.js&quot;)} 
+
+
+var arr = window.parent.location.href.split(&quot;/&quot;); 
+var arr2 = arr[3].split(&quot;?&quot;); 
+var id = arr2[0]; 
+
+var tmpquery = sforce.connection.query(&quot;select OwnerId,Quotation_Type__c, Internal_Contact__c From Request_Quotation__c where Id =&apos;&quot;+id+&quot;&apos; limit 1&quot;); 
+var tmp = tmpquery.getArray(&quot;records&quot;); 
+
+var user = &quot;{!$User.Id}&quot;; 
+var InternalContactsring = tmp[0].Internal_Contact__c; 
+var OwnerIDstring = tmp[0].OwnerId; 
+if(InternalContactsring != null){InternalContactsring = InternalContactsring.substring(0,15);} 
+if (OwnerIDstring != null){OwnerIDstring = OwnerIDstring.substring(0,15);} 
+
+
+if ((InternalContactsring ==user) &amp;&amp; (tmp[0].Quotation_Type__c == &apos;Internal&apos;)) 
+{ 
+window.open(&quot;https://emea.salesforce.com/apex/EditPQtest?id=&quot; + id, &quot;QuotationPricing&quot;, &quot;menubar=no,toolbar=no,dependent=yes,scrollbar=yes,width=900,height=480&quot;); 
+} 
+else if ((tmp[0].Quotation_Type__c == &apos;Internal&apos;)) 
+{ 
+alert(&apos;Request Quotation Type is Internal , only user which is entered in Internal Field can change Pricings&apos;); 
+} 
+if ((tmp[0].Quotation_Type__c == &apos;Proposal&apos;) &amp;&amp; (OwnerIDstring== user)) 
+{ 
+window.open(&quot;https://emea.salesforce.com/apex/EditPQtest?id=&quot; + id, &quot;QuotationPricing&quot; ,&quot;menubar=no,toolbar=no,dependent=yes,scrollbar=yes,width=900,height=480&quot;); 
+} 
+else if((tmp[0].Quotation_Type__c == &apos;Proposal&apos;)) 
+{ 
+alert(&apos;Request Quotation Type is Proposal , only user which is owner of Request Quotation can change Pricings&apos;); 
+} 
+
+if(tmp[0].Quotation_Type__c == &apos;External&apos;) 
+{ 
+alert(&apos;Request Quotation Type is External , only user which is entered in External Field can change Pricings by email&apos;); 
+}</url>
+    </webLinks>
+</CustomObject>

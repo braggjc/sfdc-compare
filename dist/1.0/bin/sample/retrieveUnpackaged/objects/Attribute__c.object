@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <content>AttributeDelete</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Definition of an Attribute</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>A_End_Contact__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates that this Attribute represents Contact list from Account related to Order.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates that this Attribute represents Contact list from Account related to Order. When selected, Field Type will be changed to Picklist and Data Type to Text.</inlineHelpText>
+        <label>A-End Contact</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Indicates if attribute is active; Active attributes are shown in Product Configurator;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if attribute is active; Active attributes are shown in Product Configurator;</inlineHelpText>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Attribute_Line_Type__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if attribute stores the value for Line Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if attribute stores the value for Line Type</inlineHelpText>
+        <label>Attribute Line Type</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Attribute_Tag__c</fullName>
+        <description>Tag representing Attribute Value within Invoicing Name of Pricing Item</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tag representing Attribute Value within Invoicing Name of Pricing Item</inlineHelpText>
+        <label>Attribute Tag</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BCT_Attribute_Id_old__c</fullName>
+        <description>ID of corresponding attribute on BCT side (previous value)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of corresponding attribute on BCT side (previous value)</inlineHelpText>
+        <label>BCT Attribute Id (old)</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BCT_Attribute__c</fullName>
+        <description>ID of corresponding attribute on BCT side</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of corresponding attribute on BCT side</inlineHelpText>
+        <label>BCT Attribute Id</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BCT_Field_Type__c</fullName>
+        <description>Type of the Attribute, that will be sent to BCT (in case of Address, details will be retrieved by ESB when sending request to BCT)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of the Attribute, that will be sent to BCT (in case of Address, details will be retrieved by ESB when sending request to BCT)</inlineHelpText>
+        <label>BCT Attribute Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>dictionary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>field</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>checkbox</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>country</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>BillingAccounts__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>flag denoting an Attribute that displays Billing Accounts multiselect picklist</description>
+        <externalId>false</externalId>
+        <inlineHelpText>flag denoting an Attribute that displays Billing Accounts multiselect picklist</inlineHelpText>
+        <label>Billing Accounts</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Blocked_after_BCT__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Attribute should be set to read-only after BCT Calculation will be created for given Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Attribute should be set to read-only after BCT Calculation will be created for given Order Line</inlineHelpText>
+        <label>Blocked after BCT</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Blocked_after_Technical_Project__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Attribute should be set to read-only after Technical Project will be created for given Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Attribute should be set to read-only after Technical Project will be created for given Order Line</inlineHelpText>
+        <label>Blocked after Technical Project</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bundle_to_Synchronize__c</fullName>
+        <description>Technical field used by synchronization mechanism. Used in case of desynchronization. Stores name of the Bundle that contains this attribute and should be synchronized.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field used by synchronization mechanism. Used in case of desynchronization. Stores name of the Bundle that contains this attribute and should be synchronized.</inlineHelpText>
+        <label>Bundle to Synchronize</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CBCT_Attribute__c</fullName>
+        <description>Name of Attribute visible in CBCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of Attribute visible in CBCT</inlineHelpText>
+        <label>CBCT Attribute</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CBCT_Field_Type__c</fullName>
+        <description>Attribute&apos;s field type in CBCT system.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Attribute&apos;s field type in CBCT system.</inlineHelpText>
+        <label>CBCT Field Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>dictionary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>field</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>checkbox</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Code__c</fullName>
+        <description>Attribute code / identifier</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Attribute code / identifier</inlineHelpText>
+        <label>Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Component_Validity__c</fullName>
+        <description>PRISRAII-41 Attribute used as a validity date for Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Attribute used as a validity date for Component</inlineHelpText>
+        <label>Component Validity</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Valid From</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Valid To</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates that this Attribute represents Contact list from Account related to Order.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates that this Attribute represents Contact list from Account related to Order. When selected, Field Type will be changed to Picklist and Data Type to Text.</inlineHelpText>
+        <label>B-End Contact</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this item has been created in Billing system (during Bundle synchronization)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this item has been created in Billing system (during Bundle synchronization)</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DataType__c</fullName>
+        <description>Type of data stored in the attribute.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of data stored in the attribute.</inlineHelpText>
+        <label>Data Type</label>
+        <picklist>
+            <controllingField>FieldType__c</controllingField>
+            <picklistValues>
+                <fullName>Date</fullName>
+                <controllingFieldValues>Date</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DateTime</fullName>
+                <controllingFieldValues>Date</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <controllingFieldValues>EditBox</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Number</fullName>
+                <controllingFieldValues>EditBox</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone</fullName>
+                <controllingFieldValues>EditBox</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Text</fullName>
+                <controllingFieldValues>EditBox</controllingFieldValues>
+                <controllingFieldValues>TextArea</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Password</fullName>
+                <controllingFieldValues>EditBox</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>DefaultVal__c</fullName>
+        <description>Default value for the attribute; Can be overridden by Attribute Default Value related record;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default value for the attribute; Can be overridden by Attribute Default Value related record;</inlineHelpText>
+        <label>Default Value</label>
+        <length>7200</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DefaultValue__c</fullName>
+        <description>Legacy field. Not used.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Legacy field. Not used.</inlineHelpText>
+        <label>Default Value</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Attribute&apos;s description.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Attribute&apos;s description.</inlineHelpText>
+        <label>Description</label>
+        <length>1024</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Distance_Zone__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates that attribute holds Distance Zone information</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates that attribute holds Distance Zone information</inlineHelpText>
+        <label>Distance Zone</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Editable_Client__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if attribute is editable in Extranet by a client.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if attribute is editable in Extranet by a client.</inlineHelpText>
+        <label>Editable Client</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Editable_Partner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if attribute is editable in Extranet by a partner.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if attribute is editable in Extranet by a partner.</inlineHelpText>
+        <label>Editable Partner</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Editable__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Indicates if Attribute value can be changed by a user in Product Configurator.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Attribute value can be changed by a user in Product Configurator.</inlineHelpText>
+        <label>Editable</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Editable_by_Provisioning__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Attribute value can be changed by automatic Provisioning Process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Attribute value can be changed by automatic Provisioning Process</inlineHelpText>
+        <label>Editable by Provisioning</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EnumeratorOSS__c</fullName>
+        <description>OSS enumerator used to obtain attribute&apos;s value / oss id.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>OSS enumerator used to obtain attribute&apos;s value / oss id.</inlineHelpText>
+        <label>EnumeratorOSS</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NONE</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IE_ADR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IE_LOC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IE_NN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IE_CIRCUIT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IE_DN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IE_IP_SPEC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IE_TL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Export_for_Calculation__c</fullName>
+        <description>Indicates if Attribute should be included in export for Manual Calculation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Attribute should be included in export for Manual Calculation</inlineHelpText>
+        <label>Export for Calculation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>skip</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>add to description</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>as a new column</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FieldType__c</fullName>
+        <description>Designates what editor should be used in Product Configurator to present and edit the value (eg. Calendar, Grid, Picklist).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Designates what editor should be used in Product Configurator to present and edit the value (eg. Calendar, Grid, Picklist).</inlineHelpText>
+        <label>Field Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EditBox</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TextArea</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Checkbox</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Picklist</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MultiSelect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Date</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Grid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Summary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>For_Provisioning__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Denotes an attribute that is sent to Provisioning</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Denotes an attribute that is sent to Provisioning</inlineHelpText>
+        <label>For Provisioning</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>Products will be marked with multipicklist field GTS Location (GTS Poland, GTS Slovakia etc. ) mainly to separate Products for SK and other countries</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please choose countires for this product</inlineHelpText>
+        <label>GTS_Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Geocode__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates an attribute that stores Geocode information.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates an attribute that stores Geocode information.</inlineHelpText>
+        <label>Geocode</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsQuantity__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates that the attribute stores quantity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates that the attribute stores quantity.</inlineHelpText>
+        <label>IsQuantity</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Label_CZE__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Czech)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_Eng__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (English)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_HUN__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Hungarian)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_POL__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Polish)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_ROU__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Romanian)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_SVK__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Slovak)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label__c</fullName>
+        <description>Legacy field. Not used.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Legacy field. Not used.</inlineHelpText>
+        <label>Label</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Length__c</fullName>
+        <defaultValue>64</defaultValue>
+        <description>Maximum length of attribute&apos;s value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximum length of attribute&apos;s value.</inlineHelpText>
+        <label>Length</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Locked_on_Special_Offer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates that attribute should be locked for editing on Order Line created from Special Offer.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates that attribute should be locked for editing on Order Line created from Special Offer.</inlineHelpText>
+        <label>Locked on Special Offer</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Master_Picklist__c</fullName>
+        <description>Reference to the Picklist that is a value master for this Picklist Attribute.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reference to the Picklist that is a value master for this Picklist Attribute.</inlineHelpText>
+        <label>Master Picklist</label>
+        <referenceTo>Attribute__c</referenceTo>
+        <relationshipLabel>Attributes (Master Picklist)</relationshipLabel>
+        <relationshipName>Attributes1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Minutes__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Technical field - indicates if attribute stores a quantity of minutes.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field - indicates if attribute stores a quantity of minutes.</inlineHelpText>
+        <label>Quantity of minutes</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OrderLines__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>flag denoting Attribute that displays Order Lines multiselect picklist</description>
+        <externalId>false</externalId>
+        <inlineHelpText>flag denoting Attribute that displays Order Lines multiselect picklist</inlineHelpText>
+        <label>Order Lines</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>RowsReference__c</fullName>
+        <description>Contains reference to another Attribute that should contain the maximal number of rows for this Grid.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contains reference to another Attribute that should contain the maximal number of rows for this Grid.</inlineHelpText>
+        <label>Grid Rows Reference</label>
+        <referenceTo>Attribute__c</referenceTo>
+        <relationshipLabel>Attributes</relationshipLabel>
+        <relationshipName>Attributes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Rows__c</fullName>
+        <description>Maximal number of rows in Grid attribute or selectable rows in Multiselect picklist.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximal number of rows in Grid attribute or selectable rows in Multiselect picklist.</inlineHelpText>
+        <label>Grid/Multiselect Rows</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ServiceBundles__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>flag denoting an Attribute that displays Service Bundles multiselect picklist</description>
+        <externalId>false</externalId>
+        <inlineHelpText>flag denoting an Attribute that displays Service Bundles multiselect picklist</inlineHelpText>
+        <label>Service Bundles</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Simplified_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Flag indicating if attribute will be displayed for Simplified Orders.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag indicating if attribute will be displayed for Simplified Orders.</inlineHelpText>
+        <label>Simplified Order</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Store_In_SFDC__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates that value of installed attribute will be stored in SFDC</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates that value of installed attribute will be stored in SFDC</inlineHelpText>
+        <label>Store In SFDC</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Super_Bundle_ID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>PRISRAII-41 Attribute stores reference to a Super Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Attribute stores reference to a Super Bundle</inlineHelpText>
+        <label>Super Bundle ID</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Synchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this definiton matches a definition in Billing system.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this definiton matches a definition in Billing system.</inlineHelpText>
+        <label>Synchronized</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Technical__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Purely technical attributes are not displayed in product configurator.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked this attribute will not be displayed in product configurator.</inlineHelpText>
+        <label>Technical</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Token_Name__c</fullName>
+        <description>Token Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Token Name</inlineHelpText>
+        <label>Token Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Token_Value__c</fullName>
+        <description>Token Value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Token Value</inlineHelpText>
+        <label>Token Value</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Label</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>UID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Flag indicating that attribute stores UID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag indicating that attribute stores UID</inlineHelpText>
+        <label>UID</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>UniqueName__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Tehcnical field used for validation of name field&apos;s uniqueness.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tehcnical field.</inlineHelpText>
+        <label>UniqueName</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Unique__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When this field is checked it will always be verified to have unique value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When this field is checked it will always be verified to have unique value.</inlineHelpText>
+        <label>Unique</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Visible_Client__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Attribute is visible in Extranet for clients</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Attribute is visible in Extranet for clients</inlineHelpText>
+        <label>Visible Client</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Visible_Partner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Attribute is visible in Extranet for partners</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Attribute is visible in Extranet for partners</inlineHelpText>
+        <label>Visible Partner</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Visible__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Indicates if attribute should be visible. Not used in Product Configurator.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if attribute should be visible. Not used in Product Configurator.</inlineHelpText>
+        <label>Visible</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Visible_on_Acceptance_Protocol__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checked, attribute will be printed on Acceptance Protocol</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, attribute will be printed on Acceptance Protocol</inlineHelpText>
+        <label>Visible on Acceptance Protocol</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <label>Attribute</label>
+    <listViews>
+        <fullName>Active</fullName>
+        <columns>NAME</columns>
+        <columns>DefaultValue__c</columns>
+        <columns>FieldType__c</columns>
+        <columns>DataType__c</columns>
+        <columns>Editable__c</columns>
+        <columns>Visible__c</columns>
+        <columns>Unique__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Active__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <columns>NAME</columns>
+        <columns>Label_Eng__c</columns>
+        <columns>Label_SVK__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Attribute_Line_Type__c</columns>
+        <columns>Editable__c</columns>
+        <columns>EnumeratorOSS__c</columns>
+        <columns>FieldType__c</columns>
+        <columns>For_Provisioning__c</columns>
+        <columns>Label__c</columns>
+        <columns>Length__c</columns>
+        <columns>Technical__c</columns>
+        <columns>Unique__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Empty_Field_Type</fullName>
+        <columns>NAME</columns>
+        <columns>Code__c</columns>
+        <columns>FieldType__c</columns>
+        <columns>DataType__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>FieldType__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Empty Field Type</label>
+    </listViews>
+    <listViews>
+        <fullName>Grids_HU</fullName>
+        <columns>NAME</columns>
+        <columns>Active__c</columns>
+        <columns>Label_Eng__c</columns>
+        <columns>Label_SVK__c</columns>
+        <columns>FieldType__c</columns>
+        <columns>EnumeratorOSS__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>FieldType__c</field>
+            <operation>equals</operation>
+            <value>Grid</value>
+        </filters>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>equals</operation>
+            <value>GTS Hungary</value>
+        </filters>
+        <label>Grids_HU</label>
+    </listViews>
+    <nameField>
+        <label>Attribute Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <namedFilters>
+        <fullName>nf_01I20000000HVCdEAO_00N20000002hTrFEAU</fullName>
+        <active>true</active>
+        <field>Provisioning_Plan_Task_Attribute__c.MandatoryAttribute__c</field>
+        <filterItems>
+            <field>Attribute__c.Technical__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>Attribute__c.Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Provisioning Plan Task Attribute_Mandato</name>
+    </namedFilters>
+    <pluralLabel>Attributes</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Label_Eng__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Label_SVK__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>DataType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>FieldType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Active__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Attribute_Line_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER.ALIAS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LAST_UPDATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Label_Eng__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Label_SVK__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>FieldType__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>DataType__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Label_Eng__c</searchFilterFields>
+        <searchFilterFields>Label_SVK__c</searchFilterFields>
+        <searchFilterFields>FieldType__c</searchFilterFields>
+        <searchFilterFields>DataType__c</searchFilterFields>
+        <searchResultsAdditionalFields>Label_Eng__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Label_SVK__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FieldType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DataType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Length__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>For_Provisioning__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>AttributeTagValidation</fullName>
+        <active>true</active>
+        <description>Checks format of Attribute Tag (first and last character, spaces)</description>
+        <errorConditionFormula>AND(
+NOT( ISBLANK( Attribute_Tag__c ) ),
+OR(
+NOT(LEFT(Attribute_Tag__c, 1) = &quot;#&quot;),
+NOT(RIGHT(Attribute_Tag__c, 1) = &quot;#&quot;),
+FIND(&quot; &quot;,Attribute_Tag__c) &gt; 0,
+LEN(Attribute_Tag__c) &lt; 3
+)
+)</errorConditionFormula>
+        <errorDisplayField>Attribute_Tag__c</errorDisplayField>
+        <errorMessage>Incorrect format (must start and end with &apos;#&apos; and contain no spaces)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Labels_Check</fullName>
+        <active>false</active>
+        <description>checks if any of the local labels is set</description>
+        <errorConditionFormula>Label_CZE__c = null &amp;&amp; Label_HUN__c = null &amp;&amp; Label_POL__c = null &amp;&amp; Label_ROU__c = null &amp;&amp; Label_SVK__c = null</errorConditionFormula>
+        <errorMessage>At least one of the local (non-English) labels for this Attribute should be set! Please check &apos;Attribute Labels&apos; section.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Dependent_Picklist</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Dependent Picklist</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/DependentPicklist?id={!Attribute__c.Id}</url>
+    </webLinks>
+</CustomObject>

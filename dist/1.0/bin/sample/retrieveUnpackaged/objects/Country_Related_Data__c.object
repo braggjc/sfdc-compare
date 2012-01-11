@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Data describing Customer, related to Account object</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Related Account object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Account object</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Country Related Data</relationshipLabel>
+        <relationshipName>Country_Related_Data</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>DataType__c</fullName>
+        <description>Type of Data</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of Data</inlineHelpText>
+        <label>Data Type</label>
+        <referenceTo>Country_Related_Data_Type__c</referenceTo>
+        <relationshipLabel>Country Related Data</relationshipLabel>
+        <relationshipName>Country_Related_Data</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>UniqueIDs__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>Unique String Value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unique String Value</inlineHelpText>
+        <label>UniqueIDs</label>
+        <length>150</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Country Related Data</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CRD{000000000}</displayFormat>
+        <label>Data Id</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Country Related Data</pluralLabel>
+    <recordTypes>
+        <fullName>Identification_Number</fullName>
+        <active>true</active>
+        <description>Record Type for storing Identification Numbers</description>
+        <label>Identification Number</label>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Account_Rectype_eq_CRD_rec_type</fullName>
+        <active>true</active>
+        <description>record type at Account  &amp; Country Related Data must be the same for GTS Hungary</description>
+        <errorConditionFormula>AND(
+TEXT(Account__r.GTS_Location_del__c) == &apos;GTS Hungary&apos;,
+Account__r.Account_Record_Type_formula__c &lt;&gt; DataType__r.Record_Type_Name__c
+)</errorConditionFormula>
+        <errorMessage>Record type at Country Related Data &amp; Account have to be the same for GTS Hungary.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EU_VAT_format_for_GB</fullName>
+        <active>true</active>
+        <description>Rule checking EU_Vat format for GB</description>
+        <errorConditionFormula>IF (
+AND (
+NOT (ISBLANK (Value__c) ),
+OR (CONTAINS (LEFT (Value__c , 4),&quot;GBHA&quot;),
+CONTAINS (LEFT (Value__c , 4),&quot;GBGD&quot;) )
+),
+
+NOT (
+IF (
+LEN ( Value__c ) =7,
+true, false)
+),
+False
+)</errorConditionFormula>
+        <errorMessage>Vat Number must begin with country prefix eg.SK and be in EU VAT Format.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EU_VAT_format_for_IE</fullName>
+        <active>true</active>
+        <description>Rule validating EU VAT format for IE</description>
+        <errorConditionFormula>IF (
+AND (
+NOT (ISBLANK (Value__c) ),
+CONTAINS (LEFT (Value__c , 2),&quot;IE&quot;)
+),
+NOT (
+IF (
+LEN ( Value__c ) =10,
+true, false)
+),
+False
+)</errorConditionFormula>
+        <errorMessage>Vat Number must begin with country prefix eg.SK and be in EU VAT Format.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EU_VAT_format_for_RO</fullName>
+        <active>true</active>
+        <description>Validation of EU VAT for Romania</description>
+        <errorConditionFormula>AND(
+CONTAINS(LEFT ( Value__c , 2),&quot;RO&quot;), OR(
+LEN(Value__c) &lt; 4,
+LEN(Value__c) &gt; 12)
+)</errorConditionFormula>
+        <errorMessage>Vat Number must begin with country prefix eg.SK and be in EU VAT Format.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EU_VAT_format_for_SK</fullName>
+        <active>true</active>
+        <description>Checking EU Vat format for: SK</description>
+        <errorConditionFormula>AND(
+CONTAINS(LEFT ( Value__c , 2),&quot;SK&quot;), LEN(Value__c) &lt;&gt; 12
+)</errorConditionFormula>
+        <errorMessage>Vat Number must begin with country prefix eg.SK and be in EU VAT Format.
+It should be SK0000000000 (SK prefix and 10 digits)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EU_VAT_format_for_other_countries</fullName>
+        <active>true</active>
+        <description>Checking EU Vat format for: AT,BE,BG,CY,CZ,DK,EE,FI,FR,DE,EL,HU,IT,LV,LT,LU,MT,NL,PL,PT,SI,ES,SE,GB</description>
+        <errorConditionFormula>IF (
+AND (
+NOT (ISBLANK (Value__c) ),
+NOT (CONTAINS (LEFT (Value__c , 4),&quot;GBHA&quot;)),
+NOT (CONTAINS (LEFT (Value__c , 4),&quot;GBGD&quot;)),
+
+OR
+(CONTAINS (LEFT (Value__c , 2),&quot;AT&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;BE&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;BG&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;CY&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;CZ&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;DK&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;EE&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;FI&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;FR&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;DE&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;EL&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;HU&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;IT&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;LV&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;LT&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;LU&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;MT&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;NL&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;PL&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;PT&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;SI&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;ES&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;SE&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;GB&quot;) )
+),
+NOT (IF (AND (LEN ( Value__c ) &lt;=14, LEN ( Value__c ) &gt;=10 ), true, false)
+),False )</errorConditionFormula>
+        <errorMessage>Vat Number must begin with country prefix eg.SK and be in EU VAT Format.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EU_VAT_format_must_contain_country</fullName>
+        <active>true</active>
+        <description>Checks if VAt number begins with Country Prefix.</description>
+        <errorConditionFormula>AND(DataType__r.Name = &apos;VAT Number&apos;, TEXT(Account__r.GTS_Location_del__c) = &apos;GTS Slovakia&apos;,NOT( OR(CONTAINS (LEFT ( Value__c , 2),&quot;AT&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;BE&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;BG&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;CY&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;CZ&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;DK&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;EE&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;FI&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;FR&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;DE&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;EL&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;HU&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;IT&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;LV&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;LT&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;LU&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;MT&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;NL&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;PL&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;PT&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;RO&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;SK&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;SI&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;ES&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;SE&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;IE&quot;),
+CONTAINS (LEFT (Value__c , 2),&quot;GB&quot;) )
+))</errorConditionFormula>
+        <errorMessage>Vat Number must begin with country prefix eg.SK and be in EU VAT Format.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GTS_Loc_equal_at_Account_and_Data_Type</fullName>
+        <active>false</active>
+        <description>GTS Location at Country Related Data Type must be the same as GTS Location at related Account object</description>
+        <errorConditionFormula>TEXT(DataType__r.GTS_Location__c) &lt;&gt; TEXT(Account__r.GTS_Location_del__c)</errorConditionFormula>
+        <errorDisplayField>DataType__c</errorDisplayField>
+        <errorMessage>GTS Location at Country Related Data Type must be the same as GTS Location at related Account object</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TAX_ID_validation_for_HU</fullName>
+        <active>true</active>
+        <description>Verifies Tax ID for HU in country related data object</description>
+        <errorConditionFormula>AND(
+TEXT(Account__r.GTS_Location_del__c) = &apos;GTS Hungary&apos;, (ISPICKVAL(DataType__r.GTS_Location__c, &apos;GTS Hungary&apos;)), DataType__r.Name = &apos;Tax Identification Number&apos;,
+NOT(REGEX(Value__c , &apos;(^[0-9]{8}-[0-9]{1}-[0-9]{2}$)&apos;))
+)</errorConditionFormula>
+        <errorMessage>Tax Identification Number format is incorrect, the correct form is 12345678-1-12.
+Or the Tax identification type selected is not valid in HU or for this account record type</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Tax_Id_Validation_SK</fullName>
+        <active>false</active>
+        <description>Verifies format of Tax Id / Turned off based on https://helpdeskce.in.gtsce.com/browse/GSSS-303</description>
+        <errorConditionFormula>AND(DataType__r.Name = &apos;Tax Identification Number&apos;, TEXT(Account__r.GTS_Location_del__c) = &apos;GTS Slovakia&apos;, OR(NOT( LEN(Value__c ) = 10), NOT(REGEX(Value__c , &quot;[0-9]{10}&quot;))))</errorConditionFormula>
+        <errorDisplayField>Value__c</errorDisplayField>
+        <errorMessage>Tax Identification Number format is incorrect. It should be 10 digits</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>VAT_Number_Validation</fullName>
+        <active>false</active>
+        <description>Validates format of VAT Number</description>
+        <errorConditionFormula>AND(DataType__r.Name = &apos;VAT Number&apos;,  TEXT(Account__r.GTS_Location_del__c)  = &apos;GTS Slovakia&apos;, OR(NOT( BEGINS( Value__c , &apos;SK&apos;) ), NOT( LEN(Value__c ) = 12), NOT(REGEX(Value__c , &quot;SK[0-9]{10}&quot;))))</errorConditionFormula>
+        <errorDisplayField>Value__c</errorDisplayField>
+        <errorMessage>VAT Number format is incorrect. It should be SK0000000000 (SK prefix and 10 digits)</errorMessage>
+    </validationRules>
+</CustomObject>

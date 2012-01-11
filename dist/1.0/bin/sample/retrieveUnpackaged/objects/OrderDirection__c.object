@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Actiontype__c</fullName>
+        <description>Action set by Product Configurator; based on this appropriate actions will be executed in external systems</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Action set by Product Configurator; based on this appropriate actions will be executed in external systems</inlineHelpText>
+        <label>Actiontype</label>
+        <picklist>
+            <picklistValues>
+                <fullName>create</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>update</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>delete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Billing_ID__c</fullName>
+        <description>ID of Direction Disccount in Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of Direction Disccount in Billing System</inlineHelpText>
+        <label>Billing ID</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CSR_ID__c</fullName>
+        <description>ID of direction created in CSR Database</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of direction created in CSR Database</inlineHelpText>
+        <label>CSR ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if direction has already been created in Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if direction has already been created in Billing</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Direction__c</fullName>
+        <description>relation to Direction definition</description>
+        <externalId>false</externalId>
+        <inlineHelpText>relation to Direction definition</inlineHelpText>
+        <label>Direction</label>
+        <referenceTo>Direction__c</referenceTo>
+        <relationshipLabel>Order Directions</relationshipLabel>
+        <relationshipName>Order_Directions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Discount__c</fullName>
+        <description>Percent of discount for given Direction</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Percent of discount for given Direction</inlineHelpText>
+        <label>Discount</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>OrderTariff__c</fullName>
+        <description>Relation to Tariff, that Direction Discount belongs to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Tariff, that Direction Discount belongs to</inlineHelpText>
+        <label>Order Tariff</label>
+        <referenceTo>OrderTariff__c</referenceTo>
+        <relationshipLabel>Order Directions</relationshipLabel>
+        <relationshipName>Order_Directions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <trackHistory>false</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Price__c</fullName>
+        <description>Value of discount for given Direction</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of discount for given Direction</inlineHelpText>
+        <label>Price</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>true</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_ID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>ID assigned by Product Configurator used later to update Direction with any changes</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID assigned by Product Configurator used later to update Direction with any changes</inlineHelpText>
+        <label>SFDC ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Valid_From__c</fullName>
+        <description>Date, when given discount should be activated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when given discount should be activated</inlineHelpText>
+        <label>Valid From</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Valid_To__c</fullName>
+        <description>Date, till when given discount is valid</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, till when given discount is valid</inlineHelpText>
+        <label>Valid To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <label>Order Direction</label>
+    <nameField>
+        <label>Order Direction Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Order Directions</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

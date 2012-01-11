@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Attribute_Set_Type__c</fullName>
+        <description>Indicates what Attribute Set should be sent to Billing under this Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates what Attribute Set should be sent to Billing under this Component</inlineHelpText>
+        <label>Attribute Set Type</label>
+        <referenceTo>Attribute_Set_Type__c</referenceTo>
+        <relationshipLabel>Components</relationshipLabel>
+        <relationshipName>Components</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BCT_Subservice_ID__c</fullName>
+        <description>ID of BCT subservice corresponding to this Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of BCT subservice corresponding to this Component</inlineHelpText>
+        <label>BCT Subservice ID</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_to_Synchronize__c</fullName>
+        <description>Technical field used by synchronization mechanism. Used in case of desynchronization. Stores name of the Bundle that contains this component and should be synchronized.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field used by synchronization mechanism. Used in case of desynchronization. Stores name of the Bundle that contains this component and should be synchronized.</inlineHelpText>
+        <label>Bundle to Synchronize</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this item has been created in Billing system (during Bundle synchronization)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this item has been created in Billing system (during Bundle synchronization)</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Dimension_Dictionary__c</fullName>
+        <description>Relation to Dimension Dictionary used in SK Billing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Dimension Dictionary used in SK Billing.</inlineHelpText>
+        <label>Dimension Dictionary</label>
+        <referenceTo>Dimension_Dictionary__c</referenceTo>
+        <relationshipLabel>Components</relationshipLabel>
+        <relationshipName>Components</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>For_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies whether the component should be send to Billing or not;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies whether the component should be send to Billing or not;</inlineHelpText>
+        <label>For Billing</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>Products will be marked with multipicklist field GTS Location (GTS Poland, GTS Slovakia etc. ) mainly to separate Products for SK and other countries</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please choose countires for this product</inlineHelpText>
+        <label>GTS Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>HasUsage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if username Attribute can be used to obtain usage data for Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if username Attribute can be used to obtain usage data for Component</inlineHelpText>
+        <label>Has usage</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include_Pricing_Items__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates whether Pricing Items under this Component should be included in Price when verifying BCT calculation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether Pricing Items under this Component should be included in Price when verifying BCT calculation</inlineHelpText>
+        <label>Include Pricing Items</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Integration_Id__c</fullName>
+        <description>Unique number for communication with external systems eg. Billing.</description>
+        <displayFormat>2{000000}</displayFormat>
+        <externalId>true</externalId>
+        <inlineHelpText>Unique number for communication with external systems.</inlineHelpText>
+        <label>Integration ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Order__c</fullName>
+        <defaultValue>1</defaultValue>
+        <description>DAVO field - it is required in Billing: Indicated the order on which component will be printed on invoice document</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the order on which components will be printed on invoice document</inlineHelpText>
+        <label>Invoice Order</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_CZE__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Czech)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_Eng__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (English)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_HUN__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Hungarian)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_POL__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Polish)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_ROU__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Romanian)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_SVK__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Slovak)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_AST__c</fullName>
+        <description>Technical field which will remember the last related AST, which should be disconnected in Durian. The field will be automatically clean after succesfull synchronization</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field for Billing SK.</inlineHelpText>
+        <label>Last AST</label>
+        <referenceTo>Attribute_Set_Type__c</referenceTo>
+        <relationshipLabel>Components (Last AST)</relationshipLabel>
+        <relationshipName>Components1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Line_of_Business__c</fullName>
+        <description>Line of Business that categorizes the Component.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Line of Business that categorizes the Component.</inlineHelpText>
+        <label>Line of Business</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Components</relationshipLabel>
+        <relationshipName>Components</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Previous_AST__c</fullName>
+        <description>Technical field, which stores the previously assigned AST</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field for Billing SK.</inlineHelpText>
+        <label>Previous AST</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ProvisioningType__c</fullName>
+        <description>Determines whether manual or automatic provisioning will be used</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines whether manual or automatic provisioning will be used</inlineHelpText>
+        <label>Provisioning Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Manual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Automatic</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Simplified_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Flag indicating if component will be displayed for Simplified Orders.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag indicating if component will be displayed for Simplified Orders.</inlineHelpText>
+        <label>Simplified Order</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Synchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this definiton matches a definition in Billing system.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this definiton matches a definition in Billing system.</inlineHelpText>
+        <label>Synchronized</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>UniqueName__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Tehcnical field used for validation of name field&apos;s uniqueness.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tehcnical field.</inlineHelpText>
+        <label>UniqueName</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Validity_from_Attributes__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>PRISRAII-41 Component&apos;s validity dates are obtained from it&apos;s attributes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Component&apos;s validity dates are obtained from it&apos;s attributes</inlineHelpText>
+        <label>Validity from Attributes</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Voice_Types_Created_in_Billing__c</fullName>
+        <description>Cummulative fields, which stores the VoiceTypes already send to Durian (technical field);</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tecnnical field for Billing SK</inlineHelpText>
+        <label>Voice Types Created in Billing</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Voice__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Voice flag - if checked then it is be possible to select TARIFF</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Voice flag - if checked then it is be possible to select TARIFF</inlineHelpText>
+        <label>Voice</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <label>Component</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Dimension_Dictionary__c</columns>
+        <columns>Attribute_Set_Type__c</columns>
+        <columns>ProvisioningType__c</columns>
+        <columns>For_Billing__c</columns>
+        <columns>HasUsage__c</columns>
+        <columns>Voice__c</columns>
+        <columns>Integration_Id__c</columns>
+        <columns>OBJECT_ID</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Component Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Components</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Label_Eng__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Label_SVK__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Line_of_Business__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Dimension_Dictionary__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Attribute_Set_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ProvisioningType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>For_Billing__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>HasUsage__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Voice__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Label_Eng__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Label_SVK__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Line_of_Business__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Label_Eng__c</searchFilterFields>
+        <searchFilterFields>Label_SVK__c</searchFilterFields>
+        <searchFilterFields>Line_of_Business__c</searchFilterFields>
+        <searchResultsAdditionalFields>Label_Eng__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Label_SVK__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Line_of_Business__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Assign_Prices</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Assign Prices</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var component = &apos;{!Component__c.Id}&apos;;
+
+var result = sforce.apex.execute(&quot;PC_Webservices_SK&quot;,&quot;CheckComponentFreezability&quot;, {compId: component});
+
+if (result == &apos;OK&apos;) {
+location.href=&apos;/apex/RelatePricingItem?cid={!Component__c.Id}&apos;;
+} else {
+alert(result);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Relate_Tariff</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Relate Tariff</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var component = &apos;{!Component__c.Id}&apos;;
+
+var result = sforce.apex.execute(&quot;PC_Webservices_SK&quot;,&quot;CheckComponentFreezability&quot;, {compId: component});
+
+if (result == &apos;OK&apos;) {
+location.href=&apos;/apex/RelateTariff?id={!Component__c.Id}&apos;;
+} else {
+alert(result);
+}</url>
+    </webLinks>
+</CustomObject>

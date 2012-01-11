@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Solution base</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Order_Line__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>OL_OL2CI</relationshipLabel>
+        <relationshipName>OL_OL2CI</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_Costing_Item__c</fullName>
+        <externalId>false</externalId>
+        <label>SFDC Costing Item</label>
+        <referenceTo>SFDC_Costing_Item__c</referenceTo>
+        <relationshipLabel>CI_OL2CI</relationshipLabel>
+        <relationshipName>CI_OL2CI</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>OL2CI</label>
+    <nameField>
+        <displayFormat>OL2CI{000000000}</displayFormat>
+        <label>OL2CI Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>OL2CI</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

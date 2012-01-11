@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Definitions of Data Types</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>GTS Location, for which given Type can be used</description>
+        <externalId>false</externalId>
+        <inlineHelpText>GTS Location, for which given Type can be used</inlineHelpText>
+        <label>GTS Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Global</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Record_Type_Name__c</fullName>
+        <description>Name of Record Type, for which given Type can be used</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of Record Type, for which given Type can be used</inlineHelpText>
+        <label>Record Type Name</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Required_for__c</fullName>
+        <description>Account Identification Type, for which given Type is Required</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Identification Type, for which given Type is Required</inlineHelpText>
+        <label>Required for</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Civil Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Corporate Entity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Entity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Country Related Data Type</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>GTS_Location__c</columns>
+        <columns>Required_for__c</columns>
+        <columns>Record_Type_Name__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Type Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Country Related Data Types</pluralLabel>
+    <recordTypes>
+        <fullName>Identification_Number</fullName>
+        <active>true</active>
+        <description>Record Type for storing Identification Numbers</description>
+        <label>Identification Number</label>
+        <picklistValues>
+            <picklist>GTS_Location__c</picklist>
+            <values>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Global</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Required_for__c</picklist>
+            <values>
+                <fullName>Civil Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Entity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Entity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Other</fullName>
+        <active>true</active>
+        <label>Other</label>
+        <picklistValues>
+            <picklist>GTS_Location__c</picklist>
+            <values>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Global</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Required_for__c</picklist>
+            <values>
+                <fullName>Civil Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate Entity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Entity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>GTS_Location__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Record_Type_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Required_for__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>GTS_Location__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Record_Type_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Required_for__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

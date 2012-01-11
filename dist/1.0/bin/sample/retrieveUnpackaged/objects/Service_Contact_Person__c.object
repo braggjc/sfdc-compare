@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Information about Customer Contacts related to Service</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Contact_Role__c</fullName>
+        <description>Role of the Selected Contact Person</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Role of the Selected Contact Person</inlineHelpText>
+        <label>Contact Role</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Technical User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Planned Work</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Decision Maker</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invoicing User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner Representative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>Relation to Contact Person</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Contact Person</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Service Contact Persons</relationshipLabel>
+        <relationshipName>Service_Contact_Persons</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Created_in_OCTT__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates whether infdormation about Contact was sent to OCTT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether infdormation about Contact was sent to OCTT</inlineHelpText>
+        <label>Created in OCTT</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Service_Bundle__c</fullName>
+        <description>Relation to Service Bundle (indicates, that selected Person is Contact for the whole Bundle)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Service Bundle (indicates, that selected Person is Contact for the whole Bundle)</inlineHelpText>
+        <label>Service Bundle</label>
+        <referenceTo>ServiceBundle__c</referenceTo>
+        <relationshipLabel>Service Contact Persons</relationshipLabel>
+        <relationshipName>Service_Contact_Persons</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Component__c</fullName>
+        <description>Relation to Service Component (indicates, that selected Person is Contact for this element of the Bundle)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Service Component (indicates, that selected Person is Contact for this element of the Bundle)</inlineHelpText>
+        <label>Service Component</label>
+        <referenceTo>ServiceComponent__c</referenceTo>
+        <relationshipLabel>Service Contact Persons</relationshipLabel>
+        <relationshipName>Service_Contact_Persons</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Unique_Role_For_Service_Bundle__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>Autogenerated text with contact role, contact ID and service bundle Id. Have to be unique</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Autogenerated text with contact role, contact ID and service bundle Id. Have to be unique</inlineHelpText>
+        <label>Unique Role For Service Bundle</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Unique_Role_For_Service_Component__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>Autogenerated text with contact role, contact ID and service component Id. Have to be unique.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Autogenerated text with contact role, contact ID and service component Id. Have to be unique.</inlineHelpText>
+        <label>Unique Role For Service Component</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Service Contact Person</label>
+    <nameField>
+        <displayFormat>SCP{000000000}</displayFormat>
+        <label>Service Contact Person</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Service Contact Persons</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Prevent_Service</fullName>
+        <active>true</active>
+        <description>One the fields &quot;Service Bundle&quot; or &quot;Service Component&quot; has to have value and the other has to be empty.</description>
+        <errorConditionFormula>NOT(ISBLANK(Service_Bundle__c)) &amp;&amp; NOT(ISBLANK(Service_Component__c)) || ISBLANK(Service_Bundle__c)&amp;&amp; ISBLANK(Service_Component__c)</errorConditionFormula>
+        <errorMessage>One the fields &quot;Service Bundle&quot; or &quot;Service Component&quot; has to have value and the other has to be empty.</errorMessage>
+    </validationRules>
+</CustomObject>

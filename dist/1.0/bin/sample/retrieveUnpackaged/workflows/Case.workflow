@@ -1,0 +1,1201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CSC_Mail_Modification_Notify</fullName>
+        <description>CSC Mail Modification Notify</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>GTS_Slovakia_Templates/Update_Mail_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>CSC_Mail_Notify</fullName>
+        <description>CSC Mail Notify</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>GTS_Slovakia_Templates/New_Mail_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Closed_case_notification</fullName>
+        <description>Closed case notification</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>GTS_Slovakia_Templates/Closed_case</template>
+    </alerts>
+    <alerts>
+        <fullName>Hotline_Mail_Modification_Notify</fullName>
+        <description>Hotline Mail Modification Notify</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>GTS_Slovakia_Templates/Update_Mail_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Hotline_Mail_Notify</fullName>
+        <description>Hotline Mail Notify</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>GTS_Slovakia_Templates/New_Mail_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Notification_about_assign_to_Case_Member</fullName>
+        <description>Notification about assign to Case Member</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Billing Specialist</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Supervisor</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Technical user</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <recipient>Viewer</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>GTS_Slovakia_Templates/CASE_Case_assigned</template>
+    </alerts>
+    <alerts>
+        <fullName>Notify_owner_about_case_assignment</fullName>
+        <description>Notify owner about case assignment</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>GTS_Slovakia_Templates/CASE_Case_assigned</template>
+    </alerts>
+    <alerts>
+        <fullName>Partner_Mail_Modification_Notify</fullName>
+        <description>Partner Mail Modification Notify</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>GTS_Slovakia_Templates/Update_Mail_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Partner_Mail_Notify</fullName>
+        <description>Partner Mail Notify</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>GTS_Slovakia_Templates/New_Mail_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Registry_Mail_Modification_Notify</fullName>
+        <description>Registry Mail Modification Notify</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>GTS_Slovakia_Templates/Update_Mail_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Registry_Mail_Notify</fullName>
+        <description>Registry Mail Notify</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>GTS_Slovakia_Templates/New_Mail_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_Notifcation_to_AM_when_Case_Phase_is_changed_to_Service_Suspended</fullName>
+        <description>Send Email Notifcation to AM when Case Phase is changed to Service Suspended</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>GTS_Slovakia_Templates/AccountOwnerNotify_SS</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_Notifcation_to_AM_when_Case_Phase_is_changed_to_Waiting_for_Suspensio</fullName>
+        <description>Send Email Notifcation to AM when Case Phase is changed to Waiting for Suspension</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>GTS_Slovakia_Templates/AccountOwnerNotify</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notify_to_email_sender_follow_up_to_Email_to_Case_CSC</fullName>
+        <description>Send notify to email sender follow up to Email-to-Case : CSC</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>csc@gts.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>GTS_Slovakia_Templates/CASE_Follow_up_CSC_new</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notify_to_email_sender_follow_up_to_Email_to_Case_Hotline</fullName>
+        <description>Send notify to email sender follow up to Email-to-Case : Hotline</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hotline@gts.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>GTS_Slovakia_Templates/CASE_Follow_up_Hotlinenew</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notify_to_email_sender_follow_up_to_Email_to_Case_Partner_Hotline</fullName>
+        <description>Send notify to email sender follow up to Email-to-Case : Partner Hotline</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>partnerhotline@gts.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>GTS_Slovakia_Templates/CASE_Follow_up_Partner_Hotline</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notify_to_email_sender_follow_up_to_Email_to_Case_Registry</fullName>
+        <description>Send notify to email sender follow up to Email-to-Case : Registry</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>registry@gts.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>GTS_Slovakia_Templates/CASE_Follow_up_Registrynew</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notify_to_email_sender_follow_up_to_Email_to_Case_VipCare</fullName>
+        <description>Send notify to email sender follow up to Email-to-Case : VipCare</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hotline@gts.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>GTS_Slovakia_Templates/CASE_Follow_up_CSC_new</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notify_to_email_sender_in_response_to_Email_to_Case_Hotline</fullName>
+        <description>Send notify to email sender in response to Email-to-Case : Hotline</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hotline@gts.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>GTS_Slovakia_Templates/CASE_New_case_Hotlinenew</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notify_to_email_sender_in_response_to_Email_to_Case_Partnerhotline</fullName>
+        <description>Send notify to email sender in response to Email-to-Case : Partner Hotline</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>partnerhotline@gts.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>GTS_Slovakia_Templates/CASE_New_case_Partner_hotlinenew</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notify_to_email_sender_in_response_to_Email_to_Case_Registry</fullName>
+        <description>Send notify to email sender in response to Email-to-Case : Registry</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>registry@gts.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>GTS_Slovakia_Templates/CASE_New_case_Registrynew</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notify_to_email_sender_in_response_to_Email_to_Case_VipCare</fullName>
+        <description>Send notify to email sender in response to Email-to-Case : VipCare</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>hotline@gts.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>GTS_Slovakia_Templates/CASE_New_case_CSCnew</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notify_to_extranet_user_in_response_to_NewCase</fullName>
+        <description>Send notify to extranet user in response to NewCase</description>
+        <protected>false</protected>
+        <recipients>
+            <field>ContactEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>csc@gts.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>GTS_Slovakia_Templates/CASE_Follow_up_Hotlinenew</template>
+    </alerts>
+    <alerts>
+        <fullName>VIP_Mail_Modification_Notify</fullName>
+        <description>VIP Mail Modification Notify</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>GTS_Slovakia_Templates/Update_Mail_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>VIP_Mail_Notify</fullName>
+        <description>VIP Mail Notify</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>GTS_Slovakia_Templates/New_Mail_notification</template>
+    </alerts>
+    <alerts>
+        <fullName>notify_to_email_sender_in_response_to_Email_to_Case</fullName>
+        <description>Send notify to email sender in response to Email-to-Case : CSC</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>csc@gts.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>GTS_Slovakia_Templates/CASE_New_case_CSCnew</template>
+    </alerts>
+    <alerts>
+        <fullName>owner_notify</fullName>
+        <description>Send notify to owner whenever owner is changed</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>GTS_Slovakia_Templates/CASE_Case_assigned</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>CaseAccountSearch</fullName>
+        <field>AccountSearch__c</field>
+        <formula>Account.Name</formula>
+        <name>CaseAccountSearch</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CaseResynch</fullName>
+        <field>Synchronized__c</field>
+        <literalValue>0</literalValue>
+        <name>CaseResynch</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Check_Copy_Compensation</fullName>
+        <field>Create_Task__c</field>
+        <literalValue>1</literalValue>
+        <name>Check Copy Compensation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>ClearNotifyFlag</fullName>
+        <field>Create_Task__c</field>
+        <literalValue>0</literalValue>
+        <name>ClearNotifyFlag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Clear_follow_up</fullName>
+        <field>Follow_up__c</field>
+        <literalValue>0</literalValue>
+        <name>Clear follow up</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Compensation_Update</fullName>
+        <field>Compensation_Summary__c</field>
+        <formula>CaseNumber  +  RecordTypeId</formula>
+        <name>Compensation Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CopyWebmailAddress</fullName>
+        <field>Contact_s_Email__c</field>
+        <formula>SuppliedEmail</formula>
+        <name>CopyWebmailAddress</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FilledAssignee</fullName>
+        <field>Assignee__c</field>
+        <lookupValue>pavol.regec@gtsce.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>FilledAssigneeforCSC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FilledAssigneeforDomain</fullName>
+        <field>Assignee__c</field>
+        <lookupValue>richard.maas@gtsce.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>FilledAssigneeforDomain</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FilledAssigneeforHotline</fullName>
+        <field>Assignee__c</field>
+        <lookupValue>juraj.sykora@gtsce.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>FilledAssigneeforHotline</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FilledAssigneeforPartner</fullName>
+        <field>Assignee__c</field>
+        <lookupValue>juraj.sykora@gtsce.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>FilledAssigneeforPartner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FilledAssigneeforVIP</fullName>
+        <field>Assignee__c</field>
+        <lookupValue>matus.luknar@gtsce.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>FilledAssigneeforVIP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IncrementChangeNo</fullName>
+        <field>ChangesNumber__c</field>
+        <formula>ChangesNumber__c +1</formula>
+        <name>IncrementChangeNo</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Task_Creation</fullName>
+        <field>Create_Task__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Task Creation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>StatusChange</fullName>
+        <description>Change from NEW to IN OPERATION</description>
+        <field>Status</field>
+        <literalValue>In Operation</literalValue>
+        <name>StatusChange</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Status_Reset</fullName>
+        <field>Status</field>
+        <literalValue>New</literalValue>
+        <name>Status Reset</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Assignee auto fill CSC</fullName>
+        <actions>
+            <name>FilledAssignee</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : CSC</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Assignee auto fill Domain</fullName>
+        <actions>
+            <name>FilledAssigneeforDomain</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Registry</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Assignee auto fill Hotline</fullName>
+        <actions>
+            <name>FilledAssigneeforHotline</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Hotline</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Assignee auto fill Partner</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Partner Hotline</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Assignee auto fill VIP</fullName>
+        <actions>
+            <name>FilledAssigneeforVIP</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : VipCare</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>CASE%3A Case reassigned</fullName>
+        <actions>
+            <name>Notify_owner_about_case_assignment</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <description>Case has been reassigned and newly assigned owner is not a current user</description>
+        <formula>AND (ISCHANGED(OwnerId), (OwnerId  &lt;&gt;  $User.Id))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CaseAnotherChange</fullName>
+        <actions>
+            <name>IncrementChangeNo</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>WF resposnible for setting the no of changes done on the TT in the one synch period process;</description>
+        <formula>IF( AND(NOT( CONTAINS( $User.Username, &apos;admin@gtsce.com&apos; ) ), OR( ISCHANGED( Status ), ISCHANGED(Type), ISCHANGED( Token_on__c ), ISCHANGED( AccountId), ISCHANGED( OwnerId ), ISCHANGED( Subject), ISCHANGED( ContactId ), ISCHANGED( Priority ), ISCHANGED( Solution_Description__c), ISCHANGED( Closure_Code__c), ISCHANGED( Summary__c), ISCHANGED( ClosedDate), ISCHANGED( Reason_of_Postponment__c), ISCHANGED( Postpone_Till__c), ISCHANGED( ParentId), ISCHANGED( RecordTypeId), ISCHANGED( Description), ISCHANGED( Origin), ISCHANGED( Contact_s_Email__c), ISCHANGED( Contact_info__c), ISCHANGED( Contact_Phone_No__c) ) ), true, false)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CasePhaseChangedToSS</fullName>
+        <actions>
+            <name>Send_Email_Notifcation_to_AM_when_Case_Phase_is_changed_to_Service_Suspended</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Notification used for GTS SK only - BILL_SK_008_Extend CASE functionality for supporting debt collection process</description>
+        <formula>AND(ISCHANGED(Phase__c), ISPICKVAL(Phase__c, &apos;Services Suspended&apos;), ISPICKVAL(Account.GTS_Location_del__c , &apos;GTS Slovakia&apos;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CasePhaseChangedToWfS</fullName>
+        <actions>
+            <name>Send_Email_Notifcation_to_AM_when_Case_Phase_is_changed_to_Waiting_for_Suspensio</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Notification used for GTS SK only - BILL_SK_008_Extend CASE functionality for supporting debt collection process</description>
+        <formula>AND(ISCHANGED(Phase__c), ISPICKVAL(Phase__c, &apos;Waiting for Suspension&apos;), ISPICKVAL(Account.GTS_Location_del__c , &apos;GTS Slovakia&apos;) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CaseResynch</fullName>
+        <actions>
+            <name>CaseResynch</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Colorado project: after modification some of case values, case should be marked as desynchronized;</description>
+        <formula>IF( AND( Synchronized__c, NOT( CONTAINS( $User.Username, &apos;admin@gtsce.com&apos; ) ), OR(ISCHANGED( OwnerId ) , ISCHANGED( Status ), ISCHANGED(Type), ISCHANGED( Token_on__c ), ISCHANGED( Contact_Phone_No__c ), ISCHANGED( Contact_info__c ), ISCHANGED( Contact_s_Email__c ), ISCHANGED( AccountId), ISCHANGED( Subject), ISCHANGED( ContactId ), ISCHANGED( Priority ), ISCHANGED( Solution_Description__c), ISCHANGED(  Origin ) ) ), true, false)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>ChangeToOperation</fullName>
+        <actions>
+            <name>StatusChange</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>CARE_CZ_103</description>
+        <formula>IF(AND( NOT(ISCHANGED(Synchronization_Error__c)), NOT(ISNEW()), ISPICKVAL(Status, &apos;New&apos;), NOT(CONTAINS( $User.Username , &apos;admin@gtsce.com&apos;))),true,false)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Closed case notification</fullName>
+        <actions>
+            <name>Closed_case_notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>IF(AND(ISCHANGED(Status),   ISPICKVAL(Status, &apos;Closed&apos;)),true, false )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CopyWebmailAddress</fullName>
+        <actions>
+            <name>CopyWebmailAddress</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>IF(ISBLANK( SuppliedEmail ),false,true)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Case in IS sales desk queue</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>IS Sales Desk</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Mail to Case - CSC</fullName>
+        <actions>
+            <name>CSC_Mail_Notify</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : CSC</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Mail to Case - Hotline</fullName>
+        <actions>
+            <name>Hotline_Mail_Notify</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Hotline</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Mail to Case - Partner</fullName>
+        <actions>
+            <name>Partner_Mail_Notify</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Partner Hotline</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Mail to Case - Registry</fullName>
+        <actions>
+            <name>Registry_Mail_Notify</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Registry</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Mail to Case - VIP</fullName>
+        <actions>
+            <name>VIP_Mail_Notify</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : VipCare</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify Case Team Members</fullName>
+        <actions>
+            <name>Notification_about_assign_to_Case_Member</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>ClearNotifyFlag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Create_Task__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify customer - email  Case Origin%3A CSC</fullName>
+        <actions>
+            <name>notify_to_email_sender_in_response_to_Email_to_Case</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : CSC</value>
+        </criteriaItems>
+        <description>Notify customer who send email about case number</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify customer - email Case Origin%3A Email %3A Hotline</fullName>
+        <actions>
+            <name>Send_notify_to_email_sender_in_response_to_Email_to_Case_Hotline</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Hotline</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify customer - email Case Origin%3A Email %3A Partnerhotline</fullName>
+        <actions>
+            <name>Send_notify_to_email_sender_in_response_to_Email_to_Case_Partnerhotline</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Partner Hotline</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify customer - email Case Origin%3A Email %3A Registry</fullName>
+        <actions>
+            <name>Send_notify_to_email_sender_in_response_to_Email_to_Case_Registry</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Registry</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify customer - email Case Origin%3A Email %3A VipCare</fullName>
+        <actions>
+            <name>Send_notify_to_email_sender_in_response_to_Email_to_Case_VipCare</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : VipCare</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify customer - email follow up %3A CASE Origin CSC</fullName>
+        <actions>
+            <name>Send_notify_to_email_sender_follow_up_to_Email_to_Case_CSC</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Follow_up__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : CSC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify customer - email follow up %3A CASE Origin Hotline</fullName>
+        <actions>
+            <name>Send_notify_to_email_sender_follow_up_to_Email_to_Case_Hotline</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Follow_up__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Hotline</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify customer - email follow up %3A CASE Origin Partner Hotline</fullName>
+        <actions>
+            <name>Send_notify_to_email_sender_follow_up_to_Email_to_Case_Partner_Hotline</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Follow_up__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Partner Hotline</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify customer - email follow up %3A CASE Origin Registry</fullName>
+        <actions>
+            <name>Send_notify_to_email_sender_follow_up_to_Email_to_Case_Registry</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Follow_up__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Registry</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify customer - email follow up %3A CASE Origin VipCare</fullName>
+        <actions>
+            <name>Send_notify_to_email_sender_follow_up_to_Email_to_Case_VipCare</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Follow_up__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : VipCare</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Notify customer - extranet</fullName>
+        <actions>
+            <name>Send_notify_to_extranet_user_in_response_to_NewCase</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Extranet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.ContactEmail</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>NotifyCaseVip</fullName>
+        <active>true</active>
+        <formula>If( ISNEW() , true, false)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>SearchFiled Update</fullName>
+        <actions>
+            <name>CaseAccountSearch</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Account.Name</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Notify to Owner</fullName>
+        <actions>
+            <name>owner_notify</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>(ISCHANGED( OwnerId)&amp;&amp;  $User.Id != OwnerId)&amp;&amp;   ISPICKVAL( $Profile.LicenseType ,&apos;Salesforce&apos;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Mail to Case - CSC</fullName>
+        <actions>
+            <name>CSC_Mail_Modification_Notify</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 4) AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <field>Case.Follow_up__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : CSC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Reopened</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Mail to Case - Hotline</fullName>
+        <actions>
+            <name>Hotline_Mail_Modification_Notify</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 4) AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <field>Case.Follow_up__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Hotline</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Reopened</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Mail to Case - Partner</fullName>
+        <actions>
+            <name>Partner_Mail_Modification_Notify</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 4) AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <field>Case.Follow_up__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Partner Hotline</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Reopened</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Mail to Case - Registry</fullName>
+        <actions>
+            <name>Registry_Mail_Modification_Notify</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 4) AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <field>Case.Follow_up__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : Registry</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Reopened</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Mail to Case - VIP</fullName>
+        <actions>
+            <name>VIP_Mail_Modification_Notify</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Clear_follow_up</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 OR 4) AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <field>Case.Follow_up__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email : VipCare</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Reopened</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

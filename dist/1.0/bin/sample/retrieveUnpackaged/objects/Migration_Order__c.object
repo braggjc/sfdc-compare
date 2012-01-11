@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>CTarget_Bundle__c</fullName>
+        <description>Target Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Target Bundle</inlineHelpText>
+        <label>Target Bundle</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Migration Orders</relationshipLabel>
+        <relationshipName>Migration_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>Comments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comments</inlineHelpText>
+        <label>Comments</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Downloaded__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies, whether the origin service full configuration has been already downloaded. Technical flag used for asynchronous migration order processing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies, whether the origin service full configuration has been allready downloaded.</inlineHelpText>
+        <label>Downloaded</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Effective_date__c</fullName>
+        <description>Effective date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Effective date</inlineHelpText>
+        <label>Effective date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Installation_Order__c</fullName>
+        <description>Installation Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Installation Order</inlineHelpText>
+        <label>Installation Order</label>
+        <referenceTo>COrder__c</referenceTo>
+        <relationshipLabel>Migration Orders (Installation Order)</relationshipLabel>
+        <relationshipName>Migration_Orders1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Account__c</fullName>
+        <description>CARE_SK_370 Automatic Retention Case</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Partner which has agreed with Customer migrating the service.</inlineHelpText>
+        <label>Partner Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Migration Orders</relationshipLabel>
+        <relationshipName>Migration_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Provisioning_start_date__c</fullName>
+        <description>Provisioning start date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provisioning start date</inlineHelpText>
+        <label>Provisioning start date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Soft_Disconnection_Order__c</fullName>
+        <description>Soft Disconnection Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Soft Disconnection Order</inlineHelpText>
+        <label>Soft Disconnection Order</label>
+        <referenceTo>COrder__c</referenceTo>
+        <relationshipLabel>Migration Orders</relationshipLabel>
+        <relationshipName>Migration_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Source_Service_Bundle__c</fullName>
+        <description>Source Service Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Source Service Bundle</inlineHelpText>
+        <label>Source Service Bundle</label>
+        <referenceTo>ServiceBundle__c</referenceTo>
+        <relationshipLabel>Migration Orders</relationshipLabel>
+        <relationshipName>Migration_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Migration Order Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Migration Order Status</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prepared</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning started</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Awaiting provisioning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Target_Billing_Account__c</fullName>
+        <description>Target Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Target Billing Account</inlineHelpText>
+        <label>Target Billing Account</label>
+        <referenceTo>Billing_Accounts__c</referenceTo>
+        <relationshipLabel>Migration Orders</relationshipLabel>
+        <relationshipName>Migration_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Target_Bundle__c</fullName>
+        <description>Target Product (not used)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Target Product (not used)</inlineHelpText>
+        <label>Target Bundle</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Migration Orders</relationshipLabel>
+        <relationshipName>Migration_Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <label>Migration Order</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Soft_Disconnection_Order__c</columns>
+        <columns>Installation_Order__c</columns>
+        <columns>Provisioning_start_date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>MOR{000000000}</displayFormat>
+        <label>Order Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Migration Orders</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Configure</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Configure</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var morderstatus = &apos;{!Migration_Order__c.Status__c}&apos;;
+var morderid = &apos;{!Migration_Order__c.Id}&apos;;
+
+if(morderstatus == &quot;New&quot;) {
+alert(&apos;Initial target configuration is not ready yet. First submit the migration order.&apos;);
+} else if (morderstatus == &quot;Submitted&quot; || morderstatus == &quot;Preparation failed&quot;) {
+alert(&apos;Initial Target configuration is not ready yet. The preparation is in progress. Please try again later.&apos;);
+} else if (morderstatus == &quot;Provisioning started&quot; || morderstatus == &quot;Awaiting provisioning&quot; ) {
+alert(&apos;The provisioning is already in progress and the configuration cannot be changed.&apos;);
+} else if (morderstatus == &quot;Completed&quot;) {
+alert(&apos;Migration order has already been completed and configuration cannot be changed.&apos;);
+} else if (morderstatus == &quot;Prepared&quot;) {
+var result1 = sforce.connection.query(&quot;Select Installation_Order__r.Id From Migration_Order__c Where Id = &apos;&quot; + morderid + &quot;&apos;&quot;);
+var morder = result1.getArray(&apos;records&apos;);
+var installationorderid = morder[0].Installation_Order__r.Id;
+var result = sforce.connection.query(&quot;Select Id, Status__c, OrderLookup__r.OrderType__c, Line_Type__c From OrderLine__c Where OrderLookup__c = &apos;&quot; + installationorderid + &quot;&apos;&quot;);
+var orderlines = result.getArray(&apos;records&apos;);
+window.location.href = &quot;/apex/OrderAtrributesModification?olid=&quot; + orderlines[0].Id;
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Start_Provisioning</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Start Provisioning</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var ordStatus = &apos;{!Migration_Order__c.Status__c}&apos;;
+var ordId = &apos;{!Migration_Order__c.Id}&apos;;
+var proceed_with_submit = false;
+
+var validation_result = sforce.apex.execute(&quot;MigrationOrderMethods&quot;,&quot;startProvisionigValidation&quot;, {ordId:ordId, ordStatus:ordStatus });
+
+if(validation_result != null){
+if(validation_result[0] == &apos;OK&apos;){
+proceed_with_submit = true;
+} else if(validation_result[0] == &apos;QA&apos;){
+if(confirm(validation_result[1])){
+proceed_with_submit = true;
+}
+} else if(validation_result[0] == &apos;ERR&apos;){
+alert(validation_result[1]);
+}
+}
+
+if(proceed_with_submit == true){
+var result = sforce.apex.execute(&quot;MigrationOrderMethods&quot;,&quot;startProvisionig&quot;, {ordId:ordId, ordStatus:ordStatus });
+if(result[0] == &apos;OK&apos;){
+alert(result[1]);
+location.reload(true);
+} else if(result[0] == &apos;TRNSFR&apos;){
+window.top.location.href = &quot;https://&quot; + window.top.location.host + result[1];
+} else {
+alert(result[1]);
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Submit</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Submit</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var ordStatus = &apos;{!Migration_Order__c.Status__c}&apos;;
+var ordId = &apos;{!Migration_Order__c.Id}&apos;;
+var proceed_with_submit = false;
+
+var validation_result = sforce.apex.execute(&quot;MigrationOrderMethods&quot;,&quot;validateSubmit&quot;, {ordId:ordId, ordStatus:ordStatus });
+
+if(validation_result != null){
+if(validation_result[0] == &apos;OK&apos;){
+proceed_with_submit = true;
+} else if(validation_result[0] == &apos;QA&apos;){
+if(confirm(validation_result[1])){
+proceed_with_submit = true;
+}
+} else if(validation_result[0] == &apos;ERR&apos;){
+alert(validation_result[1]);
+}
+}
+
+if(proceed_with_submit == true){
+var result = sforce.apex.execute(&quot;MigrationOrderMethods&quot;,&quot;processSubmit&quot;, {ordId:ordId, ordStatus:ordStatus });
+if(result[0] == &apos;OK&apos;){
+alert(result[1]);
+location.reload(true);
+} else if(result[0] == &apos;TRNSFR&apos;){
+window.top.location.href = &quot;https://&quot; + window.top.location.host + result[1];
+} else {
+alert(result[1]);
+}
+}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,2303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <content>Grant_Element_Clone</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>GrantElementEdit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>Grant_Element_Insert</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>GrantElementView</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Store information about UKE grants elements.</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>ACC_Account__c</fullName>
+        <externalId>false</externalId>
+        <label>ACC Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Grant Elements</relationshipLabel>
+        <relationshipName>Grant_Elements</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ACC__c</fullName>
+        <externalId>false</externalId>
+        <label>ACC</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccrualAccount__c</fullName>
+        <externalId>false</externalId>
+        <label>Accrual Account</label>
+        <picklist>
+            <picklistValues>
+                <fullName>645003</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>645002</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>645047</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amount_Months__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount (Months)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Antenna_Size2__c</fullName>
+        <externalId>false</externalId>
+        <label>Antenna Size2 [m]</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Antenna_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Antenna Size [m]</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Application ID</label>
+        <referenceTo>Grant__c</referenceTo>
+        <relationshipLabel>Grant Elements</relationshipLabel>
+        <relationshipName>Grant2Grant_Element</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Band__c</fullName>
+        <externalId>false</externalId>
+        <label>Band</label>
+        <picklist>
+            <picklistValues>
+                <fullName>5,9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10,5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>18</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>23</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>26</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>28</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>32</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Unit</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CID__c</fullName>
+        <externalId>false</externalId>
+        <label>CID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Catch_Up_Currency__c</fullName>
+        <externalId>false</externalId>
+        <label>Catch Up Currency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CAD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HUF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GBP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RON</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Catch_Up_PLN__c</fullName>
+        <externalId>false</externalId>
+        <label>Catch Up PLN</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Catch_Up__c</fullName>
+        <externalId>false</externalId>
+        <label>Catch Up</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Change_Permit__c</fullName>
+        <externalId>false</externalId>
+        <label>Change Permit</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel__c</fullName>
+        <externalId>false</externalId>
+        <label>Channel</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Comment</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Commision_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Commision Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Company_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Company Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Energis</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Polska</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cost_Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Cost Account</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_Of_Issue__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <externalId>false</externalId>
+        <label>Date Of Issue</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Of_Signing__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Of Signing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Deinstallation_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Deinstallation Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>End_Of_Service__c</fullName>
+        <externalId>false</externalId>
+        <label>End Of Service</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Exchg__c</fullName>
+        <externalId>false</externalId>
+        <label>Exchg</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expiry_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expiry Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Fee_Cur__c</fullName>
+        <externalId>false</externalId>
+        <label>Fee Currency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CAD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HUF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GBP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RON</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Fee</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FinancialOwner__c</fullName>
+        <externalId>false</externalId>
+        <label>Financial Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Grant_Elements1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Financial_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Grant_Elements</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Gmina__c</fullName>
+        <externalId>false</externalId>
+        <label>Gmina</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoice Position</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoiced_until__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoiced until</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>KAM__c</fullName>
+        <externalId>false</externalId>
+        <label>KAM</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Length__c</fullName>
+        <description>Length (km)</description>
+        <externalId>false</externalId>
+        <label>Length (km)</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOR_Account__c</fullName>
+        <externalId>false</externalId>
+        <label>MOR Account</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Month_of_One_off__c</fullName>
+        <externalId>false</externalId>
+        <label>Month Of One Off</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Fee_PLN__c</fullName>
+        <externalId>false</externalId>
+        <label>Monthly Fee PLN</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Monthly Fee</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Node__c</fullName>
+        <externalId>false</externalId>
+        <label>Node</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OneOffFeePLN__c</fullName>
+        <externalId>false</externalId>
+        <label>One Off Fee PLN</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>One_Off_Fee_Cur__c</fullName>
+        <externalId>false</externalId>
+        <label>One Off Fee Currency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CAD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HUF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GBP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RON</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>One_Off_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>One Off Fee</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order__c</fullName>
+        <externalId>false</externalId>
+        <label>Order</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Our_Customer__c</fullName>
+        <externalId>false</externalId>
+        <label>Our Customer</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PAR_Fee_Coeff__c</fullName>
+        <externalId>false</externalId>
+        <label>PAR Fee Coeff</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Permit_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Permit ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Planned_Start_Of_Service__c</fullName>
+        <externalId>false</externalId>
+        <label>Planned Start of Service</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Pol__c</fullName>
+        <externalId>false</externalId>
+        <label>Pol</label>
+        <picklist>
+            <picklistValues>
+                <fullName>H</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>V</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Radio_Equipment__c</fullName>
+        <externalId>false</externalId>
+        <label>Radio Equipment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO/c with LAN, 16xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO 10MB with LAN, 16xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO 20MB with LAN, 16xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO 40MB with LAN, 16xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO 80MB with LAN, 16xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO 80MB with LAN, 32xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO 100MB with LAN, 32xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO 150MB 2xLAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO STM-1 opt, S1,1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO GbE, 150MB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO GbE + 3xLAN with VLAN + E1, 150MB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO GbE/STM-1, 310MB XPIC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO 40MB 1xE3+4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink NEO 80MB 2xE3+8E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink + STM-1 opt</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink + 2xLAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink MX 80MB with LAN, 32xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink V4 8MB with LAN, 4xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink V4 32MB with LAN, 16xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC Pasolink V3 34MB, E3 + E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ceragon 1500P 2xSTM-1 opt XPIC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ceragon IP-10 25M 16xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ceragon IP-10 50M 16xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ceragon IP-10 100M 16xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ceragon IP-10 150M 16xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ceragon IP-10 200M 16xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ceragon IP-10 300M 16xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sagem LinkF 34M, 9xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sagem LinkF 68M, 9xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sagem LinkF 68M, 26xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harris MicroStar Plus 2xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harris MicroStar Plus 4xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harris MicroStar Plus 16xE1 3U</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harris MicroStar Plus 16xE1 1U</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harris MicroStar Plus E3 3U</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF CFM 4-REB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF CFM 8-MUX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF CFM 16-REBM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF CFM 34-MUX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ericsson MiniLink E3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ericsson MiniLink HC STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 23</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 38 10M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 23 8M flex</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 32 STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 38 20M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 32 10M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 38 40M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 38 80M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 13 10M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 38 E3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 23 8M fix</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mini Link 38 HC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC MX 23</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 23 80M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 38 156M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 32 156M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SA LF 13 34M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 13 GEth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 23 2E1 flex</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 23 STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasolink MX 13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 38 32E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasolink+ 13 STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harris MS 38 2E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SA LF 23 34M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harris 4xE1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC E3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SA LF 34M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 80M 32</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harris MS 13 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC NEO STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO STM-1 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasolink+ 23 STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sagem linkF 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC V4 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sagem Link F 68</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 23 16M fix</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC V4 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC MX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC V4 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAGEM 68M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harris 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAGEM 34M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ER ML 38HC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harris 2E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC GbE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 23 FEth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 32 32E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 13 32E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 10M 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 23 E3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 23 GEth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 23 34M fix</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MiniLink E3 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 32 48E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 23 16M flex</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MSM 38 16E1 1U</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mini Link 23 HC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC 40M 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sagem linkF 68M/9 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sagem linkF 68M/9 23</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 80M 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO STM-1 13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 38 16E1+LAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 32 16E1+LAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 32 GEth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 20M 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 40M 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 8 MUX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 38 FEth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sagem linkF 23</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MSM 13 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 13 48E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasolink V4 13 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1500P 23 XPIC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MSM 13 16E1 1U RFU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 2E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 32 80M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 23 32E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC 38 STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC V4 23</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 23 2E1 fix</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 23 4M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>repeater</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 20M 32</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 20 M 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 23 40M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 13 40M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 16M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sagem linkF 34M 13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP-10 38 16E1+LAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP-10 23 16E1+LAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ML E-38 2E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XP4+ 13 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PA+ 38 STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC NEO 10M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sagem Link F 34</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harris MS 38 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harris MS 38 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SA LF 38 34M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC V4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PA V3 38 E3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasolink V4 38 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasolink V4 38 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 32 32E1+LAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasolink+ 38 STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 38 STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 13 16E1+LAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 13 FEth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 32 E3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO/c 13 16E1+LAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO/c 38 16E1+LAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO/c 23 16E1+LAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO/c 32 16E1+LAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MSM 13 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1500P 38 XPIC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PA+ 13 STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PA V4 38 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PA V4 38 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SA LF 13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SA LF 38 17M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PA V4 23 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SA LF 23</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PA V4 23 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 23 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ML E3 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 23 34M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ML E3 23</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PA V4 13 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PA V4 13 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ML E3 13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 13 16M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PA+ 23 STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ML HC 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TL 13 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MS 38 E3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XP4+ 13 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XP4 38 E3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ML HC 18</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>XP4 38 8E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CL 18 STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ML E-26 E3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasolink MX 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 23 16E1+LAN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC NEO 20M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC NEO 40M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 13 STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC NEO 80M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasolink V4 13 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 32</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 32 20M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 32 40M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC 80M MX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEO 38 GEth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sagem linkF 34M 23</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC NEO 156M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sagem linkF 34M 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasolink V4 23 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasolink V4 23 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pasolink MX 23</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TL 38 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TL 38 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TL 38 4E1 13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MS 13 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MS 38 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MS 38 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MS 13 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Harris 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MS 38 2E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 23 8M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 13 8M flex</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ML HC 23</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC MX 38</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NEC MX 13</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 23 16M</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAF 23 2E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PAV3 18 E3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PAV4 23 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PAV4 38 4E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>iPasolink 13 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>iPasolink 23 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>iPasolink 32 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>iPasolink 38 16E1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BBA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BDG</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BST</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CIE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ELB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GDA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GOW</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KAL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KAT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KIE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KLS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KON</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KOS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KRK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LBN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LDZ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LGN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LSO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NOS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NSA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OLS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OPL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PIO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>POZ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PTR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RAD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RZE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SIE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SKN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SLU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SZC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TAR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TOR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TRB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WAW</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WLB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WRO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZGA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LUB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SDE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Relation__c</fullName>
+        <externalId>false</externalId>
+        <label>Relation</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Report__c</fullName>
+        <externalId>false</externalId>
+        <label>Report</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Point To Point</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Multipoints</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Scala__c</fullName>
+        <externalId>false</externalId>
+        <label>Scala</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_Of_Service_From_Protocol__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Of Service From Protocol</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Street_Address_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Street Address 1</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_Address_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Street Address 2</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Town_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Town 1</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Town_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Town 2</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type_Of_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Type Of Cost</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BNFF</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CRFF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CROF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BNOF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type_Of_Payment__c</fullName>
+        <externalId>false</externalId>
+        <label>Type Of Payment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Annualy Fee</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly Fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quatrely Fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Half of the Year Fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Width__c</fullName>
+        <externalId>false</externalId>
+        <label>Width</label>
+        <picklist>
+            <picklistValues>
+                <fullName>3,5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>14</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>28</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <label>Grant Element</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Application_ID__c</columns>
+        <columns>NAME</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>Scala__c</columns>
+        <columns>Company_Name__c</columns>
+        <columns>Node__c</columns>
+        <columns>Active__c</columns>
+        <columns>Planned_Start_Of_Service__c</columns>
+        <columns>End_Of_Service__c</columns>
+        <columns>Report__c</columns>
+        <columns>Fee_Cur__c</columns>
+        <columns>Fee__c</columns>
+        <columns>Monthly_Fee__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Application_ID__c</field>
+            <operation>startsWith</operation>
+            <value>unknow</value>
+        </filters>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>kris_vw</fullName>
+        <columns>ACC__c</columns>
+        <columns>Active__c</columns>
+        <columns>Application_ID__c</columns>
+        <columns>NAME</columns>
+        <columns>Scala__c</columns>
+        <columns>Company_Name__c</columns>
+        <columns>Node__c</columns>
+        <columns>Planned_Start_Of_Service__c</columns>
+        <columns>End_Of_Service__c</columns>
+        <columns>Report__c</columns>
+        <columns>Fee_Cur__c</columns>
+        <columns>Fee__c</columns>
+        <columns>Monthly_Fee__c</columns>
+        <columns>CURRENCY_ISO_CODE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>equals</operation>
+            <value>E04861</value>
+        </filters>
+        <label>kris_vw</label>
+    </listViews>
+    <nameField>
+        <label>Nextno</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Grant Elements</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>Invoice</listViewButtons>
+        <listViewButtons>Calculate_Rates</listViewButtons>
+        <listViewButtons>Export_Selected</listViewButtons>
+        <lookupDialogsAdditionalFields>Application_ID__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Invoice_Position__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Monthly_Fee_PLN__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Application_ID__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Application_ID__c</searchFilterFields>
+        <searchResultsAdditionalFields>Application_ID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Permit_ID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Active__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Relation__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Channel__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Width__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Band__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Fee__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Antenna_Size_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISBLANK(Antenna_Size__c ), TEXT(Report__c) = &apos;Point To Point&apos;)</errorConditionFormula>
+        <errorDisplayField>Antenna_Size__c</errorDisplayField>
+        <errorMessage>Antenna Size: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Application_ID_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISBLANK(Application_ID__c )</errorConditionFormula>
+        <errorDisplayField>Application_ID__c</errorDisplayField>
+        <errorMessage>Application ID: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Band_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>OR(ISBLANK(TEXT(Band__c) ), TEXT(Band__c) = &apos;0&apos;)</errorConditionFormula>
+        <errorDisplayField>Band__c</errorDisplayField>
+        <errorMessage>Band: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Channel_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISBLANK(Channel__c )</errorConditionFormula>
+        <errorDisplayField>Channel__c</errorDisplayField>
+        <errorMessage>Channel: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Currency_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>OR(
+AND(NOT(ISNULL( One_Off_Fee__c )), ISBLANK(TEXT(One_Off_Fee_Cur__c ))),
+AND(NOT(ISNULL( Monthly_Fee__c )), ISBLANK(TEXT(Fee_Cur__c )))
+)</errorConditionFormula>
+        <errorMessage>ERROR: One or more Currency fields hasn&apos;t been filled.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Date_Of_Signing_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISBLANK(Date_Of_Signing__c )</errorConditionFormula>
+        <errorDisplayField>Date_Of_Signing__c</errorDisplayField>
+        <errorMessage>Date Of Signing: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Fee_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISNULL(Fee__c), NOT(ISBLANK(TEXT( Type_Of_Payment__c ))))</errorConditionFormula>
+        <errorDisplayField>Fee__c</errorDisplayField>
+        <errorMessage>Fee: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Gmina_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISBLANK(Gmina__c ), TEXT(Report__c) = &apos;Multipoints&apos;)</errorConditionFormula>
+        <errorDisplayField>Gmina__c</errorDisplayField>
+        <errorMessage>Gmina: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Length_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISBLANK(Length__c ), TEXT(Report__c) = &apos;Point To Point&apos;)</errorConditionFormula>
+        <errorDisplayField>Length__c</errorDisplayField>
+        <errorMessage>Length: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Month_of_One_off_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>OR(AND(NOT(ISNULL(One_Off_Fee__c)), ISBLANK(TEXT( Month_of_One_off__c ))), ISNULL(One_Off_Fee__c))</errorConditionFormula>
+        <errorDisplayField>Month_of_One_off__c</errorDisplayField>
+        <errorMessage>Month Of One Off: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Node_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISBLANK(Node__c ), TEXT(Report__c) = &apos;Multipoints&apos;)</errorConditionFormula>
+        <errorDisplayField>Node__c</errorDisplayField>
+        <errorMessage>Node: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>One_Off_Fee_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISNULL(One_Off_Fee__c), NOT(ISNULL( Month_of_One_off__c )))</errorConditionFormula>
+        <errorDisplayField>One_Off_Fee__c</errorDisplayField>
+        <errorMessage>One Off Fee: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PAR_Fee_Coeff_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISBLANK(TEXT(PAR_Fee_Coeff__c)), TEXT(Report__c) = &apos;Point To Point&apos;)</errorConditionFormula>
+        <errorDisplayField>PAR_Fee_Coeff__c</errorDisplayField>
+        <errorMessage>PAR Fee Coeff: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Permit_ID_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISBLANK(Permit_ID__c )</errorConditionFormula>
+        <errorDisplayField>Permit_ID__c</errorDisplayField>
+        <errorMessage>Permit ID: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Planned_Start_Of_Service_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISBLANK(Planned_Start_Of_Service__c )</errorConditionFormula>
+        <errorDisplayField>Planned_Start_Of_Service__c</errorDisplayField>
+        <errorMessage>Planned Start Of Service: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Pol_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISBLANK(TEXT(Pol__c)), TEXT(Report__c) = &apos;Point To Point&apos;)</errorConditionFormula>
+        <errorDisplayField>Pol__c</errorDisplayField>
+        <errorMessage>Pol: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Radio_Equipment_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISBLANK(TEXT(Radio_Equipment__c)), TEXT(Report__c) = &apos;Point To Point&apos;)</errorConditionFormula>
+        <errorDisplayField>Radio_Equipment__c</errorDisplayField>
+        <errorMessage>Radio Equipment: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Region_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISBLANK(TEXT(Region__c )), TEXT(Report__c) = &apos;Point To Point&apos;)</errorConditionFormula>
+        <errorDisplayField>Region__c</errorDisplayField>
+        <errorMessage>Region: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Relation_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISBLANK(Relation__c ), TEXT(Report__c) = &apos;Point To Point&apos;)</errorConditionFormula>
+        <errorDisplayField>Relation__c</errorDisplayField>
+        <errorMessage>Relation: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Report_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISBLANK(TEXT(Report__c ))</errorConditionFormula>
+        <errorDisplayField>Report__c</errorDisplayField>
+        <errorMessage>You must enter a value in Report field and then in Type Of Cost field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Street_Address2_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISBLANK(Street_Address_2__c ), TEXT(Report__c) = &apos;Point To Point&apos;)</errorConditionFormula>
+        <errorDisplayField>Street_Address_2__c</errorDisplayField>
+        <errorMessage>Street Address 2: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Street_Address_1_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(Street_Address_1__c )</errorConditionFormula>
+        <errorDisplayField>Street_Address_1__c</errorDisplayField>
+        <errorMessage>Street Address 1: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Town1_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISBLANK(Town_1__c )</errorConditionFormula>
+        <errorDisplayField>Town_1__c</errorDisplayField>
+        <errorMessage>Town 1: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Town2_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISBLANK(Town_2__c ), TEXT(Report__c) = &apos;Point To Point&apos;)</errorConditionFormula>
+        <errorDisplayField>Town_2__c</errorDisplayField>
+        <errorMessage>Town 2: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Type_Of_Cost_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISBLANK(TEXT(Type_Of_Cost__c ))</errorConditionFormula>
+        <errorDisplayField>Type_Of_Cost__c</errorDisplayField>
+        <errorMessage>You must enter a value in Report field and then in Type Of Cost field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Type_Of_Payment_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(NOT(ISNULL(Monthly_Fee__c)), ISBLANK(TEXT( Type_Of_Payment__c )))</errorConditionFormula>
+        <errorDisplayField>Type_Of_Payment__c</errorDisplayField>
+        <errorMessage>Type Of Payment: You must enter a value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Width_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>OR(ISBLANK(TEXT(Width__c) ), TEXT(Width__c) = &apos;0&apos;)</errorConditionFormula>
+        <errorDisplayField>Width__c</errorDisplayField>
+        <errorMessage>Width: You must enter a value</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Calculate_Rates</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Calculate Rates</masterLabel>
+        <openType>sidebar</openType>
+        <page>Grant_Element_Calculate_Rate</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Export_Selected</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Export Selected</masterLabel>
+        <openType>noSidebar</openType>
+        <page>Grant_Elements_Selected</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Invoice</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Invoice</masterLabel>
+        <openType>sidebar</openType>
+        <page>Grant_Element_Invoice</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>NoManualAddressCreation</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Scontrol</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Account for which this Address is related to.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account for which this Address is related to.</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Account Addresses</relationshipLabel>
+        <relationshipName>R00N20000001SDfDEAW</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Address_Type__c</fullName>
+        <description>Type of Address.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of Address.</inlineHelpText>
+        <label>Address Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Correspondence</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Local Office</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Registration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Point</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mailing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Address__c</fullName>
+        <description>Related Address.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Address.</inlineHelpText>
+        <label>Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Account/Contact Addresses</relationshipLabel>
+        <relationshipName>R00N20000001SDfCEAW</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AutoCreate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies if this relation has been auto created.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if this relation has been auto created.</inlineHelpText>
+        <label>AutoCreate</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <description>Name of the City.</description>
+        <externalId>false</externalId>
+        <formula>Address__r.City__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Name of the City.</inlineHelpText>
+        <label>City</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>Related Contact.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Contact.</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Contact Addresses</relationshipLabel>
+        <relationshipName>R00N20000001SDfHEAW</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <description>Name of the Country.</description>
+        <externalId>false</externalId>
+        <formula>CASE(Address__r.Country__c, 
+&quot;Armenia&quot;, &quot;Armenia&quot;,
+&quot;Austria&quot;, &quot;Austria&quot;,
+&quot;Azerbaijan&quot;, &quot;Azerbaijan&quot;,
+&quot;Belorus&quot;, &quot;Belorus&quot;,
+&quot;Bulgaria&quot;, &quot;Bulgaria&quot;,
+&quot;Croatia&quot;, &quot;Croatia&quot;,
+&quot;Czech Republic&quot;, &quot;Czech Republic&quot;,
+&quot;Estonia&quot;, &quot;Estonia&quot;,
+&quot;France&quot;, &quot;France&quot;,
+&quot;Georgia&quot;, &quot;Georgia&quot;,
+&quot;Germany&quot;, &quot;Germany&quot;,
+&quot;Greece&quot;, &quot;Greece&quot;,
+&quot;Hungary&quot;, &quot;Hungary&quot;,
+&quot;Iran&quot;, &quot;Iran&quot;,
+&quot;Kazakhstan&quot;, &quot;Kazakhstan&quot;,
+&quot;Kyrgyzstan&quot;, &quot;Kyrgyzstan&quot;,
+&quot;Latvia&quot;, &quot;Latvia&quot;,
+&quot;Lithuania&quot;, &quot;Lithuania&quot;,
+&quot;Moldova&quot;, &quot;Moldova&quot;,
+&quot;Poland&quot;, &quot;Poland&quot;,
+&quot;Romania&quot;, &quot;Romania&quot;,
+&quot;Russia&quot;, &quot;Russia&quot;,
+&quot;Serbia&quot;, &quot;Serbia&quot;,
+&quot;Slovakia&quot;, &quot;Slovakia&quot;,
+&quot;Slovenia&quot;, &quot;Slovenia&quot;,
+&quot;Tajikistan&quot;, &quot;Tajikistan&quot;,
+&quot;Turkey&quot;, &quot;Turkey&quot;,
+&quot;Ukraine&quot;, &quot;Ukraine&quot;,
+&quot;United Kingdom&quot;, &quot;United Kingdom&quot;,
+&quot;Other&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Name of the Country.</inlineHelpText>
+        <label>Country</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Integration_Timestamp__c</fullName>
+        <description>Stores information when this record has been last modified by integration.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores information when this record has been last modified by integration.</inlineHelpText>
+        <label>Integration Timestamp</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>On_Net__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if address in On or Off-Net</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if address in On or Off-Net</inlineHelpText>
+        <label>On Net</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Postal_Code__c</fullName>
+        <description>Postal Code of City.</description>
+        <externalId>false</externalId>
+        <formula>Address__r.Postal_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Postal Code of City.</inlineHelpText>
+        <label>Postal Code</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Object__c</fullName>
+        <description>Link to related object - Contact or Account</description>
+        <externalId>false</externalId>
+        <formula>IF( Account__c = null ,  HYPERLINK(&quot;/&quot; +  Contact__r.Id ,  Contact__r.FirstName + &quot; &quot; + Contact__r.LastName , &quot;_top&quot;) ,  HYPERLINK(&quot;/&quot; +  Account__r.Id ,  Account__r.Name , &quot;_top&quot; ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Link to related object - Contact or Account</inlineHelpText>
+        <label>Related Object</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>If this record has been migrated or created from other system this filed is storing it&apos;s ID in original system.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>If this record has been migrated or created from other system this filed is storing it&apos;s ID in original system.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Street_No__c</fullName>
+        <description>Street number.</description>
+        <externalId>false</externalId>
+        <formula>Address__r.Street_No__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Street number.</inlineHelpText>
+        <label>Street No</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street__c</fullName>
+        <description>Name of the street.</description>
+        <externalId>false</externalId>
+        <formula>IF( Address__r.Street_2__c = null ,  Address__r.Street_1__c ,  Address__r.Street_1__c + &quot;, &quot; + Address__r.Street_2__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Name of the street.</inlineHelpText>
+        <label>Street</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>isPrimary__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies if this address is primary for selected type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if this address is primary for selected type.</inlineHelpText>
+        <label>Primary</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Account/Contact Address</label>
+    <nameField>
+        <displayFormat>AA{00000000}</displayFormat>
+        <label>Relation Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Account/Contact Addresses</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Get_New_Address</fullName>
+        <availability>online</availability>
+        <description>Gets new Address from OSS</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Get New Address</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>function getRandomNum(lbound, ubound)
+{
+     return (Math.floor(Math.random() * (ubound - lbound)) + lbound);
+}
+
+function getRandomChar() 
+{
+     var numberChars = &quot;0123456789&quot;;
+     var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;
+     var charSet = numberChars + alphaChars;
+
+     return charSet.charAt(getRandomNum(0, charSet.length));
+}
+
+function getPassword(length) 
+{
+     var pass = &quot;&quot;;
+     length++;
+
+     if (length &gt; 0) pass = pass + getRandomChar();
+
+     for (var idx = 1; idx &lt; length; ++idx) 
+     {
+          pass = pass + getRandomChar();
+     }
+     return pass;
+}
+
+var arr = window.parent.location.href.split(&quot;/&quot;); 
+var arr2 = arr[3].split(&quot;?&quot;); 
+var id = arr2[0]; 
+var str_password = getPassword(24);
+
+window.top.location.href = &quot;https://&quot; + window.top.location.host + &quot;/apex/GetAddressFromOSS?objid=&quot; + id + &quot;&amp;hashId=&quot; + str_password;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Address</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Address</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>var arr = window.parent.location.href.split(&quot;/&quot;); 
+var arr2 = arr[3].split(&quot;?&quot;); 
+var id = arr2[0]; 
+
+
+var gts = &apos;{!Account.GTS_Location_del__c}&apos; ;
+
+if (gts == &apos;GTS Slovakia&apos;)
+alert (&apos;Use &quot;Get New Address&quot; button for Accounts &amp; Contacts from  GTS Slovakia&apos;);
+else
+window.open(&quot;/apex/NewAddressPage?id=&quot; + id, &quot;NewAddress&quot;, &quot;menubar=no,toolbar=no,width=670,height=480&quot;);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Set_as_Primary</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Set as Primary</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/apex.js&quot;)} 
+
+var records = {!GETRECORDIDS( $ObjectType.Account_Address__c)}; 
+if (records.length != 1) alert(&apos;Please select one Address.&apos;); 
+else if (records.length == 1) { 
+var new_results = sforce.connection.query(&quot;select Account__c, Contact__c, Address_Type__c from Account_Address__c where Id =&apos;&quot; + records[0] + &quot;&apos;&quot;); 
+var new_address= new_results.getArray(&quot;records&quot;)[0];
+
+var old_results;
+
+if(new_address.Account__c != null) {
+old_results = sforce.connection.query(&quot;select Id, isPrimary__c from Account_Address__c where Account__c = &apos;&quot; + new_address.Account__c + &quot;&apos; and Address_Type__c = &apos;&quot; + new_address. Address_Type__c + &quot;&apos; and isPrimary__c = true&quot;); 
+} else {
+old_results = sforce.connection.query(&quot;select Id, isPrimary__c from Account_Address__c where Contact__c = &apos;&quot; + new_address.Contact__c + &quot;&apos; and Address_Type__c = &apos;&quot; + new_address. Address_Type__c + &quot;&apos; and isPrimary__c = true&quot;); 
+}
+
+var old_addresses = old_results.getArray(&quot;records&quot;); 
+
+if (old_addresses.length&gt;0){ 
+for (var i = 0; i &lt; old_addresses.length; i++){ 
+var oldPrimaryAddress = old_addresses[i]; 
+oldPrimaryAddress.isPrimary__c = false; 
+sforce.connection.update([oldPrimaryAddress]); 
+} 
+} 
+
+var new_results2 = sforce.connection.query(&quot;select Id, isPrimary__c from Account_Address__c where Id =&apos;&quot; + records[0] + &quot;&apos;&quot;); 
+var new_address2 = new_results2.getArray(&quot;records&quot;)[0];
+
+new_address2.isPrimary__c = true; 
+var res = sforce.connection.update([new_address2]); 
+
+var error = &apos;&gt;&apos; +res;
+if(error.length !=44)
+alert(&apos;Account with the same Full Name and Registration address already exist in database&apos;);
+
+
+//reload the current page 
+window.location.href = window.location.href; 
+
+}</url>
+    </webLinks>
+</CustomObject>

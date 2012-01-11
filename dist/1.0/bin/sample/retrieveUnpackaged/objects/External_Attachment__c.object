@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Account related to External Attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account related to External Attachment</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>External Attachments</relationshipLabel>
+        <relationshipName>External_Attachments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CContract__c</fullName>
+        <description>Contract (custom) related to External Attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract (custom) related to External Attachment</inlineHelpText>
+        <label>Contract (custom)</label>
+        <referenceTo>CContract__c</referenceTo>
+        <relationshipLabel>External Attachments</relationshipLabel>
+        <relationshipName>External_Attachments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <description>Case related to External Attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Case related to External Attachment</inlineHelpText>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>External Attachments</relationshipLabel>
+        <relationshipName>External_Attachments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Cession_Account__c</fullName>
+        <description>Cession Account related to External Attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Cession Account related to External Attachment</inlineHelpText>
+        <label>Cession Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>External Attachments (Cession Account)</relationshipLabel>
+        <relationshipName>External_Attachments1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>Contact related to External Attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact related to External Attachment</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>External Attachments</relationshipLabel>
+        <relationshipName>External_Attachments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <description>Contract related to External Attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract related to External Attachment</inlineHelpText>
+        <label>Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>External Attachments</relationshipLabel>
+        <relationshipName>External_Attachments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Created_By_Ext_Contact__c</fullName>
+        <description>Extranet User (as Contact in SFDC) which created record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Extranet User (as Contact in SFDC) which created record</inlineHelpText>
+        <label>Created By Extranet Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>External Attachments (Created By Extranet Contact)</relationshipLabel>
+        <relationshipName>External_Attachments1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Created_By_Ext_Txt__c</fullName>
+        <description>Extranet User (not represented in SFDC) which created record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Extranet User (not represented in SFDC) which created record</inlineHelpText>
+        <label>Created By Extranet</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Created_By__c</fullName>
+        <description>SFDC User which created this record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>SFDC User which created this record</inlineHelpText>
+        <label>Created By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>External_Attachments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Created_Date__c</fullName>
+        <description>Date when the attachment was created</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when the attachment was created</inlineHelpText>
+        <label>Created Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Desciption of this attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Desciption of this attachment</inlineHelpText>
+        <label>Description</label>
+        <length>2000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DocumentType__c</fullName>
+        <description>Type of document stored as a attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of document stored as a attachment</inlineHelpText>
+        <label>Document Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Contract Agreement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Annex</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Order Form (SOF)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Specification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Terms of Use</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Power of Attorney</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Document_Number__c</fullName>
+        <description>Document Number from related Contract (custom)</description>
+        <externalId>false</externalId>
+        <formula>CContract__r.Document_Number__c</formula>
+        <inlineHelpText>Document Number from related Contract (custom)</inlineHelpText>
+        <label>Document Number</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Extranet_Impersonated_By_Username__c</fullName>
+        <description>Extranet Impersonated By User (as Contact in SFDC) which created record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Extranet Impersonated By User (as Contact in SFDC) which created record</inlineHelpText>
+        <label>Extranet Impersonated By Username</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>External Attachments (Extranet Impersonated By Username)</relationshipLabel>
+        <relationshipName>External_Attachments2</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>File_Link__c</fullName>
+        <description>Hyperlink to attached file</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://extranet.gtsce.com/attachments/&quot;+File_URL__c, &quot;Attachment File&quot; , &quot;_blank&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Hyperlink to attached file</inlineHelpText>
+        <label>File Link</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>File_Name__c</fullName>
+        <description>Name of the attached file</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the attached file</inlineHelpText>
+        <label>File Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>File_URL__c</fullName>
+        <description>Path to attachment in remote attachment storage</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Path to attachment in remote attachment storage</inlineHelpText>
+        <label>File URL</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Impersonated_By_Username__c</fullName>
+        <description>Name of Extranet user who added this attachment while impersonating other user.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of Extranet user who added this attachment while impersonating other user.</inlineHelpText>
+        <label>Extranet Impersonated By Username</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsPublic__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When selcted the document is available externally i.e. through portals for Partners, Customers</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When selcted the document is available externally i.e. through portals for Partners, Customers</inlineHelpText>
+        <label>Public</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <description>Lead related to External Attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lead related to External Attachment</inlineHelpText>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>External Attachments</relationshipLabel>
+        <relationshipName>External_Attachments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <description>Opportunity related to External Attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunity related to External Attachment</inlineHelpText>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>External Attachments</relationshipLabel>
+        <relationshipName>External_Attachments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order_Line__c</fullName>
+        <description>Order Line related to External Attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order Line related to External Attachment</inlineHelpText>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>External Attachments</relationshipLabel>
+        <relationshipName>External_Attachments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order__c</fullName>
+        <description>Order related to External Attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order related to External Attachment</inlineHelpText>
+        <label>Order</label>
+        <referenceTo>COrder__c</referenceTo>
+        <relationshipLabel>External Attachments</relationshipLabel>
+        <relationshipName>External_Attachments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_Calculation__c</fullName>
+        <description>Lookup to BCT Calculation object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to BCT Calculation object</inlineHelpText>
+        <label>SFDC Calculation</label>
+        <referenceTo>SFDC_Calculation__c</referenceTo>
+        <relationshipLabel>External Attachments</relationshipLabel>
+        <relationshipName>External_Attachments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Task__c</fullName>
+        <description>Task related to External Attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Task related to External Attachment</inlineHelpText>
+        <label>Task</label>
+        <referenceTo>CTask__c</referenceTo>
+        <relationshipLabel>External Attachments</relationshipLabel>
+        <relationshipName>External_Attachments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>View__c</fullName>
+        <description>View link to attachment; used on related lists on objects related to External Attachments</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;https://emea.salesforce.com/apex/viewExternalAttachment?id=&apos; + Id, &apos;View&apos;, &apos;_blank&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>View link to attachment</inlineHelpText>
+        <label>View</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>External Attachment</label>
+    <nameField>
+        <label>Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>External Attachments</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Account_Add_Attachment</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Attachment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+function getRandomNum(lbound, ubound) 
+{ 
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound); 
+} 
+
+function getRandomChar() 
+{ 
+var numberChars = &quot;0123456789&quot;; 
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;; 
+var charSet = numberChars + alphaChars; 
+
+return charSet.charAt(getRandomNum(0, charSet.length)); 
+} 
+
+function getPassword(length) 
+{ 
+var pass = &quot;&quot;; 
+length++; 
+
+if (length &gt; 0) pass = pass + getRandomChar(); 
+
+for (var idx = 1; idx &lt; length; ++idx) 
+{ 
+pass = pass + getRandomChar(); 
+} 
+return pass; 
+} 
+
+function openExtranetForm(url){ 
+window.open(url); 
+} 
+
+var url = &apos;http://extranet.gtsce.com/web/guest/attachement&apos;; 
+var str_password = getPassword(24); 
+var oppId = &apos;{!Account.Id}&apos;; 
+var create_ref_result = sforce.apex.execute(&quot;ExternalAttachmentMethods&quot;,&quot;createReferenceObject&quot;, {hash:str_password, objectId:oppId, objectType:&apos;Account&apos;}); 
+
+if(create_ref_result != null){ 
+if(create_ref_result[0] == &apos;OK&apos;){ 
+openExtranetForm(url + &apos;?requestId=&apos; + str_password); 
+} else if(validation_result[0] == &apos;REF_ERROR&apos;){ 
+alert(&apos;Try again&apos;); 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>CTask_Add_Attachment</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Attachment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+function getRandomNum(lbound, ubound) 
+{ 
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound); 
+} 
+
+function getRandomChar() 
+{ 
+var numberChars = &quot;0123456789&quot;; 
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;; 
+var charSet = numberChars + alphaChars; 
+
+return charSet.charAt(getRandomNum(0, charSet.length)); 
+} 
+
+function getPassword(length) 
+{ 
+var pass = &quot;&quot;; 
+length++; 
+
+if (length &gt; 0) pass = pass + getRandomChar(); 
+
+for (var idx = 1; idx &lt; length; ++idx) 
+{ 
+pass = pass + getRandomChar(); 
+} 
+return pass; 
+} 
+
+function openExtranetForm(url){ 
+window.open(url); 
+} 
+
+var url = &apos;http://extranet.gtsce.com/web/guest/attachement&apos;; 
+var str_password = getPassword(24); 
+var oppId = &apos;{!CTask__c.Id}&apos;; 
+var create_ref_result = sforce.apex.execute(&quot;ExternalAttachmentMethods&quot;,&quot;createReferenceObject&quot;, {hash:str_password, objectId:oppId, objectType:&apos;CTask&apos;}); 
+
+if(create_ref_result != null){ 
+if(create_ref_result[0] == &apos;OK&apos;){ 
+openExtranetForm(url + &apos;?requestId=&apos; + str_password); 
+} else if(validation_result[0] == &apos;REF_ERROR&apos;){ 
+alert(&apos;Try again&apos;); 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Case_Add_Attachment</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Attachment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+function getRandomNum(lbound, ubound) 
+{ 
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound); 
+} 
+
+function getRandomChar() 
+{ 
+var numberChars = &quot;0123456789&quot;; 
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;; 
+var charSet = numberChars + alphaChars; 
+
+return charSet.charAt(getRandomNum(0, charSet.length)); 
+} 
+
+function getPassword(length) 
+{ 
+var pass = &quot;&quot;; 
+length++; 
+
+if (length &gt; 0) pass = pass + getRandomChar(); 
+
+for (var idx = 1; idx &lt; length; ++idx) 
+{ 
+pass = pass + getRandomChar(); 
+} 
+return pass; 
+} 
+
+function openExtranetForm(url){ 
+window.open(url); 
+} 
+
+var url = &apos;http://extranet.gtsce.com/web/guest/attachement&apos;; 
+var str_password = getPassword(24); 
+var oppId = &apos;{!Case.Id}&apos;; 
+var create_ref_result = sforce.apex.execute(&quot;ExternalAttachmentMethods&quot;,&quot;createReferenceObject&quot;, {hash:str_password, objectId:oppId, objectType:&apos;Case&apos;}); 
+
+if(create_ref_result != null){ 
+if(create_ref_result[0] == &apos;OK&apos;){ 
+openExtranetForm(url + &apos;?requestId=&apos; + str_password); 
+} else if(validation_result[0] == &apos;REF_ERROR&apos;){ 
+alert(&apos;Try again&apos;); 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Contact_Add_Attachment</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Attachment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+function getRandomNum(lbound, ubound) 
+{ 
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound); 
+} 
+
+function getRandomChar() 
+{ 
+var numberChars = &quot;0123456789&quot;; 
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;; 
+var charSet = numberChars + alphaChars; 
+
+return charSet.charAt(getRandomNum(0, charSet.length)); 
+} 
+
+function getPassword(length) 
+{ 
+var pass = &quot;&quot;; 
+length++; 
+
+if (length &gt; 0) pass = pass + getRandomChar(); 
+
+for (var idx = 1; idx &lt; length; ++idx) 
+{ 
+pass = pass + getRandomChar(); 
+} 
+return pass; 
+} 
+
+function openExtranetForm(url){ 
+window.open(url); 
+} 
+
+var url = &apos;http://extranet.gtsce.com/web/guest/attachement&apos;; 
+var str_password = getPassword(24); 
+var oppId = &apos;{!Contact.Id}&apos;; 
+var create_ref_result = sforce.apex.execute(&quot;ExternalAttachmentMethods&quot;,&quot;createReferenceObject&quot;, {hash:str_password, objectId:oppId, objectType:&apos;Contact&apos;}); 
+
+if(create_ref_result != null){ 
+if(create_ref_result[0] == &apos;OK&apos;){ 
+openExtranetForm(url + &apos;?requestId=&apos; + str_password); 
+} else if(validation_result[0] == &apos;REF_ERROR&apos;){ 
+alert(&apos;Try again&apos;); 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Contract_Add_Attachment</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Attachment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+function getRandomNum(lbound, ubound) 
+{ 
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound); 
+} 
+
+function getRandomChar() 
+{ 
+var numberChars = &quot;0123456789&quot;; 
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;; 
+var charSet = numberChars + alphaChars; 
+
+return charSet.charAt(getRandomNum(0, charSet.length)); 
+} 
+
+function getPassword(length) 
+{ 
+var pass = &quot;&quot;; 
+length++; 
+
+if (length &gt; 0) pass = pass + getRandomChar(); 
+
+for (var idx = 1; idx &lt; length; ++idx) 
+{ 
+pass = pass + getRandomChar(); 
+} 
+return pass; 
+} 
+
+function openExtranetForm(url){ 
+window.open(url); 
+} 
+
+var url = &apos;http://extranet.gtsce.com/web/guest/attachement&apos;; 
+var str_password = getPassword(24); 
+var oppId = &apos;{!CContract__c.Id}&apos;; 
+var create_ref_result = sforce.apex.execute(&quot;ExternalAttachmentMethods&quot;,&quot;createReferenceObject&quot;, {hash:str_password, objectId:oppId, objectType:&apos;Contract&apos;}); 
+
+if(create_ref_result != null){ 
+if(create_ref_result[0] == &apos;OK&apos;){ 
+openExtranetForm(url + &apos;?requestId=&apos; + str_password); 
+} else if(validation_result[0] == &apos;REF_ERROR&apos;){ 
+alert(&apos;Try again&apos;); 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GenerateDocumentC2</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Generate Document</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/GenerateDocument?c2id={!Contact.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GenerateDocumentCO</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Generate Document</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/GenerateDocument?cid={!CContract__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GenerateDocumentOP</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Generate Document</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/GenerateDocument?oid={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GenerateDocumentORD</fullName>
+        <availability>online</availability>
+        <description>opens page for generating documents</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Generate Document</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/GenerateDocument?orid={!COrder__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Lead_Add_Attachment</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Attachment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+function getRandomNum(lbound, ubound) 
+{ 
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound); 
+} 
+
+function getRandomChar() 
+{ 
+var numberChars = &quot;0123456789&quot;; 
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;; 
+var charSet = numberChars + alphaChars; 
+
+return charSet.charAt(getRandomNum(0, charSet.length)); 
+} 
+
+function getPassword(length) 
+{ 
+var pass = &quot;&quot;; 
+length++; 
+
+if (length &gt; 0) pass = pass + getRandomChar(); 
+
+for (var idx = 1; idx &lt; length; ++idx) 
+{ 
+pass = pass + getRandomChar(); 
+} 
+return pass; 
+} 
+
+function openExtranetForm(url){ 
+window.open(url); 
+} 
+
+var url = &apos;http://extranet.gtsce.com/web/guest/attachement&apos;; 
+var str_password = getPassword(24); 
+var oppId = &apos;{!Lead.Id}&apos;; 
+var create_ref_result = sforce.apex.execute(&quot;ExternalAttachmentMethods&quot;,&quot;createReferenceObject&quot;, {hash:str_password, objectId:oppId, objectType:&apos;Lead&apos;}); 
+
+if(create_ref_result != null){ 
+if(create_ref_result[0] == &apos;OK&apos;){ 
+openExtranetForm(url + &apos;?requestId=&apos; + str_password); 
+} else if(validation_result[0] == &apos;REF_ERROR&apos;){ 
+alert(&apos;Try again&apos;); 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Opportunity_Add_Attachment</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Attachment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+function getRandomNum(lbound, ubound) 
+{ 
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound); 
+} 
+
+function getRandomChar() 
+{ 
+var numberChars = &quot;0123456789&quot;; 
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;; 
+var charSet = numberChars + alphaChars; 
+
+return charSet.charAt(getRandomNum(0, charSet.length)); 
+} 
+
+function getPassword(length) 
+{ 
+var pass = &quot;&quot;; 
+length++; 
+
+if (length &gt; 0) pass = pass + getRandomChar(); 
+
+for (var idx = 1; idx &lt; length; ++idx) 
+{ 
+pass = pass + getRandomChar(); 
+} 
+return pass; 
+} 
+
+function openExtranetForm(url){ 
+window.open(url); 
+} 
+
+var url = &apos;http://extranet.gtsce.com/web/guest/attachement&apos;; 
+var str_password = getPassword(24); 
+var oppId = &apos;{!Opportunity.Id}&apos;; 
+var create_ref_result = sforce.apex.execute(&quot;ExternalAttachmentMethods&quot;,&quot;createReferenceObject&quot;, {hash:str_password, objectId:oppId, objectType:&apos;Opportunity&apos;}); 
+
+if(create_ref_result != null){ 
+if(create_ref_result[0] == &apos;OK&apos;){ 
+openExtranetForm(url + &apos;?requestId=&apos; + str_password); 
+} else if(validation_result[0] == &apos;REF_ERROR&apos;){ 
+alert(&apos;Try again&apos;); 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>OrderLine_Add_Attachment</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Attachment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+function getRandomNum(lbound, ubound) 
+{ 
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound); 
+} 
+
+function getRandomChar() 
+{ 
+var numberChars = &quot;0123456789&quot;; 
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;; 
+var charSet = numberChars + alphaChars; 
+
+return charSet.charAt(getRandomNum(0, charSet.length)); 
+} 
+
+function getPassword(length) 
+{ 
+var pass = &quot;&quot;; 
+length++; 
+
+if (length &gt; 0) pass = pass + getRandomChar(); 
+
+for (var idx = 1; idx &lt; length; ++idx) 
+{ 
+pass = pass + getRandomChar(); 
+} 
+return pass; 
+} 
+
+function openExtranetForm(url){ 
+window.open(url); 
+} 
+
+var url = &apos;http://extranet.gtsce.com/web/guest/attachement&apos;; 
+var str_password = getPassword(24); 
+var oppId = &apos;{!OrderLine__c.Id}&apos;; 
+var create_ref_result = sforce.apex.execute(&quot;ExternalAttachmentMethods&quot;,&quot;createReferenceObject&quot;, {hash:str_password, objectId:oppId, objectType:&apos;OrderLine&apos;}); 
+
+if(create_ref_result != null){ 
+if(create_ref_result[0] == &apos;OK&apos;){ 
+openExtranetForm(url + &apos;?requestId=&apos; + str_password); 
+} else if(validation_result[0] == &apos;REF_ERROR&apos;){ 
+alert(&apos;Try again&apos;); 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Order_Add_Attachment</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Attachment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+function getRandomNum(lbound, ubound) 
+{ 
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound); 
+} 
+
+function getRandomChar() 
+{ 
+var numberChars = &quot;0123456789&quot;; 
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;; 
+var charSet = numberChars + alphaChars; 
+
+return charSet.charAt(getRandomNum(0, charSet.length)); 
+} 
+
+function getPassword(length) 
+{ 
+var pass = &quot;&quot;; 
+length++; 
+
+if (length &gt; 0) pass = pass + getRandomChar(); 
+
+for (var idx = 1; idx &lt; length; ++idx) 
+{ 
+pass = pass + getRandomChar(); 
+} 
+return pass; 
+} 
+
+function openExtranetForm(url){ 
+window.open(url); 
+} 
+
+var url = &apos;http://extranet.gtsce.com/web/guest/attachement&apos;; 
+var str_password = getPassword(24); 
+var oppId = &apos;{!COrder__c.Id}&apos;; 
+var create_ref_result = sforce.apex.execute(&quot;ExternalAttachmentMethods&quot;,&quot;createReferenceObject&quot;, {hash:str_password, objectId:oppId, objectType:&apos;Order&apos;}); 
+
+if(create_ref_result != null){ 
+if(create_ref_result[0] == &apos;OK&apos;){ 
+openExtranetForm(url + &apos;?requestId=&apos; + str_password); 
+} else if(validation_result[0] == &apos;REF_ERROR&apos;){ 
+alert(&apos;Try again&apos;); 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SFDCCalc_Add_Attachment</fullName>
+        <availability>online</availability>
+        <description>Button allowing upload of external attachments from BCT Calculation object</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Attachment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+function getRandomNum(lbound, ubound) 
+{ 
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound); 
+} 
+
+function getRandomChar() 
+{ 
+var numberChars = &quot;0123456789&quot;; 
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;; 
+var charSet = numberChars + alphaChars; 
+
+return charSet.charAt(getRandomNum(0, charSet.length)); 
+} 
+
+function getPassword(length) 
+{ 
+var pass = &quot;&quot;; 
+length++; 
+
+if (length &gt; 0) pass = pass + getRandomChar(); 
+
+for (var idx = 1; idx &lt; length; ++idx) 
+{ 
+pass = pass + getRandomChar(); 
+} 
+return pass; 
+} 
+
+function openExtranetForm(url){ 
+window.open(url); 
+} 
+
+var country = &apos;pl&apos;; 
+var baseUrl = sforce.apex.execute(&quot;IntegrationConfig&quot;,&quot;getExtranetUrl&quot;, {country:country}); //&apos;http://stg-extranet-pl.gtsce.com&apos; 
+var url = baseUrl+&apos;/web/guest/attachement&apos;; 
+//var url = &apos;http://stg-extranet-pl.gtsce.com/web/guest/attachement&apos;; 
+var str_password = getPassword(24); 
+var oppId = &apos;{!SFDC_Calculation__c.Id}&apos;; 
+var create_ref_result = sforce.apex.execute(&quot;ExternalAttachmentMethods&quot;,&quot;createReferenceObject&quot;, {hash:str_password, objectId:oppId, objectType:&apos;SFDCCalculation&apos;}); 
+
+if(create_ref_result != null){ 
+if(create_ref_result[0] == &apos;OK&apos;){ 
+openExtranetForm(url + &apos;?requestId=&apos; + str_password); 
+} else if(validation_result[0] == &apos;REF_ERROR&apos;){ 
+alert(&apos;Try again&apos;); 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>View_Attachment</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>View Attachment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+function getRandomNum(lbound, ubound) 
+{ 
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound); 
+} 
+
+function getRandomChar() 
+{ 
+var numberChars = &quot;0123456789&quot;; 
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;; 
+var charSet = numberChars + alphaChars; 
+
+return charSet.charAt(getRandomNum(0, charSet.length)); 
+} 
+
+function getPassword(length) 
+{ 
+var pass = &quot;&quot;; 
+length++; 
+
+if (length &gt; 0) pass = pass + getRandomChar(); 
+
+for (var idx = 1; idx &lt; length; ++idx) 
+{ 
+pass = pass + getRandomChar(); 
+} 
+return pass; 
+} 
+
+function openExtranetForm(url){ 
+window.open(url); 
+} 
+
+var url = &apos;http://extranet.gtsce.com/web/guest/sign-in/-/locator/sfdc/&apos;; 
+var str_password = getPassword(24); 
+var pathc= &apos;{!External_Attachment__c.File_URL__c}&apos;; 
+var name = &apos;{!External_Attachment__c.File_Name__c }&apos;; 
+var create_ref_result = sforce.apex.execute(&quot;ExternalAttachmentMethods&quot;,&quot;createAuthorizationObject&quot;, {hash:str_password, path:pathc, fileName:name}); 
+
+if(create_ref_result != null){ 
+if(create_ref_result[0] == &apos;OK&apos;){ 
+openExtranetForm(url + str_password); 
+} else if(validation_result[0] == &apos;REF_ERROR&apos;){ 
+alert(&apos;Try again&apos;); 
+} 
+}</url>
+    </webLinks>
+</CustomObject>

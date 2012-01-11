@@ -1,0 +1,3250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>NoOLManualCreation</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Order Lines</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>A_End_Contact__c</fullName>
+        <description>Customer&apos;s Contact for A-End location</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Contact for A-End location</inlineHelpText>
+        <label>A-End Contact (lookup)</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Order Lines (A-End Contact (lookup))</relationshipLabel>
+        <relationshipName>Order_Lines6</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>A_End_Interface__c</fullName>
+        <description>Interface configured for A-End location</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Interface configured for A-End location</inlineHelpText>
+        <label>A-End Interface</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>A_End_Medium__c</fullName>
+        <description>Medium configured for A-End location</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Medium configured for A-End location</inlineHelpText>
+        <label>A-End Medium</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>A_End__c</fullName>
+        <description>A-End address taken from Attributes configured under Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A-End address taken from Attributes configured under Order Line</inlineHelpText>
+        <label>A-End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Acceptance_Protocol_Signed__c</fullName>
+        <description>Date, when Acceptance Protocol was signed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Acceptance Protocol was signed</inlineHelpText>
+        <label>Acceptance Protocol Signed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Acceptance_Protocol__c</fullName>
+        <description>Acceptance Protocol which was created for this Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Acceptance Protocol which was created for this Order Line</inlineHelpText>
+        <label>Acceptance Protocol</label>
+        <referenceTo>Acceptance_Protocol__c</referenceTo>
+        <relationshipLabel>Order Lines</relationshipLabel>
+        <relationshipName>Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <description>Name of the Account (taken from Account assigned to related Order)</description>
+        <externalId>false</externalId>
+        <formula>OrderLookup__r.Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Name of the Account</inlineHelpText>
+        <label>Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Account, for which this Order Line was created</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account, for which this Order Line was created</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Order Lines (Account)</relationshipLabel>
+        <relationshipName>Order_Lines1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Accounts_Contact__c</fullName>
+        <description>Contact person representing the Account for installed / modified Service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact person representing the Account for installed / modified Service</inlineHelpText>
+        <label>Account&apos;s Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Order Lines (Account&apos;s Contact)</relationshipLabel>
+        <relationshipName>Order_Lines1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates that Special Offer is Active for selection</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates that Special Offer is Active for selection</inlineHelpText>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Billing_Start__c</fullName>
+        <description>Indicates actual Date, when billing for this Order Line started</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates actual Date, when billing for this Order Line started</inlineHelpText>
+        <label>Actual Billing Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Provisioning_End__c</fullName>
+        <description>Indicates actual Date, when provisioning for this Order Line completed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates actual Date, when provisioning for this Order Line completed</inlineHelpText>
+        <label>Actual Provisioning End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Provisioning_Start__c</fullName>
+        <description>Indicates actual Date, when provisioning for this Order Line started</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates actual Date, when provisioning for this Order Line started</inlineHelpText>
+        <label>Actual Provisioning Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_Project_Manager_Email__c</fullName>
+        <description>Email Address of Assigned Project Manager
+Created for PROV_PL_034 Postponing of disconnection date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email Address of Assigned Project Manager</inlineHelpText>
+        <label>Assigned Project Manager Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Assigned_Project_Manger__c</fullName>
+        <description>Project Manager assigned to manage Provisioning for this Order Line (taken from Assigned Project Manager field on Order)</description>
+        <externalId>false</externalId>
+        <formula>OrderLookup__r.Assigned_Project_Manager__r.FirstName+&quot; &quot;+OrderLookup__r.Assigned_Project_Manager__r.LastName</formula>
+        <inlineHelpText>Project Manager assigned to manage Provisioning for this Order Line</inlineHelpText>
+        <label>Assigned Project Manger</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Assigned_Provisioning_Plan__c</fullName>
+        <description>Provisioning Plan assigned to this Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provisioning Plan assigned to this Line</inlineHelpText>
+        <label>Assigned Provisioning Plan</label>
+        <referenceTo>Provisioning_Plan__c</referenceTo>
+        <relationshipLabel>Order Lines</relationshipLabel>
+        <relationshipName>Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Auto_Assign_PP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Auto Assign PP</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Auto_Submit_PP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Auto Submit PP</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>B_End_Contact__c</fullName>
+        <description>Customer&apos;s Contact for B-End location</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Contact for B-End location</inlineHelpText>
+        <label>B End Contact</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>B_End__c</fullName>
+        <description>B-End address taken from Attributes configured under Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>B-End address taken from Attributes configured under Order Line</inlineHelpText>
+        <label>B-End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Bandwidth__c</fullName>
+        <description>Bandwidth configured within Attributes under this Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bandwidth configured within Attributes under this Line</inlineHelpText>
+        <label>Bandwidth</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bandwidth_converted__c</fullName>
+        <description>Bandwidth converted to numeric value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bandwidth converted to numeric value</inlineHelpText>
+        <label>Bandwidth converted</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Account__c</fullName>
+        <description>Billing Account under which modified Service Bundle is installed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Billing Account under which modified Service Bundle is installed</inlineHelpText>
+        <label>Billing Account</label>
+        <referenceTo>Billing_Accounts__c</referenceTo>
+        <relationshipLabel>Order Lines</relationshipLabel>
+        <relationshipName>Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Billing_ID__c</fullName>
+        <description>ID of installed / modified Bundle in Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of installed / modified Bundle in Billing System</inlineHelpText>
+        <label>Billing ID</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Label__c</fullName>
+        <description>Label of the Bundle taken from it&apos;s Definition</description>
+        <externalId>false</externalId>
+        <formula>&apos;a&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Label of the Bundle taken from it&apos;s Definition</inlineHelpText>
+        <label>Bundle Label</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Special_Offer__c</fullName>
+        <description>Relation to Bundle for the Special Offer Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Bundle for the Special Offer Order Line</inlineHelpText>
+        <label>Bundle Special Offer</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Special Offers</relationshipLabel>
+        <relationshipName>SpecialOffers</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Business_Hours__c</fullName>
+        <description>indicated Business Hours definition, that should be used for planning Tasks under this Line (taken from Business Hours related to Order)</description>
+        <externalId>false</externalId>
+        <formula>OrderLookup__r.Business_Hours__c</formula>
+        <inlineHelpText>indicated Business Hours definition, that should be used for planning Tasks under this Line</inlineHelpText>
+        <label>Business Hours</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CContract__c</fullName>
+        <description>Contract related to this Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract related to this Order Line</inlineHelpText>
+        <label>Contract (custom)</label>
+        <referenceTo>CContract__c</referenceTo>
+        <relationshipLabel>Order Lines</relationshipLabel>
+        <relationshipName>Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CProduct__c</fullName>
+        <description>Indicates Bundle Definition of modified / installed Service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates Bundle Definition of modified / installed Service</inlineHelpText>
+        <label>Bundle</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Order Lines</relationshipLabel>
+        <relationshipName>Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CSR_ID__c</fullName>
+        <description>ID of installed / modified Service in CSR Database</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of installed / modified Service in CSR Database</inlineHelpText>
+        <label>CSR ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calculation_Number__c</fullName>
+        <description>Number of Calculation in CBCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Calculation in CBCT</inlineHelpText>
+        <label>Calculation Number</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cancelled_By__c</fullName>
+        <description>User who started Order Line cancellation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User who started Order Line cancellation</inlineHelpText>
+        <label>Cancelled By</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cancelled_Date__c</fullName>
+        <description>Date when the Order Line has been cancelled</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when the Order Line has been cancelled</inlineHelpText>
+        <label>Cancelled Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Capex_One_off_Awaiting_Provisioning__c</fullName>
+        <description>Value of Capex One-off in Awaiting Provisioning status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Capex One-off in Awaiting Provisioning status</inlineHelpText>
+        <label>Capex One-off Awaiting Provisioning</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_One_off_Cancelled__c</fullName>
+        <description>Value of Capex One-off in Cancelled status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Capex One-off in Cancelled status</inlineHelpText>
+        <label>Capex One-off Cancelled</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_One_off_Configured__c</fullName>
+        <description>The field contains the value of the Capex One-off when the OL has been created or updated and still had Configured status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field contains the value of the Capex One-off when the OL has been created or updated and still had Configured status</inlineHelpText>
+        <label>Capex One-off Configured</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_One_off_NEW__c</fullName>
+        <description>The field contains the value of the Capex One-off when the OL has been created or updated and still had new status.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field contains the value of the Capex One-off when the OL has been created or updated and still had new status.</inlineHelpText>
+        <label>Capex One-off_NEW</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_One_off_Rollback__c</fullName>
+        <description>Value of Capex One-off during Rollback</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Capex One-off during Rollback</inlineHelpText>
+        <label>Capex One-off Rollback</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_One_off_Submi__c</fullName>
+        <description>Value of Capex One-off during Submitted Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Capex One-off during Submitted Status</inlineHelpText>
+        <label>Capex One off Submited</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_One_off__c</fullName>
+        <description>Value of Capex One-off</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Capex One-off</inlineHelpText>
+        <label>Capex One-off</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_Reuseable_Awaiting_Provisioning__c</fullName>
+        <description>Value of Capex Reuseable in Awaiting Provisioning status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Capex Reuseable in Awaiting Provisioning status</inlineHelpText>
+        <label>Capex Reuseable Awaiting Provisioning</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_Reuseable_Cancelled__c</fullName>
+        <description>Value of Capex Reuseable in Cancelled status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Capex Reuseable in Cancelled status</inlineHelpText>
+        <label>Capex Reuseable Cancelled</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_Reuseable_Configured__c</fullName>
+        <description>The field contains the value of the Capex OReusable when the OL has been updated and still had status Configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field contains the value of the Capex OReusable when the OL has been updated and still had status Configured</inlineHelpText>
+        <label>Capex Reuseable Configured</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_Reuseable_NEW__c</fullName>
+        <description>The field contains the value of the Capex Reuseable when the OL has been created or updated and still had new status.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field contains the value of the Capex Reuseable when the OL has been created or updated and still had new status.</inlineHelpText>
+        <label>Capex Reuseable_NEW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_Reuseable_Rollback__c</fullName>
+        <description>Value of Capex Reuseable during Rollback</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Capex Reuseable during Rollback</inlineHelpText>
+        <label>Capex Reuseable Rollback</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_Reuseable_Submited__c</fullName>
+        <description>Value of Capex Reuseable in Submitted status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Capex Reuseable in Submitted status</inlineHelpText>
+        <label>Capex Reuseable Submited</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_Reuseable__c</fullName>
+        <description>Value of Capex Reuseable</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Capex Reuseable</inlineHelpText>
+        <label>Capex Reuseable</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Circuit_ID__c</fullName>
+        <description>Circuit ID assigned to installed / modified Service</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Circuit ID assigned to installed / modified Service</inlineHelpText>
+        <label>Circuit ID</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Circuit_Id_OSS_Link__c</fullName>
+        <description>con3:
+HYPERLINK(&apos;http://dione1.gtsgroup.cz/sand_box/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c)
+test:
+HYPERLINK(&apos;http://dione1.gtsgroup.cz/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c)
+prod:
+HYPERLINK(&apos;http://dione1.gtsgroup.cz/idengine/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c)</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;http://dione1.gtsgroup.cz/idengine/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c)</formula>
+        <inlineHelpText>Direct link to Circuit in OSS.</inlineHelpText>
+        <label>Circuit ID Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>Additional Comments related to Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional Comments related to Order Line</inlineHelpText>
+        <label>Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Commitment_Period__c</fullName>
+        <description>Indicates what Commitment Period should be set for installed / modified Service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates what Commitment Period should be set for installed / modified Service</inlineHelpText>
+        <label>Commitment Period</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Definite period</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Indefinite period</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Indefinite period with minimum period for using</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CommittedDeliveryDatePopupFlag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if for this Order Line reminder about empty Committed Delivery Date should be displayed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if for this Order Line reminder about empty Committed Delivery Date should be displayed</inlineHelpText>
+        <label>CDDPopupFlag</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CommittedDeliveryDatePopup__c</fullName>
+        <description>When Provisioning Entry Date is set at Order CommittedDeliveryDatePopup__c at OrderLine is calculated as ProvisioningEntryDate__c + 10 business days</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates Date and Time when reminder popup should be displayed if Commited Delivery Date is still empty  (10 days after Provisioning Entry Date)</inlineHelpText>
+        <label>CDDPopup</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CommittedDeliveryDateSetDate__c</fullName>
+        <description>Indicates when Committed Delivery Date was set</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates when Committed Delivery Date was set</inlineHelpText>
+        <label>CDDSD</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CommittedDeliveryDate__c</fullName>
+        <description>Committed Delivery Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CDD - Committed Delivery Date set manually by provisioning (PM), this date should lock after setting. If CDD is not provided 10 business days after Provisioning Entry Date, the popup notification is displayed to PM.</inlineHelpText>
+        <label>Committed Delivery Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Completed_Date__c</fullName>
+        <description>Date when Order Line has been completed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when Order Line has been completed</inlineHelpText>
+        <label>Completed Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Configured_Status_Date__c</fullName>
+        <description>Date when the line has been configured for the first time</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when the line has been configured for the first time</inlineHelpText>
+        <label>Configured Status Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>Customer&apos;s Contact for B-End location (Lookup to Contact object)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Contact for B-End location</inlineHelpText>
+        <label>B End Contact (lookup)</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Order Lines (B End Contact (lookup))</relationshipLabel>
+        <relationshipName>Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Length_formula__c</fullName>
+        <description>Contract Length taken from Related Contract</description>
+        <externalId>false</externalId>
+        <formula>OrderLookup__r.CContract__r.ContractTerm__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Contract Length taken from Related Contract</inlineHelpText>
+        <label>Contract Length</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Contact_in_an_emergency_A__c</fullName>
+        <description>Customer&apos;s Contact for A-End location, who should be notified in case of emergency</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Contact for A-End location, who should be notified in case of emergency</inlineHelpText>
+        <label>Customer Contact in an emergency [A]</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Order Lines (Customer Contact in an emergency [A])</relationshipLabel>
+        <relationshipName>Order_Lines7</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Contact_in_an_emergency__c</fullName>
+        <description>Customer&apos;s Contact for B-End location, who should be notified in case of emergency</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Contact for B-End location, who should be notified in case of emergency</inlineHelpText>
+        <label>Customer Contact in an emergency [B]</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Order Lines (Customer Contact in an emergency)</relationshipLabel>
+        <relationshipName>Order_Lines3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Contact_in_working_hours_A__c</fullName>
+        <description>Customer&apos;s Contact for A-End location, who should be notified within working hours</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Contact for A-End location, who should be notified within working hours</inlineHelpText>
+        <label>Customer Contact in an emergency [A]</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Order Lines (Customer Contact in an emergency [A])</relationshipLabel>
+        <relationshipName>Order_Lines8</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Contact_in_working_hours__c</fullName>
+        <description>Customer&apos;s Contact for B-End location, who should be notified within working hours</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Contact for B-End location, who should be notified within working hours</inlineHelpText>
+        <label>Customer Contact in working hours [B]</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Order Lines (Customer Contact in working hours)</relationshipLabel>
+        <relationshipName>Order_Lines4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Contact_outside_working_hours_A__c</fullName>
+        <description>Customer&apos;s Contact for A-End location, who should be notified outside working hours</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Contact for A-End location, who should be notified outside working hours</inlineHelpText>
+        <label>Customer Contact outside working hrs [A]</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Order Lines (Customer Contact outside working hrs [A])</relationshipLabel>
+        <relationshipName>Order_Lines9</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Contact_outside_working_hours__c</fullName>
+        <description>Customer&apos;s Contact for B-End location, who should be notified outside working hours</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Contact for B-End location, who should be notified outside working hours</inlineHelpText>
+        <label>Customer Contact outside working hrs [B]</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Order Lines (Customer Contact outside working hours)</relationshipLabel>
+        <relationshipName>Order_Lines5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Expected_Delivery__c</fullName>
+        <description>Date, when Customer expects the Service to be installed / updated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Customer expects the Service to be installed / updated</inlineHelpText>
+        <label>Customer Expected Delivery</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Distance_Zone__c</fullName>
+        <description>Distance Zone selected for this Order Line with the Configurator</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Distance Zone selected for this Order Line with the Configurator</inlineHelpText>
+        <label>Distance Zone</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Document_Number__c</fullName>
+        <description>Number of related Contract document</description>
+        <externalId>false</externalId>
+        <formula>CContract__r.Document_Number__c</formula>
+        <inlineHelpText>Number of related Contract document</inlineHelpText>
+        <label>Document Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Downloaded__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies if data from CSR has been already downloaded and saved as orderComponents, orderGPs ...</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Marks the lines for which configuration has already been retrieved from CSR database</inlineHelpText>
+        <label>Downloaded</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Email_Assigned_Project_Manager_Phone__c</fullName>
+        <description>Phone Number of Project Manager assigned to Order</description>
+        <externalId>false</externalId>
+        <formula>OrderLookup__r.Assigned_Project_Manager__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Phone Number of Project Manager assigned to Order</inlineHelpText>
+        <label>Email Assigned Project Manager Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Counter__c</fullName>
+        <defaultValue>1</defaultValue>
+        <description>Counts number of e-mails sent from the Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Counts number of e-mails sent from the Order Line</inlineHelpText>
+        <label>Email Counter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Customer_Address__c</fullName>
+        <description>Address from Costomer assigned to the Order</description>
+        <externalId>false</externalId>
+        <formula>OrderLookup__r.Account__r.ShippingStreet &amp; &quot;, &quot; &amp; OrderLookup__r.Account__r.ShippingCity &amp; &quot;, &quot; &amp; OrderLookup__r.Account__r.ShippingPostalCode &amp; &quot;, &quot; &amp; OrderLookup__r.Account__r.ShippingState</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Address from Costomer assigned to the Order</inlineHelpText>
+        <label>Email Customer Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Customer_City__c</fullName>
+        <description>City from Customer&apos;s Address</description>
+        <externalId>false</externalId>
+        <formula>OrderLookup__r.Account__r.ShippingCity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>City from Customer&apos;s Address</inlineHelpText>
+        <label>Email Customer City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Customer_Contact__c</fullName>
+        <description>Customer&apos;s Contact (for emailing)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Contact</inlineHelpText>
+        <label>Email Customer Contact</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Customer_Email__c</fullName>
+        <description>Customer&apos;s Email Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Email Address</inlineHelpText>
+        <label>Email Customer Email</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Customer_Name__c</fullName>
+        <description>Customer&apos;s Name Taken from Account related to Order</description>
+        <externalId>false</externalId>
+        <formula>OrderLookup__r.Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Customer&apos;s Name Taken from Account related to Order</inlineHelpText>
+        <label>Email Customer Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Customer_Phone__c</fullName>
+        <description>Customer&apos;s Phone Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Phone Number</inlineHelpText>
+        <label>Email Customer Phone</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Customer_Street__c</fullName>
+        <description>Street of Customer&apos;s Address taken from Account related to Order</description>
+        <externalId>false</externalId>
+        <formula>OrderLookup__r.Account__r.ShippingStreet</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Street of Customer&apos;s Address taken from Account related to Order</inlineHelpText>
+        <label>Email Customer Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Supplier_Address__c</fullName>
+        <description>Address taken from assigned Supplier</description>
+        <externalId>false</externalId>
+        <formula>Supplier__r.ShippingStreet &amp; &quot;, &quot; &amp; Supplier__r.ShippingCity &amp; &quot;, &quot;&amp; Supplier__r.ShippingPostalCode &amp; &quot;, &quot; &amp; Supplier__r.ShippingCountry</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Address taken from assigned Supplier</inlineHelpText>
+        <label>Email Supplier Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Supplier_Email__c</fullName>
+        <description>Email Address of assigned Supplier&apos;s Contact</description>
+        <externalId>false</externalId>
+        <formula>Suppliers_Contact__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Email Address of assigned Supplier&apos;s Contact</inlineHelpText>
+        <label>Email Supplier Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Supplier_Phone__c</fullName>
+        <description>Phone Number of Assigned Supplier</description>
+        <externalId>false</externalId>
+        <formula>Supplier__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Phone Number of Assigned Supplier</inlineHelpText>
+        <label>Email Supplier Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EndBillingDate__c</fullName>
+        <description>Date, when Billing should be stopped for disconnected service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Billing should be stopped for disconnected service</inlineHelpText>
+        <label>End Billing Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>End_Billing_Customer__c</fullName>
+        <description>Date, when Billing should be stopped for disconnected service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Billing should be stopped for disconnected service</inlineHelpText>
+        <label>End Billing Customer</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ExpectedDeliveryDateNumberOfWeeks__c</fullName>
+        <description>Expected Delivery Date Number Of Weeks</description>
+        <externalId>false</externalId>
+        <inlineHelpText>EDD - Expected Delivery Date is selected from calendar or calculated from number of provided calendar weeks.</inlineHelpText>
+        <label>EDD Number of weeks</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ExpectedDeliveryDate__c</fullName>
+        <description>EDD - Expected Delivery Date set manually by AM at the same time when OSD is set</description>
+        <externalId>false</externalId>
+        <inlineHelpText>EDD - Expected Delivery Date set manually by AM at the same time when OSD is set; indicates expected date, when Service should be delivered/modified</inlineHelpText>
+        <label>Expected Delivery Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GTS_Commited_Date__c</fullName>
+        <description>Date, when GTS committed to deliver/modify the Service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when GTS committed to deliver/modify the Service</inlineHelpText>
+        <label>GTS Commited Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>GTS, for which given Special Offer was defined</description>
+        <externalId>false</externalId>
+        <inlineHelpText>GTS, for which given Special Offer was defined</inlineHelpText>
+        <label>GTS Location (Special Offer)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GTS_Location_from_Order__c</fullName>
+        <description>Formula which takes the Order GTS Location -  needed for views</description>
+        <externalId>false</externalId>
+        <formula>OrderLookup__r.GTS_Location__c</formula>
+        <inlineHelpText>GTS Location from related Order</inlineHelpText>
+        <label>GTS Location from Order</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generate_ServiceIDs__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>PROV_PL_313 Service ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field points the lines, for which serivce Ids (SID) should be generated.</inlineHelpText>
+        <label>Generate ServiceIDs</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include_Into_Amount__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if values from this Order Line should be copied to Opportunity Product and Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if values from this Order Line should be copied to Opportunity Product and Order</inlineHelpText>
+        <label>Include Into Amount</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Included_in_BCT_Calculation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates that OL has been included in BCT Caluclation; some attributes will be no longer editable</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates that OL has been included in BCT Caluclation; some attributes will be no longer editable</inlineHelpText>
+        <label>Included in BCT Calculation</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Included_in_Technical_Project__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates that OL has been included in Technical Project; some attributes will be no longer editable</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates that OL has been included in Technical Project; some attributes will be no longer editable</inlineHelpText>
+        <label>Included in Technical Project</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Intercompany_Buisness__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determines if this orderline is realized with few GTS.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines if this orderline is realized with few GTS.</inlineHelpText>
+        <label>Intercompany Buisness</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Interface__c</fullName>
+        <description>Interface configured for B-End location</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Interface configured for B-End location</inlineHelpText>
+        <label>B-End Interface</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Partial_Cession__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determines if migration line is for all numbers from Source Service.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines if migration line is for all numbers from Source Service.</inlineHelpText>
+        <label>Partial Transfer</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_By_Ext_Contact_ID__c</fullName>
+        <description>Contact, who last modified this Order Line from Extranet (ID of Contact used later to create hyperlink)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact, who last modified this Order Line from Extranet</inlineHelpText>
+        <label>Last Modified by Extranet Contact ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_By_Ext_Contact_Name__c</fullName>
+        <description>Contact, who last modified this Order Line from Extranet (Name used later to create hyperlink)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact, who last modified this Order Line from Extranet</inlineHelpText>
+        <label>Last Modified by Extranet Contact Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_By_Ext_Contact__c</fullName>
+        <description>Contact, who last modified this Order Line from Extranet (due to limit of Lookup fields craeted as hyperlink formula)</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Last_Modified_By_Ext_Contact_ID__c , Last_Modified_By_Ext_Contact_Name__c )</formula>
+        <inlineHelpText>Contact, who last modified this Order Line from Extranet</inlineHelpText>
+        <label>Last Modified by Extranet Contact</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_By_Ext_Txt__c</fullName>
+        <description>Date, when given Order Line was last modified from Extranet</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when given Order Line was last modified from Extranet</inlineHelpText>
+        <label>Last Modified by Extranet</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LineNumber__c</fullName>
+        <description>Number of Line under Order (number is used as a pert of Order Line Name)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Line under Order</inlineHelpText>
+        <label>Line Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_Type__c</fullName>
+        <description>Identifies type of action related to selected Product (New Installation, Modification, etc.)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identifies type of action related to selected Product (New Installation, Modification, etc.)</inlineHelpText>
+        <label>Line Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Price Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disconnection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Release</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Suspend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Soft Disconnection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Migration Installation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Change BA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cession</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Migration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Update</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Numbers Transfer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Numbers Cession</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Link_to_CBCT__c</fullName>
+        <description>Link to CBCT system, to Calculation related to this Order Line</description>
+        <externalId>false</externalId>
+        <formula>IF (OR(ISBLANK(Calculation_Number__c) ,ISNULL(Calculation_Number__c )) ,&apos;No Calculation Number&apos;, HYPERLINK(&quot;https://sk-bct.in.gtsce.com/restricted/showCalculation-&quot; &amp; Calculation_Number__c , &apos;Open CBCT&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Link to CBCT system, to Calculation related to this Order Line</inlineHelpText>
+        <label>Link to CBCT</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lock_Mode__c</fullName>
+        <description>Used for communication with eWegorz and suspension lines only
+part of [PROV]_PL_004: Integration with eWęgorz (aDSL and SHDSL services)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used for communication with eWegorz and suspension lines only</inlineHelpText>
+        <label>Lock Mode</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Spam</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vindication</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Medium__c</fullName>
+        <description>Medium configured for B-End location</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Medium configured for B-End location</inlineHelpText>
+        <label>B-End Medium</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Minimum_Service_Period__c</fullName>
+        <description>Indicates minimum service period for given Service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates minimum service period for given Service (should be provided as number of months)</inlineHelpText>
+        <label>Minimum Service Period [months]</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_Recurring_Price_Awaiting_Prov__c</fullName>
+        <description>Value of Monthly Recurring Price in Awaiting Provisioning Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Monthly Recurring Price in Awaiting Provisioning Status</inlineHelpText>
+        <label>Monthly Recurring Price Awaiting Prov</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Recurring_Price_Cancelled__c</fullName>
+        <description>Value of Monthly Recurring Price in Cancelled Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Monthly Recurring Price in Cancelled Status</inlineHelpText>
+        <label>Monthly Recurring Price Cancelled</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Recurring_Price_Configured__c</fullName>
+        <description>The field contains the value of the MRP when the OL has been updated and still had status Configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field contains the value of the MRP when the OL has been updated and still had status Configured</inlineHelpText>
+        <label>Monthly Recurring Price Configured</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Recurring_Price_NEW__c</fullName>
+        <description>The field contains the value of the Monthly Recuring Price when the OL has been created or updated and still had new status.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field contains the value of the Monthly Recuring Price when the OL has been created or updated and still had new status.</inlineHelpText>
+        <label>Monthly Recurring Price_NEW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Recurring_Price_Submited__c</fullName>
+        <description>Value of Monthly Recurring Price in Submitted Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Monthly Recurring Price in Submitted Status</inlineHelpText>
+        <label>Monthly Recurring Price Submited</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_recurring_price__c</fullName>
+        <description>Value of Monthly Recurring Price</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Monthly Recurring Price</inlineHelpText>
+        <label>Monthly Recurring Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>New_Status_Date__c</fullName>
+        <description>Date, when new status has been assigned to Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when new status has been assigned to Order Line</inlineHelpText>
+        <label>New Status Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Non_Recurring_Price_Awaiting_Prov__c</fullName>
+        <description>Value of Non Recurring Price in Awaiting Provisioning Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Non Recurring Price in Awaiting Provisioning Status</inlineHelpText>
+        <label>Non Recurring Price Awaiting Prov.</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_Recurring_Price_Cancelled__c</fullName>
+        <description>Value of Non Recurring Price in Cancelled Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Non Recurring Price in Cancelled Status</inlineHelpText>
+        <label>Non Recurring Price Cancelled</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_Recurring_Price_Configured__c</fullName>
+        <description>The field contains the value of the NRP when the OL has been updated and still had status Configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field contains the value of the NRP when the OL has been updated and still had status Configured</inlineHelpText>
+        <label>Non Recurring Price Configured</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_Recurring_Price_NEW__c</fullName>
+        <description>The field contains the value of the Non Recurring Price when the OL has been created or updated and still had new status.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field contains the value of the Non Recurring Price when the OL has been created or updated and still had new status.</inlineHelpText>
+        <label>Non Recurring Price_NEW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_Recurring_Price_Submited__c</fullName>
+        <description>Value of Non Recurring Price in Submitted Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Non Recurring Price in Submitted Status</inlineHelpText>
+        <label>Non Recurring Price Submited</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_recurring_price__c</fullName>
+        <description>Value of Non Recurring Price</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Non Recurring Price</inlineHelpText>
+        <label>Non Recurring Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>OL_Awaiting_Provisioning_State_Date__c</fullName>
+        <description>Date, when Order Line status was set to Awaiting Provisioning</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Order Line status was set to Awaiting Provisioning</inlineHelpText>
+        <label>OL Awaiting Provisioning State Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OL_Cancelled_State_Date__c</fullName>
+        <description>Date, when Order Line status was set to Cancelled</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Order Line status was set to Cancelled</inlineHelpText>
+        <label>OL Cancelled State Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OL_Completed_State_Date__c</fullName>
+        <description>Date, when Order Line status was set to Completed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Order Line status was set to Completed</inlineHelpText>
+        <label>OL Completed State Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OL_Configured_Status_Date__c</fullName>
+        <description>Date, when Order Line status was set to Configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Order Line status was set to Configured</inlineHelpText>
+        <label>OL Configured Status Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OL_New_Status_Date__c</fullName>
+        <description>Date, when Order Line status was set to New (taken from Line creation date)</description>
+        <externalId>false</externalId>
+        <formula>CreatedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Date, when Order Line status was set to New</inlineHelpText>
+        <label>OL New Status Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OL_Submited_State_Date__c</fullName>
+        <description>Date, when Order Line status was set to Submitted</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Order Line status was set to Submitted</inlineHelpText>
+        <label>OL Submited State Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opex_Monthly_Awaiting_Provisioning__c</fullName>
+        <description>Value of Opex Monthly in Awaiting Provisioning status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Opex Monthly in Awaiting Provisioning status</inlineHelpText>
+        <label>Opex Monthly Awaiting Provisioning</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_Monthly_Cancelled__c</fullName>
+        <description>Value of Opex Monthly in Cancelled status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Opex Monthly in Cancelled status</inlineHelpText>
+        <label>Opex Monthly Cancelled</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_Monthly_Configured__c</fullName>
+        <description>The field contains the value of the Opex Monthly when the OL has been updated and still had status Configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field contains the value of the Opex Monthly when the OL has been updated and still had status Configured</inlineHelpText>
+        <label>Opex Monthly Configured</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_Monthly_NEW__c</fullName>
+        <description>The field contains the value of the Opex Monthly when the OL has been created or updated and still had new status.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field contains the value of the Opex Monthly when the OL has been created or updated and still had new status.</inlineHelpText>
+        <label>Opex Monthly_NEW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_Monthly_Rollback__c</fullName>
+        <description>Value of Opex Monthly during Rollback</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Opex Monthly during Rollback</inlineHelpText>
+        <label>Opex Monthly Rollback</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_Monthly_Submited__c</fullName>
+        <description>Value of Opex Monthly in Submitted status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Opex Monthly in Submitted status</inlineHelpText>
+        <label>Opex Monthly Submited</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_Monthly__c</fullName>
+        <description>Value of Opex Monthly</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Opex Monthly</inlineHelpText>
+        <label>Opex Monthly</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_One_off_Awaiting_Provisioning__c</fullName>
+        <description>Value of Opex One-off in Awaiting Provisioning status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Opex One-off in Awaiting Provisioning status</inlineHelpText>
+        <label>Opex One-off Awaiting Provisioning</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_One_off_Cancelled__c</fullName>
+        <description>Value of Opex One-off in Cancelled status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Opex One-off in Cancelled status</inlineHelpText>
+        <label>Opex One-off Cancelled</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_One_off_Configured__c</fullName>
+        <description>The field contains the value of the Opex One Off when the OL has been updated and still had status Configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field contains the value of the Opex One Off when the OL has been updated and still had status Configured</inlineHelpText>
+        <label>Opex One-off Configured</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_One_off_NEW__c</fullName>
+        <description>The field contains the value of the Opex One-off when the OL has been created or updated and still had new status.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The field contains the value of the Opex One-off when the OL has been created or updated and still had new status.</inlineHelpText>
+        <label>Opex One-off_NEW</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_One_off_Rollback__c</fullName>
+        <description>Value of Opex One-off during Rollback</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Opex One-off during Rollback</inlineHelpText>
+        <label>Opex One-off Rollback</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_One_off_Submited__c</fullName>
+        <description>Value of Opex One-off in Submited status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Opex One-off in Submited status</inlineHelpText>
+        <label>Opex One off Submited</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_One_off__c</fullName>
+        <description>Value of Opex One-off</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Opex One-off</inlineHelpText>
+        <label>Opex One-off</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Line_Item_Id__c</fullName>
+        <description>Identifier of related Opportunity Product (used to update values on Opportunity Product when something changes on Order Line)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identifier of related Opportunity Product (used to update values on Opportunity Product when something changes on Order Line)</inlineHelpText>
+        <label>Opportunity Line Item Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <description>Opportunity related to the Order Line, used in order to have Related List of Order Lines directly under Opportunity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunity related to the Order Line, used in order to have Related List of Order Lines directly under Opportunity</inlineHelpText>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Order Lines</relationshipLabel>
+        <relationshipName>Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OrderCloseDate__c</fullName>
+        <description>Order Close Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>OCD - Order Close Date set automatically when OrderLine&apos;s status changes to &apos;Completed‘ or ‘Cancelled’.</inlineHelpText>
+        <label>Order Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OrderLookup__c</fullName>
+        <description>Relation to Order, that this Order Line belongs to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Order, that this Order Line belongs to</inlineHelpText>
+        <label>Order</label>
+        <referenceTo>COrder__c</referenceTo>
+        <relationshipLabel>Order Lines (Order)</relationshipLabel>
+        <relationshipName>Order_Lines1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OrderSigningDate__c</fullName>
+        <description>Value of Order Signing Date field from related Order</description>
+        <externalId>false</externalId>
+        <formula>OrderLookup__r.OrderSigningDate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Value of Order Signing Date field from related Order</inlineHelpText>
+        <label>OrderSigningDate</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Order_GTS_Location__c</fullName>
+        <description>GTS Location copied from Order object (used to create Views, reporting, etc.)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>GTS Location copied from Order object (used to create Views, reporting, etc.)</inlineHelpText>
+        <label>GTS Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Order_Line_Source__c</fullName>
+        <description>Source of created Order Line like external system i.e Extranet</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Source of created Order Line like external system i.e Extranet</inlineHelpText>
+        <label>Order Line Source</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Extranet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Order_Number__c</fullName>
+        <description>Number of related Order (ORD...)</description>
+        <externalId>false</externalId>
+        <formula>OrderLookup__r.Name</formula>
+        <inlineHelpText>Number of related Order (ORD...)</inlineHelpText>
+        <label>Order Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Status2__c</fullName>
+        <description>Status of related Order; additional field was reqired to trigger notification from OL dependant on Order Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of related Order; additional field was reqired to trigger notification from OL dependant on Order Status</inlineHelpText>
+        <label>Order Status</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Status__c</fullName>
+        <description>Status from related Order</description>
+        <externalId>false</externalId>
+        <formula>TEXT(OrderLookup__r.Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Status from related Order</inlineHelpText>
+        <label>Order Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Type__c</fullName>
+        <description>Value of Order Type field from related Order</description>
+        <externalId>false</externalId>
+        <formula>TEXT(OrderLookup__r.OrderType__c)</formula>
+        <inlineHelpText>Value of Order Type field from related Order</inlineHelpText>
+        <label>Order Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PP_Provisioning_Plan_Defined__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Provisioning Plan has been triggered</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Provisioning Plan has been triggered</inlineHelpText>
+        <label>Provisioning Plan Defined</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Account__c</fullName>
+        <description>Link to Partner Account assigned to related Order</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/001&quot;&amp; OrderLookup__r.Partner_ID__c , &quot;_blank&quot; )</formula>
+        <inlineHelpText>Link to Partner Account assigned to related Order</inlineHelpText>
+        <label>Partner Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_Email__c</fullName>
+        <description>Email from assigned Partner Account (required for notifications)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email from assigned Partner Account (required for notifications)</inlineHelpText>
+        <label>Partner Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Plan_Name__c</fullName>
+        <description>Name of assigned Provisioning Plan, taken from related Instance</description>
+        <externalId>false</externalId>
+        <formula>Assigned_Provisioning_Plan__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Name of assigned Provisioning Plan, taken from related Instance</inlineHelpText>
+        <label>Plan Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PlannedDeliveryDateSetDate__c</fullName>
+        <description>Planned Delivery Date Set Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates, when Planned Delivery Date was set</inlineHelpText>
+        <label>PDDSD</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PlannedDeliveryDate__c</fullName>
+        <description>Planned Delivery Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PDD - Planned Delivery Date. When CDD is set for the first time, PDD should be automatically set too (the same value); then PDD can be modified by PM.</inlineHelpText>
+        <label>Planned Delivery Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Provisioning_End__c</fullName>
+        <description>Planned date, when provisioning for given installation / modification should be completed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Planned date, when provisioning for given installation / modification should be completed</inlineHelpText>
+        <label>Planned Provisioning End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Provisioning_Start__c</fullName>
+        <description>Planned date, when provisioning for given installation / modification should be started</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Planned date, when provisioning for given installation / modification should be started</inlineHelpText>
+        <label>Planned Provisioning Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Start_Billing_Customer__c</fullName>
+        <description>Planned date, when billing for given installation / modification of the Service should be started</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Planned date, when billing for given installation / modification of the Service should be started</inlineHelpText>
+        <label>Planned Start Billing Customer</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Preparation_failed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates, that there was error during Order Line preparation (automatic assignment of Provisioning Plan, submitting it, etc.)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates, that there was error during Order Line preparation (automatic assignment of Provisioning Plan, submitting it, etc.)</inlineHelpText>
+        <label>Preparation failed</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ProductInstanceId__c</fullName>
+        <description>Installed product instance ID from CSR (field not used anymore)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Installed product instance ID from CSR</inlineHelpText>
+        <label>Bundle Instance ID</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <description>Relation to Main Product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Main Product</inlineHelpText>
+        <label>Bundle</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Order Lines</relationshipLabel>
+        <relationshipName>OrderLines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project_Costs__c</fullName>
+        <description>Relation to Project Costs selected for this Order Line</description>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK( Selected_Project_Costs__c ) ,&quot;&quot;, HYPERLINK(&quot;https://tapp0.salesforce.com/&quot; + Selected_Project_Costs__c, &quot;Go to Project Costs&quot;, &quot;_top&quot;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Relation to Project Costs selected for this Order Line</inlineHelpText>
+        <label>Project Costs</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <description>Quantity of products (not used currently)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity of products</inlineHelpText>
+        <label>Quantity</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ready_For_Provisioning__c</fullName>
+        <description>If Order Line is Selcted by Customer, Configured and Expected Delivery Date is provided then is ready for provisioning. Field needed for guide (Help on Order).</description>
+        <externalId>false</externalId>
+        <formula>IF(AND( 
+Selected_by_customer__c = true, 
+TEXT(Status__c ) = &apos;Configured&apos;, 
+NOT( ISNULL(ExpectedDeliveryDate__c ) ) 
+), 
+&apos;true&apos;, 
+&apos;false&apos;)</formula>
+        <inlineHelpText>If Order Line is Selcted by Customer, Configured and Expected Delivery Date is provided then is ready for provisioning. Field needed for guide (Help on Order).</inlineHelpText>
+        <label>Ready For Provisioning</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RealDeliveryDateSetDate__c</fullName>
+        <description>Real Delivery Date Set Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Real Delivery Date has been set</inlineHelpText>
+        <label>RDDSD</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RealDeliveryDate__c</fullName>
+        <description>Real Delivery Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>RDD - Real Delivery Date set automatically when the task with BA verification started (only if RDD was empty). RDD can be also set manually by PM.</inlineHelpText>
+        <label>Real Delivery Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Reason_of_Delay_Set__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The flag indicates if any Reasons of Delay were set for the Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The flag indicates if any Reasons of Delay were set for the Order Line</inlineHelpText>
+        <label>Reason of Delay Set</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Reason_of_Delay_Task__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The field is updated by time dependant workflow in order to force Order Line trigger to add standard Task to PM&apos;s calendar.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates, whether there should be Task added automatically for Project Manager about providing reason of delay</inlineHelpText>
+        <label>Reason of Delay Task</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Reason_of_Delay__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Enforce Reason of Delay</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enforce Reason of Delay setting while executing Provisioning Plan</inlineHelpText>
+        <label>Reason of Delay</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Recalculate_FD__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Flag for data cleaning; when set from unchecked to checked triggers recalculation of Financial Dimension IDs / GTS Codes for all Pricing Items under gived Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag for data cleaning; when set from unchecked to checked triggers recalculation of Financial Dimension IDs / GTS Codes for all Pricing Items under gived Order Line</inlineHelpText>
+        <label>Recalculate FD</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Related_Document__c</fullName>
+        <description>Shows direct links to Contract and Service Order</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;/&apos;+ Service_Order__r.Id, Service_Order__r.Document_Number__c, &apos;_self&apos;) &amp;BR()&amp;
+HYPERLINK(&apos;/&apos;+ CContract__r.Id, CContract__r.Document_Number__c, &apos;_self&apos;)</formula>
+        <inlineHelpText>Shows direct links to Contract and Service Order</inlineHelpText>
+        <label>Related Document</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reporting_Line_Type__c</fullName>
+        <description>Line Type for Reporting (mapping of Line Type to one of the values needed in the Report)</description>
+        <externalId>false</externalId>
+        <formula>IF( AND (ISPICKVAL(Line_Type__c, &quot;New service&quot;), NOT(ISPICKVAL(Status__c, &quot;Cancelled&quot;))), 
+&quot;Gross sales&quot;, 
+IF( AND (OR(ISPICKVAL(Line_Type__c, &quot;Upgrade&quot;),ISPICKVAL(Line_Type__c, &quot;Technical Change&quot;)), NOT(ISPICKVAL(Status__c, &quot;Cancelled&quot;))), 
+&quot;Upgrades&quot;, 
+IF( AND (ISPICKVAL(Line_Type__c, &quot;Price Change&quot;), NOT(ISPICKVAL(Status__c, &quot;Cancelled&quot;))), 
+&quot;Price changes&quot;, 
+IF( AND (ISPICKVAL(Line_Type__c, &quot;Downgrade&quot;), NOT(ISPICKVAL(Status__c, &quot;Cancelled&quot;))), 
+&quot;Downgrades&quot;, 
+IF( ISPICKVAL(Line_Type__c, &quot;Disconnection&quot;), 
+IF ( ISPICKVAL(Status__c, &quot;Cancelled&quot;), &quot;Win back&quot;, &quot;Disconnections&quot;), 
+IF ( ISPICKVAL(Status__c, &quot;Cancelled&quot;), &quot;Cancellations&quot;, &quot;Rest&quot;) 
+) 
+) 
+) 
+) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Line Type for Reporting</inlineHelpText>
+        <label>Reporting Line Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Amount__c</fullName>
+        <description>Estimated value of requested modification / installation (not used anymore)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated value of requested modification / installation (not used anymore)</inlineHelpText>
+        <label>Request Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Received_Date__c</fullName>
+        <description>Date, when request for given installation / modification was received</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when request for given installation / modification was received</inlineHelpText>
+        <label>Request Received Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Resignation_Mode__c</fullName>
+        <description>Used for communication with eWegorz and disconnection lines only; [PROV]_PL_004: Integration with eWęgorz (aDSL and SHDSL services):</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used for communication with eWegorz and disconnection lines only</inlineHelpText>
+        <label>Resignation Mode</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Retract from Contract</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contract Termination</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Breach of Contract</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Special Mode</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vindication</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Resignation_Reason__c</fullName>
+        <description>Used for communication with eWegorz and disconnection lines only; [PROV]_PL_004: Integration with eWęgorz (aDSL and SHDSL services):</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used for communication with eWegorz and disconnection lines only;</inlineHelpText>
+        <label>Resignation Reason</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Service not started</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lack of continuity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Death</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Changes in Regulations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_Calculation_Selected_by_Customer__c</fullName>
+        <description>List of selected Calculations containing this Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List of selected Calculations containing this Order Line</inlineHelpText>
+        <label>SFDC Calculation Selected by Customer</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SFDC_Calculations__c</fullName>
+        <description>List of Calculations containing this Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List of Calculations containing this Order Line</inlineHelpText>
+        <label>SFDC Calculations</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>ID generated by Product Configurator in order to update the record after modification</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID generated by Product Configurator in order to update the record after modification</inlineHelpText>
+        <label>SFDC_ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>SO_Valid_From__c</fullName>
+        <description>Special Offer validity starting date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Special Offer validity starting date</inlineHelpText>
+        <label>Special Offer Valid From</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SO_Valid_To__c</fullName>
+        <description>Special Offer validity end date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Special Offer validity end date</inlineHelpText>
+        <label>Special Offer Valid To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Price__c</fullName>
+        <description>Price for configured installation / modification (not used anymore)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Price for configured installation / modification (not used anymore)</inlineHelpText>
+        <label>Sales Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Type__c</fullName>
+        <description>Indicates whether this deal is Retail or Wholesale</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether this deal is Retail or Wholesale</inlineHelpText>
+        <label>Sales Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SelectedOfferId__c</fullName>
+        <description>Id of selected Offer required during product configuration</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Id of selected Offer required during product configuration</inlineHelpText>
+        <label>SelectedOfferId</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Selected_BCT_Calculation__c</fullName>
+        <description>Number of BCT Calculation that was used for realization of this Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of BCT Calculation that was used for realization of this Order Line</inlineHelpText>
+        <label>Selected BCT Calculation</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Selected_Costing_Line__c</fullName>
+        <description>Id of Costing Line containing solution selected for realization</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Id of Costing Line containing solution selected for realization</inlineHelpText>
+        <label>Selected Costing Line</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Selected_Project_Costs__c</fullName>
+        <description>Id of Project Costs related to this Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Id of Project Costs related to this Order Line</inlineHelpText>
+        <label>Selected Project Costs</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Selected_Revenue_Order_Line__c</fullName>
+        <description>Revenue Order Line related to this Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Revenue Order Line related to this Order Line</inlineHelpText>
+        <label>Selected Revenue Order Line</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Selected_Special_Offer_Id__c</fullName>
+        <description>ID of selected Special Offer, that should be applied during configuration of this Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of selected Special Offer, that should be applied during configuration of this Line</inlineHelpText>
+        <label>Selected Special Offer Id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Selected_by_customer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates whether this line was selected to be further processed; If this flag is not selected, then during submitting Order, Line will be cancelled</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether this line was selected to be further processed; If this flag is not selected, then during submitting Order, Line will be cancelled</inlineHelpText>
+        <label>Selected</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ServiceOrder__c</fullName>
+        <description>Relation to Service Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Service Order</inlineHelpText>
+        <label>Service Order</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Order Lines (Service Order)</relationshipLabel>
+        <relationshipName>Order_Lines1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Bundle__c</fullName>
+        <description>Selected Installed Bundle that is modified by this Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected Installed Bundle that is modified by this Order Line</inlineHelpText>
+        <label>Service Bundle</label>
+        <referenceTo>ServiceBundle__c</referenceTo>
+        <relationshipLabel>Order Lines</relationshipLabel>
+        <relationshipName>Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_ID__c</fullName>
+        <description>Implemented as part of [PROV]_PL_313 Service ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is bundle Service ID. This field corresponds to &quot;Service ID / Local Reference&quot; field on Service Bundle.</inlineHelpText>
+        <label>Service ID</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Order__c</fullName>
+        <description>Relation to Service Order assigned to this Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Service Order assigned to this Order Line</inlineHelpText>
+        <label>Service Order (custom)</label>
+        <referenceTo>CContract__c</referenceTo>
+        <relationshipLabel>Order Lines (Service Order)</relationshipLabel>
+        <relationshipName>OrderLinesSO</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Skip_AP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Implemented as a part of [PROV_SK_1030 - Suspension and Release Orders - automated process]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When this flag is selected, automatic mechanism for Provisioning Plan assignment and submit will skip this Order Line</inlineHelpText>
+        <label>Skip AP</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_Service_Bundle__c</fullName>
+        <description>Source service bundle lookup for different migration/cession lines</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Source service bundle lookup for different migration/cession lines</inlineHelpText>
+        <label>Source Service Bundle</label>
+        <referenceTo>ServiceBundle__c</referenceTo>
+        <relationshipLabel>Order Lines (Source Service Bundle)</relationshipLabel>
+        <relationshipName>Order_Lines1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SpecialOffer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates whether Order Line was created from Special Offer</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether Order Line was created from Special Offer</inlineHelpText>
+        <label>Special Offer</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>StartBillingDate__c</fullName>
+        <description>Start Billing Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>SBD - Start Billing Date. If SBD is empty or equals Real Delivery Date it should change along with RDD; otherwise it can be set manually by Order Entry.</inlineHelpText>
+        <label>Start Billing Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Start_Billing_Customer__c</fullName>
+        <description>Date, when Billing for given Service should start</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Billing for given Service should start</inlineHelpText>
+        <label>Start Billing Customer</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Status of the Order Line:
+New - newly created Order Line without configuration saved yet (or with configuration not required); 
+Configured - configuration of this Order Line was saved at least once; 
+Submitted - Provisioning Plan has been assigned to OL and started; 
+Completed - processing of Provisioning Plan has been finished; 
+In Cancellation - cancellation process is in progress for this Order Line; 
+Cancelled - Order Line has been Cancelled</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of the Order Line:
+New - newly created Order Line without configuration saved yet; 
+Configured - configuration of this Order Line was saved at least once; 
+Submitted - Provisioning Plan has been assigned to OL a</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Configured</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disconnected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Cancellation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Submited_Date__c</fullName>
+        <description>Date when the Order Line has been submited (status changed)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when the Order Line has been submited (status changed)</inlineHelpText>
+        <label>Submited Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Submitted_for_Preparation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checkbox determines if Cession,change BA order line has been already submitted for batch preparing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checkbox determines if Cession,change BA order line has been already submitted for batch preparing</inlineHelpText>
+        <label>Submitted for Preparation</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Supplier__c</fullName>
+        <description>Supplier involved in provisioning process (related Account)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Supplier involved in provisioning process (related Account)</inlineHelpText>
+        <label>Supplier</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Order Lines</relationshipLabel>
+        <relationshipName>Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Suppliers_Contact__c</fullName>
+        <description>Supplier&apos;s employee - contact from related Supplier Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Supplier&apos;s employee - contact from related Supplier Account</inlineHelpText>
+        <label>Supplier&apos;s Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Order Lines (Supplier&apos;s Contact)</relationshipLabel>
+        <relationshipName>Order_Lines2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Valid_To__c</fullName>
+        <description>Validity date of costs estimated on Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Validity date of costs estimated on Order Line</inlineHelpText>
+        <label>Valid To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Version_number__c</fullName>
+        <description>Field which is storing first version of bundle in CSR in case we will want to restore previous configuration (CSR task rollback)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field which is storing first version of bundle in CSR in case we will want to restore previous configuration (CSR task rollback)</inlineHelpText>
+        <label>Version number</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>View_Structure__c</fullName>
+        <description>Direct link to Service Bundle Structure</description>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK(Service_Bundle__c), &apos;&apos;, HYPERLINK(&apos;https://c.eu0.visual.force.com/apex/View_StructureforBundle?scontrolCaching=1&amp;id=&apos; + Service_Bundle__c , &apos;View&apos; , &apos;_blank&apos;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Direct link to Service Bundle Structure</inlineHelpText>
+        <label>View Structure</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Order Line</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>LineNumber__c</columns>
+        <columns>Product__c</columns>
+        <columns>Quantity__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Status__c</columns>
+        <columns>Plan_Name__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>AllCancelled</fullName>
+        <columns>NAME</columns>
+        <columns>LineNumber__c</columns>
+        <columns>Product__c</columns>
+        <columns>Quantity__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Status__c</columns>
+        <columns>Plan_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Cancelled</value>
+        </filters>
+        <label>AllCancelled</label>
+    </listViews>
+    <listViews>
+        <fullName>Migracie</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CProduct__c</columns>
+        <columns>Order_Type__c</columns>
+        <columns>OL_Completed_State_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <filters>
+            <field>CProduct__c</field>
+            <operation>startsWith</operation>
+            <value>ADSL_</value>
+        </filters>
+        <filters>
+            <field>Line_Type__c</field>
+            <operation>equals</operation>
+            <value>Migration Installation</value>
+        </filters>
+        <label>Migracie</label>
+        <sharedTo>
+            <groups>Administrators</groups>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>OL_older_than_90_days</fullName>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <columns>NAME</columns>
+        <columns>GTS_Location_from_Order__c</columns>
+        <columns>Account__c</columns>
+        <columns>Line_Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>lessThan</operation>
+            <value>LAST_90_DAYS</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Submitted</value>
+        </filters>
+        <filters>
+            <field>GTS_Location_from_Order__c</field>
+            <operation>equals</operation>
+            <value>GTS Slovakia</value>
+        </filters>
+        <label>SK OLs older than 90 days</label>
+        <sharedTo>
+            <groups>Administrators</groups>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>With_CSR_ID_not_installation</fullName>
+        <columns>NAME</columns>
+        <columns>OrderLookup__c</columns>
+        <columns>Line_Type__c</columns>
+        <columns>Service_Bundle__c</columns>
+        <columns>CSR_ID__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Line_Type__c</field>
+            <operation>notEqual</operation>
+            <value>New Service</value>
+        </filters>
+        <filters>
+            <field>CSR_ID__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>With CSR ID not installation</label>
+    </listViews>
+    <nameField>
+        <label>Order Line Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Order Lines</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>LineNumber__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Product__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Quantity__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LAST_UPDATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>LineNumber__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Product__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Quantity__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LAST_UPDATE</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>LineNumber__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Quantity__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Accounts_Contact_selection</fullName>
+        <active>false</active>
+        <description>Selected Account&apos;s Contact person must belong to the Account.</description>
+        <errorConditionFormula>AND( NOT(ISBLANK(Accounts_Contact__c)), Accounts_Contact__r.AccountId != OrderLookup__r.Account__r.Id)</errorConditionFormula>
+        <errorDisplayField>Accounts_Contact__c</errorDisplayField>
+        <errorMessage>Selected Account&apos;s Contact person does not belong to the Account.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CDD_Change_Blockade</fullName>
+        <active>true</active>
+        <description>https://helpdeskce.in.gtsce.com/browse/CECOLPL-46</description>
+        <errorConditionFormula>IF(AND(NOT(ISBLANK(PRIORVALUE(CommittedDeliveryDate__c))), PRIORVALUE(CommittedDeliveryDate__c) != CommittedDeliveryDate__c ),true, false)</errorConditionFormula>
+        <errorMessage>Commited Delivery Date can not be modified.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Contract_selection</fullName>
+        <active>false</active>
+        <description>Selected contract on Order Line must belong to the same Account as Order.</description>
+        <errorConditionFormula>AND( NOT(ISBLANK( Contract__c )), 00N200000026Lsp.Account != OrderLookup__r.Account__r.Id )</errorConditionFormula>
+        <errorMessage>Selected contract does not belong to the Account.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LockCommittedDeliveryDate</fullName>
+        <active>false</active>
+        <description>If Committed Delivery Date is set should be locked for edition</description>
+        <errorConditionFormula>AND(NOT(ISBLANK(PRIORVALUE(CommittedDeliveryDate__c))), ISCHANGED(CommittedDeliveryDate__c))</errorConditionFormula>
+        <errorMessage>After &apos;Committed Delivery Date&apos; is set can not be changed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Modification_of_Costs_after_Submit</fullName>
+        <active>true</active>
+        <description>Modification of Costs after Submit is not allowed</description>
+        <errorConditionFormula>AND(OR( ISCHANGED(Valid_To__c), ISCHANGED(Opex_Monthly__c), ISCHANGED(Opex_One_off__c), ISCHANGED(Capex_One_off__c), ISCHANGED(Capex_Reuseable__c)), NOT(ISPICKVAL(OrderLookup__r.Status__c, &apos;New&apos;)) , NOT(ISPICKVAL(OrderLookup__r.Status__c, &apos;Budgetary Quotation&apos;)), NOT(ISPICKVAL(OrderLookup__r.Status__c, &apos;Firm Quotation&apos;)), NOT(ISPICKVAL(OrderLookup__r.Status__c, &apos;In Progress&apos;)), NOT(ISPICKVAL(OrderLookup__r.Status__c, &apos;On Hold&apos;)), NOT( $Profile.Name = &apos;System Administrator&apos;))</errorConditionFormula>
+        <errorMessage>Modification of Proposal Costs section after Submit is not allowed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Suppliers_Contact_selection</fullName>
+        <active>false</active>
+        <description>Supplier&apos;s Contact person must belong to the selected Supplier.</description>
+        <errorConditionFormula>AND( NOT(ISBLANK(Suppliers_Contact__c)), Suppliers_Contact__r.AccountId != Supplier__r.Id)</errorConditionFormula>
+        <errorDisplayField>Suppliers_Contact__c</errorDisplayField>
+        <errorMessage>Supplier&apos;s Contact person does not belong to the selected Supplier.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Calculate_Selected_Order_Lines</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Calculate Selected Order Lines</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS( $ObjectType.OrderLine__c )};
+var OpportunityId = &quot;{! Opportunity.Id}&quot;;
+var SalesTypeVerified = &quot;{!Opportunity.Sales_Type_Verified__c}&quot;;
+var OpportunityOwnerId = &quot;{! Opportunity.OwnerId}&quot;;
+var result;
+
+if (records.length == 0)
+alert(&apos;Please select at least one Order Line to Calculate.&apos;);
+else{
+result=sforce.apex.execute(&quot;SFDCCalculation&quot;,&quot;CalculateOrderLines&quot;, {SalesTypeVerified:SalesTypeVerified,OpportunityId:OpportunityId ,OpportunityOwnerId:OpportunityOwnerId,OrderLinesId:records});
+
+if (result==&apos;OK&apos;)
+window.location.href = window.location.href;
+else
+alert(&apos;OrderLine/OrderLines can not be calculated, due to the fact that: &apos;+result);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>CancelOrderLine</fullName>
+        <availability>online</availability>
+        <description>Cancel Order Line</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Cancel Line</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var ordLineStatus = &apos;{! OrderLine__c.Status__c}&apos;;
+var ordLineId = &apos;{! OrderLine__c.Id}&apos;;
+var proceed_with_cancel = false;
+var userId = &apos;{!User.Name}&apos;;
+var projectManager = &apos;{!OrderLine__c.Assigned_Project_Manger__c}&apos;;
+
+
+if (userId != projectManager ) {
+alert(&apos;You are not priveledged to cancel Order Line. Only Assigned Project Manager can trigger cancellation. USERID: &apos;+userId+&apos; PM: &apos;+projectManager+&apos;.&apos;);
+} else {
+
+if (ordLineStatus == &quot;Submitted&quot; || ordLineStatus == &quot;New&quot; || ordLineStatus == &quot;Configured&quot;) {
+proceed_with_cancel = true;
+} else {
+alert(&apos;Order Line in status \&apos;&apos;+ordLineStatus+&apos;\&apos; can not be cancelled.&apos;);
+}
+
+}
+
+
+
+
+if (proceed_with_cancel == true) {
+var response = confirm(&apos;Do you want to cancel Order Line?&apos;);
+if (response) {
+
+var result = sforce.apex.execute(&quot;IntegrationOrder&quot;,&quot;processOLCancel&quot;, {ordLineId:ordLineId, ordLineStatus:ordLineStatus });
+if(result[0] == &apos;OK&apos;){
+alert(result[1]);
+location.reload(true);
+} else if(result[0] == &apos;TRNSFR&apos;){
+window.top.location.href = &quot;https://&quot; + window.top.location.host + result[1];
+} else {
+alert(result[1]);
+}
+
+}
+
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Clone_Selected_Order_Lines</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Clone Selected Order Lines</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS( $ObjectType.OrderLine__c )};
+var Orderid = &quot;{!COrder__c.Id};&quot;
+var Orderlinestatus=&quot;{!OrderLine__c.Status__c}&quot;;
+var result;
+if (records.length == 0) 
+ alert(&apos;Please select at least one Order Line to Clone.&apos;);
+ else 
+ if (records.length &gt; 0) {
+ //alert(&apos;orderid:&apos;+Orderid);
+ //alert(&apos;Linenumbersmax:&apos;+Linenumbersmax);
+ //alert(&apos;records:&apos;+records);
+ //alert(&apos;Orderlineststus:&apos;+Orderlinestatus);
+result=sforce.apex.execute(&quot;CloneOrderLIne&quot;,&quot;clone&quot;,  {OrderIdToCloneFrom:Orderid,LineNumbersToClone:records});
+}
+//alert(&apos;result:&apos;+result);
+if (result==&apos;OK&apos;) {
+//reload the current page
+window.location.href = window.location.href;
+}
+
+if (result!=&apos;OK&apos;)
+{
+alert(result);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Configure_Selected_Line</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Configure Selected Line</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var records = {!GETRECORDIDS( $ObjectType.OrderLine__c )};
+if (records.length != 1) alert(&apos;Please select exactly one Line to configure.&apos;);
+else {
+  var result = sforce.connection.query(&quot;Select Id, Status__c, CProduct__c, CProduct__r.Synchronized__c, CProduct__r.GTS_Location__c, Service_Bundle__c, OrderLookup__r.GTS_Location__c, OrderLookup__r.OrderType__c, Line_Type__c, Minimum_Service_Period__c, CurrencyIsoCode From OrderLine__c Where Id = &apos;&quot; + records [0] + &quot;&apos;&quot;);
+
+  var orderlines = result.getArray(&apos;records&apos;);
+  var url_arr = window.location.href.split(&quot;/&quot;);
+  var otype = orderlines[0].OrderLookup__r.OrderType__c;
+  var prodAv = orderlines[0].OrderLookup__r.GTS_Location__c;
+  var LineType = orderlines[0].Line_Type__c;
+  var lstatus = orderlines[0].Status__c;
+  var msp = orderlines[0].Minimum_Service_Period__c;
+
+  if(orderlines[0].CProduct__r.Synchronized__c == &apos;false&apos; &amp;&amp; (prodAv==&apos;GTS Slovakia&apos; || prodAv==&apos;GTS Hungary&apos; )){
+    alert(&apos;Definition of the product is desynchronized with Billing. It has to be synchronized first&apos;);
+  }
+  else {
+    if((lstatus != &quot;New&quot;) &amp;&amp; (lstatus != &quot;Configured&quot;))
+      alert(&apos;You can only configure order lines that are &quot;New&quot; or &quot;Configured&quot;&apos;);
+    else{
+      if(LineType == &quot;Release&quot; || LineType == &quot;Suspend&quot; || LineType == &quot;Disconnection&quot;){
+        alert(&apos;Order for Disconection / Release / Suspend can not be modified by Product Configurator&apos;);
+      } else if(msp==&apos;&apos; &amp;&amp; prodAv==&apos;GTS Poland&apos;){
+        alert(&apos;Minimum Service Period is not set fot the selected Order Line!&apos;);
+      } else if(LineType == &quot;Upgrade&quot; || LineType == &quot;Downgrade&quot; || LineType == &quot;Price Change&quot; || LineType == &quot;Technical Change&quot; || LineType == &quot;Data Update&quot;){
+
+
+
+		var valRes = &apos;true&apos;;
+		if(LineType == &quot;Data Update&quot;){
+			valRes = sforce.apex.execute(&quot;ModificationOrderMethods&quot;,&quot;checkIfRoleIsAllowed&quot;, {actionType:&quot;Data Update&quot;, action:&quot;Update&quot;});
+		}
+		if(valRes == &apos;false&apos;){
+			alert(&apos;Your role is not allowed to upate Data Update Order Line.&apos;);
+		}else{
+			var res = &apos;NONE&apos;;
+			do{
+			   res = sforce.apex.execute(&quot;ModificationOrderMethods&quot;,&quot;prepareOrderLinesObjectsDivided&quot;, {ordLines:orderlines});
+
+			   if(res == &apos;INTEGRATION_ERROR&apos;){
+					break;
+			   }
+			} while (res != &apos;ALL&apos;);
+			if(res == &apos;INTEGRATION_ERROR&apos;){
+				alert(&apos;Unexpected error during connection with CSR database. Please try again later. \nIf problem persist please contact System Administrator.&apos;);
+			}else{
+				window.location.href = &quot;/apex/OrderAtrributesModification?olid=&quot; + records[0]; 
+			}
+		}
+      } else if( LineType == &apos;Service Migration&apos;){
+		sforce.apex.execute(&quot;ModificationOrderMethods&quot;,&quot;prepareOfferChangeOrderLine&quot;, {orderLineId:orderlines});
+		window.location.href = &quot;/apex/OrderAtrributesModification?olid=&quot; + records[0]; 
+	  }else if(LineType == &quot;New Service&quot; || LineType == &quot;Migration Installation&quot; || LineType == &quot;Cession&quot;){
+        window.location.href = &quot;/apex/OrderAtrributesModification?olid=&quot; + records[0]; 
+      }
+    }
+  }
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Configure_Special_Offer</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Configure Special Offer</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var records = {!GETRECORDIDS( $ObjectType.OrderLine__c )}; 
+
+if (records.length != 1){ 
+alert(&apos;Please select exactly one Special Offer Line to configure.&apos;); 
+}else { 
+window.location.href = &quot;/apex/OrderAtrributesModification?olid=&quot; + records[0]; 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mark_as_Selected</fullName>
+        <availability>online</availability>
+        <description>Marks the Line as Selected by Customer</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mark as Selected</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS( $ObjectType.OrderLine__c )};
+
+if (records.length == 0) {
+  alert(&apos;Please select at least one Order Line to be marked as Selected&apos;);
+} else {
+  result=sforce.apex.execute(&quot;IntegrationOrder&quot;,&quot;MarkAsSelected&quot;, {LineIDs:records});
+  if (result==&apos;OK&apos;) {
+    window.location.href = window.location.href;
+  } else {
+    alert(result);
+  }
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Special_Offer</fullName>
+        <availability>online</availability>
+        <description>Create a new Special Offer Order Line</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>New Special Offer</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/NewSpecialOffer?id={!CProduct__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Reason_of_Delay</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Reason of Delay</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.location.href = &apos;apex/ReasonOfDelay?id={!OrderLine__c.Id}&apos;;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Search_for_related_Order_Lines</fullName>
+        <availability>online</availability>
+        <description>Searching for Order Lines with matching A_End and/or B_En</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Search for related Order Lines</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var orderLineId = &apos;{!OrderLine__c.Id}&apos;; 
+
+window.top.location.href = &quot;/apex/RelatedOrderLines?orderLineId=&quot; + orderLineId;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Select_Special_Offer</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Select Special Offer</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var records = {!GETRECORDIDS( $ObjectType.OrderLine__c )}; 
+
+if (records.length != 1){ 
+alert(&apos;Please select exactly one Order Line for Special Offer.&apos;); 
+}else { 
+window.location.href = &quot;/apex/SelectSpecialOffer?olid=&quot; + records[0]; 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Selected_Order_Lines</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Selected Order Lines</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS( $ObjectType.OrderLine__c )};
+var Orderid = &quot;{!COrder__c.Id}&quot;;
+var Orderlinestatus=&quot;{!OrderLine__c.Status__c}&quot;;
+var result;
+if (records.length == 0)
+alert(&apos;Please select at least one Order Line to create Calculation.&apos;);
+else
+if (records.length &gt; 0) {
+result=sforce.apex.execute(&quot;CloneOrderLIne&quot;,&quot;clone&quot;, {OrderIdToCloneFrom:Orderid,LineNumbersToClone:records});
+}
+if (result==&apos;OK&apos;) {
+window.location.href = window.location.href;
+}
+if (result!=&apos;OK&apos;)
+{
+alert(&apos;Calculation can not be created, due to the fact that: &apos;+result);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>View_Summary</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>View Summary</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/OrderSummaryPage?OrdId={!OrderLine__c.OrderLookup__c}&amp;OrdLnId={!OrderLine__c.Id}&amp;bSelOnly=0&amp;bAcct=1&amp;bBAcct=1&amp;bOrdr=1&amp;bPrice=1&amp;bContr=1&amp;bCfg=1&amp;nActType=3&amp;RetId={!OrderLine__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Yellowpages_PDF_PL</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Yellowpages PDF (PL)</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+var ordLnId = &apos;{!OrderLine__c.Id}&apos;; 
+
+
+
+if({!ISPICKVAL($User.GTS_Location__c, &apos;GTS Poland&apos;)}){ 
+
+var check_result = sforce.apex.execute(&quot;YellowpagesPLController&quot;,&quot;check&quot;, {ordLnId:ordLnId}); 
+
+if(check_result != null){ 
+
+if(check_result[0] == &apos;OK&apos;){ 
+window.top.location.href = &quot;apex/YellowpagesPL?ordLnId=&quot; + ordLnId; 
+} else { 
+alert(&apos;Generic Product Yellowages not found on Order Line.&apos;); 
+} 
+
+} else { 
+alert(&apos;Generic Product Yellowages not found on Order Line.&apos;); 
+} 
+
+} 
+else { 
+alert(&apos;This functionality works for PL only.&apos;); 
+}</url>
+    </webLinks>
+</CustomObject>

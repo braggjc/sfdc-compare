@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>CommissionRevenueNew</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>CommissionRevenueNew</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object for CommissionTab</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Percent__c</fullName>
+        <description>Percent of the Target</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Percent of the Target</inlineHelpText>
+        <label>Percent</label>
+        <length>5</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Period__c</fullName>
+        <description>Period for revenue</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Year__c)+&apos; - &apos;+TEXT(Quarter__c)</formula>
+        <inlineHelpText>Period for revenue</inlineHelpText>
+        <label>Period</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quarter__c</fullName>
+        <description>Quarter of revenue</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Quarter of revenue</inlineHelpText>
+        <label>Quarter</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Q1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Q2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Q3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Q4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Revenue__c</fullName>
+        <description>Sum accumulated by salesman in chosen period</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sum accumulated by salesman in chosen period</inlineHelpText>
+        <label>Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Salesman__c</fullName>
+        <description>Salesman for this Commisions Revenue</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Salesman for this Commisions Revenue</inlineHelpText>
+        <label>Salesman</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Commissions_Revenues</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Target__c</fullName>
+        <description>Target for chosen period.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Target for chosen period. Auto-value of this field equals value of Revenue from previous period. To see this, you have to set values of fields: Salesman, Year and Quarter.</inlineHelpText>
+        <label>Target</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <description>Year for Revenue</description>
+        <externalId>false</externalId>
+        <label>Year</label>
+        <precision>4</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Commissions Revenue</label>
+    <nameField>
+        <displayFormat>{0}</displayFormat>
+        <label>No.</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Commissions Revenues</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

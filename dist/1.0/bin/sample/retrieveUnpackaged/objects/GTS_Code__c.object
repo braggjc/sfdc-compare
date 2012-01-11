@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Configuration of GTS Codes</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Attribute_Name__c</fullName>
+        <description>Attribute, that value of GTS Code depends on</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Attribute, that value of GTS Code depends on</inlineHelpText>
+        <label>Attribute Name</label>
+        <referenceTo>Attribute__c</referenceTo>
+        <relationshipLabel>GTS Codes</relationshipLabel>
+        <relationshipName>GTS_Codes</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Attribute_Value__c</fullName>
+        <description>Value of Attribute (selected in Attribute Name) for which this GTS Code should be used</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Attribute (selected in Attribute Name) for which this GTS Code should be used</inlineHelpText>
+        <label>Attribute Value</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle__c</fullName>
+        <description>Bundle, for which this GTS Code should be used</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bundle, for which this GTS Code should be used</inlineHelpText>
+        <label>Bundle</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>GTS Codes</relationshipLabel>
+        <relationshipName>GTS_Codes</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Component__c</fullName>
+        <description>Component, for which this GTS Code should be used</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Component, for which this GTS Code should be used</inlineHelpText>
+        <label>Component</label>
+        <referenceTo>Component__c</referenceTo>
+        <relationshipLabel>GTS Codes</relationshipLabel>
+        <relationshipName>GTS_Codes</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>GTS Location for which this GTS Code should be used</description>
+        <externalId>false</externalId>
+        <inlineHelpText>GTS Location for which this GTS Code should be used</inlineHelpText>
+        <label>GTS Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Generic_Product__c</fullName>
+        <description>Generic Product, that value of GTS Code depends on</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Generic Product, that value of GTS Code depends on (code will be assigned only if GP was selected)</inlineHelpText>
+        <label>Generic Product</label>
+        <referenceTo>Generic_Product__c</referenceTo>
+        <relationshipLabel>GTS Codes</relationshipLabel>
+        <relationshipName>GTS_Codes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Type__c</fullName>
+        <description>Sales Type (Retail / Wholesale) for which this GTS Code should be used</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sales Type (Retail / Wholesale) for which this GTS Code should be used</inlineHelpText>
+        <label>Sales Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sequence__c</fullName>
+        <description>Sequence of GTS Code assignment (first one accepted will be assigned)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sequence of GTS Code assignment (first one accepted will be assigned)</inlineHelpText>
+        <label>Sequence</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>GTS Code</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Attribute_Value__c</columns>
+        <columns>Attribute_Name__c</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>GTS_Location__c</columns>
+        <columns>Component__c</columns>
+        <columns>Bundle__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>equals</operation>
+            <value>GTS Slovakia</value>
+        </filters>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>GTS Code</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>GTS Codes</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>GTS_Location__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Sales_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Bundle__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Component__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Sequence__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Attribute_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Attribute_Value__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>GTS_Location__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Sales_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Bundle__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Component__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Sequence__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Attribute_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Attribute_Value__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>GTS_Location__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Sales_Type__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>GTS_Location__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Sales_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Sequence__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Bundle__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Component__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Attribute_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Attribute_Value__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UPDATEDBY_USER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

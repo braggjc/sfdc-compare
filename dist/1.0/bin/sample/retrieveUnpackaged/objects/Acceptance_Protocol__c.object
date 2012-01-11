@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Acceptance Protocol document, generated from Order.</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <description>Name from Account</description>
+        <externalId>false</externalId>
+        <formula>Order__r.Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Name from Account</inlineHelpText>
+        <label>Account Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Number__c</fullName>
+        <description>Account Number from Account</description>
+        <externalId>false</externalId>
+        <formula>Order__r.Account__r.Account_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Account Number from Account</inlineHelpText>
+        <label>Account Number</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Owner__c</fullName>
+        <description>Relation to user who is Account&apos;s Owner</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to user who is Account&apos;s Owner</inlineHelpText>
+        <label>Account Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Acceptance_Protocols</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bank_data__c</fullName>
+        <description>Bank name and bank account number from Order OR bank account number from Billing Account</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Order__r.Billing_Account__c) , Order__r.Bank_Name__r.Name &amp; &quot;, &quot; &amp; Order__r.Bank_Account_Number__c, Order__r.Billing_Account__r.BankName__r.Name&amp;&quot;, &quot;&amp;Order__r.Billing_Account__r.Bank_Account_Number__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Bank name and bank account number from Order OR bank account number from Billing Account</inlineHelpText>
+        <label>Bank Data</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <description>Registration City from Account</description>
+        <externalId>false</externalId>
+        <formula>Order__r.Account__r.ShippingCity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Registration City from Account</inlineHelpText>
+        <label>City</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>Comments on Acceptance Protocol</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comments on Acceptance Protocol</inlineHelpText>
+        <label>Comments</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contact_Persons__c</fullName>
+        <description>List of names and e-mail of Account&apos;s Contact Persons from Order Lines selected for this Acceptance Protocol</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List of names and e-mail of Account&apos;s Contact Persons from Order Lines selected for this Acceptance Protocol</inlineHelpText>
+        <label>Contact Persons</label>
+        <length>2000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Identification_type__c</fullName>
+        <description>Identification type for ID Number</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Order__r.Account__r.Identification_type__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Identification type for ID Number</inlineHelpText>
+        <label>ID Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Language__c</fullName>
+        <description>Language of generated document</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Language of generated document</inlineHelpText>
+        <label>Language</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Type__c</fullName>
+        <description>Order Type from related Order</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Order__r.OrderType__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Order Type from related Order</inlineHelpText>
+        <label>Order Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order__c</fullName>
+        <description>Order from which Acceptance Protocol is generated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order from which Acceptance Protocol is generated</inlineHelpText>
+        <label>Order</label>
+        <referenceTo>COrder__c</referenceTo>
+        <relationshipLabel>Acceptance Protocols</relationshipLabel>
+        <relationshipName>Acceptance_Protocols</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Postal_code__c</fullName>
+        <description>Registration zip/postal code from related Account</description>
+        <externalId>false</externalId>
+        <formula>Order__r.Account__r.ShippingPostalCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Registration zip/postal code from related Account</inlineHelpText>
+        <label>Postal code</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Manager__c</fullName>
+        <description>User which generated Acceptance Protocol</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User which generated Acceptance Protocol</inlineHelpText>
+        <label>Project Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Acceptance_Protocols1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Ready_Date__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <description>Ready for Service Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Ready for Service Date</inlineHelpText>
+        <label>Ready For Service Date</label>
+        <required>true</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Street__c</fullName>
+        <description>Registration street from related Account</description>
+        <externalId>false</externalId>
+        <formula>Order__r.Account__r.ShippingStreet</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Registration street from related Account</inlineHelpText>
+        <label>Street</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_Id__c</fullName>
+        <description>ID Number from Account</description>
+        <externalId>false</externalId>
+        <formula>Order__r.Account__r.Tax_Id__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>ID Number from Account</inlineHelpText>
+        <label>ID Number</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_Identification_Number__c</fullName>
+        <description>Tax Identification Number acquired from Account&apos;s Country Related Data section.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tax Identification Number acquired from Account&apos;s Country Related Data section.</inlineHelpText>
+        <label>Tax Identification Number</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Acceptance Protocol</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>ACP{000000000}</displayFormat>
+        <label>Acceptance Protocol</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Acceptance Protocols</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Account_Owner_validation</fullName>
+        <active>true</active>
+        <description>Account Owner entered in Acceptance Protocol must be the same as original Account Owner</description>
+        <errorConditionFormula>AND( NOT(ISBLANK( Account_Owner__c )), Account_Owner__r.Id != Order__r.Account__r.OwnerId )</errorConditionFormula>
+        <errorDisplayField>Account_Owner__c</errorDisplayField>
+        <errorMessage>Selected Account Owner doesn&apos;t match Account Owner entered in Account object.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Generate_PDF</fullName>
+        <availability>online</availability>
+        <description>Generates printable Acceptance Protocol document in PDF format.</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate PDF</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.location.href = &apos;apex/GenerateAcceptanceProtocolPDF?id={!Acceptance_Protocol__c.Id}&apos;;</url>
+    </webLinks>
+</CustomObject>

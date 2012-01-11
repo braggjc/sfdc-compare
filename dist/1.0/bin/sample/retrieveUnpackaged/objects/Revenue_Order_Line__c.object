@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores information about NRP and MRP received from BCT</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Bandwidth__c</fullName>
+        <description>Bandwidth received from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bandwidth received from BCT</inlineHelpText>
+        <label>Bandwidth</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calculation__c</fullName>
+        <description>Parent relation to SFDC Calculation object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Parent relation to SFDC Calculation object</inlineHelpText>
+        <label>Calculation</label>
+        <referenceTo>SFDC_Calculation__c</referenceTo>
+        <relationshipLabel>Revenue Order Lines</relationshipLabel>
+        <relationshipName>Revenue_Order_Lines</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Capex_One_Off__c</fullName>
+        <description>Capex One-Off received from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Capex One-Off received from BCT</inlineHelpText>
+        <label>Capex One-Off</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_Reuseable__c</fullName>
+        <description>Capex Reuseable received from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Capex Reuseable received from BCT</inlineHelpText>
+        <label>Capex Reuseable</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Length__c</fullName>
+        <description>Length of Contract received from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Length of Contract received from BCT</inlineHelpText>
+        <label>Contract Length</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Costing_Line__c</fullName>
+        <description>Related Costing Line which was used to create this Revenue Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Costing Line which was used to create this Revenue Order Line</inlineHelpText>
+        <label>Costing Line</label>
+        <referenceTo>Costing_Line__c</referenceTo>
+        <relationshipLabel>Revenue Order Lines</relationshipLabel>
+        <relationshipName>Revenue_Order_Lines</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Margin__c</fullName>
+        <description>Gross Margin received from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Gross Margin received from BCT</inlineHelpText>
+        <label>Gross Margin</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Medium__c</fullName>
+        <description>Medium received from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Medium received from BCT</inlineHelpText>
+        <label>Medium</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_Recurring_Charge__c</fullName>
+        <description>MRC Amount, that was returned from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MRC Amount, that was returned from BCT</inlineHelpText>
+        <label>Monthly Recurring Charge</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_Recurring_Charge__c</fullName>
+        <description>NRC Amount that was returned from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NRC Amount that was returned from BCT</inlineHelpText>
+        <label>Non Recurring Charge</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_Monthly__c</fullName>
+        <description>Opex Monthly received from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opex Monthly received from BCT</inlineHelpText>
+        <label>Opex Monthly</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_One_Off__c</fullName>
+        <description>Opex One-Off received from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opex One-Off received from BCT</inlineHelpText>
+        <label>Opex One-Off</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Order_Line__c</fullName>
+        <description>Relation to Order Line, for which given Revenue OL was created</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Order Line, for which given Revenue OL was created</inlineHelpText>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>Revenue Order Lines</relationshipLabel>
+        <relationshipName>Revenue_Order_Lines</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Payback__c</fullName>
+        <description>Payback received from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payback received from BCT</inlineHelpText>
+        <label>Payback</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Profitability_Ratio__c</fullName>
+        <description>Profitability Ratio received from BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Profitability Ratio received from BCT</inlineHelpText>
+        <label>Profitability Ratio</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Revenue Order Line</label>
+    <nameField>
+        <label>Revenue Order Line</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Revenue Order Lines</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

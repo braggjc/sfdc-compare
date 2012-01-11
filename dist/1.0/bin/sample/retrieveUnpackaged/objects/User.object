@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableFeeds>true</enableFeeds>
+    <fields>
+        <fullName>Allow_Plan_Modifications__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>User with this checkbox marked is allowed to edit Provisioning  Plan definition.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User with this checkbox marked is allowed to edit Provisioning  Plan definition.</inlineHelpText>
+        <label>Allow Plan Modifications</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <description>Business Unit Dimension</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Business Unit Dimension</inlineHelpText>
+        <label>Business Unit</label>
+        <picklist>
+            <picklistValues>
+                <fullName>IS (International Services)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Local Country Unit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wholesale Voice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Default_object_owner__c</fullName>
+        <description>Default object owner</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default object owner - the field is used to indicate a default object owner for objects that are created over integration platform, and do not have a local object owner information</inlineHelpText>
+        <label>Default object owner</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Global</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>External_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>External ID used for users matching.</description>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>Is to be used with GTS Location on Account for preventing users from creation of Accounts with different GTS Location than defined on User.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is to be used with GTS Location on Account for preventing users from creation of Accounts with different GTS Location than defined on User.</inlineHelpText>
+        <label>GTS Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OutOfOfficeReplacement_del__c</fullName>
+        <description>Select the person who replace you when you are out of office (Holiday , Sick level)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the person who replace you when you are out of office (Holiday , Sick level)</inlineHelpText>
+        <label>Out Of Office Replacement</label>
+        <relationshipName>Users</relationshipName>
+        <restrictedAdminField>false</restrictedAdminField>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
+        <fullName>Override_Restrictions__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Allows to override Product Configurator restrictions (visibility of Attributes and Pricing Items)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Allows to override Product Configurator restrictions (visibility of Attributes and Pricing Items)</inlineHelpText>
+        <label>Override Configurator Restrictions</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PCLang__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(ProductCatalogueLanguage__c)</formula>
+        <label>Product Catalogue Language</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProductCatalogueLanguage__c</fullName>
+        <description>Indicates which language version of Product Catalogue will be used.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates which language version of Product Catalogue will be used.</inlineHelpText>
+        <label>Product Catalogue Language</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GBR</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SVK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HUN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>POL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ROU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Profile_Name__c</fullName>
+        <description>Provides name of the profile to avoid SFDC governor limits wtih use of SOQL</description>
+        <externalId>false</externalId>
+        <formula>Profile.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Profile Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role_Name__c</fullName>
+        <description>Provides name of the profile to avoid SFDC governor limits wtih use of SOQL</description>
+        <externalId>false</externalId>
+        <formula>UserRole.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Role Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Code__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Sales Code</label>
+        <length>30</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Thor_Power_User__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determines special privileges in Thor management application (see all quotas, close quotas on demand).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines special privileges in Thor management application (see all quotas, close quotas on demand).</inlineHelpText>
+        <label>Thor Power User</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>User_role_id__c</fullName>
+        <externalId>false</externalId>
+        <formula>$User.UserRoleId +  $UserRole.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>User_role_id</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>ActiveUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ADDRESS_COUNTRY</columns>
+        <columns>DEFAULT_CURRENCY</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>CORE.USERS.COMPANY_NAME</columns>
+        <columns>CORE.USERS.DIVISION</columns>
+        <columns>CORE.USERS.DEPARTMENT</columns>
+        <columns>LOCALE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active Users</label>
+    </listViews>
+    <listViews>
+        <fullName>AdminUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CREATED_BY_NAME</columns>
+        <columns>UPDATEDBY_USER.NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CORE.PROFILE.USERTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.PROFILE.NAME</field>
+            <operation>equals</operation>
+            <value>System Administrator</value>
+        </filters>
+        <label>Admin Users</label>
+    </listViews>
+    <listViews>
+        <fullName>HU_Active_users</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>equals</operation>
+            <value>GTS Hungary</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>HU Active users</label>
+    </listViews>
+    <listViews>
+        <fullName>HU_LOCAL_ADMINS</fullName>
+        <booleanFilter>1 AND ( 2 OR 3 )</booleanFilter>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>equals</operation>
+            <value>GTS Hungary</value>
+        </filters>
+        <filters>
+            <field>CORE.PROFILE.NAME</field>
+            <operation>equals</operation>
+            <value>local_admin</value>
+        </filters>
+        <filters>
+            <field>CORE.PROFILE.NAME</field>
+            <operation>equals</operation>
+            <value>System Administrator</value>
+        </filters>
+        <label>HU_LOCAL_ADMINS</label>
+    </listViews>
+    <listViews>
+        <fullName>Order_Entry</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.PROFILE.NAME</field>
+            <operation>equals</operation>
+            <value>Order Entry</value>
+        </filters>
+        <label>Order Entry</label>
+    </listViews>
+    <listViews>
+        <fullName>Sales_Training_User</fullName>
+        <booleanFilter>1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9 or 10</booleanFilter>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>contains</operation>
+            <value>Biskupicova,Olajec</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Kockovska</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Kucbelova</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Prochazka</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Domsitz</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Filipkova</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Cieśluk</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Boros</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Tóth</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Stanila</value>
+        </filters>
+        <label>Sales Training User</label>
+    </listViews>
+    <listViews>
+        <fullName>Users_who_didn_t_login_110901</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_LOGIN</field>
+            <operation>lessOrEqual</operation>
+            <value>9/1/2011 9:00 AM</value>
+        </filters>
+        <label>Active didn&apos;t login since 110901</label>
+        <sharedTo>
+            <groups>Administrators</groups>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Users_who_didn_t_login_last_month</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>CORE.USERS.LAST_LOGIN</field>
+            <operation>lessOrEqual</operation>
+            <value>7/1/2011 9:00 AM</value>
+        </filters>
+        <label>Active didn&apos;t login since 110701</label>
+        <sharedTo>
+            <groups>Administrators</groups>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>my_ks_view</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>contains</operation>
+            <value>cieszkowska</value>
+        </filters>
+        <label>my ks view</label>
+    </listViews>
+    <listViews>
+        <fullName>notActiveUsers</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ADDRESS_COUNTRY</columns>
+        <columns>DEFAULT_CURRENCY</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>CORE.USERS.COMPANY_NAME</columns>
+        <columns>CORE.USERS.DIVISION</columns>
+        <columns>CORE.USERS.DEPARTMENT</columns>
+        <columns>LOCALE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.ACTIVE</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <label>notActive Users</label>
+    </listViews>
+    <listViews>
+        <fullName>users_CZ</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>CORE.USERS.USERNAME</columns>
+        <columns>CORE.USERS.LAST_LOGIN</columns>
+        <columns>CORE.USER_ROLE.NAME</columns>
+        <columns>CORE.USERS.ACTIVE</columns>
+        <columns>CORE.PROFILE.NAME</columns>
+        <columns>MANAGER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATED_BY_NAME</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USER_ROLE.NAME</field>
+            <operation>equals</operation>
+            <value>Off-net Proc. Manager</value>
+        </filters>
+        <label>testi_view</label>
+    </listViews>
+    <webLinks>
+        <fullName>Configure_Sales_Types</fullName>
+        <availability>online</availability>
+        <description>Opens Sales Types configuration page</description>
+        <displayType>link</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Configure Sales Types</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/SalesTypeConfiguration?id={!User.Id}&amp;retURL=/{!User.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>OpenCasesforthisUser</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Open Cases for this User</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>/00O?pc0=OWNER&amp;pn0=eq&amp;pv0={!User.FirstName}%20{!User.LastName}&amp;uid={!User.Id}&amp;pc1=OPEN&amp;pn1=eq&amp;pv1=true&amp;c_3=CDT&amp;brkdat2=0&amp;v=126&amp;cr_highcolor0=5554772&amp;calcagg_type1=N&amp;brkdat1a=0&amp;brkord0a=up&amp;bgdir=2&amp;brkdat1=0&amp;c_2=SU&amp;cr_highcolor1=5554772&amp;fg=0&amp;colDt=CREATED_DATEONLY&amp;ctsize=18&amp;lsk=1&amp;format=t&amp;c_5=CO&amp;cs=default&amp;calcagg_type2=N&amp;cr_highcolor2=5554772&amp;calcagg_scale4=2&amp;calcagg_type3=N&amp;brkord1=up&amp;cp=b&amp;cr_midcolor2=12763732&amp;cr_midcolor0=12763732&amp;sortdir=&amp;brkord0=up&amp;l=1&amp;calcagg_type0=N&amp;colDt_q=custom&amp;cd0=OWNER&amp;c_1=AN&amp;cr_midcolor1=12763732&amp;cnt=7&amp;tfg=0&amp;units=d&amp;calcagg_type4=N&amp;lcodes_0=&amp;ctitle=foo&amp;Ymin=&amp;bg1=16777215&amp;cr_lowcolor0=12735572&amp;details=yes&amp;brkord1a=up&amp;drillcol=OWNER&amp;rt=10&amp;cr_lowbk0=&amp;edate=&amp;calcagg_formula1=&amp;reln=&amp;sdate=&amp;cfsize=12&amp;pc5=&amp;pc8=&amp;c_6=CF&amp;bg2=13421823&amp;calcagg_formula3=&amp;cr_lowcolor2=12735572&amp;cd1=&amp;bool_filter=&amp;brkdat0=0&amp;scope=organization&amp;brkord2=up&amp;sal=yes&amp;ct=none&amp;c_4=AGE&amp;calcagg_scale3=2&amp;calcagg_label2=&amp;calcagg_scale2=2&amp;calcagg_scale1=2&amp;c_0=OW&amp;cr_lowcolor1=12735572&amp;calcagg_scale0=2&amp;brkdat0a=0&amp;csize=3&amp;break0=OWNER</url>
+        <width>800</width>
+    </webLinks>
+</CustomObject>

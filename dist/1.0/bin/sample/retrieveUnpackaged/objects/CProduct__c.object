@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Custom Product object</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Attribute_Set_Type__c</fullName>
+        <description>Relation to Attribute Set Type used to send attribute values to billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Attribute Set Type used to send attribute values to billing</inlineHelpText>
+        <label>Attribute Set Type</label>
+        <referenceTo>Attribute_Set_Type__c</referenceTo>
+        <relationshipLabel>Bundles (Attribute Set Type)</relationshipLabel>
+        <relationshipName>CProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BCT_Product_Int__c</fullName>
+        <description>ID of this Bundle in BCT for International bundles</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of this Bundle in BCT for International bundles (used in automatic calculation creation process; in case there is no international Product in BCT it can be empty)</inlineHelpText>
+        <label>BCT Product Id (International)</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BCT_Product__c</fullName>
+        <description>ID of this Bundle in BCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of this Bundle in BCT (used in automatic calculation creation process)</inlineHelpText>
+        <label>BCT Product Id</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Product_Family__c</fullName>
+        <description>Product Family from related Main Product.</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Product__r.Family )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Product Family from related Main Product.</inlineHelpText>
+        <label>Bundle Product Family</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Type__c</fullName>
+        <description>PRISRAII-41 Field treated as flag for distinguishing Bundles of special types, like Super Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field treated as flag for distinguishing Bundles of special types, like Super Bundle</inlineHelpText>
+        <label>Bundle Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Super Bundle</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CBCT_Product__c</fullName>
+        <description>Name of Product visible in CBCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of Product visible in CBCT</inlineHelpText>
+        <label>CBCT Product</label>
+        <picklist>
+            <picklistValues>
+                <fullName>nll</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>dwdm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ip_ll</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ipvpn</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>iptransit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>internet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>colo_host</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>nll_eth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ip_ll_eth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Excel Calculation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>lambda</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Calculation_Type__c</fullName>
+        <description>Indicates what type of price Calculation should be used for this Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates what type of price Calculation should be used for this Bundle</inlineHelpText>
+        <label>Calculation Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Price List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BCT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Excel Calculation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BCT or Price List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Configuration_Frozen__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if configuration pages should be accessible for this Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if configuration pages should be accessible for this Bundle</inlineHelpText>
+        <label>Configuration Frozen</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this item has been created in Billing system (during Bundle synchronization)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this item has been created in Billing system (during Bundle synchronization)</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_Extranet__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this item has been created in Extranet system (during Bundle synchronization)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this item has been created in Extranet system (during Bundle synchronization)</inlineHelpText>
+        <label>Created in Extranet</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Credit_Risk__c</fullName>
+        <description>Indicates what is the Credit Risk for given Bundle [PL specific]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates what is the Credit Risk for given Bundle [PL specific]</inlineHelpText>
+        <label>Credit Risk</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Description of the Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of the Bundle</inlineHelpText>
+        <label>Product Description</label>
+        <length>4000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Dimension_Dictionary__c</fullName>
+        <description>Relation to Dimension Dictionary used in SK Billing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Dimension Dictionary used in SK Billing.</inlineHelpText>
+        <label>Dimension Dictionary</label>
+        <referenceTo>Dimension_Dictionary__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>CProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Extranet__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If selected then it means that it can be added to Service Menu under Partner Accounts</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If selected then it means that it can be added to Service Menu under Partner Accounts</inlineHelpText>
+        <label>Extranet</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Family__c</fullName>
+        <description>Assigned Product Family</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Assigned Product Family</inlineHelpText>
+        <label>Product Family</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Data Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internet Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Voice Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Managed Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bundles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>From_Date__c</fullName>
+        <description>Validity date from which Bundle can be sold.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Validity date from which Bundle can be sold.</inlineHelpText>
+        <label>From Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>Products will be marked with multipicklist field GTS Location (GTS Poland, GTS Slovakia etc. ) mainly to separate Products for SK and other countries</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please choose countires for this product</inlineHelpText>
+        <label>GTS_Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Integration_ID__c</fullName>
+        <description>Unique number for communication with external systems eg. Billing.</description>
+        <displayFormat>1{000000}</displayFormat>
+        <externalId>true</externalId>
+        <inlineHelpText>Unique number for communication with external systems.</inlineHelpText>
+        <label>Integration ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Order__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>DAVO field - it is required in Billing: Indicated the order on which bundle will be printed on invoice document</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicated the order on which bundles will be printed on invoice document</inlineHelpText>
+        <label>Invoice Order</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsActive__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Indicates a Bundle that can be sold and configured.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates a Bundle that can be sold and configured.</inlineHelpText>
+        <label>Active</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Label_CZE__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Czech)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_Eng__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (English)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_HUN__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Hungarian)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_POL__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Polish)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_ROU__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Romanian)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_SVK__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Slovak)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_AST__c</fullName>
+        <description>Technical field which will remember the last related AST, which should be disconnected in Durian. The field will be automatically clean after succesfull synchronization</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field for Billing SK.</inlineHelpText>
+        <label>Last AST</label>
+        <referenceTo>Attribute_Set_Type__c</referenceTo>
+        <relationshipLabel>Bundles (Last AST)</relationshipLabel>
+        <relationshipName>CProducts1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Line_of_Business__c</fullName>
+        <description>Line of Business that categorizes the Bundle.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Line of Business that categorizes the Bundle.</inlineHelpText>
+        <label>Line of Business</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Products</relationshipLabel>
+        <relationshipName>CProducts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Modified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies if the definition has been modified or not.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field; Specifies if the definition has been modified or not.</inlineHelpText>
+        <label>Modified</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Node_A_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check if Address Node A is required on request for this product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check if Address Node A is required on request for this product</inlineHelpText>
+        <label>Node A Required</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Node_B_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check if Address Node B is required on request for this product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check if Address Node B is required on request for this product</inlineHelpText>
+        <label>Node B Required</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Extranet__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Value indicates if opportunities for this bundle can be created in Extranet.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value indicates if opportunities for this bundle can be created in Extranet.</inlineHelpText>
+        <label>Opportunity Extranet</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Previous_AST__c</fullName>
+        <description>Technical field, which stores the previously assigned AST</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field for Billing SK</inlineHelpText>
+        <label>Previous AST</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ProductCode__c</fullName>
+        <description>Assigned Product Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Assigned Product Code</inlineHelpText>
+        <label>Product Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <description>Relation to Main Product.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Main Product.</inlineHelpText>
+        <label>Main Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Products (custom)</relationshipLabel>
+        <relationshipName>Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Retail__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Product available for Retail</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product available for Retail</inlineHelpText>
+        <label>Retail</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Synchronization_Log__c</fullName>
+        <description>Technical field that contains log messages for synchronization with external systems.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field that contains log messages for synchronization with external systems.</inlineHelpText>
+        <label>Synchronization Log</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Synchronization_in_Progress__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Technical field used for synchronization with external systems.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field used for synchronization with external systems.</inlineHelpText>
+        <label>Synchronization in Progress</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Synchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies whether the product definition has been send to external systems or not;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies whether the product definition has been send to external systems or not;</inlineHelpText>
+        <label>Synchronized</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>To_Date__c</fullName>
+        <description>Validity date until which Bundle can be sold.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Validity date until  which Bundle can be sold.</inlineHelpText>
+        <label>To Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Type_of_Service_for_Contract__c</fullName>
+        <description>Selected Type Of Service will be presented on printed Contract</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected Type Of Service will be presented on printed Contract</inlineHelpText>
+        <label>Type of Service for Contract</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Direct Voice-Public Telephone Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internet Access-Connection to Internet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leased Line-Lease of Data Circuits</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP VPN-Virtual Private Data Network</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Free Phone-Supp. Telephone Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shared Cost-Supp. Telephone Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>UniqueName__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Tehcnical field used for validation of name field&apos;s uniqueness..</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tehcnical field.</inlineHelpText>
+        <label>UniqueName</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Wholesale__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Product available for Wholesale</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product available for Wholesale</inlineHelpText>
+        <label>Wholesale</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <label>Bundle</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Integration_ID__c</columns>
+        <columns>Product__c</columns>
+        <columns>Line_of_Business__c</columns>
+        <columns>Label_Eng__c</columns>
+        <columns>Label_SVK__c</columns>
+        <columns>Synchronized__c</columns>
+        <columns>Created_in_Extranet__c</columns>
+        <columns>IsActive__c</columns>
+        <columns>Configuration_Frozen__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>GTS_SK_Bundles</fullName>
+        <columns>NAME</columns>
+        <columns>Integration_ID__c</columns>
+        <columns>Product__c</columns>
+        <columns>Label_Eng__c</columns>
+        <columns>Label_SVK__c</columns>
+        <columns>IsActive__c</columns>
+        <columns>Synchronized__c</columns>
+        <columns>Created_in_Extranet__c</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>includes</operation>
+            <value>GTS Slovakia</value>
+        </filters>
+        <label>GTS_SK Bundles</label>
+    </listViews>
+    <listViews>
+        <fullName>HU_Bundles</fullName>
+        <columns>NAME</columns>
+        <columns>Product__c</columns>
+        <columns>IsActive__c</columns>
+        <columns>Synchronized__c</columns>
+        <columns>Created_in_Billing__c</columns>
+        <columns>Configuration_Frozen__c</columns>
+        <columns>GTS_Location__c</columns>
+        <columns>Integration_ID__c</columns>
+        <columns>Label_Eng__c</columns>
+        <columns>Label_HUN__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>includes</operation>
+            <value>GTS Hungary</value>
+        </filters>
+        <label>HU Bundles</label>
+    </listViews>
+    <listViews>
+        <fullName>HU_Bundles_not_synchronized</fullName>
+        <columns>NAME</columns>
+        <columns>IsActive__c</columns>
+        <columns>Product__c</columns>
+        <columns>Synchronized__c</columns>
+        <columns>Label_Eng__c</columns>
+        <columns>Label_HUN__c</columns>
+        <columns>Line_of_Business__c</columns>
+        <columns>Family__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>includes</operation>
+            <value>GTS Hungary</value>
+        </filters>
+        <filters>
+            <field>Synchronized__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>HU Bundles not synchronized</label>
+    </listViews>
+    <listViews>
+        <fullName>HU_Migration</fullName>
+        <columns>NAME</columns>
+        <columns>Line_of_Business__c</columns>
+        <columns>Family__c</columns>
+        <columns>Description__c</columns>
+        <columns>IsActive__c</columns>
+        <columns>To_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>startsWith</operation>
+            <value>HU_Migration</value>
+        </filters>
+        <label>HU_Migration</label>
+    </listViews>
+    <nameField>
+        <label>Custom Object Label Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <namedFilters>
+        <fullName>nf_01I20000000H94ZEAS_00N20000002767ZEAQ</fullName>
+        <active>true</active>
+        <field>Migration_Order__c.CTarget_Bundle__c</field>
+        <filterItems>
+            <field>CProduct__c.IsActive__c</field>
+            <operation>equals</operation>
+            <value>true</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Migration Order_Target Bundle</name>
+    </namedFilters>
+    <pluralLabel>Bundles</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>From_Date_Check</fullName>
+        <active>true</active>
+        <description>Checks From Date against To Date</description>
+        <errorConditionFormula>IF(AND(IF(ISNULL(To_Date__c), false, true), From_Date__c &gt; To_Date__c), true, false)</errorConditionFormula>
+        <errorDisplayField>From_Date__c</errorDisplayField>
+        <errorMessage>From Date can not be a later date than To Date!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>To_Date_Check</fullName>
+        <active>true</active>
+        <description>Checks To Date against From Date</description>
+        <errorConditionFormula>IF(AND(IF(ISNULL(From_Date__c), false, true), From_Date__c &gt; To_Date__c), true, false)</errorConditionFormula>
+        <errorDisplayField>To_Date__c</errorDisplayField>
+        <errorMessage>To Date can not be an earlier date than From Date!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>setLocationLabel</fullName>
+        <active>false</active>
+        <description>Rule checks current User&apos;s GTSLocation and sets proper Label as Req</description>
+        <errorConditionFormula>OR(
+IF(ISPICKVAL($User.GTS_Location__c, &apos;GTS Czech Rep&apos;) &amp;&amp; Label_CZE__c = &apos;&apos;, true, false)
+)</errorConditionFormula>
+        <errorDisplayField>Label_CZE__c</errorDisplayField>
+        <errorMessage>Please fill Label (Czech) field.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Assign_Prices</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Assign Prices</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var freeze = {!CProduct__c.Configuration_Frozen__c};
+if(freeze == 0){
+location.href=&apos;/apex/RelatePricingItem?bid={!CProduct__c.Id}&apos;;
+}else{
+alert(&apos;Bundle configuration frozen.&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Configure_Bundle</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Configure Bundle</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+/*
+if({!INCLUDES( CProduct__c.GTS_Location__c , &apos;GTS Slovakia&apos;)}){
+location.href=&apos;/apex/RelateBundleComponent?id={!CProduct__c.Id}&apos;;
+//location.reload(true);
+} else {
+alert(&apos;Only Slovakian products can be configured.&apos;);
+}
+*/
+
+var freeze = {!CProduct__c.Configuration_Frozen__c};
+if(freeze == 0){
+location.href=&apos;/apex/RelateBundleComponent?id={!CProduct__c.Id}&apos;;
+}else{
+alert(&apos;Bundle configuration frozen.&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Configure_Offer_Structure</fullName>
+        <availability>online</availability>
+        <description>Opens page for Offer Structure Configuration</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Configure Offer Structure</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/Relate_Services?id={!CProduct__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Synchronize</fullName>
+        <availability>online</availability>
+        <description>Sends Bundle structure to Extranet and Billing System</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Synchronize</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var prodId = &apos;{!CProduct__c.Id}&apos;;
+
+var synch = &apos;{!CProduct__c.Synchronized__c}&apos;;
+//sforce.apex.execute(&quot;Bundle_Synchronization_SK&quot;,&quot;clearTransactionSynchronization&quot;, {bundleId: prodId});
+var a = &apos;false&apos;;
+var resultString = &apos;&apos;
+if(synch == 0) {
+resultString = sforce.apex.execute(&quot;Bundle_Synchronization_SK&quot;,&quot;Synchronize_Bundle&quot;, {bundleId: prodId, test: a});
+alert(resultString);
+location.reload(true);
+}
+
+if(synch == 1){
+alert(&apos;Definition is synchronized.&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SynchronizeAll</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>SynchronizeAll</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+ 
+
+var result = sforce.connection.query(&quot;Select ID from CProduct__c where Synchronized__c = false and GTS_Location__c INCLUDES(&apos;GTS Poland&apos;)&quot;); 
+
+records = result.getArray(&quot;records&quot;);
+
+var a = &apos;false&apos;;
+
+var resultString = &apos;&apos;
+
+ 
+
+for(var i = 0; i &lt; records.length; i ++){
+
+        resultString = sforce.apex.execute(&quot;Bundle_Synchronization_SK&quot;,&quot;Synchronize_Bundle&quot;, {bundleId: records[i].Id, test: a});
+
+        alert(resultString);
+
+}</url>
+    </webLinks>
+</CustomObject>

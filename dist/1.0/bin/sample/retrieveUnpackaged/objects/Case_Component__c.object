@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Components related to Case</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>CSR_Id__c</fullName>
+        <description>ID from CSR Database</description>
+        <externalId>false</externalId>
+        <formula>Service_Component__r.CSR_Id__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>ID from CSR Database</inlineHelpText>
+        <label>CSR Id</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_No__c</fullName>
+        <description>Case Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Case Number</inlineHelpText>
+        <label>Case No</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Case Components</relationshipLabel>
+        <relationshipName>Case_Components</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Circuit_ID__c</fullName>
+        <description>Circuit ID of related Component</description>
+        <externalId>false</externalId>
+        <formula>Service_Component__r.Circuit_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Circuit ID of related Component</inlineHelpText>
+        <label>Circuit ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Component_Type__c</fullName>
+        <description>Name of related Component</description>
+        <externalId>false</externalId>
+        <formula>Service_Component__r.Component__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Name of related Component</inlineHelpText>
+        <label>Component Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Component__c</fullName>
+        <description>Service Component related to Case</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Service Component related to Case</inlineHelpText>
+        <label>Service Component</label>
+        <referenceTo>ServiceComponent__c</referenceTo>
+        <relationshipLabel>Case Components</relationshipLabel>
+        <relationshipName>Case_Components</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>Case Component</label>
+    <nameField>
+        <displayFormat>CCO{000000000}</displayFormat>
+        <label>Case Component No</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Case Components</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Add_Services</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Services</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+if(&apos;{!Case.Token_on__c}&apos; == &apos;OCTT&apos;){
+alert(&apos;You can not relate new components to the case which belongs currently to OCTT!&apos;);
+} else
+if(&apos;{!Case.IsClosed}&apos; == &apos;1&apos;){
+alert(&apos;You can not relate new components to the case which is closed!&apos;);
+} else
+if(&apos;{!Case.AccountId}&apos;!=&apos;&apos;){
+location.href=&apos;/apex/RelateCaseComponent?accId={!Case.AccountId}&amp;caseId={!Case.Id}&apos;;
+//location.reload(true);
+} else {
+alert(&apos;This functionality requires Account to be assigned.&apos;);
+}</url>
+    </webLinks>
+</CustomObject>

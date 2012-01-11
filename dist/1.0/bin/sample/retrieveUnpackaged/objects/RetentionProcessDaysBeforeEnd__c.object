@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <description>CARE_SK_370 Automatic Retention Case - number of days, before the PRI will end, value used in query;</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Interval__c</fullName>
+        <description>Number of days</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of days</inlineHelpText>
+        <label>Interval</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>RetentionProcessDaysBeforeEnd</label>
+</CustomObject>

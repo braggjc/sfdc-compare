@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <comment>Solution Base</comment>
+        <content>Cost_Element_Edit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>Cost_Element_New</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>Cost_Element_View</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Solution base</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Capex_one_time__c</fullName>
+        <externalId>false</externalId>
+        <label>Capex one time</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Capex_reusable__c</fullName>
+        <externalId>false</externalId>
+        <label>Capex reusable</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>LL Inst/Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Radio Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>URTiP One-FF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>URTiP Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Roofs Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Router Maintanance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Access Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Radio Installation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Radio infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Per Customer   Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CPE Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Network standard</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utrzymanie Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SDH/DWDM Equipmet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>xDSL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Konwerter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Router</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Switch</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Modem E3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Multiplekser   n*E1/Eth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Modem FO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UPS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SDH/Konwerter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Koszt operacyjny</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Radio</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Equipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Micro PP Frequency</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Micro 3.5G Frequency</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU T-Com Datalink (TDM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU T-Com HSLL (TDM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Internet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Other monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU INSTALL Micro 3.5G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Install PP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU T-Com HSLL (TDM) 1x</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU T-Com Datalink (TDM) 1x</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Other One Time Fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Router</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Voice EQ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Switch</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Port Fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Converters</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Cabeling fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU SDH EQ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Micro PP EQ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU T-Com Multiflex 1év (Eth.) 1x</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU T-Com Multiflex 1 év (Eth.)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU T-Com Multiflex 2év (Eth.) 1x</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU T-Com Multiflex 2 év (Eth.)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU T-Com Multiflex 3 év (Eth.)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Client_Network__c</fullName>
+        <defaultValue>100</defaultValue>
+        <externalId>false</externalId>
+        <label>Client/Network [%]</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Count</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Currency__c</fullName>
+        <description>Solution Base</description>
+        <externalId>false</externalId>
+        <label>Currency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CZK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GBP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RON</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HUF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SKK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Deinstalation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Deinstalation</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Delivery_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Delivery Time [weeks]</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Forced_Display__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Forced Display</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Inventory__c</fullName>
+        <externalId>false</externalId>
+        <label>Inventory</label>
+        <referenceTo>Inventory__c</referenceTo>
+        <relationshipName>Positions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opex_monthly__c</fullName>
+        <externalId>false</externalId>
+        <label>Opex monthly</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opex_one_off__c</fullName>
+        <externalId>false</externalId>
+        <label>Opex one off</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Removed_from_use__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Removed from use</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <label>Cost Element</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Name__c</columns>
+        <columns>Inventory__c</columns>
+        <columns>Capex_reusable__c</columns>
+        <columns>Client_Network__c</columns>
+        <columns>Category__c</columns>
+        <columns>Delivery_Time__c</columns>
+        <columns>Forced_Display__c</columns>
+        <columns>Currency__c</columns>
+        <columns>Removed_from_use__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>update</fullName>
+        <columns>Name__c</columns>
+        <columns>NAME</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>update</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CE{00000000}</displayFormat>
+        <label>Cost Element Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Cost Elements</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Inventory__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Currency__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Opex_monthly__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Capex_reusable__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Client_Network__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Removed_from_use__c</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Category_not_null</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( Category__c , &apos;&apos;)</errorConditionFormula>
+        <errorDisplayField>Category__c</errorDisplayField>
+        <errorMessage>You have to choose a category value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Client_Network_between_0_100</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Client_Network__c &gt;1 || Client_Network__c &lt; 0 , true, false)</errorConditionFormula>
+        <errorDisplayField>Client_Network__c</errorDisplayField>
+        <errorMessage>Enter a value from 0 to 100</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Currency_not_null</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( Currency__c , &apos;&apos;)</errorConditionFormula>
+        <errorDisplayField>Currency__c</errorDisplayField>
+        <errorMessage>You have to choose a currency value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Name_not_null</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( Name__c )</errorConditionFormula>
+        <errorDisplayField>Name__c</errorDisplayField>
+        <errorMessage>You must enter a Name value</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Cost_Element</fullName>
+        <availability>online</availability>
+        <description>Solution Base</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>New Cost Element</masterLabel>
+        <openType>sidebar</openType>
+        <page>Cost_Element_New_In_Inventory</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

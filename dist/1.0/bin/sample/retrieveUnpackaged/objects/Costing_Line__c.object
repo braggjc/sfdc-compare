@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>Costing_Line_Edit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>Costing_Line_New_NA</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>Costing_Line_View</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Solution base</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>5000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Expected_Delivery_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Delivery Time[in week]</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LOS_Order__c</fullName>
+        <externalId>false</externalId>
+        <label>LOS Order</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LOS_data__c</fullName>
+        <externalId>false</externalId>
+        <label>LOS data</label>
+        <length>5000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Line__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>Project Cost</relationshipLabel>
+        <relationshipName>Costing_Lines</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order__c</fullName>
+        <description>Solution Base</description>
+        <externalId>false</externalId>
+        <label>Order</label>
+        <referenceTo>COrder__c</referenceTo>
+        <relationshipLabel>Costing Lines</relationshipLabel>
+        <relationshipName>Costing_Lines</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PC_Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Project_cost__r.Account__c,  Project_cost__r.Account__r.Name)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PC_Contract_lenght__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Project_cost__r.Contract_lenght__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract lenght</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PC_IS_Local__c</fullName>
+        <externalId>false</externalId>
+        <formula>Project_cost__r.IS_Local__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PC_IS/Local</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PC_KAM__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Project_cost__r.User2Kam__c, 
+Project_cost__r.User2Kam__r.FirstName  + &apos; &apos; + Project_cost__r.User2Kam__r.LastName)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>KAM</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PC_PM__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Project_cost__r.User2PM__c, 
+Project_cost__r.User2PM__r.FirstName  + &apos; &apos; + Project_cost__r.User2PM__r.LastName)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PM</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PC_Real__c</fullName>
+        <externalId>false</externalId>
+        <formula>Project_cost__r.Real__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Real</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PC_Short_description__c</fullName>
+        <externalId>false</externalId>
+        <formula>Project_cost__r.Short_description__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Short description</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PC_Task__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Project_cost__r.Task__c, Project_cost__r.Task__r.Name)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Task</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PC_Version__c</fullName>
+        <externalId>false</externalId>
+        <formula>Project_cost__r.Version__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Version</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Project cost</label>
+        <referenceTo>Project_cost__c</referenceTo>
+        <relationshipLabel>Costing Lines</relationshipLabel>
+        <relationshipName>Costing_Lines</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Request__c</fullName>
+        <externalId>false</externalId>
+        <label>Request</label>
+        <referenceTo>Request__c</referenceTo>
+        <relationshipLabel>Project Cost</relationshipLabel>
+        <relationshipName>Costing_Lines2Request</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service__c</fullName>
+        <externalId>false</externalId>
+        <label>Service</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Short_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Short Description</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Task_Pricing__c</fullName>
+        <externalId>false</externalId>
+        <label>Task Pricing</label>
+        <referenceTo>CTask_Pricing__c</referenceTo>
+        <relationshipLabel>Costing Lines</relationshipLabel>
+        <relationshipName>Costing_Lines</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>wrong_task__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>wrong_task</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Costing Line</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Name__c</columns>
+        <columns>Project_cost__c</columns>
+        <columns>PC_IS_Local__c</columns>
+        <columns>Expected_Delivery_Time__c</columns>
+        <columns>Order_Line__c</columns>
+        <columns>Task_Pricing__c</columns>
+        <columns>Request__c</columns>
+        <columns>Service__c</columns>
+        <columns>Short_Description__c</columns>
+        <columns>CREATEDBY_USER.ALIAS</columns>
+        <columns>LOS_data__c</columns>
+        <columns>LOS_Order__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CL{000000000}</displayFormat>
+        <label>CostingLine Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Costing Lines</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Project_cost__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Expected_Delivery_Time__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Order_Line__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Service__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Short_Description__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Name_not_null</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( Name__c )</errorConditionFormula>
+        <errorDisplayField>Name__c</errorDisplayField>
+        <errorMessage>You must enter a Name value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Order_Line_not_null</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Project_cost__r.IS_Local__c == &apos;Local&apos;, 
+     AND(ISBLANK(Order_Line__c), 
+               NOT(AND( ISBLANK( Request__c ) , ISBLANK( Task_Pricing__c )  )  ) ) , 
+     false)</errorConditionFormula>
+        <errorDisplayField>Order_Line__c</errorDisplayField>
+        <errorMessage>You must select Order Line</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Order_line_not_Request</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Project_cost__r.IS_Local__c == &apos;Local&apos;,
+NOT( ISBLANK( Request__c ) ),
+false)</errorConditionFormula>
+        <errorMessage>You must select Order Line not Request. For Local type you can only add or change Order Line.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Order_line_not_RequestOrTaskPricing</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Project_cost__r.IS_Local__c == &apos;Local&apos;,
+NOT( AND ( ISBLANK( Request__c ) , ISBLANK( Task_Pricing__c ) )  ),
+false)</errorConditionFormula>
+        <errorMessage>You must select Order Line not Request or Task Pricing. For Local type you can only add or change Order Line.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Request_not_Order_line</fullName>
+        <active>false</active>
+        <errorConditionFormula>IF( Project_cost__r.IS_Local__c == &apos;IS&apos;, 
+     NOT( ISBLANK( Order_Line__c ) ), 
+     false)</errorConditionFormula>
+        <errorMessage>You must select Request not Order Line. For IS type you can only add or change Request.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Request_not_null</fullName>
+        <active>false</active>
+        <errorConditionFormula>IF( Project_cost__r.IS_Local__c == &apos;IS&apos;, 
+     ISBLANK( Request__c ), 
+     false)</errorConditionFormula>
+        <errorDisplayField>Request__c</errorDisplayField>
+        <errorMessage>You must select Request</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Task_Pricing_not_Order_line</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Project_cost__r.IS_Local__c == &apos;IS&apos;, 
+     NOT( ISBLANK( Order_Line__c ) ), 
+     false)</errorConditionFormula>
+        <errorMessage>You must select Task Pricing not Order Line. For IS type you can only add or change  Task Pricing.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Task_Pricing_not_null</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( Project_cost__r.IS_Local__c == &apos;IS&apos;,
+ISBLANK(  Task_Pricing__c  ),
+false)</errorConditionFormula>
+        <errorDisplayField>Task_Pricing__c</errorDisplayField>
+        <errorMessage>You must select Task Pricing</errorMessage>
+    </validationRules>
+</CustomObject>

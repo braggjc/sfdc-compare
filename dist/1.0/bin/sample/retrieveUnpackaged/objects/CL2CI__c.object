@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Solution base</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Costing_Item_Name__c</fullName>
+        <description>Name of Costing Item</description>
+        <externalId>false</externalId>
+        <formula>SFDC_Costing_Item__r.Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Name of Costing Item</inlineHelpText>
+        <label>Costing Item Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Costing_Line__c</fullName>
+        <externalId>false</externalId>
+        <label>Costing Line</label>
+        <referenceTo>Costing_Line__c</referenceTo>
+        <relationshipName>CL_CL2CI</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Network_Capex_One_time__c</fullName>
+        <description>Network Capex One-time</description>
+        <externalId>false</externalId>
+        <formula>SFDC_Costing_Item__r.Network_Capex_One_time__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Network Capex One-time</inlineHelpText>
+        <label>Network Capex One-time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Network_Capex_Reusable__c</fullName>
+        <description>Network Capex Reusable</description>
+        <externalId>false</externalId>
+        <formula>SFDC_Costing_Item__r.Network_Capex_Reusuable__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Network Capex Reusable</inlineHelpText>
+        <label>Network Capex Reusable</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Network_Opex_Monthly__c</fullName>
+        <description>Network Opex Monthly</description>
+        <externalId>false</externalId>
+        <formula>SFDC_Costing_Item__r.Network_Opex_Monthly__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Network Opex Monthly</inlineHelpText>
+        <label>Network Opex Monthly</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Network_Opex_One_off__c</fullName>
+        <description>Network Opex One-off</description>
+        <externalId>false</externalId>
+        <formula>SFDC_Costing_Item__r.Network_Opex_One_Off__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Network Opex One-off</inlineHelpText>
+        <label>Network Opex One-off</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Order_Line__c</fullName>
+        <description>Relation to Order Line (presents related list of Costing Items under Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Order Line</inlineHelpText>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>Costing Items</relationshipLabel>
+        <relationshipName>CL2CI</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_Costing_Item__c</fullName>
+        <externalId>false</externalId>
+        <label>SFDC Costing Item</label>
+        <referenceTo>SFDC_Costing_Item__c</referenceTo>
+        <relationshipName>CI_CL2CI</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>CL2CI</label>
+    <nameField>
+        <displayFormat>CL2CI{000000000}</displayFormat>
+        <label>CL2CI Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>CL2CI</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

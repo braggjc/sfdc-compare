@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>CommissionQuotaNew</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>CommissionQuotaNew</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Obiect for Commission Tab</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Edited__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Flag is check, if object at least one time was edit.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag is check, if object at least one time was edit.</inlineHelpText>
+        <label>Edited</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>From_Date__c</fullName>
+        <description>Start date for Period</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Start date for Period</inlineHelpText>
+        <label>From Date</label>
+        <length>19</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>From_Month__c</fullName>
+        <description>First month for period of quota</description>
+        <externalId>false</externalId>
+        <inlineHelpText>First month for period of quota</inlineHelpText>
+        <label>From Month</label>
+        <picklist>
+            <picklistValues>
+                <fullName>January</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>February</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>March</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>April</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>May</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>June</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>July</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>August</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>September</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>October</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>November</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>December</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>From_Year__c</fullName>
+        <description>Year of first month from period</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Year of first month from period</inlineHelpText>
+        <label>From Year</label>
+        <precision>4</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Percent__c</fullName>
+        <externalId>false</externalId>
+        <label>Percent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Period__c</fullName>
+        <description>Period of Commissions Quota</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Period for salesman to realised Quota</inlineHelpText>
+        <label>Period</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quota_Attainment__c</fullName>
+        <description>Value of Quota attainment for datetime equals &quot;Quota Attainment counting time&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Quota attainment for datetime equals &quot;Quota Attainment counting time&quot;</inlineHelpText>
+        <label>Quota Attainment</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quota_Attainment_counting_time__c</fullName>
+        <description>Time of last counting Quota attainment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Time of last counting Quota attainment</inlineHelpText>
+        <label>Quota Attainment counting time</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Quota__c</fullName>
+        <description>Value of quota, which salesman have to attain in indicated period</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In this field is value of quota, which salesman have to attain in indicated period</inlineHelpText>
+        <label>Quota</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Salesman__c</fullName>
+        <description>Salesman for this Commissions Quota</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Salesman for this Commissions Quota</inlineHelpText>
+        <label>Salesman</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Commissions_Quotas</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <description>Stage of Commissions Quota</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stage of Commissions Quota</inlineHelpText>
+        <label>Stage</label>
+        <length>22</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>To_Date__c</fullName>
+        <description>Last day of Period</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last day of Period</inlineHelpText>
+        <label>To Date</label>
+        <length>19</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>To_Month__c</fullName>
+        <description>Last month for period of quota</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last month for period of quota</inlineHelpText>
+        <label>To Month</label>
+        <picklist>
+            <picklistValues>
+                <fullName>January</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>February</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>March</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>April</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>May</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>June</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>July</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>August</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>September</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>October</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>November</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>December</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>To_Year__c</fullName>
+        <description>Year of last month from period</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Year of last month from period</inlineHelpText>
+        <label>To Year</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Commissions Quota</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>CQ</fullName>
+        <columns>NAME</columns>
+        <columns>Salesman__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Period__c</columns>
+        <columns>Quota__c</columns>
+        <columns>Quota_Attainment__c</columns>
+        <columns>Quota_Attainment_counting_time__c</columns>
+        <columns>Percent__c</columns>
+        <columns>Edited__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>CQ</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{0}</displayFormat>
+        <label>No.</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Commissions Quotas</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>From_Month_can_not_be_blank</fullName>
+        <active>true</active>
+        <description>From Month field can not be blank</description>
+        <errorConditionFormula>ISPICKVAL(From_Month__c, &apos;&apos;)</errorConditionFormula>
+        <errorDisplayField>From_Month__c</errorDisplayField>
+        <errorMessage>From Month field can not be blank</errorMessage>
+    </validationRules>
+</CustomObject>

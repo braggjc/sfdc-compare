@@ -1,0 +1,2678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>New_Simplified_Order_Override</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Scontrol</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Account_Identification_Type__c</fullName>
+        <description>Account Identification Type for new Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Identification Type for new Account</inlineHelpText>
+        <label>Account Identification Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Personal entity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Corporate entity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Civil service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <description>Account Name for new Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Name for new Account</inlineHelpText>
+        <label>Account Name</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Status__c</fullName>
+        <description>Account Status Type for new Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Status Type for new Account</inlineHelpText>
+        <label>Account Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Potential</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Related Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Account</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Simplified Orders (Account)</relationshipLabel>
+        <relationshipName>Simplified_Orders2</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Activated_Date__c</fullName>
+        <description>Activated Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Activated Date</inlineHelpText>
+        <label>Activated Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>BA_Bank_Account_Number__c</fullName>
+        <description>Bank Account Number (for Billing Account)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bank Account Number (for Billing Account)</inlineHelpText>
+        <label>Bank Account Number</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BA_Bank_Code__c</fullName>
+        <description>Bank Code</description>
+        <externalId>false</externalId>
+        <formula>BA_Bank_Name__r.Bank_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Bank Code</inlineHelpText>
+        <label>Bank Code</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BA_Bank_Name__c</fullName>
+        <description>Bank Name (for Billing Account)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bank Name (for Billing Account)</inlineHelpText>
+        <label>Bank Name</label>
+        <referenceTo>Bank_Data__c</referenceTo>
+        <relationshipLabel>Simplified Orders (Bank Name)</relationshipLabel>
+        <relationshipName>Simplified_Orders1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bank_Account_Number__c</fullName>
+        <description>Bank Account Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bank Account Number</inlineHelpText>
+        <label>Bank Account Number</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bank_Name__c</fullName>
+        <description>Bank Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bank Name</inlineHelpText>
+        <label>Bank Name</label>
+        <referenceTo>Bank_Data__c</referenceTo>
+        <relationshipLabel>Simplified Orders</relationshipLabel>
+        <relationshipName>Simplified_Orders</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bank_Specific_Symbol__c</fullName>
+        <description>Bank Specific Symbol</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bank Specific Symbol</inlineHelpText>
+        <label>Bank Specific Symbol</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Account_Name__c</fullName>
+        <description>Billing Account Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Billing Account Name</inlineHelpText>
+        <label>Billing Account Name</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Account_Status__c</fullName>
+        <description>Billing Account Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Billing Account Status</inlineHelpText>
+        <label>Billing Account Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Account__c</fullName>
+        <description>Related Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Billing Account</inlineHelpText>
+        <label>Billing Account</label>
+        <referenceTo>Billing_Accounts__c</referenceTo>
+        <relationshipLabel>Simplified Orders (Billing Account)</relationshipLabel>
+        <relationshipName>Simplified_Orders1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Binding_Period__c</fullName>
+        <description>Binding Period</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Binding Period</inlineHelpText>
+        <label>Binding Period</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Simplified Orders (Binding Period)</relationshipLabel>
+        <relationshipName>Simplified_Orders6</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <description>Business Unit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Business Unit</inlineHelpText>
+        <label>Business Unit</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Simplified Orders (Business Unit)</relationshipLabel>
+        <relationshipName>Simplified_Orders1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CProduct__c</fullName>
+        <description>Related Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Bundle</inlineHelpText>
+        <label>Product (custom)</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Simplified Orders</relationshipLabel>
+        <relationshipName>Simplified_Orders</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CRD_Tax_Identification_Number__c</fullName>
+        <description>Tax Identification Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tax Identification Number</inlineHelpText>
+        <label>Tax Identification Number</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRD_VAT_Number__c</fullName>
+        <description>VAT Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>VAT Number</inlineHelpText>
+        <label>VAT Number</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Class_VAT__c</fullName>
+        <description>Class VAT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Class VAT</inlineHelpText>
+        <label>Class VAT</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Simplified Orders</relationshipLabel>
+        <relationshipName>Simplified_Orders</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Company_Signed_Date__c</fullName>
+        <description>Company Signed Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Company Signed Date</inlineHelpText>
+        <label>Company Signed Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Email__c</fullName>
+        <description>Email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email</inlineHelpText>
+        <label>Email</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_First_Name__c</fullName>
+        <description>First Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>First Name</inlineHelpText>
+        <label>First Name</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Last_Name__c</fullName>
+        <description>Last Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Name</inlineHelpText>
+        <label>Last Name</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Mobile__c</fullName>
+        <description>Mobile</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Mobile</inlineHelpText>
+        <label>Mobile</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Phone__c</fullName>
+        <description>Phone</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Phone</inlineHelpText>
+        <label>Phone</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Type__c</fullName>
+        <description>Contact Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contact Type</inlineHelpText>
+        <label>Contact Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Decision Maker</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invoicing User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Contract_End_Date__c</fullName>
+        <description>Contract End Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract End Date</inlineHelpText>
+        <label>Contract End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Start_Date__c</fullName>
+        <description>Contract Start Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract Start Date</inlineHelpText>
+        <label>Contract Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Status__c</fullName>
+        <description>Contract Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract Status</inlineHelpText>
+        <label>Contract Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Type__c</fullName>
+        <description>Contract Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract Type</inlineHelpText>
+        <label>Contract Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Local</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Correspondence_Address__c</fullName>
+        <description>Correspondence Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Correspondence Address</inlineHelpText>
+        <label>Correspondence Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Simplified Orders (Correspondence Address)</relationshipLabel>
+        <relationshipName>Simplified_Orders1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Correspondence_City__c</fullName>
+        <description>Correspondence City</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Correspondence City</inlineHelpText>
+        <label>Correspondence City</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Correspondence_Country__c</fullName>
+        <description>Correspondence Country</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Correspondence Country</inlineHelpText>
+        <label>Correspondence Country</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Slovakia</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Correspondence_Postal_Code__c</fullName>
+        <description>Correspondence Postal Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Correspondence Postal Code</inlineHelpText>
+        <label>Correspondence Postal Code</label>
+        <length>32</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Correspondence_Street_No__c</fullName>
+        <description>Correspondence Street Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Correspondence Street Number</inlineHelpText>
+        <label>Correspondence Street No.</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Correspondence_Street__c</fullName>
+        <description>Correspondence Street</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Correspondence Street</inlineHelpText>
+        <label>Correspondence Street</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Currency_Formula__c</fullName>
+        <description>Currency</description>
+        <externalId>false</externalId>
+        <formula>TEXT(CurrencyIsoCode )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Currency</inlineHelpText>
+        <label>Currency</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Class__c</fullName>
+        <description>Customer Class</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer Class</inlineHelpText>
+        <label>Customer Class</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Company</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Person</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Self-employee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Foreigner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Intercompany</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Signed_Date__c</fullName>
+        <description>Customer Signed Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer Signed Date</inlineHelpText>
+        <label>Customer Signed Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Debtor_Group__c</fullName>
+        <description>Debtor Group</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Debtor Group</inlineHelpText>
+        <label>Debtor Group</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Additional description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional description</inlineHelpText>
+        <label>Description</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Existing_Account__c</fullName>
+        <description>Relation to already existing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to already existing Account</inlineHelpText>
+        <label>Existing Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Simplified Orders</relationshipLabel>
+        <relationshipName>Simplified_Orders</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Existing_Billing_Account__c</fullName>
+        <description>Relation to already existing Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to already existing Billing Account</inlineHelpText>
+        <label>Existing Billing Account</label>
+        <referenceTo>Billing_Accounts__c</referenceTo>
+        <relationshipLabel>Simplified Orders</relationshipLabel>
+        <relationshipName>Simplified_Orders</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Existing_Contact__c</fullName>
+        <description>Relation to already existing Contact</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to already existing Contact</inlineHelpText>
+        <label>Existing Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Simplified Orders</relationshipLabel>
+        <relationshipName>Simplified_Orders</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>External_Attachment__c</fullName>
+        <description>Relation to External Attachment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to External Attachment</inlineHelpText>
+        <label>External Attachment</label>
+        <referenceTo>External_Attachment__c</referenceTo>
+        <relationshipLabel>Simplified Orders</relationshipLabel>
+        <relationshipName>Simplified_Orders</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Fax__c</fullName>
+        <description>Fax number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Fax number</inlineHelpText>
+        <label>Fax</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <description>First Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>First Name</inlineHelpText>
+        <label>First Name</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Identification_No__c</fullName>
+        <description>Identification number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identification number</inlineHelpText>
+        <label>Identification No</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Identification_Type__c</fullName>
+        <description>Identification type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identification type</inlineHelpText>
+        <label>Identification Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Company registration number</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Installation_Order__c</fullName>
+        <description>Related Installation Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Installation Order</inlineHelpText>
+        <label>Installation Order</label>
+        <referenceTo>COrder__c</referenceTo>
+        <relationshipLabel>Simplified Orders</relationshipLabel>
+        <relationshipName>Simplified_Orders</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Delivery__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoice Delivery</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Simplified Orders (Invoice Delivery)</relationshipLabel>
+        <relationshipName>Simplified_Orders2</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Email__c</fullName>
+        <description>Invoice Email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Invoice Email</inlineHelpText>
+        <label>Invoice Email</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice_Language__c</fullName>
+        <description>Invoice Language</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Invoice Language</inlineHelpText>
+        <label>Invoice Language</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Simplified Orders (Invoice Language)</relationshipLabel>
+        <relationshipName>Simplified_Orders3</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Layout__c</fullName>
+        <description>Invoice Layout</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Invoice Layout</inlineHelpText>
+        <label>Invoice Layout</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Simplified Orders (Invoice Layout)</relationshipLabel>
+        <relationshipName>Simplified_Orders4</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Invoicing_Address__c</fullName>
+        <description>Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Invoicing Address</inlineHelpText>
+        <label>Invoicing Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Simplified Orders (Invoicing Address)</relationshipLabel>
+        <relationshipName>Simplified_Orders2</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <description>Last Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Name</inlineHelpText>
+        <label>Last Name</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Limit__c</fullName>
+        <description>Limit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Limit</inlineHelpText>
+        <label>Limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_Type__c</fullName>
+        <description>Order Line Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order Line Type</inlineHelpText>
+        <label>Line Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New Service</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disconnection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Release</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Suspend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Local_Contract_Number__c</fullName>
+        <description>Local Contract Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Local Contract Number</inlineHelpText>
+        <label>Local Contract Number</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Maturity_of_Payment__c</fullName>
+        <defaultValue>14</defaultValue>
+        <description>Maturity of payment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Maturity of payment</inlineHelpText>
+        <label>Maturity of Payment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_Recurring_Price__c</fullName>
+        <description>Monthly Recurring Price</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Monthly Recurring Price</inlineHelpText>
+        <label>Monthly Recurring Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_Recurring_Price__c</fullName>
+        <description>Non Recurring Price</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Non Recurring Price</inlineHelpText>
+        <label>Non Recurring Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Notification_Send__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>CARE_PL_366 Notification after installing services</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Points SO for which notification about installed products has been already send</inlineHelpText>
+        <label>Notification Send</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name__c</fullName>
+        <description>Opportunity Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunity Name</inlineHelpText>
+        <label>Opportunity Name</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Record_Type__c</fullName>
+        <description>Opportunity Record Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunity Record Type</inlineHelpText>
+        <label>Opportunity Record Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Domestic</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Stage__c</fullName>
+        <description>Opportunity Stage</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunity Stage</inlineHelpText>
+        <label>Opportunity Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Contract Signature</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Type_Details__c</fullName>
+        <description>Opportunity Type Details</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunity Type Details</inlineHelpText>
+        <label>Opportunity Type Details</label>
+        <picklist>
+            <controllingField>Opportunity_Type__c</controllingField>
+            <picklistValues>
+                <fullName>New Service</fullName>
+                <controllingFieldValues>New Business</controllingFieldValues>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Type__c</fullName>
+        <description>Opportunity Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunity Type</inlineHelpText>
+        <label>Opportunity Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New Business</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Account__c</fullName>
+        <description>Partner Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Partner Account</inlineHelpText>
+        <label>Partner Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Simplified Orders (Partner Account)</relationshipLabel>
+        <relationshipName>Simplified_Orders1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Method__c</fullName>
+        <description>Payment Method</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payment Method</inlineHelpText>
+        <label>Payment Method</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Simplified Orders (Payment Method)</relationshipLabel>
+        <relationshipName>Simplified_Orders5</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <description>Phone</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Phone</inlineHelpText>
+        <label>Phone</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Billing_Stop__c</fullName>
+        <description>Planned Billing Stop</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Planned Billing Stop</inlineHelpText>
+        <label>Planned Billing Stop</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Provisioning_Start__c</fullName>
+        <description>Determines date when Provisioning Plan should start.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines date when Provisioning Plan should start.</inlineHelpText>
+        <label>Planned Provisioning Start</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Primary__c</fullName>
+        <description>Primary</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Primary</inlineHelpText>
+        <label>Primary</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <description>Related main Product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related main Product</inlineHelpText>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Simplified Orders</relationshipLabel>
+        <relationshipName>Simplified_Orders</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Registration_Address__c</fullName>
+        <description>Registration Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Registration Address</inlineHelpText>
+        <label>Registration Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Simplified Orders</relationshipLabel>
+        <relationshipName>Simplified_Orders</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Registration_City__c</fullName>
+        <description>Registration City</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Registration City</inlineHelpText>
+        <label>Registration City</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Registration_Country__c</fullName>
+        <description>Registration Country</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Registration Country</inlineHelpText>
+        <label>Registration Country</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Slovakia</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Registration_Postal_Code__c</fullName>
+        <description>Registration Postal Code</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Registration Postal Code</inlineHelpText>
+        <label>Registration Postal Code</label>
+        <length>32</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Registration_Street_No__c</fullName>
+        <description>Registration Street Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Registration Street Number</inlineHelpText>
+        <label>Registration Street No.</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Registration_Street__c</fullName>
+        <description>Registration Street</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Registration Street</inlineHelpText>
+        <label>Registration Street</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_User__c</fullName>
+        <description>User, that should be set as Owner of newly created objects</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User, that should be set as Owner of newly created objects</inlineHelpText>
+        <label>Sales User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Simplified_Orders</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Segment__c</fullName>
+        <description>Account&apos;s Segment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Account&apos;s Segment</inlineHelpText>
+        <label>Segment</label>
+        <picklist>
+            <controllingField>Identification_Type__c</controllingField>
+            <picklistValues>
+                <fullName>SOHO</fullName>
+                <controllingFieldValues>Company registration number</controllingFieldValues>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SOHO+</fullName>
+                <controllingFieldValues>Company registration number</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SME</fullName>
+                <controllingFieldValues>Company registration number</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SME+</fullName>
+                <controllingFieldValues>Company registration number</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LE</fullName>
+                <controllingFieldValues>Company registration number</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LE+</fullName>
+                <controllingFieldValues>Company registration number</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ME</fullName>
+                <controllingFieldValues>Company registration number</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WHSL</fullName>
+                <controllingFieldValues>Company registration number</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home</fullName>
+                <controllingFieldValues>Other</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Service_Bundle__c</fullName>
+        <description>Related Service Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Service Bundle</inlineHelpText>
+        <label>Service Bundle</label>
+        <referenceTo>ServiceBundle__c</referenceTo>
+        <relationshipLabel>Simplified Orders</relationshipLabel>
+        <relationshipName>Simplified_Orders</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Notification_Address__c</fullName>
+        <description>Service Notification Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Service Notification Address</inlineHelpText>
+        <label>Service Notification Address</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Notification_Body__c</fullName>
+        <description>Service Notification Email&apos;s Body</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Service Notification Email&apos;s Body</inlineHelpText>
+        <label>Service Notification Body</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Service_Notification_Subject__c</fullName>
+        <description>Service Notification Email&apos;s Subject</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Service Notification Email&apos;s Subject</inlineHelpText>
+        <label>Service Notification Subject</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Simplified_Product__c</fullName>
+        <description>Product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Product</inlineHelpText>
+        <label>Product</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ADSL_SMART</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADSL_RAPID</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADSL_RAPID_PLUS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP_HLAS_0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP_HLAS_200</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP_HLAS_500</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP_HLAS_1200</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP_HLAS_PARTNER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HLAS_CS_PLUS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HLAS_CS_100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HLAS_CS_333</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HLAS_CS_500</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HLAS_CS_PARTNER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VIRTUAL_FAX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TELECONFERENCE8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TELECONFERENCE16</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TELECONFERENCE30</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E-MAIL_BOX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP_OFFICE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DIALUP_DOMA_PLUS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DIALUP_DOMA_VOLNO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DIALUP_FANATIK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DIALUP_PROFI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DIALUP_PROFI_PLUS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADSL_WS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADSL_WS_DATA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADSL_WS_FLAT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADSL_WS_FLAT_FUP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DIALUP_DOMA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DSL_4_VOICE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADSL_FIRE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADSL_EMPLOYEE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADSL_PROFI_KOMPLET</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADSL_DOMA_KOMPLET</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ADSL_DOMA_KOMPLET_1.5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DOMAIN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WWW</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Start_Billing_Date__c</fullName>
+        <description>Start Billing Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Start Billing Date</inlineHelpText>
+        <label>Start Billing Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Status for Simplified Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status for Simplified Order</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prepared</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Configured</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type</inlineHelpText>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Customer</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Civil service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Use_Reg_Address_For_Corr__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Use Registration Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use Registration Address</inlineHelpText>
+        <label>Use Registration Address</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Use_Registration_Address_As_Invoicing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Use Registration Address as Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use Registration Address as Invoicing Address</inlineHelpText>
+        <label>Use Registration Address</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Simplified Order</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account_Name__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Detailed_List</fullName>
+        <columns>NAME</columns>
+        <columns>Product__c</columns>
+        <columns>Account__c</columns>
+        <columns>Account_Name__c</columns>
+        <columns>Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>Detailed List</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SOR{000000000}</displayFormat>
+        <label>Simplified Order Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Simplified Orders</pluralLabel>
+    <recordTypes>
+        <fullName>Modification</fullName>
+        <active>true</active>
+        <description>Simplified Orders for modifications</description>
+        <label>Modification</label>
+        <picklistValues>
+            <picklist>Account_Identification_Type__c</picklist>
+            <values>
+                <fullName>Civil service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate entity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal entity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Account_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Potential</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Billing_Account_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contact_Type__c</picklist>
+            <values>
+                <fullName>Business User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision Maker</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Invoicing User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical User</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Status__c</picklist>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Type__c</picklist>
+            <values>
+                <fullName>Local</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Correspondence_Country__c</picklist>
+            <values>
+                <fullName>Slovakia</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_Class__c</picklist>
+            <values>
+                <fullName>Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreigner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intercompany</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Person</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self-employee</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Debtor_Group__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Identification_Type__c</picklist>
+            <values>
+                <fullName>Company registration number</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Line_Type__c</picklist>
+            <values>
+                <fullName>Disconnection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suspend</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Record_Type__c</picklist>
+            <values>
+                <fullName>Domestic</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Stage__c</picklist>
+            <values>
+                <fullName>Contract Signature</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Type_Details__c</picklist>
+            <values>
+                <fullName>New Service</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Type__c</picklist>
+            <values>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Primary__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Registration_Country__c</picklist>
+            <values>
+                <fullName>Slovakia</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Segment__c</picklist>
+            <values>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LE%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SME%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SOHO</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>SOHO%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WHSL</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Simplified_Product__c</picklist>
+            <values>
+                <fullName>ADSL_DOMA_KOMPLET</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_DOMA_KOMPLET_1%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_EMPLOYEE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_FIRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_PROFI_KOMPLET</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_RAPID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_RAPID_PLUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_SMART</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_WS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_WS_DATA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_WS_FLAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_WS_FLAT_FUP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIALUP_DOMA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIALUP_DOMA_PLUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIALUP_DOMA_VOLNO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIALUP_FANATIK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIALUP_PROFI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIALUP_PROFI_PLUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOMAIN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DSL_4_VOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-MAIL_BOX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HLAS_CS_100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HLAS_CS_333</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HLAS_CS_500</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HLAS_CS_PARTNER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HLAS_CS_PLUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP_HLAS_0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP_HLAS_1200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP_HLAS_200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP_HLAS_500</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP_HLAS_PARTNER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP_OFFICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TELECONFERENCE16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TELECONFERENCE30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TELECONFERENCE8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIRTUAL_FAX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WWW</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Configured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Prepared</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Civil service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>New_Installation</fullName>
+        <active>true</active>
+        <description>Simplified Orders for New Installation</description>
+        <label>New Installation</label>
+        <picklistValues>
+            <picklist>Account_Identification_Type__c</picklist>
+            <values>
+                <fullName>Civil service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate entity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal entity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Account_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Potential</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Billing_Account_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contact_Type__c</picklist>
+            <values>
+                <fullName>Business User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decision Maker</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Invoicing User</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical User</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Status__c</picklist>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Type__c</picklist>
+            <values>
+                <fullName>Local</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Correspondence_Country__c</picklist>
+            <values>
+                <fullName>Slovakia</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_Class__c</picklist>
+            <values>
+                <fullName>Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreigner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intercompany</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Person</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self-employee</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Debtor_Group__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Identification_Type__c</picklist>
+            <values>
+                <fullName>Company registration number</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Line_Type__c</picklist>
+            <values>
+                <fullName>New Service</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Record_Type__c</picklist>
+            <values>
+                <fullName>Domestic</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Stage__c</picklist>
+            <values>
+                <fullName>Contract Signature</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Type_Details__c</picklist>
+            <values>
+                <fullName>New Service</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Type__c</picklist>
+            <values>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Business</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Primary__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Registration_Country__c</picklist>
+            <values>
+                <fullName>Slovakia</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Segment__c</picklist>
+            <values>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LE%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SME</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SME%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SOHO</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>SOHO%2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WHSL</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Simplified_Product__c</picklist>
+            <values>
+                <fullName>ADSL_DOMA_KOMPLET</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_DOMA_KOMPLET_1%2E5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_EMPLOYEE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_FIRE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_PROFI_KOMPLET</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_RAPID</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_RAPID_PLUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_SMART</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_WS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_WS_DATA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_WS_FLAT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADSL_WS_FLAT_FUP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIALUP_DOMA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIALUP_DOMA_PLUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIALUP_DOMA_VOLNO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIALUP_FANATIK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIALUP_PROFI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIALUP_PROFI_PLUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOMAIN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DSL_4_VOICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-MAIL_BOX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HLAS_CS_100</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HLAS_CS_333</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HLAS_CS_500</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HLAS_CS_PARTNER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HLAS_CS_PLUS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP_HLAS_0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP_HLAS_1200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP_HLAS_200</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP_HLAS_500</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP_HLAS_PARTNER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP_OFFICE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TELECONFERENCE16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TELECONFERENCE30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TELECONFERENCE8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIRTUAL_FAX</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WWW</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Configured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Prepared</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Civil service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Registration_Number_GTS_Slovakia</fullName>
+        <active>false</active>
+        <description>Turned of based on https://helpdeskce.in.gtsce.com/browse/GSSS-303</description>
+        <errorConditionFormula>AND(!ISBLANK(Identification_No__c ) ,OR(NOT(ISNUMBER( Identification_No__c  )), LEN(Identification_No__c ) != 8 ))</errorConditionFormula>
+        <errorDisplayField>Identification_No__c</errorDisplayField>
+        <errorMessage>Company Registration Number must consist of 8 digits. Remove all spaces, dashes or other special characters.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Sales_User_Modification</fullName>
+        <active>true</active>
+        <description>Blocks modification of Sales User field after</description>
+        <errorConditionFormula>AND( ISCHANGED( Sales_User__c ), NOT( ISPICKVAL( Status__c , &apos;New&apos;) ))</errorConditionFormula>
+        <errorDisplayField>Sales_User__c</errorDisplayField>
+        <errorMessage>Sales User can be modified only before Simplified Order preparation</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Tax_Id_Validation</fullName>
+        <active>false</active>
+        <description>https://helpdeskce.in.gtsce.com/browse/GSSS-303</description>
+        <errorConditionFormula>AND(!ISBLANK(CRD_Tax_Identification_Number__c ) ,OR(NOT( LEN(CRD_Tax_Identification_Number__c 
+) = 10), NOT(REGEX(CRD_Tax_Identification_Number__c 
+ , &quot;[0-9]{10}&quot;))))</errorConditionFormula>
+        <errorDisplayField>CRD_Tax_Identification_Number__c</errorDisplayField>
+        <errorMessage>Tax Identification Number format is incorrect. It should be 10 digits</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>VAT_Number_Validation</fullName>
+        <active>false</active>
+        <description>https://helpdeskce.in.gtsce.com/browse/GSSS-303</description>
+        <errorConditionFormula>AND(!ISBLANK(CRD_VAT_Number__c) ,OR(NOT( BEGINS( CRD_VAT_Number__c  , &apos;SK&apos;) ), NOT( LEN(CRD_VAT_Number__c ) = 12), NOT(REGEX(CRD_VAT_Number__c , &quot;SK[0-9]{10}&quot;))))</errorConditionFormula>
+        <errorDisplayField>CRD_VAT_Number__c</errorDisplayField>
+        <errorMessage>VAT Number format is incorrect. It should be SK0000000000 (SK prefix and 10 digits)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>mobile_phone_number</fullName>
+        <active>true</active>
+        <errorConditionFormula>!BEGINS(  Contact_Mobile__c , &quot;+&quot;)</errorConditionFormula>
+        <errorDisplayField>Contact_Mobile__c</errorDisplayField>
+        <errorMessage>Phone number should start with &quot;+&quot; and be in international format</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>phone_number</fullName>
+        <active>true</active>
+        <errorConditionFormula>!BEGINS( Contact_Phone__c , &quot;+&quot;)</errorConditionFormula>
+        <errorDisplayField>Contact_Phone__c</errorDisplayField>
+        <errorMessage>Phone number should start with &quot;+&quot; and be in international format.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Attachment</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Attachment</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+function getRandomNum(lbound, ubound)
+{
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound);
+}
+
+function getRandomChar()
+{
+var numberChars = &quot;0123456789&quot;;
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;
+var charSet = numberChars + alphaChars;
+
+return charSet.charAt(getRandomNum(0, charSet.length));
+}
+
+function getPassword(length)
+{
+var pass = &quot;&quot;;
+length++;
+
+if (length &gt; 0) pass = pass + getRandomChar();
+
+for (var idx = 1; idx &lt; length; ++idx)
+{
+pass = pass + getRandomChar();
+}
+return pass;
+}
+
+function openExtranetForm(url){
+	window.open(url);
+}
+
+var url = &apos;http://extranet.gtsce.com/web/guest/attachement&apos;;
+var str_password = getPassword(24);
+var ordId = &apos;{!Simplified_Order__c.Id}&apos;; 
+var create_ref_result = sforce.apex.execute(&quot;ExternalAttachmentMethods&quot;,&quot;createReferenceObject&quot;, {hash:str_password, objectId:ordId, objectType:&apos;Simplified Order&apos;});
+
+if(create_ref_result != null){
+if(create_ref_result[0] == &apos;OK&apos;){
+openExtranetForm(url + &apos;?requestId=&apos; + str_password);
+} else if(validation_result[0] == &apos;REF_ERROR&apos;){
+alert(&apos;Try again&apos;);
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Configure</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Configure</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var morderstatus = &apos;{!Simplified_Order__c.Status__c}&apos;;
+var morderid = &apos;{!Simplified_Order__c.Id}&apos;;
+
+if(morderstatus == &quot;New&quot;) {
+	alert(&apos;Initial target configuration is not ready yet. First submit the migration order.&apos;);
+} else if (morderstatus == &quot;Submitted&quot;) {
+	alert(&apos;The provisioning is already in progress and the configuration cannot be changed.&apos;);
+} else if (morderstatus == &quot;Completed&quot;) {
+	alert(&apos;This order has already been completed and configuration cannot be changed.&apos;);
+} else if (morderstatus == &quot;Prepared&quot; || morderstatus == &quot;Configured&quot;) {
+	var lineType = &apos;{!Simplified_Order__c.Line_Type__c}&apos;; 
+	var result1 = sforce.connection.query(&quot;Select Installation_Order__r.Id From Simplified_Order__c Where Id = &apos;&quot; + morderid + &quot;&apos;&quot;);
+	var morder = result1.getArray(&apos;records&apos;);
+	var installationorderid = morder[0].Installation_Order__r.Id;
+	var result = sforce.connection.query(&quot;Select Id, Status__c, CProduct__c, CProduct__r.Synchronized__c, CProduct__r.GTS_Location__c, Service_Bundle__c, OrderLookup__r.GTS_Location__c, OrderLookup__r.OrderType__c, Line_Type__c, Minimum_Service_Period__c, CurrencyIsoCode From OrderLine__c Where OrderLookup__c = &apos;&quot; + installationorderid + &quot;&apos;&quot;);
+	var orderlines = result.getArray(&apos;records&apos;);
+	if(lineType == &apos;New Service&apos;){
+		window.location.href = &quot;/apex/OrderAtrributesModification?olid=&quot; + orderlines[0].Id;
+	}else{
+		var res = &apos;NONE&apos;;
+		do{
+		   res = sforce.apex.execute(&quot;ModificationOrderMethods&quot;,&quot;prepareOrderLinesObjectsDivided&quot;, {ordLines:orderlines});
+		   if(res == &apos;INTEGRATION_ERROR&apos;){
+				break;
+			}
+		} while (res != &apos;ALL&apos;);
+		if(res == &apos;INTEGRATION_ERROR&apos;){
+			alert(&apos;Unexpected error during connection with CSR database. Please try again later. \nIf problem persist please contact System Administrator.&apos;);
+		}else{
+			window.location.href = &quot;/apex/OrderAtrributesModification?olid=&quot; + orderlines[0].Id; 
+		}
+	}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Prepare</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Prepare</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var ordStatus = &apos;{!Simplified_Order__c.Status__c}&apos;;
+var ordId = &apos;{!Simplified_Order__c.Id}&apos;;
+var proceed_with_prepare = false;
+
+var validation_result = sforce.apex.execute(&quot;SimplifiedOrderMethods&quot;,&quot;validateOrderData&quot;, {ordId:ordId, ordStatus:ordStatus, action:&apos;prepare&apos;});
+
+if(validation_result != null){
+if(validation_result[0] == &apos;OK&apos;){
+proceed_with_prepare = true;
+} else if(validation_result[0] == &apos;QA&apos;){
+if(confirm(validation_result[1])){
+proceed_with_prepare = true;
+}
+} else if(validation_result[0] == &apos;ERR&apos;){
+alert(validation_result[1]);
+}
+}
+
+if(proceed_with_prepare == true){
+var result = sforce.apex.execute(&quot;SimplifiedOrderMethods&quot;,&quot;processPrepare&quot;, {ordId:ordId });
+if(result[0] == &apos;OK&apos;){
+alert(result[1]);
+location.reload(true);
+} else if(result[0] == &apos;TRNSFR&apos;){
+window.top.location.href = &quot;https://&quot; + window.top.location.host + result[1];
+} else {
+alert(result[1]);
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Set_Addresses</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Set Addresses</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>function getRandomNum(lbound, ubound)
+{
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound);
+}
+
+function getRandomChar()
+{
+var numberChars = &quot;0123456789&quot;;
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;
+var charSet = numberChars + alphaChars;
+
+return charSet.charAt(getRandomNum(0, charSet.length));
+}
+
+function getPassword(length)
+{
+var pass = &quot;&quot;;
+length++;
+
+if (length &gt; 0) pass = pass + getRandomChar();
+
+for (var idx = 1; idx &lt; length; ++idx)
+{
+pass = pass + getRandomChar();
+}
+return pass;
+}
+
+var arr = window.parent.location.href.split(&quot;/&quot;);
+var arr2 = arr[3].split(&quot;?&quot;);
+var id = arr2[0];
+var str_password = getPassword(24);
+
+window.top.location.href = &quot;https://&quot; + window.top.location.host + &quot;/apex/GetAddressFromOSS?objid=&quot; + id + &quot;&amp;hashId=&quot; + str_password;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Submit</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Submit</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var ordStatus = &apos;{!Simplified_Order__c.Status__c}&apos;;
+var ordId = &apos;{!Simplified_Order__c.Id}&apos;;
+var proceed_with_submit = false;
+
+var validation_result = sforce.apex.execute(&quot;SimplifiedOrderMethods&quot;,&quot;validateOrderData&quot;, {ordId:ordId, ordStatus:ordStatus, action:&apos;submit&apos;});
+
+if(validation_result != null){
+if(validation_result[0] == &apos;OK&apos;){
+proceed_with_submit= true;
+} else if(validation_result[0] == &apos;QA&apos;){
+if(confirm(validation_result[1])){
+proceed_with_submit= true;
+}
+} else if(validation_result[0] == &apos;ERR&apos;){
+alert(validation_result[1]);
+}
+}
+
+if(proceed_with_submit== true){
+var result = sforce.apex.execute(&quot;SimplifiedOrderMethods&quot;,&quot;processSubmit&quot;, {ordId:ordId });
+if(result[0] == &apos;OK&apos;){
+alert(result[1]);
+location.reload(true);
+} else if(result[0] == &apos;TRNSFR&apos;){
+window.top.location.href = &quot;https://&quot; + window.top.location.host + result[1];
+} else {
+alert(result[1]);
+}
+}</url>
+    </webLinks>
+</CustomObject>

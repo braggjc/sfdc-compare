@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object used for storing relations between Provisioning Plan definitions and Bundles</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Only active plans can be used</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Only active plans can be used</inlineHelpText>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bundle__c</fullName>
+        <description>Related Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Bundle</inlineHelpText>
+        <label>Bundle</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Provisioning Plan Bundles</relationshipLabel>
+        <relationshipName>Provisioning_Plan_Bundles</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Extranet_Order__c</fullName>
+        <description>Extranet Order</description>
+        <externalId>false</externalId>
+        <formula>IF( Provisioning_Plan__r.Extranet_Order__c = true, &apos;YES&apos;, &apos;NO&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Extranet Order</inlineHelpText>
+        <label>Extranet Order</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Plan_Name__c</fullName>
+        <description>Provisioning Plan Name</description>
+        <externalId>false</externalId>
+        <formula>Provisioning_Plan__r.Plan_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Provisioning Plan Name</inlineHelpText>
+        <label>Plan Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Plan_Status__c</fullName>
+        <description>Provisioning Plan Status</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Provisioning_Plan__r.Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Provisioning Plan Status</inlineHelpText>
+        <label>Plan Status</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Provisioning_Plan__c</fullName>
+        <description>Related Provisioning Plan</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Provisioning Plan</inlineHelpText>
+        <label>Provisioning Plan</label>
+        <referenceTo>Provisioning_Plan__c</referenceTo>
+        <relationshipLabel>Provisioning Plan Bundles</relationshipLabel>
+        <relationshipName>Provisioning_Plan_Bundles</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SImplified_Order__c</fullName>
+        <description>SImplified Order</description>
+        <externalId>false</externalId>
+        <formula>IF(Provisioning_Plan__r.Simplified_Order__c = true, &apos;YES&apos;, &apos;NO&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>SImplified Order</inlineHelpText>
+        <label>SImplified Order</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Provisioning Plan Bundle</label>
+    <nameField>
+        <displayFormat>PPB{000000000}</displayFormat>
+        <label>Provisioning Plan Bundle Relationship ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Provisioning Plan Bundles</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Provisioning_Plan_Change</fullName>
+        <active>false</active>
+        <description>Provisioning Plan field can not be changed.</description>
+        <errorConditionFormula>ISCHANGED(Provisioning_Plan__c)</errorConditionFormula>
+        <errorDisplayField>Provisioning_Plan__c</errorDisplayField>
+        <errorMessage>Provisioning Plan can not be changed. Delete relation and create new one.</errorMessage>
+    </validationRules>
+</CustomObject>

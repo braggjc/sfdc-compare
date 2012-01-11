@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>NoAPAManualCreation</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>List of attributes shown on Acceptance Protocol.</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Acceptance_Protocol__c</fullName>
+        <description>Relation to Acceptance Protocol</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Acceptance Protocol</inlineHelpText>
+        <label>Acceptance Protocol</label>
+        <referenceTo>Acceptance_Protocol__c</referenceTo>
+        <relationshipLabel>Acceptance Protocol Attributes</relationshipLabel>
+        <relationshipName>Acceptance_Protocol_Attributes</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Attribute_Value__c</fullName>
+        <description>Value copied from Attribute&apos;s instance (Order Attribute)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value copied from Attribute&apos;s instance (Order Attribute)</inlineHelpText>
+        <label>Attribute Value</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attribute__c</fullName>
+        <description>Relation to Attribute</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Attribute</inlineHelpText>
+        <label>Attribute</label>
+        <referenceTo>Attribute__c</referenceTo>
+        <relationshipLabel>Acceptance Protocol Attributes</relationshipLabel>
+        <relationshipName>Acceptance_Protocol_Attributes</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order_Attribute__c</fullName>
+        <description>Relation to Attribute&apos;s instance on Order Line (Order Attribute)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Attribute&apos;s instance on Order Line (Order Attribute)</inlineHelpText>
+        <label>Order Attribute</label>
+        <referenceTo>OrderAttribute__c</referenceTo>
+        <relationshipLabel>Acceptance Protocol Attributes</relationshipLabel>
+        <relationshipName>Acceptance_Protocol_Attributes</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order_Line__c</fullName>
+        <description>Relation to Order Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Order Line</inlineHelpText>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>Acceptance Protocol Attributes</relationshipLabel>
+        <relationshipName>Acceptance_Protocol_Attributes</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>Acceptance Protocol Attribute</label>
+    <nameField>
+        <label>Attribute Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Acceptance Protocol Attributes</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>Add_Attributes</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>url</linkType>
+        <masterLabel>Add Attributes</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/AddAPAttributes?id={!Acceptance_Protocol__c.Id}</url>
+    </webLinks>
+</CustomObject>

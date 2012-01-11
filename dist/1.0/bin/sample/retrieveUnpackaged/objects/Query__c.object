@@ -1,0 +1,2796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>Query_Edit</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>Query_new</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>Query_View</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Solution base</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Address_A__c</fullName>
+        <externalId>false</externalId>
+        <label>Address A</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Address_B__c</fullName>
+        <externalId>false</externalId>
+        <label>Address B</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Amount_of_copper_circuits__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount of copper circuits</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bandwidth_kbps__c</fullName>
+        <externalId>false</externalId>
+        <label>Bandwidth [kbps]</label>
+        <picklist>
+            <picklistValues>
+                <fullName>128</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>256</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>512</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1024</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2048</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4096</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6144</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8192</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10240</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>34Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>155Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>622Mb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2,5Gb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10Gb</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Branch_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Branch 1</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Branch_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Branch 2</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Sieciowe i klienckie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LLU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <defaultValue>&quot;Proszę o pozostawienie pętli fizycznej po stronie klienta.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Comment</label>
+        <length>5000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Construction_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Construction Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Brak decyzji</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>W budowie</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wybudowane</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rezygnacja</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_response__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of response</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Delivery_time_weeks__c</fullName>
+        <externalId>false</externalId>
+        <label>Delivery time [weeks]</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Distance_km__c</fullName>
+        <externalId>false</externalId>
+        <label>Distance [km]</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expiration_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expiration date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Instructing__c</fullName>
+        <externalId>false</externalId>
+        <label>Instructing</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Queries_for_TP</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Loc1_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc1_Contact_phone_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact phone number</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Loc1_Employee__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Queries</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Loc1_Ending__c</fullName>
+        <externalId>false</externalId>
+        <label>Ending</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Do szafy GTS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do głowicy budynku</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do przełącznicy cyfrowej DDF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wykonanie instalacji wewnętrznej przez TP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do sieci innego operatora</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inne</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc1_Ending_description__c</fullName>
+        <externalId>false</externalId>
+        <label>Ending description</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Loc1_Interface__c</fullName>
+        <externalId>false</externalId>
+        <label>Interface</label>
+        <picklist>
+            <picklistValues>
+                <fullName>G.703</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>V.35</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>X.21</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fast Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gigabit Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-16</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 1G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 2G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 4G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 10G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>n/a</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-64</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10-Gigabit Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc1_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Number</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc1_Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Street</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc1_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Zakończenie A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Zakończenie B</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie I</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie II</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie III</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie IV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc1_Type_of_FO_cable__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of FO cable</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc1_Type_of_ending__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of ending</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Node</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc1_Type_of_secondary_sewage__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of secondary sewage</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc1_ZIPcode__c</fullName>
+        <externalId>false</externalId>
+        <label>ZIP code</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc1_city__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc1_name__c</fullName>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc2_City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc2_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc2_Contact_phone_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact phone number</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Loc2_Employee__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Queries1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Loc2_Ending__c</fullName>
+        <externalId>false</externalId>
+        <label>Ending</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Do szafy GTS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do głowicy budynku</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do przełącznicy cyfrowej DDF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wykonanie instalacji wewnętrznej przez TP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do sieci innego operatora</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inne</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc2_Ending_description__c</fullName>
+        <externalId>false</externalId>
+        <label>Ending description</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Loc2_Interface__c</fullName>
+        <externalId>false</externalId>
+        <label>Interface</label>
+        <picklist>
+            <picklistValues>
+                <fullName>G.703</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>V.35</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>X.21</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fast Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gigabit Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-16</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 1G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 2G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 4G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 10G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>n/a</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-64</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10-Gigabit Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc2_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc2_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Number</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc2_Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Street</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc2_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Zakończenie A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Zakończenie B</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie I</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie II</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie III</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie IV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc2_Type_of_FO_cable__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of FO cable</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc2_Type_of_ending__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of ending</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Node</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc2_Type_of_secondary_sewage__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of secondary sewage</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc2_ZIPCode__c</fullName>
+        <externalId>false</externalId>
+        <label>ZIP code</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc3_City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc3_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc3_Contact_phone_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact phone number</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Loc3_Employee__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Queries2</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Loc3_Ending__c</fullName>
+        <externalId>false</externalId>
+        <label>Ending</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Do szafy GTS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do głowicy budynku</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do przełącznicy cyfrowej DDF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wykonanie instalacji wewnętrznej przez TP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do sieci innego operatora</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inne</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc3_Ending_description__c</fullName>
+        <externalId>false</externalId>
+        <label>Ending description</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Loc3_Interface__c</fullName>
+        <externalId>false</externalId>
+        <label>Interface</label>
+        <picklist>
+            <picklistValues>
+                <fullName>G.703</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>V.35</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>X.21</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fast Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gigabit Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-16</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 1G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 2G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 4G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 10G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>n/a</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-64</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10-Gigabit Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc3_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc3_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Number</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc3_Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Street</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc3_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Zakończenie A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Zakończenie B</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie I</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie II</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie III</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie IV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc3_Type_of_FO_cable__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of FO cable</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc3_Type_of_ending__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of ending</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Node</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc3_Type_of_secondary_sewage__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of secondary sewage</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc3_ZIPcode__c</fullName>
+        <externalId>false</externalId>
+        <label>ZIP code</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc4_City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc4_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc4_Contact_phone_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact phone number</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Loc4_Employee__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Queries3</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Loc4_Ending__c</fullName>
+        <externalId>false</externalId>
+        <label>Ending</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Do szafy GTS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do głowicy budynku</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do przełącznicy cyfrowej DDF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wykonanie instalacji wewnętrznej przez TP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Do sieci innego operatora</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inne</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc4_Ending_description__c</fullName>
+        <externalId>false</externalId>
+        <label>Ending description</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Loc4_Interface__c</fullName>
+        <externalId>false</externalId>
+        <label>Interface</label>
+        <picklist>
+            <picklistValues>
+                <fullName>G.703</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>V.35</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>X.21</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fast Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gigabit Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-16</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 1G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 2G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 4G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FC 10G</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>n/a</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STM-64</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10-Gigabit Ethernet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc4_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc4_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Number</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc4_Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Street</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc4_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Zakończenie A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Zakończenie B</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie I</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie II</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie III</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rozgałęzienie IV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc4_Type_of_FO_cable__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of FO cable</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc4_Type_of_ending__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of ending</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Node</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loc4_Type_of_secondary_sewage__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of secondary sewage</label>
+        <length>250</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loc4_ZIPcode__c</fullName>
+        <externalId>false</externalId>
+        <label>ZIP code</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lp__c</fullName>
+        <externalId>false</externalId>
+        <label>Lp</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly__c</fullName>
+        <externalId>false</externalId>
+        <label>Monthly</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_WT__c</fullName>
+        <externalId>false</externalId>
+        <label>No WT</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>One_Off__c</fullName>
+        <externalId>false</externalId>
+        <label>One Off</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payer__c</fullName>
+        <externalId>false</externalId>
+        <label>Payer</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Project_cost__c</fullName>
+        <description>Solution Base. Link to parent Project cost</description>
+        <externalId>false</externalId>
+        <label>Project cost</label>
+        <referenceTo>Project_cost__c</referenceTo>
+        <relationshipLabel>Queries</relationshipLabel>
+        <relationshipName>Queries</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Purpose__c</fullName>
+        <externalId>false</externalId>
+        <label>Purpose</label>
+        <length>5000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Question Number</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Request Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Request_sent_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Request sent Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>W weryfikacji</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pozytywny</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Negatywny</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Częściowo negatywny</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reasumpcja częściowo neg.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Anulowane</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>W przygotowaniu</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>W przygotowaniu (nowe)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Structural__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Structural / no Structural</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Technical_verification_result__c</fullName>
+        <externalId>false</externalId>
+        <label>Technical verification result</label>
+        <length>5000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>The_expected_contract_duration_end__c</fullName>
+        <externalId>false</externalId>
+        <label>The expected contract duration (end)</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>The_expected_contract_duration_start__c</fullName>
+        <externalId>false</externalId>
+        <label>The expected contract duration (start)</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>The_length_of_sewer__c</fullName>
+        <externalId>false</externalId>
+        <label>The length of sewer</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type_of_query__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of query</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Kanał cyfrowy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tor miedziany</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Frame-Relay</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Linia telefoniczna</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Łącze analogowe dwuprzewodowe</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Łącze analogowe czteroprzewodowe</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <label>Query</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>Q{000000000}</displayFormat>
+        <label>Query Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Queries</pluralLabel>
+    <recordTypes>
+        <fullName>Leasing</fullName>
+        <active>true</active>
+        <label>Leasing</label>
+        <picklistValues>
+            <picklist>Bandwidth_kbps__c</picklist>
+            <values>
+                <fullName>1024</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10240</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10Gb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>128</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>155Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2C5Gb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2048</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>256</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>34Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4096</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>512</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6144</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>622Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8192</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>LLU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sieciowe i klienckie</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Construction_Status__c</picklist>
+            <values>
+                <fullName>Wybudowane</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc1_Ending__c</picklist>
+            <values>
+                <fullName>Do głowicy budynku</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do przełącznicy cyfrowej DDF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do sieci innego operatora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do szafy GTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wykonanie instalacji wewnętrznej przez TP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc1_Interface__c</picklist>
+            <values>
+                <fullName>10-Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 10G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 1G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 2G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 4G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fast Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G%2E703</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-64</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>V%2E35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>X%2E21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>n%2Fa</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc1_Type__c</picklist>
+            <values>
+                <fullName>Rozgałęzienie I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie II</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie III</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie IV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc1_Type_of_ending__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Node</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc2_Ending__c</picklist>
+            <values>
+                <fullName>Do głowicy budynku</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do przełącznicy cyfrowej DDF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do sieci innego operatora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do szafy GTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wykonanie instalacji wewnętrznej przez TP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc2_Interface__c</picklist>
+            <values>
+                <fullName>10-Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 10G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 1G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 2G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 4G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fast Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G%2E703</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-64</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>V%2E35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>X%2E21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>n%2Fa</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc2_Type__c</picklist>
+            <values>
+                <fullName>Rozgałęzienie I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie II</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie III</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie IV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc2_Type_of_ending__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Node</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc3_Ending__c</picklist>
+            <values>
+                <fullName>Do głowicy budynku</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do przełącznicy cyfrowej DDF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do sieci innego operatora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do szafy GTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wykonanie instalacji wewnętrznej przez TP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc3_Interface__c</picklist>
+            <values>
+                <fullName>10-Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 10G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 1G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 2G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 4G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fast Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G%2E703</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-64</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>V%2E35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>X%2E21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>n%2Fa</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc3_Type__c</picklist>
+            <values>
+                <fullName>Rozgałęzienie I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie II</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie III</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie IV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc3_Type_of_ending__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Node</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc4_Ending__c</picklist>
+            <values>
+                <fullName>Do głowicy budynku</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do przełącznicy cyfrowej DDF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do sieci innego operatora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do szafy GTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wykonanie instalacji wewnętrznej przez TP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc4_Interface__c</picklist>
+            <values>
+                <fullName>10-Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 10G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 1G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 2G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 4G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fast Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G%2E703</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-64</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>V%2E35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>X%2E21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>n%2Fa</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc4_Type__c</picklist>
+            <values>
+                <fullName>Rozgałęzienie I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie II</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie III</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie IV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc4_Type_of_ending__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Node</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payer__c</picklist>
+            <values>
+                <fullName>GTS Poland</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>W weryfikacji</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_query__c</picklist>
+            <values>
+                <fullName>Frame-Relay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kanał cyfrowy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Linia telefoniczna</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tor miedziany</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Łącze analogowe czteroprzewodowe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Łącze analogowe dwuprzewodowe</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sewerage</fullName>
+        <active>true</active>
+        <label>Sewerage</label>
+        <picklistValues>
+            <picklist>Bandwidth_kbps__c</picklist>
+            <values>
+                <fullName>1024</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10240</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10Gb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>155Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2C5Gb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2048</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>256</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>34Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4096</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>512</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6144</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>622Mb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8192</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>LLU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sieciowe i klienckie</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Construction_Status__c</picklist>
+            <values>
+                <fullName>Brak decyzji</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rezygnacja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>W budowie</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wybudowane</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc1_Ending__c</picklist>
+            <values>
+                <fullName>Do głowicy budynku</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do przełącznicy cyfrowej DDF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do sieci innego operatora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do szafy GTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wykonanie instalacji wewnętrznej przez TP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc1_Interface__c</picklist>
+            <values>
+                <fullName>10-Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 10G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 1G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 2G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 4G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fast Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G%2E703</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-64</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>V%2E35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>X%2E21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>n%2Fa</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc1_Type__c</picklist>
+            <values>
+                <fullName>Rozgałęzienie I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie II</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie III</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie IV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc1_Type_of_ending__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Node</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc2_Ending__c</picklist>
+            <values>
+                <fullName>Do głowicy budynku</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do przełącznicy cyfrowej DDF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do sieci innego operatora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do szafy GTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wykonanie instalacji wewnętrznej przez TP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc2_Interface__c</picklist>
+            <values>
+                <fullName>10-Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 10G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 1G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 2G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 4G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fast Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G%2E703</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-64</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>V%2E35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>X%2E21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>n%2Fa</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc2_Type__c</picklist>
+            <values>
+                <fullName>Rozgałęzienie I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie II</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie III</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie IV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc2_Type_of_ending__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Node</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc3_Ending__c</picklist>
+            <values>
+                <fullName>Do głowicy budynku</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do przełącznicy cyfrowej DDF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do sieci innego operatora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do szafy GTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wykonanie instalacji wewnętrznej przez TP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc3_Interface__c</picklist>
+            <values>
+                <fullName>10-Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 10G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 1G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 2G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 4G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fast Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G%2E703</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-64</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>V%2E35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>X%2E21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>n%2Fa</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc3_Type__c</picklist>
+            <values>
+                <fullName>Rozgałęzienie I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie II</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie III</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie IV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc3_Type_of_ending__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Node</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc4_Ending__c</picklist>
+            <values>
+                <fullName>Do głowicy budynku</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do przełącznicy cyfrowej DDF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do sieci innego operatora</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Do szafy GTS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inne</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wykonanie instalacji wewnętrznej przez TP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc4_Interface__c</picklist>
+            <values>
+                <fullName>10-Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 10G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 1G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 2G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FC 4G</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fast Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>G%2E703</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gigabit Ethernet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-16</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STM-64</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>V%2E35</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>X%2E21</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>n%2Fa</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc4_Type__c</picklist>
+            <values>
+                <fullName>Rozgałęzienie I</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie II</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie III</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rozgałęzienie IV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zakończenie B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loc4_Type_of_ending__c</picklist>
+            <values>
+                <fullName>Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Node</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payer__c</picklist>
+            <values>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Anulowane</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Częściowo negatywny</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Negatywny</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pozytywny</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reasumpcja częściowo neg%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>W przygotowaniu</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>W przygotowaniu %28nowe%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>W weryfikacji</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type_of_query__c</picklist>
+            <values>
+                <fullName>Frame-Relay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kanał cyfrowy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Linia telefoniczna</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tor miedziany</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Łącze analogowe czteroprzewodowe</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Łącze analogowe dwuprzewodowe</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Loc1_name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Loc2_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Loc3_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Loc4_Name__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Loc1_name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Loc2_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Loc3_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Loc4_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Export</fullName>
+        <availability>online</availability>
+        <description>Solution Base</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Export</masterLabel>
+        <openType>sidebar</openType>
+        <page>Query_Export_Sewerage</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Export_lease</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Export</masterLabel>
+        <openType>sidebar</openType>
+        <page>Query_Export_Lease</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

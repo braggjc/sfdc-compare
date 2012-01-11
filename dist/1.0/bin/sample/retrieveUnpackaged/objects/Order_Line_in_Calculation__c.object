@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>A_End__c</fullName>
+        <externalId>false</externalId>
+        <formula>Order_Line__r.A_End__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>A-End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>B_End__c</fullName>
+        <externalId>false</externalId>
+        <formula>Order_Line__r.B_End__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>B-End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle__c</fullName>
+        <externalId>false</externalId>
+        <label>Bundle</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Order Lines in Calculation</relationshipLabel>
+        <relationshipName>Order_Lines_in_Calculation</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CBCT_Product__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Bundle__r.CBCT_Product__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CBCT Product</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Capex_Network__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <label>Capex Network</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_One_off__c</fullName>
+        <externalId>false</externalId>
+        <label>Capex One-off</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_Reusable_deinstalation__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <label>Capex Reusable(deinstalation)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_Reuseable__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <label>Capex Reuseable</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Circuit_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Order_Line__r.Circuit_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Circuit ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Length__c</fullName>
+        <externalId>false</externalId>
+        <formula>Order_Line__r.Minimum_Service_Period__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contract Length</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CostsLockedForEditon__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Costs Locked For Editon</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Evaluation_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Evaluation Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BCT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Excel Calculation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Initial_One_time_Price__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <label>Initial One-time Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Recurring_Price__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <label>Initial Recurring Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Line_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Order_Line__r.Line_Type__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Line Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Order_Line__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>One_time_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>One-time Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_Monthly__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <label>Opex Monthly</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_Old_Monthly__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <label>Opex Old Monthly</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_One_off__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <label>Opex One-off</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Location__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Opportunity__r.GTS_Location__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Location</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Order Lines in Calculation</relationshipLabel>
+        <relationshipName>Order_Lines_in_Calculation</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order_Line__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>Order Lines in Calculation</relationshipLabel>
+        <relationshipName>Order_Lines_in_Calculation</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product_Configurator__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/apex/OrderAtrributesModification?olid=&quot; &amp; Order_Line__c, &quot;Link&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Configurator</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurring_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurring Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_Calculation__c</fullName>
+        <externalId>false</externalId>
+        <label>SFDC Calculation</label>
+        <referenceTo>SFDC_Calculation__c</referenceTo>
+        <relationshipLabel>Order Lines in Calculation</relationshipLabel>
+        <relationshipName>Order_Lines_in_Calculation</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Bundle__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Order_Line__r.Service_Bundle__c, Order_Line__r.Service_Bundle__r.Name )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Service Bundle</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Order Line in Calculation</label>
+    <nameField>
+        <displayFormat>OLIC-{0000000000}</displayFormat>
+        <label>Order Line in Calculation</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <namedFilters>
+        <fullName>nf_01I20000000HVFSEA4_00N20000002hUObEAM</fullName>
+        <active>true</active>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <field>SFDC_Costing_Item__c.Order_Line_in_Calculation__c</field>
+        <filterItems>
+            <field>Order_Line_in_Calculation__c.SFDC_Calculation__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.SFDC_Calculation__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>$Source.SFDC_Calculation__c</field>
+            <operation>equals</operation>
+            <valueField>Order_Line_in_Calculation__c.SFDC_Calculation__c</valueField>
+        </filterItems>
+        <isOptional>true</isOptional>
+        <name>SFDC Costing Item_Order Line in Calculat</name>
+        <sourceObject>SFDC_Costing_Item__c</sourceObject>
+    </namedFilters>
+    <pluralLabel>Order Lines in Calculation</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Manage_Capex_Network</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISCHANGED( Capex_Network__c ) &amp;&amp; ISPICKVAL(Evaluation_Type__c,&apos;BCT&apos;) &amp;&amp; CostsLockedForEditon__c</errorConditionFormula>
+        <errorDisplayField>Capex_Network__c</errorDisplayField>
+        <errorMessage>You can not edit cost for CBCT product.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Manage_Capex_One_off</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISCHANGED( Capex_One_off__c ) &amp;&amp; ISPICKVAL(Evaluation_Type__c,&apos;BCT&apos;) &amp;&amp; CostsLockedForEditon__c</errorConditionFormula>
+        <errorDisplayField>Capex_One_off__c</errorDisplayField>
+        <errorMessage>You can not edit cost for CBCT product.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Manage_Capex_Reusable_deinstalation</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISCHANGED( Capex_Reusable_deinstalation__c ) &amp;&amp; ISPICKVAL(Evaluation_Type__c,&apos;BCT&apos;) &amp;&amp; CostsLockedForEditon__c</errorConditionFormula>
+        <errorDisplayField>Capex_Reusable_deinstalation__c</errorDisplayField>
+        <errorMessage>You can not edit cost for CBCT product.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Manage_Capex_Reuseable</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISCHANGED( Capex_Reuseable__c ) &amp;&amp; ISPICKVAL(Evaluation_Type__c,&apos;BCT&apos;) &amp;&amp; CostsLockedForEditon__c</errorConditionFormula>
+        <errorDisplayField>Capex_Reuseable__c</errorDisplayField>
+        <errorMessage>You can not edit cost for CBCT product.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Manage_Opex_Monthly</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISCHANGED( Opex_Monthly__c ) &amp;&amp; ISPICKVAL(Evaluation_Type__c,&apos;BCT&apos;) &amp;&amp; CostsLockedForEditon__c</errorConditionFormula>
+        <errorDisplayField>Opex_Monthly__c</errorDisplayField>
+        <errorMessage>You can not edit cost for CBCT product.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Manage_Opex_Old_Monthly</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISCHANGED( Opex_Old_Monthly__c ) &amp;&amp; ISPICKVAL(Evaluation_Type__c,&apos;BCT&apos;) &amp;&amp; CostsLockedForEditon__c</errorConditionFormula>
+        <errorDisplayField>Opex_Old_Monthly__c</errorDisplayField>
+        <errorMessage>You can not edit cost for CBCT product.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Manage_Opex_One_off</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISCHANGED( Opex_One_off__c ) &amp;&amp; ISPICKVAL(Evaluation_Type__c,&apos;BCT&apos;) &amp;&amp; CostsLockedForEditon__c</errorConditionFormula>
+        <errorDisplayField>Opex_One_off__c</errorDisplayField>
+        <errorMessage>You can not edit cost for CBCT product.</errorMessage>
+    </validationRules>
+</CustomObject>

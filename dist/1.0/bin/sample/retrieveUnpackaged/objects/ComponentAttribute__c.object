@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores information about Attributes under Service Component</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>AttributeType__c</fullName>
+        <description>Type of the Attribute (used in case of IS Services, where no Attribute Definition exists)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of the Attribute (used in case of IS Services, where no Attribute Definition exists)</inlineHelpText>
+        <label>Attribute Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Circuit ID</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Device Port</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>End Address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Number</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Speed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>B-end customer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>AttributeValue__c</fullName>
+        <description>Value of the Attribute (Short value, visible within labels)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of the Attribute</inlineHelpText>
+        <label>Attribute Value</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attribute__c</fullName>
+        <description>Relation to Attribute Definition</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Attribute Definition</inlineHelpText>
+        <label>Attribute</label>
+        <referenceTo>Attribute__c</referenceTo>
+        <relationshipLabel>Component Attributes</relationshipLabel>
+        <relationshipName>Component_Attributes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CSR_Id__c</fullName>
+        <description>ID of the Attribute in CSR database</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of the Attribute in CSR database</inlineHelpText>
+        <label>CSR_Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GP__c</fullName>
+        <description>ID of Generic Product on which the Attribute is installed in CSR Database</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of Generic Product on which the Attribute is installed in CSR Database</inlineHelpText>
+        <label>GP CsrID</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generic_Product_Attribute__c</fullName>
+        <description>Relation to Generic Product-Attribute object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Generic Product-Attribute object</inlineHelpText>
+        <label>Generic Product Attribute</label>
+        <referenceTo>Generic_Product_Attribute__c</referenceTo>
+        <relationshipLabel>Component Attributes</relationshipLabel>
+        <relationshipName>Component_Attributes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Generic_Product__c</fullName>
+        <description>Parent Generic Product for Attribute</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Parent Generic Product for Attribute</inlineHelpText>
+        <label>Generic Product</label>
+        <referenceTo>Generic_Product__c</referenceTo>
+        <relationshipLabel>Component Attributes</relationshipLabel>
+        <relationshipName>Component_Attributes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OSS_Link__c</fullName>
+        <description>Direct Link to OSS Enumerator (in case of Attributes related to OSS)</description>
+        <externalId>false</externalId>
+        <formula>IF( OSSid__c != &apos;&apos; &amp;&amp; ISPICKVAL(Attribute__r.EnumeratorOSS__c , &apos;IE_DN&apos;) , HYPERLINK(&apos;http://dione1.gtsgroup.cz/idengine/ce_ie_dn/index.htm?rec_id=&apos; +  OSSid__c , OSSid__c),
+HYPERLINK(&apos;http://dione1.gtsgroup.cz/idengine/ce_ie_circ/index.htm?circ_id=&apos; +  OSSid__c , OSSid__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Direct Link to OSS Enumerator (in case of Attributes related to OSS)</inlineHelpText>
+        <label>OSS Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OSSid__c</fullName>
+        <description>ID from OSS (in case of Attributes related to OSS enumerators)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID from OSS (in case of Attributes related to OSS enumerators)</inlineHelpText>
+        <label>OSSid</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>If(Generic_Product_Attribute__r.Phone_Number__c, &apos;true&apos;, &apos;false&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ServiceComponent__c</fullName>
+        <description>Reference to the Service Component where this attribute belongs to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reference to the Service Component where this attribute belongs to</inlineHelpText>
+        <label>Service Component</label>
+        <referenceTo>ServiceComponent__c</referenceTo>
+        <relationshipLabel>Component Attributes</relationshipLabel>
+        <relationshipName>Component_Attributes</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SourceRecordID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>ID of Attribute from Local System</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of Attribute from Local System</inlineHelpText>
+        <label>Source Record ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Status of Attribute; corresponds to Attribute Lifecycle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of Attribute; corresponds to Attribute Lifecycle</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deleted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Value_long__c</fullName>
+        <description>Value of the Attribute (Full value used by Configurator and in Communication with external systems)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of the Attribute (Full value used by Configurator and in Communication with external systems)</inlineHelpText>
+        <label>Value (long)</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Component Attribute</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>AttributeType__c</columns>
+        <columns>AttributeValue__c</columns>
+        <columns>ServiceComponent__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Search_CPS</fullName>
+        <booleanFilter>(1 AND 2) OR (3 AND 4)</booleanFilter>
+        <columns>Attribute__c</columns>
+        <columns>AttributeType__c</columns>
+        <columns>ServiceComponent__c</columns>
+        <columns>Generic_Product__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Attribute__c</field>
+            <operation>equals</operation>
+            <value>HU_CPS_Main number</value>
+        </filters>
+        <filters>
+            <field>AttributeValue__c</field>
+            <operation>contains</operation>
+            <value>157796</value>
+        </filters>
+        <filters>
+            <field>Attribute__c</field>
+            <operation>equals</operation>
+            <value>CE_Number range</value>
+        </filters>
+        <filters>
+            <field>AttributeValue__c</field>
+            <operation>contains</operation>
+            <value>157796</value>
+        </filters>
+        <label>Search_CPS</label>
+        <sharedTo>
+            <groups>GTS Datanet Retail</groups>
+            <groups>GTS Datanet Wholesale</groups>
+            <groups>HU Business Customer Care</groups>
+            <groups>HU Provisioning Mangers</groups>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>gn</fullName>
+        <columns>OBJECT_ID</columns>
+        <columns>NAME</columns>
+        <columns>AttributeType__c</columns>
+        <columns>AttributeValue__c</columns>
+        <columns>ServiceComponent__c</columns>
+        <columns>SourceRecordID__c</columns>
+        <columns>CURRENCY_ISO_CODE</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>CREATEDBY_USER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>contains</operation>
+            <value>3465</value>
+        </filters>
+        <label>gn</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CAT{000000000}</displayFormat>
+        <label>Component Attribute ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Component Attributes</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>AttributeType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>AttributeValue__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SourceRecordID__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>AttributeValue__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>AttributeType__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SourceRecordID__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>AttributeValue__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SourceRecordID__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>AttributeType__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>AttributeType__c</searchFilterFields>
+        <searchFilterFields>AttributeValue__c</searchFilterFields>
+        <searchFilterFields>SourceRecordID__c</searchFilterFields>
+        <searchResultsAdditionalFields>AttributeValue__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SourceRecordID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>AttributeType__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

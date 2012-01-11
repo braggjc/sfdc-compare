@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<config><!-- Compare two enviroments -->
+	<general>
+		<key>1stPath</key><!-- set path to first enviroment -->
+		<value>C:\compare\data\test_env</value>
+	</general>
+	<general>
+		<key>2ndPath</key><!-- set path to second enviroment -->
+		<value>C:\compare\data\prod_env</value>
+	</general>
+		<general>
+		<key>resultPath</key><!-- set path where result files will be saved -->
+		<value>C:\compare\result</value>
+	</general>
+	<general>
+		<key>printFiles</key><!-- use "yes" or "no" ; if "yes" file names of compared files will be print in console. -->
+		<value>no</value><!--  print file names? -->
+	</general>
+	<general>
+		<key>objects</key><!-- As key use "objects". As value use "*" for all objects, or EXACT name of file without extension. !! be sure the file exist!!; If "*" is set along with other file name/s, all files will be compare.-->
+		<value>*</value><!-- be sure to write EXACT name of the file! -->
+	</general>
+	<general>
+		<key>objects</key>
+		<value>*</value><!-- be sure to write EXACT name of the file! -->
+	</general>
+	<general><!-- Specify mods. As key use "mode".As value use name of Section Type. Only those sections will be compare. -->
+		<key>mode</key><!-- mode -->
+		<value>fields</value>
+	</general>
+	<general>
+		<key>mode</key><!-- mode -->
+		<value>recordTypes</value>
+	</general>
+	<general>
+		<key>mode</key><!-- mode -->
+		<value>validationRules</value>
+	</general>
+	<general>
+		<key>mode</key><!-- mode -->
+		<value>workflows</value>
+	</general>
+	<general>
+		<key>mode</key><!-- mode -->
+		<value>customSettings</value>
+	</general>
+	<general>
+		<key>mode</key><!-- mode -->
+		<value>webLinks</value>
+	</general>	
+	<fields><!-- Specify in properties which tags will be compare -->
+		<masterTag>fullName</masterTag>
+		<properties>length</properties>
+		<properties>label</properties>
+		<properties>type</properties>
+		<properties>picklist</properties>precision
+		<properties>precision</properties>
+		<properties>scale</properties>
+		<properties>formula</properties>
+		<inputFolder>objects</inputFolder>
+		<resultFile>fields</resultFile>
+		<fileExtension>object</fileExtension><!-- CASE SENSITIVE !!! -->
+	</fields>
+	<recordTypes><!-- Specify in properties which tags will be compare -->
+		<masterTag>fullName</masterTag>
+		<properties>active</properties>
+		<properties>picklist</properties>
+		<inputFolder>objects</inputFolder>
+		<resultFile>recordTypes</resultFile>
+		<fileExtension>object</fileExtension><!-- CASE SENSITIVE !!! -->
+	</recordTypes>
+	<validationRules><!-- Specify in properties which tags will be compare -->
+		<masterTag>fullName</masterTag>
+		<properties>active</properties>
+		<properties>description</properties>
+		<properties>errorConditionFormula</properties>
+		<properties>errorDisplayField</properties>
+		<properties>errorMessage</properties>
+		<inputFolder>Objects</inputFolder>
+		<resultFile>validationRules</resultFile>
+		<fileExtension>object</fileExtension><!-- CASE SENSITIVE !!! -->
+	</validationRules>  
+	<workflows><!-- Specify in template which tags of workflow will be compare -->
+		<tag>
+			<template>fieldUpdates</template>
+			<masterTag>fullName</masterTag>
+			<properties>description</properties>
+			<properties>literalValue</properties>
+			<properties>name</properties>
+			<properties>notifyAssignee</properties>
+			<properties>operation</properties>
+		</tag>
+		<tag>
+			<template>rules</template>
+			<masterTag>fullName</masterTag>
+			<properties>description</properties>
+			<properties>active</properties>
+			<properties>triggerType</properties>
+			<properties>actions</properties>
+			<properties>criteriaItems</properties>
+		</tag>
+		<inputFolder>workflows</inputFolder>
+		<resultFile>workflows</resultFile>
+		<fileExtension>workflow</fileExtension><!-- CASE SENSITIVE !!! -->
+	</workflows>
+	<webLinks><!-- Specify in properties which tags will be compare -->
+		<masterTag>fullName</masterTag>
+		<properties>url</properties>
+		<resultFile>weblinks</resultFile>
+		<inputFolder>objects</inputFolder>
+		<resultFile>weblinks</resultFile>
+		<fileExtension>object</fileExtension><!-- CASE SENSITIVE !!! -->
+	</webLinks>
+	<customSettings>
+		<masterTag>fullName</masterTag>
+		<properties>tagList.xml</properties><!-- specify fileName/path of file with tagList -->
+		<resultFile>customSettings</resultFile>
+		<inputFolder>customSettings</inputFolder>
+		<fileExtension>customSetting</fileExtension><!-- CASE SENSITIVE !!! -->
+	</customSettings>
+</config>

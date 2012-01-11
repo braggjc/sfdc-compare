@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Actiontype__c</fullName>
+        <description>Action set by Product Configurator; based on this appropriate actions will be executed in external systems</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Action set by Product Configurator; based on this appropriate actions will be executed in external systems</inlineHelpText>
+        <label>Actiontype</label>
+        <picklist>
+            <picklistValues>
+                <fullName>create</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>update</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>delete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Autoprovisioned__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates when the automatic provisioning has been successfully completed for this GP</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates when the automatic provisioning has been successfully completed for this GP</inlineHelpText>
+        <label>Autoprovisioned</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Billing_ID__c</fullName>
+        <description>ID of Generic Product in Billing System (in case of SK filled only on GPs marked as PhoneLine)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of Generic Product in Billing System (in case of SK filled only on GPs marked as PhoneLine)</inlineHelpText>
+        <label>Billing ID</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BundleComponent__c</fullName>
+        <description>Lookup to relation between Bundle and Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to relation between Bundle and Component</inlineHelpText>
+        <label>Bundle Component</label>
+        <referenceTo>Bundle_Component__c</referenceTo>
+        <relationshipLabel>Order Generic Products</relationshipLabel>
+        <relationshipName>Order_Generic_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CSR_ID__c</fullName>
+        <description>ID of Generic Product in CSR Database</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of Generic Product in CSR Database</inlineHelpText>
+        <label>CSR ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ComponentGenericProduct__c</fullName>
+        <description>Lookup to relation between Component and Generic Product (used to build configuration tree)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to relation between Component and Generic Product (used to build configuration tree)</inlineHelpText>
+        <label>Component Generic Product</label>
+        <referenceTo>Component_Generic_Product__c</referenceTo>
+        <relationshipLabel>Order Generic Products</relationshipLabel>
+        <relationshipName>Order_Generic_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Copied_for_migration__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Generic Product has been copied for migration</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Generic Product has been copied for migration</inlineHelpText>
+        <label>Copied for migration</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Generic Product has already been installed in Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Generic Product has already been installed in Billing</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GenericProductInstanceId__c</fullName>
+        <description>Installed GP instance ID from CSR</description>
+        <externalId>false</externalId>
+        <label>Generic Product Instance Id</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GenericProductRelation__c</fullName>
+        <externalId>false</externalId>
+        <label>Generic Product Relation</label>
+        <referenceTo>Generic_Product_Relation__c</referenceTo>
+        <relationshipLabel>Order Generic Products</relationshipLabel>
+        <relationshipName>Order_Generic_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GenericProduct__c</fullName>
+        <description>Relation to GP definition in Product Catalog</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to GP definition in Product Catalog</inlineHelpText>
+        <label>Generic Product</label>
+        <referenceTo>Generic_Product__c</referenceTo>
+        <relationshipLabel>Order Generic Products (Generic Product)</relationshipLabel>
+        <relationshipName>Order_Generic_Products1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OrderComponent__c</fullName>
+        <description>relation to Order Component, that this GP belongs to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>relation to Order Component, that this GP belongs to</inlineHelpText>
+        <label>Order Component</label>
+        <referenceTo>OrderComponent__c</referenceTo>
+        <relationshipLabel>Order Generic Products</relationshipLabel>
+        <relationshipName>Order_Generic_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OrderLine__c</fullName>
+        <description>relation to Order Line, that this GP was configured under</description>
+        <externalId>false</externalId>
+        <inlineHelpText>relation to Order Line, that this GP was configured under</inlineHelpText>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>Order Generic Products</relationshipLabel>
+        <relationshipName>Order_Generic_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ParentGenericProduct__c</fullName>
+        <description>Parent Generic Product (will be indicated in case this is 2nd level GP)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Parent Generic Product (will be indicated in case this is 2nd level GP)</inlineHelpText>
+        <label>Parent Generic Product</label>
+        <referenceTo>OrderGenericProduct__c</referenceTo>
+        <relationshipLabel>Order Generic Products</relationshipLabel>
+        <relationshipName>Order_Generic_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>ID assigned by Product Configurator used later to update Generic Product with any changes</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID assigned by Product Configurator used later to update Generic Product with any changes</inlineHelpText>
+        <label>SFDC_ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Order Generic Product</label>
+    <nameField>
+        <label>Order Generic Product Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Order Generic Products</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,1590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>CBCT Calculation object</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Access_Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Access type: Location A</label>
+        <picklist>
+            <picklistValues>
+                <fullName>PoP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Access loop</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Access_Type_B__c</fullName>
+        <externalId>false</externalId>
+        <label>Access Type B</label>
+        <picklist>
+            <picklistValues>
+                <fullName>PoP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Access loop</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Bussiness_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Bussiness Unit</label>
+        <picklist>
+            <picklistValues>
+                <fullName>IS</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CBCT_Product__c</fullName>
+        <externalId>false</externalId>
+        <label>CBCT Product</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Colocation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Equipment Lease</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS IP Transit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS IP VPN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Internet Access</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Lambda (International)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Lambda (National)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Leased Line (international)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Leased Line (National)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Non Standard Calculation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CProduct__c</fullName>
+        <externalId>false</externalId>
+        <formula>Request__r.CProduct__r.Name</formula>
+        <label>Product (custom)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calculation_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>CBCT Calculation ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Budgetary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Firm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Changing_of_contract_terms__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Changing of contract terms</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>City_Location_A__c</fullName>
+        <externalId>false</externalId>
+        <formula>Request__r.A_End_City__c</formula>
+        <label>City Location - A</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_location_City__c</fullName>
+        <externalId>false</externalId>
+        <label>Client location: City</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Clients_Location__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Request__r.Opportunity_del__r.Account.GTS_Location_del__c )</formula>
+        <label>Clients Location</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Lenght__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Lenght</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 month</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 months</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 months</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 months</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12 months</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24 months</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Indefinite period</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Currency__c</fullName>
+        <externalId>false</externalId>
+        <label>Calculation Currency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EUR</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HUF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GBP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RON</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CAD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Request__r.Opportunity_del__r.Account.Name</formula>
+        <label>Customer Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Deinstalled_Capex__c</fullName>
+        <externalId>false</externalId>
+        <formula>Request__r.Deinstalled_Capex__c</formula>
+        <label>Deinstalled Capex</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>$User.Email</formula>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>First_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>$User.FirstName</formula>
+        <label>First Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Identification_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Identification Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>TAX</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Identification_subtype__c</fullName>
+        <externalId>false</externalId>
+        <label>Identification subtype</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Foreign Company</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>$User.LastName</formula>
+        <label>Last Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Link_to_CBCT__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISNULL(Calculation_ID__c),&quot;&quot;, (HYPERLINK(&quot;http://piaskownica.energis.poland:1380/restricted/showCalculation&quot; &amp; &quot;-&quot; &amp; 
+Calculation_ID__c &amp; &quot;-1&quot;,
+  &quot;CBCT Link&quot;)))</formula>
+        <label>Link to CBCT</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location_B_City__c</fullName>
+        <externalId>false</externalId>
+        <formula>Request__r.B_End_City__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Location B City</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location_B_street__c</fullName>
+        <externalId>false</externalId>
+        <formula>Request__r.B_End_Street_1__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Location B Street</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Major_international_DC_location_A__c</fullName>
+        <externalId>false</externalId>
+        <label>Major international DC: location A</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Major_location_DC__c</fullName>
+        <externalId>false</externalId>
+        <label>Major international DC: location B</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_opex__c</fullName>
+        <externalId>false</externalId>
+        <formula>text( Request__r.Opex_Monthly__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Monthly opex</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Network_Capex__c</fullName>
+        <externalId>false</externalId>
+        <formula>Request__r.Network_Capex__c</formula>
+        <label>Network Capex</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_reccuring_price__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(Request__r.Selected_NRC__c)</formula>
+        <label>Non reccuring price</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <defaultValue>&quot;N/A&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Number_Location_A__c</fullName>
+        <externalId>false</externalId>
+        <formula>Request__r.A_End_Street_No__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number Location A</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Monthly_Opex__c</fullName>
+        <externalId>false</externalId>
+        <formula>Request__r.Old_Monthly_Opex__c</formula>
+        <label>Old Monthly Opex</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>One_off_opex__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(Request__r.Opex_One_off__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>One-off opex</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>One_time_Capex__c</fullName>
+        <externalId>false</externalId>
+        <formula>text( Request__r.Capex_One_off__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>One time Capex</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <formula>Request__r.Product__r.Name</formula>
+        <label>Product</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Re_usable_Capex__c</fullName>
+        <externalId>false</externalId>
+        <formula>text(Request__r.Capex__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Re-usable Capex</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurring_price__c</fullName>
+        <externalId>false</externalId>
+        <formula>text( Request__r.Selected_MRC__c )</formula>
+        <label>Recurring price</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Request Number</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request__c</fullName>
+        <externalId>false</externalId>
+        <label>Request</label>
+        <referenceTo>Request__c</referenceTo>
+        <relationshipLabel>Calculations</relationshipLabel>
+        <relationshipName>Calculations</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SDH_Ethernet__c</fullName>
+        <externalId>false</externalId>
+        <label>SDH/Ethernet</label>
+        <picklist>
+            <picklistValues>
+                <fullName>SDH/PDH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ETH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Send_to_CBCT__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check this to send the Calculation to CBCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this to send the Calculation to CBCT</inlineHelpText>
+        <label>Send to CBCT</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Speed_IPVPN__c</fullName>
+        <externalId>false</externalId>
+        <label>Speed</label>
+        <picklist>
+            <picklistValues>
+                <fullName>64kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>128kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>256kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>512kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1024kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2048kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2x 2048kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3x 2048kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4x 2048kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5x 2048kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6x 2048kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7x 2048kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8x 2048kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9x 2048kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10x 2048kbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>34 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>45Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2x 45Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>100 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>155 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2x 155 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>622 Mbps</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>In CBCT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Street_B_number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Request__r.B_End_Street_No__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Street Number B</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_Location_A__c</fullName>
+        <externalId>false</externalId>
+        <formula>Request__r.A_End_Street_1__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Street Location A</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Street No.</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street__c</fullName>
+        <externalId>false</externalId>
+        <label>Street</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Request__r.Opportunity_del__r.Account.Tax_Id__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Customer Identification</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Calculation</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Subcalculation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>VAS_QoS__c</fullName>
+        <externalId>false</externalId>
+        <label>VAS - QoS</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Variant__c</fullName>
+        <externalId>false</externalId>
+        <label>Variant</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Managed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unmanaged</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <label>Calculation</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CBCT{00000000}</displayFormat>
+        <label>ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Calculations</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>IP_VPN</fullName>
+        <active>true</active>
+        <label>Calculation Header</label>
+        <picklistValues>
+            <picklist>Access_Location__c</picklist>
+            <values>
+                <fullName>Access loop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PoP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Access_Type_B__c</picklist>
+            <values>
+                <fullName>Access loop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PoP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Bussiness_Unit__c</picklist>
+            <values>
+                <fullName>CZ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IS</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>PL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CBCT_Product__c</picklist>
+            <values>
+                <fullName>GTS Colocation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Equipment Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS IP Transit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS IP VPN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Internet Access</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Lambda %28International%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Lambda %28National%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Leased Line %28National%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Leased Line %28international%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Non Standard Calculation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Budgetary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Firm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Lenght__c</picklist>
+            <values>
+                <fullName>1 month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12 months</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>24 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indefinite period</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Currency__c</picklist>
+            <values>
+                <fullName>CAD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CHF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CZK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EUR</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>GBP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HUF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RON</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_Type__c</picklist>
+            <values>
+                <fullName>Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wholesale</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Identification_Type__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TAX</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Identification_subtype__c</picklist>
+            <values>
+                <fullName>Foreign Company</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Major_international_DC_location_A__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Major_location_DC__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SDH_Ethernet__c</picklist>
+            <values>
+                <fullName>ETH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SDH%2FPDH</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Speed_IPVPN__c</picklist>
+            <values>
+                <fullName>64kbps</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>In CBCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Calculation</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Subcalculation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>VAS_QoS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Variant__c</picklist>
+            <values>
+                <fullName>Managed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unmanaged</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Leased_Line</fullName>
+        <active>true</active>
+        <label>Leased Line</label>
+        <picklistValues>
+            <picklist>Access_Location__c</picklist>
+            <values>
+                <fullName>Access loop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PoP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Access_Type_B__c</picklist>
+            <values>
+                <fullName>Access loop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PoP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Bussiness_Unit__c</picklist>
+            <values>
+                <fullName>CZ</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IS</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>PL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SK</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CBCT_Product__c</picklist>
+            <values>
+                <fullName>GTS Leased Line %28National%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTS Leased Line %28international%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Budgetary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Firm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Lenght__c</picklist>
+            <values>
+                <fullName>1 month</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12 months</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>24 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 months</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indefinite period</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Currency__c</picklist>
+            <values>
+                <fullName>CAD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CHF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CZK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EUR</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>GBP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HUF</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PLN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RON</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>USD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_Type__c</picklist>
+            <values>
+                <fullName>Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wholesale</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Identification_Type__c</picklist>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TAX</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Identification_subtype__c</picklist>
+            <values>
+                <fullName>Foreign Company</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Major_international_DC_location_A__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Major_location_DC__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SDH_Ethernet__c</picklist>
+            <values>
+                <fullName>ETH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SDH%2FPDH</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Speed_IPVPN__c</picklist>
+            <values>
+                <fullName>100 Mbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1024kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10x 2048kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>128kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>155 Mbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2048kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>256kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2x 155 Mbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2x 2048kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2x 45Mbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>34 Mbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3x 2048kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>45Mbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4x 2048kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>512kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5x 2048kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>622 Mbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>64kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6x 2048kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7x 2048kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8x 2048kbps</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9x 2048kbps</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>In CBCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Calculation</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Subcalculation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>VAS_QoS__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Variant__c</picklist>
+            <values>
+                <fullName>Managed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unmanaged</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Check_the_request_relation</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISNULL(Request__c)</errorConditionFormula>
+        <errorMessage>You cannot create Calculation without relation to a request</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>set_read_only_calculation</fullName>
+        <active>false</active>
+        <errorConditionFormula>and( 
+priorvalue(Send_to_CBCT__c)=true, 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;
+)</errorConditionFormula>
+        <errorMessage>It´s not possible edit the calculation. It has been sent to CBCT.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Send_to_CBCT</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send to CBCT</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+//{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+var result = sforce.connection.query(&quot;SELECT Id, Send_to_CBCT__c FROM Calculation__c WHERE Calculation__c.Id = &apos;{!Calculation__c.Id}&apos;&quot;);
+record = result.getArray(&quot;records&quot;)[0];
+
+if (record.Send_to_CBCT__c == &quot;false&quot;){
+   var calc = new sforce.SObject(&quot;Calculation__c&quot;);
+   calc.Id = &apos;{!Calculation__c.Id}&apos;;
+   calc.Send_to_CBCT__c = true;
+   var result = sforce.connection.update([calc]);
+
+   if (result[0].getBoolean(&quot;success&quot;)) {
+    alert(&quot;Calculation with id &quot; + result[0].id + &quot; was sent to CBCT&quot;);
+   } else {
+    alert(&quot;Failed to send calculation &quot; + result[0]);
+   }
+   window.location.reload();
+}
+else{
+   alert (&quot;This calculation has already been sent to CBCT&quot;);
+}</url>
+    </webLinks>
+</CustomObject>

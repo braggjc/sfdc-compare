@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores the relationships between AST and Bundle / Component or PRI</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this AST Assignment should be used (only if active)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this AST Assignment should be used (only if active)</inlineHelpText>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Attribute_Set_Type__c</fullName>
+        <description>Relation to Attribute Set Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Attribute Set Type</inlineHelpText>
+        <label>Attribute Set Type</label>
+        <referenceTo>Attribute_Set_Type__c</referenceTo>
+        <relationshipLabel>AST Assignments</relationshipLabel>
+        <relationshipName>AST_Assignments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bundle__c</fullName>
+        <description>Relation to Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Bundle</inlineHelpText>
+        <label>Bundle</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>AST Assignments</relationshipLabel>
+        <relationshipName>AST_Assignments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Component__c</fullName>
+        <description>Relation to Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Component</inlineHelpText>
+        <label>Component</label>
+        <referenceTo>Component__c</referenceTo>
+        <relationshipLabel>AST Assignments</relationshipLabel>
+        <relationshipName>AST_Assignments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this item has been created in Billing system (during Bundle synchronization)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this item has been created in Billing system (during Bundle synchronization)</inlineHelpText>
+        <label>Created in Billing</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>GTS Location from Attribute Set Type</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Attribute_Set_Type__r.GTS_Location__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>GTS Location from Attribute Set Type</inlineHelpText>
+        <label>GTS Location</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pricing_Item__c</fullName>
+        <description>Relation to Pricing Item</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Pricing Item</inlineHelpText>
+        <label>Pricing Item</label>
+        <referenceTo>PricingItem__c</referenceTo>
+        <relationshipLabel>AST Assignments</relationshipLabel>
+        <relationshipName>AST_Assignments</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Synchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this definiton matches a definition in Billing system.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this definiton matches a definition in Billing system.</inlineHelpText>
+        <label>Synchronized</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>AST Assignment</label>
+    <nameField>
+        <displayFormat>ASA{000000000}</displayFormat>
+        <label>AST Assignment Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>AST Assignments</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>CheckRelationships</fullName>
+        <active>true</active>
+        <errorConditionFormula>if( if(ISBLANK( Bundle__c ),0,1) + 
+if(ISBLANK( Component__c ),0,1) + 
+if(ISBLANK( Pricing_Item__c ),0,1) &gt; 1, true, false)</errorConditionFormula>
+        <errorMessage>Only one relation can be specified at the same time: Bundle / Component or Pricing Item.</errorMessage>
+    </validationRules>
+</CustomObject>

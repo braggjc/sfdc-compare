@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Holds dependency definition between Provisioning Plan Task and Attribute that is required to close such Task</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Attribute_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK( &apos;/&apos;+ MandatoryAttribute__c , MandatoryAttribute__r.Name+IF(ISBLANK( MandatoryAttribute__r.Label_Eng__c ),&apos;&apos;,&apos; - &apos;+ MandatoryAttribute__r.Label_Eng__c ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attribute Link</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attribute_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>MandatoryAttribute__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attribute Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MandatoryAttribute__c</fullName>
+        <externalId>false</externalId>
+        <label>Mandatory Attribute</label>
+        <referenceTo>Attribute__c</referenceTo>
+        <relationshipLabel>Provisioning Plan Task Attributes</relationshipLabel>
+        <relationshipName>Provisioning_Plan_Task_Attributes</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Provisioning_Plan_Task__c</fullName>
+        <externalId>false</externalId>
+        <label>Provisioning Plan Task</label>
+        <referenceTo>Provisioning_Plan_Task__c</referenceTo>
+        <relationshipLabel>Provisioning Plan Task Attributes</relationshipLabel>
+        <relationshipName>Provisioning_Plan_Task_Attributes</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Provisioning_Plan__c</fullName>
+        <externalId>false</externalId>
+        <formula>Provisioning_Plan_Task__r.Provisioning_Plan__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Provisioning Plan</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Provisioning Plan Task Attribute</label>
+    <nameField>
+        <displayFormat>PPTA{000000000}</displayFormat>
+        <label>Provisioning Plan Task Attribute Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Provisioning Plan Task Attributes</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Mandatory_Attributes_For_Technical_Tasks</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c ,&apos;Update of Billing Products&apos;),ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c ,&apos;Billing Account Creation&apos;),ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c ,&apos;IP Unregistration&apos;),ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c ,&apos;IP Activation&apos;),ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c ,&apos;Phone Number Release&apos;),ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c ,&apos;Phone Number Activation&apos;),ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c ,&apos;Automatic Provisioning (ST)&apos;),ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c ,&apos;Automatic Provisioning&apos;),ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c ,&apos;Update of CSR Database&apos;))</errorConditionFormula>
+        <errorMessage>Mandatory Attributes can be only required for manual Provisioning Plan Tasks.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Technical_and_Active_attributes_only</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(MandatoryAttribute__r.Active__c != True, MandatoryAttribute__r.Technical__c != True)</errorConditionFormula>
+        <errorMessage>Only &apos;Active&apos; and &apos;Technical&apos; Attributes can be required for manual Provisioning Plan Tasks.</errorMessage>
+    </validationRules>
+</CustomObject>

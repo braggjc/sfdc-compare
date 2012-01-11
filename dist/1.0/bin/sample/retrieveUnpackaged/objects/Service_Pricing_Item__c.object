@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Pricing Items selected for Service Bundle</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Billing_ID__c</fullName>
+        <description>ID of Pricing Item in Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of Pricing Item in Billing System</inlineHelpText>
+        <label>Billing ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Type__c</fullName>
+        <description>Type of Bundle (information taken from related Service Bundle)</description>
+        <externalId>false</externalId>
+        <formula>Service_Bundle__r.BundleType__r.Label_Eng__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Type of Bundle (information taken from related Service Bundle)</inlineHelpText>
+        <label>Bundle Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CSR_ID__c</fullName>
+        <description>ID of Pricing Item from CSR Database</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of Pricing Item from CSR Database</inlineHelpText>
+        <label>CSR ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Component_Type__c</fullName>
+        <description>Type of Component (information taken from related Service Component)</description>
+        <externalId>false</externalId>
+        <formula>Service_Component__r.Component__r.Label_Eng__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Type of Component (information taken from related Service Component)</inlineHelpText>
+        <label>Component Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Discount__c</fullName>
+        <description>Discount assigned for given Price [%]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Discount assigned for given Price [%]</inlineHelpText>
+        <label>Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Financial_Product_ID__c</fullName>
+        <description>Financial Product ID / GTS Code assigned for given Price</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Financial Product ID / GTS Code assigned for given Price</inlineHelpText>
+        <label>Financial Product ID</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Financial_Product_Value_c__c</fullName>
+        <description>Value, that allows verification of Financial Product ID algorithm (stores information about parameters used in the assignment process)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value, that allows verification of Financial Product ID algorithm (stores information about parameters used in the assignment process)</inlineHelpText>
+        <label>Financial Product Value</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Internal_Description__c</fullName>
+        <description>Internal description of Pricing Item (provided during product configuration; will not be visible to Customer)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Internal description of Pricing Item (provided during product configuration; will not be visible to Customer)</inlineHelpText>
+        <label>Internal Description</label>
+        <length>384</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Invoice_Description__c</fullName>
+        <description>Description, that will be visible to Customer on the Invoice</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description, that will be visible to Customer on the Invoice</inlineHelpText>
+        <label>Invoice Description</label>
+        <length>384</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Invoicing_Name__c</fullName>
+        <description>Name of Pricing Item, that will be presented on the Invoice (if no Name will be provided during configuration, Label defined in Product Catalog will be taken)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of Pricing Item, that will be presented on the Invoice (if no Name will be provided during configuration, Label defined in Product Catalog will be taken)</inlineHelpText>
+        <label>Invoicing Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price__c</fullName>
+        <description>Price configured for given Pricing Item</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Price configured for given Pricing Item</inlineHelpText>
+        <label>Price</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Pricing_Item_Type__c</fullName>
+        <description>Type of Pricing Item taken from assigned Pricing Item Definition</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Pricing_Item__r.Type__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Type of Pricing Item taken from assigned Pricing Item Definition</inlineHelpText>
+        <label>Pricing Item Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pricing_Item__c</fullName>
+        <description>Reference to Pricing Item Definition</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reference to Pricing Item Definition</inlineHelpText>
+        <label>Pricing Item</label>
+        <referenceTo>PricingItem__c</referenceTo>
+        <relationshipLabel>Service Pricing Items</relationshipLabel>
+        <relationshipName>Service_Pricing_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Bundle__c</fullName>
+        <description>Service Bundle, for which Pricing Item was assigned</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Service Bundle, for which Pricing Item was assigned</inlineHelpText>
+        <label>Service Bundle</label>
+        <referenceTo>ServiceBundle__c</referenceTo>
+        <relationshipLabel>Service Pricing Items</relationshipLabel>
+        <relationshipName>Service_Pricing_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Component__c</fullName>
+        <description>Service Component, for which Pricing Item was assigned</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Service Component, for which Pricing Item was assigned</inlineHelpText>
+        <label>Service Component</label>
+        <referenceTo>ServiceComponent__c</referenceTo>
+        <relationshipLabel>Service Pricing Items</relationshipLabel>
+        <relationshipName>Service_Pricing_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>ID of Pricing Item from Local System</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of Pricing Item from Local System</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Valid_From__c</fullName>
+        <description>Date, from which given Price should be invoiced</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, from which given Price should be invoiced</inlineHelpText>
+        <label>Valid From</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Valid_To__c</fullName>
+        <description>Date, till which given Price should be invoiced</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, till which given Price should be invoiced</inlineHelpText>
+        <label>Valid To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <label>Service Pricing Item</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>NegativeSPRI</fullName>
+        <columns>NAME</columns>
+        <columns>Price__c</columns>
+        <columns>Source_Record_Id__c</columns>
+        <columns>CSR_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Source_Record_Id__c</field>
+            <operation>startsWith</operation>
+            <value>HUN_PRC</value>
+        </filters>
+        <filters>
+            <field>Price__c</field>
+            <operation>lessThan</operation>
+            <value>HUF 0</value>
+        </filters>
+        <label>NegativeSPRI</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SPI{000000000}</displayFormat>
+        <label>Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Service Pricing Items</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

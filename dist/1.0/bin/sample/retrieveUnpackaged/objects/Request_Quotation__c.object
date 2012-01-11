@@ -1,0 +1,1190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>NoManualRQCreation</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Scontrol</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Request Quotation</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>A_End_B__c</fullName>
+        <description>A End</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A End</inlineHelpText>
+        <label>A End</label>
+        <referenceTo>AddressBook__c</referenceTo>
+        <relationshipLabel>Requests Quotation (A End)</relationshipLabel>
+        <relationshipName>R00N20000001RlVOEA0</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <description>Account Name</description>
+        <externalId>false</externalId>
+        <formula>Request__r.Account_N__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Account Name</inlineHelpText>
+        <label>Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Additional_Technical_Specifications__c</fullName>
+        <description>Additional Technical Specifications</description>
+        <externalId>false</externalId>
+        <formula>&quot;&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Additional Technical Specifications</inlineHelpText>
+        <label>Additional Technical Specifications</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Additional_pricing_information__c</fullName>
+        <description>Additional pricing information</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional pricing information</inlineHelpText>
+        <label>Additional pricing information</label>
+        <length>2048</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Ask_forRQ__c</fullName>
+        <description>Ask For (from Request)</description>
+        <externalId>false</externalId>
+        <formula>Request__r.Ask_for_String__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Ask For (from Request)</inlineHelpText>
+        <label>Ask For</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>B_End__c</fullName>
+        <description>B End</description>
+        <externalId>false</externalId>
+        <inlineHelpText>B End</inlineHelpText>
+        <label>B End</label>
+        <referenceTo>AddressBook__c</referenceTo>
+        <relationshipLabel>Requests Quotation</relationshipLabel>
+        <relationshipName>R00N20000001ROQ0EAO</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BandWidthRQ__c</fullName>
+        <description>BandWidth from Request</description>
+        <externalId>false</externalId>
+        <formula>Request__r.BandWidthString__c +&apos;;&apos; + Request__r.Custom_Bandwidth__c + &apos; &apos;+ CASE( Request__r.Custom_Bandwidth_Unit__c,
+&quot;Kbps&quot;,&quot;Kbps&quot;,
+&quot;Mbps&quot;,&quot;Mbps&quot;,
+&quot;Gbps&quot;,&quot;Gbps&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>BandWidth from Request</inlineHelpText>
+        <label>BandWidth</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CPE__c</fullName>
+        <description>CPE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CPE</inlineHelpText>
+        <label>CPE</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Circuit_ProtectionRQ__c</fullName>
+        <description>Circuit Protection from Request</description>
+        <externalId>false</externalId>
+        <formula>CASE( Request__r.Circuit_Protection__c , 
+&quot;not protected&quot;,&quot;not protected&quot;, 
+&quot;link protected&quot;,&quot;link protected&quot;, 
+&quot;port protected (MSP1+1)&quot;,&quot;port protected (MSP1+1)&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Circuit Protection from Request</inlineHelpText>
+        <label>Circuit Protection</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <description>Additional Comments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional Comments</inlineHelpText>
+        <label>Comment</label>
+        <length>2048</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contact_B__c</fullName>
+        <description>B-End Contact</description>
+        <externalId>false</externalId>
+        <formula>B_End__r.Contact__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>B-End Contact</inlineHelpText>
+        <label>Contact B</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Data_Volume_Limit__c</fullName>
+        <description>Data Volume Limit from Request</description>
+        <externalId>false</externalId>
+        <formula>CASE( Request__r.Data_Volume_Limit__c ,
+&quot;50GB&quot;,&quot;50GB&quot;, 
+&quot;100GB&quot;,&quot;100GB&quot;, 
+&quot;200GB&quot;,&quot;200GB&quot;, 
+&quot;300GB&quot;,&quot;300GB&quot;, 
+&quot;500GB&quot;,&quot;500GB&quot;, 
+&quot;1TB&quot;,&quot;1TB&quot;, 
+&quot;2TB&quot;,&quot;2TB&quot;, 
+&quot;5TB&quot;,&quot;5TB&quot;, 
+&quot;10TB&quot;,&quot;10TB&quot;,
+&quot;unlimited 10BaseT&quot;,&quot;unlimited 10BaseT&quot;,
+&quot;unlimited 100BaseT&quot;,&quot;unlimited 100BaseT&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Data Volume Limit from Request</inlineHelpText>
+        <label>Data Volume Limit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Delivery__c</fullName>
+        <description>Delivery</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Delivery</inlineHelpText>
+        <label>Delivery</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0 - 2 weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 - 5 weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 - 6 weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 - 8 weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 -11 weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12 - 14 weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15 - 17 weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>18 - 20 weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Expected_mediumRQ__c</fullName>
+        <description>Expected medium from Request</description>
+        <externalId>false</externalId>
+        <formula>Request__r.Expected_medium_text__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Expected medium from Request</inlineHelpText>
+        <label>Expected medium</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>External_Contact__c</fullName>
+        <description>Contact person (contact assigned to account) for External Request Quotation, who should receive automatic email to prepare a quotation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose external contact who should receive automatic email to prepare a quotation</inlineHelpText>
+        <label>External Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Requests Quotation</relationshipLabel>
+        <relationshipName>R00N20000001ReKQEA0</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IP_Address__c</fullName>
+        <description>Number of IP address from Request</description>
+        <externalId>false</externalId>
+        <formula>Request__r.IP_Address__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Number of IP address from Request</inlineHelpText>
+        <label>Number of IP address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IP_Traffic_Distribution__c</fullName>
+        <description>Distribution of IP Traffic (world/local)</description>
+        <externalId>false</externalId>
+        <formula>CASE(Request__r.IP_Traffic_Distribution__c,
+&quot;0/100&quot;,&quot;0/100&quot;,
+&quot;10/90&quot;,&quot;10/90&quot;,
+&quot;20/80&quot;,&quot;20/80&quot;,
+&quot;30/70&quot;,&quot;30/70&quot;,
+&quot;40/60&quot;,&quot;40/60&quot;,
+&quot;50/50&quot;,&quot;50/50&quot;,
+&quot;60/40&quot;,&quot;60/40&quot;,
+&quot;70/30&quot;,&quot;70/30&quot;,
+&quot;80/20&quot;,&quot;80/20&quot;,
+&quot;90/10&quot;,&quot;90/10&quot;,
+&quot;100/10&quot;,&quot;100/10&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Distribution of IP Traffic (world/local)</inlineHelpText>
+        <label>Distribution of IP Traffic (world/local)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Installation_Type__c</fullName>
+        <description>Installation Type</description>
+        <externalId>false</externalId>
+        <formula>CASE( Request__r.Installation_Type__c ,
+&quot;Rack 1/1&quot;,&quot;Rack 1/1&quot;,
+&quot;Rack 1/2&quot;,&quot;Rack 1/2&quot;,
+&quot;Rack 1/3&quot;,&quot;Rack 1/3&quot;,
+&quot;Rack 1/4&quot;,&quot;Rack 1/4&quot;,
+&quot;Standalone&quot;,&quot;Standalone&quot;,
+&quot;Cage&quot;,&quot;Cage&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Installation Type</inlineHelpText>
+        <label>Installation Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Internal_Contact__c</fullName>
+        <description>Contact person (system user) for Internal Request Quotation, who should receive automatic task to prepare a quotation.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose system user who should receive automatic task to prepare a quotation</inlineHelpText>
+        <label>Internal Contact</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>R00N20000001ReJDEA0</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IsCloned__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this Request Quotation is a cloned from another one</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical Field</inlineHelpText>
+        <label>IsCloned</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Line_Port_Type__c</fullName>
+        <description>Line/Port Type from Request</description>
+        <externalId>false</externalId>
+        <formula>CASE(Request__r.Line_Port_Type__c,
+&quot;10BaseT&quot;,&quot;10BaseT&quot;,
+&quot;100BaseT&quot;,&quot;100BaseT&quot;,
+&quot;1000BaseT&quot;,&quot;1000BaseT&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Line/Port Type from Request</inlineHelpText>
+        <label>Line/Port Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Logical_interfaceRQ__c</fullName>
+        <description>Logical interface from Request</description>
+        <externalId>false</externalId>
+        <formula>CASE( Request__r.Logical_interface__c , 
+&quot;X.21&quot;,&quot;X.21&quot;, 
+&quot;V.35&quot;,&quot;V.35&quot;, 
+&quot;G.703PDH&quot;,&quot;G.703PDH&quot;, 
+&quot;G.703SDH electrical(STM1e)&quot;,&quot;G.703SDH electrical(STM1e)&quot;, 
+&quot;G.957SDH optical(STM1o)&quot;,&quot;G.957SDH optical(STM1o)&quot;, 
+&quot;G.957SDH optical(STM4o)&quot;,&quot;G.957SDH optical(STM4o)&quot;, 
+&quot;G.957SDH optical(STM16o)&quot;,&quot;G.957SDH optical(STM16o)&quot;, 
+&quot;100Base-T&quot;,&quot;100Base-T&quot;, 
+&quot;1000Base-LX&quot;,&quot;1000Base-LX&quot;, 
+&quot;1000Base-SX&quot;,&quot;1000Base-SX&quot;, 
+&quot;10GE&quot;,&quot;10GE&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Logical interface from Request</inlineHelpText>
+        <label>Logical interface</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Medium__c</fullName>
+        <description>Medium</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Medium</inlineHelpText>
+        <label>Medium</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Copper</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fibre optic</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Microwave</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>No_of_CircuitsRQ__c</fullName>
+        <description>No of Circuits from Request</description>
+        <externalId>false</externalId>
+        <formula>Request__r.No_of_Circuits__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>No of Circuits from Request</inlineHelpText>
+        <label>No of Circuits</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Access_Keys__c</fullName>
+        <description>Number of Access Keys from Request</description>
+        <externalId>false</externalId>
+        <formula>CASE( Request__r.Number_of_Access_Keys__c ,
+&quot;0&quot;,&quot;0&quot;,
+&quot;1&quot;,&quot;1&quot;,
+&quot;2&quot;,&quot;2&quot;,
+&quot;3&quot;,&quot;3&quot;,
+&quot;4&quot;,&quot;4&quot;,
+&quot;5&quot;,&quot;5&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Number of Access Keys from Request</inlineHelpText>
+        <label>Number of Access Keys</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Ethernet_Ports__c</fullName>
+        <description>Number of Ethernet Ports from Request</description>
+        <externalId>false</externalId>
+        <formula>CASE( Request__r.Number_of_Ethernet_Ports__c ,
+&quot;0&quot;,&quot;0&quot;,
+&quot;1&quot;,&quot;1&quot;,
+&quot;2&quot;,&quot;2&quot;,
+&quot;3&quot;,&quot;3&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Number of Ethernet Ports from Request</inlineHelpText>
+        <label>Number of Ethernet Ports</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Offer__c</fullName>
+        <description>Offer type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Offer type</inlineHelpText>
+        <label>Offer</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Budgetary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Firm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_No_on_RQ__c</fullName>
+        <description>Value of Opportunity Number on Request Quotation for Reporting purposes.</description>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Oppty_Num__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Technical field for reporting</inlineHelpText>
+        <label>Opportunity No</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <description>Related opportunity, should be assigned automatically when creating budgetary proposal or firm proposal</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related opportunity, should be assigned automatically when creating budgetary proposal or firm proposal</inlineHelpText>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Requests Quotation</relationshipLabel>
+        <relationshipName>R00N20000001RPKyEAO</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone_B__c</fullName>
+        <description>B-End Phone</description>
+        <externalId>false</externalId>
+        <formula>B_End__r.Phone__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>B-End Phone</inlineHelpText>
+        <label>Phone B</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Physical_Access__c</fullName>
+        <description>Physical Access from Request</description>
+        <externalId>false</externalId>
+        <formula>CASE( Request__r.Physical_Access__c ,
+&quot;Standard&quot;,&quot;Standard&quot;,
+&quot;24/7/365&quot;,&quot;24/7/365&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Physical Access from Request</inlineHelpText>
+        <label>Physical Access</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Physical_interfaceRQ__c</fullName>
+        <description>Physical interface from Request</description>
+        <externalId>false</externalId>
+        <formula>CASE( Request__r.Physical_interface__c , 
+&quot;M-34F&quot;,&quot;M-34F&quot;, 
+&quot;RJ-45F&quot;,&quot;RJ-45F&quot;, 
+&quot;DB-15F&quot;,&quot;DB-15F&quot;, 
+&quot;DB-25F&quot;,&quot;DB-25F&quot;, 
+&quot;BNC 75Ohm&quot;,&quot;BNC 75Ohm&quot;, 
+&quot;FC/PC&quot;,&quot;FC/PC&quot;, 
+&quot;SC/PC&quot;,&quot;SC/PC&quot;, 
+&quot;LC/PC&quot;,&quot;LC/PC&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Physical interface from Request</inlineHelpText>
+        <label>Physical interface</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Position__c</fullName>
+        <description>Position from Request</description>
+        <externalId>false</externalId>
+        <formula>Request__r.Position__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Position from Request</inlineHelpText>
+        <label>Position</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Power_Supply__c</fullName>
+        <description>Power Supply from Request</description>
+        <externalId>false</externalId>
+        <formula>CASE( Request__r.Power_Supply__c ,
+&quot;230 VAC&quot;,&quot;230 VAC&quot;,
+&quot;48 VDC&quot;,&quot;48 VDC&quot;,
+&quot;both&quot;,&quot;both&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Power Supply from Request</inlineHelpText>
+        <label>Power Supply</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProductRQ__c</fullName>
+        <description>Link to Request Quotation</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; +Request__r.Product__r.Id , Request__r.Product__r.Name , &quot;_top&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Link to Request Quotation</inlineHelpText>
+        <label>Product</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quotation_Type__c</fullName>
+        <description>Quotation Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Quotation Type</inlineHelpText>
+        <label>Quotation Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rack_Nr__c</fullName>
+        <description>Number of Racks from Request</description>
+        <externalId>false</externalId>
+        <formula>Request__r.Rack_Nr__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Number of Racks from Request</inlineHelpText>
+        <label>Number of Racks</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RelatedTaskId__c</fullName>
+        <description>Related Task ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field</inlineHelpText>
+        <label>RelatedTaskId</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Stage_on_RQ__c</fullName>
+        <description>Value of Request Stage on Request Quotation for Reporting purposes.</description>
+        <externalId>false</externalId>
+        <formula>CASE( Request__r.Request_Status__c,
+&apos;Budgetary Quotation&apos;,&apos;Budgetary Quotation&apos;,
+&apos;Completed&apos;,&apos;Completed&apos;,
+&apos;Firm Quotation&apos;,&apos;Firm Quotation&apos;,
+&apos;Invoicing&apos;,&apos;Invoicing&apos;,
+&apos;New&apos;,&apos;New&apos;,
+&apos;Order&apos;,&apos;Order&apos;,
+&apos;Provisioning&apos;,&apos;Provisioning&apos;,
+&apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Technical field for reporting</inlineHelpText>
+        <label>Request Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Status_on_RQ__c</fullName>
+        <description>Value of Request Status on Request Quotation for Reporting purposes.</description>
+        <externalId>false</externalId>
+        <formula>CASE( Request__r.Field_Status_ST__c,
+&apos;Accepted&apos;,&apos;Accepted&apos;,
+&apos;Customer written confirmation&apos;,&apos;Customer written confirmation&apos;,
+&apos;Disqualified&apos;,&apos;Disqualified&apos;,
+&apos;Entered into Provisioning&apos;,&apos;Entered into Provisioning&apos;,
+&apos;Failed&apos;,&apos;Failed&apos;,
+&apos;GTS written confirmation&apos;,&apos;GTS written confirmation&apos;,
+&apos;Pending&apos;,&apos;Pending&apos;,
+&apos;Rejected&apos;,&apos;Rejected&apos;,
+&apos;Requested&apos;,&apos;Requested&apos;,
+&apos;Submitted&apos;,&apos;Submitted&apos;,
+&apos;Succeded&apos;,&apos;Succeded&apos;,
+&apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Technical field for reporting</inlineHelpText>
+        <label>Request Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request__c</fullName>
+        <description>Request Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Request Number</inlineHelpText>
+        <label>Request No</label>
+        <referenceTo>Request__c</referenceTo>
+        <relationshipLabel>Requests Quotation</relationshipLabel>
+        <relationshipName>Quotations</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Router__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if router was selected</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if router was selected</inlineHelpText>
+        <label>Router</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SLA_Level__c</fullName>
+        <description>SLA Level</description>
+        <externalId>false</externalId>
+        <formula>CASE( Request__r.SLA_Level__c ,
+&quot;Standard&quot;,&quot;Standard&quot;,
+&quot;Plus&quot;,&quot;Plus&quot;,
+&quot;Top&quot;,&quot;Top&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>SLA Level</inlineHelpText>
+        <label>SLA Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SendEmail__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Send Email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Send Email</inlineHelpText>
+        <label>SendEmail</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Request Quotation&apos;s status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Request Quotation&apos;s status</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TechnologyRQ_c__c</fullName>
+        <description>Technology from Request</description>
+        <externalId>false</externalId>
+        <formula>CASE( Request__r.Technology__c ,&quot;DSL (Attach DSL Order Form)&quot;,&quot;DSL (Attach DSL Order Form)&quot;,&quot;Leased Line&quot;,&quot;Leased Line&quot;,&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Technology from Request</inlineHelpText>
+        <label>Technology</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Valid_To__c</fullName>
+        <description>Validity date for this Request Quotation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Validity date for this Request Quotation</inlineHelpText>
+        <label>Valid To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <label>Request Quotation</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Request__c</columns>
+        <columns>Account_Name__c</columns>
+        <columns>B_End__c</columns>
+        <columns>Contact_B__c</columns>
+        <columns>Phone_B__c</columns>
+        <columns>Offer__c</columns>
+        <columns>Quotation_Type__c</columns>
+        <columns>Internal_Contact__c</columns>
+        <columns>External_Contact__c</columns>
+        <columns>Valid_To__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Quotations</fullName>
+        <columns>NAME</columns>
+        <columns>Account_Name__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Request__c</columns>
+        <columns>Request_Stage_on_RQ__c</columns>
+        <columns>Request_Status_on_RQ__c</columns>
+        <columns>Ask_forRQ__c</columns>
+        <columns>BandWidthRQ__c</columns>
+        <columns>Internal_Contact__c</columns>
+        <columns>External_Contact__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </filters>
+        <filters>
+            <field>Request_Stage_on_RQ__c</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </filters>
+        <filters>
+            <field>Request_Stage_on_RQ__c</field>
+            <operation>notEqual</operation>
+            <value>Cancelled</value>
+        </filters>
+        <filters>
+            <field>LAST_UPDATE</field>
+            <operation>greaterThan</operation>
+            <value>7/1/2009 12:00 AM</value>
+        </filters>
+        <label>All Open Quotations</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Pricings</fullName>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Request__c</columns>
+        <columns>Opportunity_No_on_RQ__c</columns>
+        <columns>Account_Name__c</columns>
+        <columns>B_End__c</columns>
+        <columns>Contact_B__c</columns>
+        <columns>Phone_B__c</columns>
+        <columns>Offer__c</columns>
+        <columns>Quotation_Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>Valid_To__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Quotation_Type__c</field>
+            <operation>equals</operation>
+            <value>Internal</value>
+        </filters>
+        <filters>
+            <field>Quotation_Type__c</field>
+            <operation>equals</operation>
+            <value>External</value>
+        </filters>
+        <label>All Pricings</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Proposals</fullName>
+        <columns>NAME</columns>
+        <columns>Request__c</columns>
+        <columns>Opportunity_No_on_RQ__c</columns>
+        <columns>Account_Name__c</columns>
+        <columns>B_End__c</columns>
+        <columns>Contact_B__c</columns>
+        <columns>Phone_B__c</columns>
+        <columns>Offer__c</columns>
+        <columns>Quotation_Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>Valid_To__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Quotation_Type__c</field>
+            <operation>equals</operation>
+            <value>Proposal</value>
+        </filters>
+        <label>All Proposals</label>
+    </listViews>
+    <listViews>
+        <fullName>My_request_quotations</fullName>
+        <columns>NAME</columns>
+        <columns>Request__c</columns>
+        <columns>B_End__c</columns>
+        <columns>Offer__c</columns>
+        <columns>Quotation_Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>Valid_To__c</columns>
+        <columns>Internal_Contact__c</columns>
+        <columns>External_Contact__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My request quotations</label>
+    </listViews>
+    <nameField>
+        <displayFormat>RQO{000000000}</displayFormat>
+        <label>Request Quotation No</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Requests Quotation</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Colocation</fullName>
+        <active>true</active>
+        <description>Record type only for Colocation wholesale product</description>
+        <label>Colocation</label>
+        <picklistValues>
+            <picklist>Delivery__c</picklist>
+            <values>
+                <fullName>0 - 2 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12 - 14 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15 - 17 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18 - 20 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - 5 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - 6 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 - 8 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 -11 weeks</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Medium__c</picklist>
+            <values>
+                <fullName>Copper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fibre optic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Microwave</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offer__c</picklist>
+            <values>
+                <fullName>Budgetary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Firm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quotation_Type__c</picklist>
+            <values>
+                <fullName>External</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Other_Product</fullName>
+        <active>true</active>
+        <description>Record type for other wholesale products</description>
+        <label>Other Product</label>
+        <picklistValues>
+            <picklist>Delivery__c</picklist>
+            <values>
+                <fullName>0 - 2 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12 - 14 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15 - 17 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>18 - 20 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - 5 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - 6 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6 - 8 weeks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9 -11 weeks</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Medium__c</picklist>
+            <values>
+                <fullName>Copper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fibre optic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Microwave</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offer__c</picklist>
+            <values>
+                <fullName>Budgetary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Firm</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quotation_Type__c</picklist>
+            <values>
+                <fullName>External</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Request__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Account_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>B_End__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Contact_B__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Phone_B__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Offer__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Quotation_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Valid_To__c</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>Offer__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Request__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Opportunity_No_on_RQ__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Account_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>B_End__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Offer__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Quotation_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Valid_To__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>Clone</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Clone</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/apex.js&quot;)} 
+
+var records = {!GETRECORDIDS( $ObjectType.Request_Quotation__c )};
+if (records.length == 0) alert(&apos;Please select at least one request quotation.&apos;);
+else if (records.length &gt; 0) {
+
+sforce.apex.execute(&quot;CloneRequestQuotation&quot;,&quot;clone&quot;, {requestQuotationIds:records});
+
+//reload the current page
+window.location.href = window.location.href;
+
+}</url>
+    </webLinks>
+</CustomObject>

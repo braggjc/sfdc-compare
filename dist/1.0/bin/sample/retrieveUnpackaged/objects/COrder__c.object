@@ -1,0 +1,4630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>NoOrderCreationFromOrdersTab</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Scontrol</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object for Provisioning and Billing operations</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>AcceptanceProtocolSigned__c</fullName>
+        <description>Date, when Acceptance Protocol was signed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Acceptance Protocol was signed</inlineHelpText>
+        <label>Acceptance Protocol Signed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AcceptedDate__c</fullName>
+        <description>Date/Time of first status change to In Progress</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date/Time of first status change to In Progress</inlineHelpText>
+        <label>Accepted Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Account_Link__c</fullName>
+        <description>Relation to Account</description>
+        <externalId>false</externalId>
+        <formula>IF((Request__r.Opportunity_del__r.AccountId != null &amp;&amp; Request__r.Opportunity_del__r.AccountId  != &apos;&apos;), HYPERLINK(&apos;/&apos; + Request__r.Opportunity_del__r.AccountId, Request__r.Opportunity_del__r.Account.Name, &apos;_top&apos;), HYPERLINK(&apos;/&apos; + Account__r.Id, Account__r.Name, &apos;_top&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Relation to Account</inlineHelpText>
+        <label>Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <description>Account Name taken from Request&apos;s Opportunity or directly from Order object</description>
+        <externalId>false</externalId>
+        <formula>IF(Request__r.Opportunity_del__r.Account.Name != null, Request__r.Opportunity_del__r.Account.Name,  IF(Account__r.Name != &apos;&apos;, Account__r.Name, Account__r.FirstName + &apos; &apos; + Account__r.LastName))</formula>
+        <inlineHelpText>Related Account Name</inlineHelpText>
+        <label>Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Owner_Email__c</fullName>
+        <description>Specifies the Account owner&apos;s ermail. Used only for sending churn order notifications (GSSS-492 ). Regular Workflow does not see the Account Owner email.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the Account owner&apos;s ermail.</inlineHelpText>
+        <label>Account Owner Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Link to related Account (customer) for which Order is created</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Link to related Account (customer) for which Order is created</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders_PC</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ActualBillingConfigurationEnd__c</fullName>
+        <description>Date, when Billing configuration really ended</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Billing configuration really ended</inlineHelpText>
+        <label>Actual Billing Configuration End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ActualBillingConfigurationStart__c</fullName>
+        <description>Date, when Billing configuration really started</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Billing configuration really started</inlineHelpText>
+        <label>Actual Billing Configuration Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ActualBillingStop__c</fullName>
+        <description>Date, when billing has been stopped</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when billing has been stopped</inlineHelpText>
+        <label>Actual Billing Stop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ActualDeinstallation__c</fullName>
+        <description>Date, when Service was actually deinstalled</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Service was actually deinstalled</inlineHelpText>
+        <label>Actual Deinstallation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ActualDisconnection__c</fullName>
+        <description>Date, when service was actually disconnected</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when service was actually disconnected</inlineHelpText>
+        <label>Actual Disconnection</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ActualProvisioningEnd__c</fullName>
+        <description>Date, when Provisioning actually ended</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Provisioning actually ended</inlineHelpText>
+        <label>Actual Provisioning End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ActualProvisioningStart__c</fullName>
+        <description>Date, when Provisioning actually started</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Provisioning actually started</inlineHelpText>
+        <label>Actual Provisioning Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Installation_Date__c</fullName>
+        <description>Actual installation date after disconnection</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual installation date after disconnection</inlineHelpText>
+        <label>Actual Installation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Order_Delivery_Time__c</fullName>
+        <description>Number of days needed for order delivery</description>
+        <externalId>false</externalId>
+        <formula>IF(Order_Completed_Date__c &gt;= CreatedDate, ( Order_Completed_Date__c - CreatedDate ),-1)</formula>
+        <inlineHelpText>Number of days needed for order delivery</inlineHelpText>
+        <label>Actual Order Delivery Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Additional_Details__c</fullName>
+        <description>Additional order description</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional order description</inlineHelpText>
+        <label>Request Details</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AssignedQueue__c</fullName>
+        <description>Queue assigned during creation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Queue assigned during creation</inlineHelpText>
+        <label>Assigned Queue</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AssignedUser__c</fullName>
+        <description>Queue assigned during creation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Queue assigned during creation</inlineHelpText>
+        <label>Assigned User</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Assigned_Project_Manager__c</fullName>
+        <description>Project Manager responsible for Provisioning Process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Project Manager responsible for Provisioning Process</inlineHelpText>
+        <label>Assigned Project Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Orders4</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BA_Comment__c</fullName>
+        <description>Comment that will be visible on new Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comment that will be visible on new Billing Account</inlineHelpText>
+        <label>Comment</label>
+        <length>16000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Bank_Account_Number__c</fullName>
+        <description>Number of Bank Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Bank Account</inlineHelpText>
+        <label>Bank Account Number</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bank_Code__c</fullName>
+        <description>Code for selected Bank Name</description>
+        <externalId>false</externalId>
+        <formula>Bank_Name__r.Bank_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Code for selected Bank Name</inlineHelpText>
+        <label>Bank Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bank_Name__c</fullName>
+        <description>Name of Bank for provided Billing Account Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of Bank for provided Billing Account Number</inlineHelpText>
+        <label>Bank Name</label>
+        <referenceTo>Bank_Data__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders_PC</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bank_Specific_Symbol__c</fullName>
+        <description>Symbol for Provided Bank Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Symbol for Provided Bank Name</inlineHelpText>
+        <label>Bank Specific Symbol</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billed_From__c</fullName>
+        <description>Country specific field, used only by GTS Hungary. Specifies the system, where service should be billed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Country specific field, used only by GTS Hungary. Specifies the system, where service should be billed.</inlineHelpText>
+        <label>Billed From</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTSHU ECHO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTSHU SCALA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>BillingStatus__c</fullName>
+        <description>State of Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>State of Billing</inlineHelpText>
+        <label>Billing Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Billing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Account_Name__c</fullName>
+        <description>Name for new Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name for new Billing Account</inlineHelpText>
+        <label>Billing Account Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Account_Type__c</fullName>
+        <description>Type of Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of Billing Account</inlineHelpText>
+        <label>Billing Account Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Customer</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Account__c</fullName>
+        <description>Related Billing Account on which provisioned services should billed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Billing Account on which provisioned services should billed</inlineHelpText>
+        <label>Existing Billing Account</label>
+        <referenceTo>Billing_Accounts__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders_PC</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Contact__c</fullName>
+        <description>Person which needs to be contacted in case of any billing issues</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Person which needs to be contacted in case of any billing issues</inlineHelpText>
+        <label>Billing Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Customer_Date__c</fullName>
+        <description>Billing Customer Date</description>
+        <externalId>false</externalId>
+        <formula>IF( ISNULL( Start_Billing_Customer__c ) , Change_Billing_Customer__c , Start_Billing_Customer__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Billing Customer Date</inlineHelpText>
+        <label>Billing Customer Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Email__c</fullName>
+        <description>Email Address for Detailed Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email Address for Detailed Billing</inlineHelpText>
+        <label>Billing Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BusinessUnit__c</fullName>
+        <description>Business Unit Dimension</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Business Unit Dimension</inlineHelpText>
+        <label>Business Unit</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Business_Hours__c</fullName>
+        <description>Business Hours Mode for the Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Business Hours Mode for the Order</inlineHelpText>
+        <label>Business Hours</label>
+        <referenceTo>BusinessHours</referenceTo>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CContract__c</fullName>
+        <description>Source contract / agreement for the order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Source contract / agreement for the order</inlineHelpText>
+        <label>Contract</label>
+        <referenceTo>CContract__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Calculation_Number__c</fullName>
+        <description>Number of Calculation in CBCT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Calculation in CBCT</inlineHelpText>
+        <label>Calculation Number</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calculation_Type__c</fullName>
+        <description>Type of Costs Calculation used for this Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of Costs Calculation used for this Order</inlineHelpText>
+        <label>Calculation Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BCT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Excel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price List</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CancellationReason__c</fullName>
+        <description>Reason of Order Cancellation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reason of Order Cancellation</inlineHelpText>
+        <label>Cancellation Reason</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Customer changed the mind</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical impossibility to deliver</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer choose another service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Processing mistake</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Cancellation_Date__c</fullName>
+        <description>Date, when Customer requested cancelation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Customer requested cancelation</inlineHelpText>
+        <label>Cancellation Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Capex_One_off__c</fullName>
+        <description>Capex One-off fees sum of all related Order Lines</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Capex One-off fees sum of all related Order Lines</inlineHelpText>
+        <label>Capex One-off</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_Reuseable__c</fullName>
+        <description>Capex Reusable fees sum of all related Order Lines</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Capex Reusable fees sum of all related Order Lines</inlineHelpText>
+        <label>Capex Reuseable</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <description>Points the source Case of the order. Used for service orders created from Customer Care level</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Points the source Case of the order. Used for service orders created from Customer Care level</inlineHelpText>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Change_Billing_Customer__c</fullName>
+        <description>Date, when customer&apos;s billing should be changed or stopped</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when customer&apos;s billing should be changed or stopped</inlineHelpText>
+        <label>Change Billing Customer</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Churn_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Field used to fix issue #GSSS-492; Specifies, wheter the Order has been created in Churn Process from CC level.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies, wheter the Order has been created in Churn Process from CC level.</inlineHelpText>
+        <label>Churn Order</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Class_VAT__c</fullName>
+        <description>Class VAT for new Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Class VAT for new Billing Account</inlineHelpText>
+        <label>Class VAT</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Locally Registered Company</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Company Outside EU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EU Company with VAT Registration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EU Company without VAT Registration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ClosedDate__c</fullName>
+        <description>Date/Time of last change to Cancelled or Closed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date/Time of last change to Cancelled or Closed</inlineHelpText>
+        <label>Closed Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Collection_Email__c</fullName>
+        <description>Email Address used by Collection Process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email Address used by Collection Process</inlineHelpText>
+        <label>Collection Email</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Collection_Profile__c</fullName>
+        <description>Customer&apos;s Collection Profile</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Collection Profile</inlineHelpText>
+        <label>Collection Profile</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Profile 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Profile 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Profile 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>Order Comments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order Comments</inlineHelpText>
+        <label>Comments</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Commercial_Contact__c</fullName>
+        <description>Person which needs to be contacted in case of any commercial issues</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Person which needs to be contacted in case of any commercial issues</inlineHelpText>
+        <label>Commercial Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Orders (Commercial Contact)</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Commitment_Period__c</fullName>
+        <description>Commitment period for the ordered services. Extended with Minimum Service Period field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Commitment period for the ordered services. Extended with Minimum Service Period field.</inlineHelpText>
+        <label>Commitment Period</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Definite period</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Indefinite period</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Indefinite period with minimum period for using</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CustomerExpectedDelivery__c</fullName>
+        <description>Date, when customer expects the Service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when customer expects the Service</inlineHelpText>
+        <label>Customer Expected Delivery</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Debtor_Group__c</fullName>
+        <description>Debtor Group for new Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Debtor Group for new Billing Account</inlineHelpText>
+        <label>Debtor Group</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Delay_Reason__c</fullName>
+        <description>Temporary field for delay reason comments. It was requested by Dariusz Pawlak.</description>
+        <externalId>false</externalId>
+        <label>Delay Reason</label>
+        <length>32000</length>
+        <trackHistory>true</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Delivery_Date__c</fullName>
+        <description>Delivery Date for Reporting</description>
+        <externalId>false</externalId>
+        <formula>IF( ISNULL( GTSCommitedDate__c ) , CustomerExpectedDelivery__c , GTSCommitedDate__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Delivery Date for Reporting</inlineHelpText>
+        <label>Delivery Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Delivery_duration__c</fullName>
+        <externalId>false</externalId>
+        <formula>CustomerExpectedDelivery__c  -  DATEVALUE( CreatedDate )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Delivery duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deposit_Amount__c</fullName>
+        <description>Deposit amount which needs to be delivered, before order will be moved to provisioning</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deposit amount which needs to be delivered, before order will be moved to provisioning</inlineHelpText>
+        <label>Deposit Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Deposit_Delivered__c</fullName>
+        <description>Deposit which has been delivered for service order. Related with Deposit Amount field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deposit which has been delivered for service order</inlineHelpText>
+        <label>Deposit Delivered</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Deposit_Maturity_Date__c</fullName>
+        <description>The latest date when deposit should be paid.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The latest date when deposit should be paid.</inlineHelpText>
+        <label>Deposit Maturity Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Deposit_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicator if deposit is required.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicator if deposit is required.</inlineHelpText>
+        <label>Deposit Required</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Order Details</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order Details</inlineHelpText>
+        <label>Description</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Detailed_Billing_Type__c</fullName>
+        <description>Type of Detailed Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of Detailed Billing</inlineHelpText>
+        <label>Detailed Billing Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Printed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Document_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>&apos;AAA&apos;</formula>
+        <label>Document Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DueDate__c</fullName>
+        <description>Date, when Order should be completed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Order should be completed</inlineHelpText>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Error__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>An error occured when processing an order. In case of migration orders when i.e. there will be problem with Prov. Plan assignemnt then this chekbox will be marked</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In case of migration orders when i.e. there will be problem with Prov. Plan assignemnt then this chekbox will be marked. some details are avaialble in Comment field on Order Line</inlineHelpText>
+        <label>Error</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EscalateNotAssigned__c</fullName>
+        <description>Date/Time when escalation about assignment should be sent</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date/Time when escalation about assignment should be sent</inlineHelpText>
+        <label>Escalate When Not Assigned</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>EscalationLevel1__c</fullName>
+        <description>User Id to who&apos;m escalation will be send in first order, when record will be assigned to Queue</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User Id to who&apos;m escalation will be send in first order, when record will be assigned to Queue</inlineHelpText>
+        <label>EscalationLevel1</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EscalationLevel2__c</fullName>
+        <description>User Id to who&apos;m escalation will be send in second order, when record will be assigned to Queue</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User Id to who&apos;m escalation will be send in second order, when record will be assigned to Queue</inlineHelpText>
+        <label>EscalationLevel2</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EscalationLevel3__c</fullName>
+        <description>User Id to who&apos;m escalation will be send in third order, when record will be assigned to Queue</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User Id to who&apos;m escalation will be send in third order, when record will be assigned to Queue</inlineHelpText>
+        <label>EscalationLevel3</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EscalationTime__c</fullName>
+        <defaultValue>3</defaultValue>
+        <description>Indicates after what time (hours) escalation about unassignment should be changed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates after what time (hours) escalation about unassignment should be changed</inlineHelpText>
+        <label>Escalation Time</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Exchange_Rate_Method__c</fullName>
+        <description>Field from Billing Account. This field indicates what exchange rates should be used</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field from Billing Account. This field indicates what exchange rates should be used</inlineHelpText>
+        <label>Exchange Rate Method</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Rates from Previous Day</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Average Rate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Extranet_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies whether the Order has been created from Extranet channel</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies whether the Order has been created from Extranet channel</inlineHelpText>
+        <label>Extranet Order</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FinishedDate__c</fullName>
+        <description>Date/Time of Last status change to Completed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date/Time of Last status change to Completed</inlineHelpText>
+        <label>Finished Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>GTSCommitedDate__c</fullName>
+        <description>Date when GTS committed to deliver service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when GTS committed to deliver service</inlineHelpText>
+        <label>GTS Commited Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>Specifies the source country for which order is processed. Used by product Configurator to present country specific product structure.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the source country for which order is processed. Used by product Configurator to present country specific product structure.</inlineHelpText>
+        <label>GTS Location</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Has_OL_Ready__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Marked means that at least one Order Line is ready fro Provisioning (selcted by customer, Configured, Expected Delivery Date is provided)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies whether there is at least one OL ready for Provisioning</inlineHelpText>
+        <label>Has OL Ready</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Head_Project_Manager__c</fullName>
+        <description>Head Manager responsible for Provisioning Process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Head Manager responsible for Provisioning Process</inlineHelpText>
+        <label>Head Project Manager</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Help__c</fullName>
+        <description>Guide containing tips for Order Management</description>
+        <externalId>false</externalId>
+        <formula>if (Has_OL_Ready__c = false, &quot;At least one Order line Configuration is mandatory for Sending to Order Entry/Provisioning!&quot;&amp;BR()&amp; 
+&quot;At least one Order Line selection is mandatory for Sending to Order Entry/Provisioning!&quot;&amp;BR() &amp; &quot;Order Line/Expected Delivery Date is mandatory for Sending to Order Entry/Provisioning!&quot;&amp;BR(),null)&amp; 
+if (ISBLANK(Start_Billing_Customer__c),&quot;Start Billing Customer is mandatory for Sending to Order Entry/Provisioning!&quot;&amp;BR(),null) &amp; 
+
+&quot;&lt;Existing Billing Account or New Billing Account for New Services is mandatory for Sending to Order Entry/Provisioning!&gt;&quot;</formula>
+        <inlineHelpText>Guide containing tips for Order Management</inlineHelpText>
+        <label>Help</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IS_Order__c</fullName>
+        <description>Related IS Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related IS Order</inlineHelpText>
+        <label>IS Order</label>
+        <referenceTo>COrder__c</referenceTo>
+        <relationshipLabel>Domestic Orders</relationshipLabel>
+        <relationshipName>Orders1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IS_Task__c</fullName>
+        <description>Related IS Task</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related IS Task</inlineHelpText>
+        <label>IS Task</label>
+        <referenceTo>CTask__c</referenceTo>
+        <relationshipLabel>Domestic Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>In_Revenue__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Order Values should be included in Opportunity Amounts</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Order Values should be included in Opportunity Amounts</inlineHelpText>
+        <label>In Revenue</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include_in_Wholesale_Reports__c</fullName>
+        <description>Indicates if Order should be included in Wholesale reports</description>
+        <externalId>false</externalId>
+        <formula>IF(Request__r.Include_in_Wholesale_Reports__c=&apos;YES&apos;,&apos;YES&apos;,&apos;NO&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Indicates if Order should be included in Wholesale reports</inlineHelpText>
+        <label>Include in Wholesale Reports</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Intercompany_Buisness__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determines if this order is done with few GTS&apos;es</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines if this order is done with few GTS&apos;es</inlineHelpText>
+        <label>Intercompany Buisness</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>InvoiceDelivery__c</fullName>
+        <description>Invoice Delivery Method</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Invoice Delivery Method</inlineHelpText>
+        <label>Invoice Delivery</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Orders (Invoice Delivery)</relationshipLabel>
+        <relationshipName>Orders3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>InvoiceLanguage__c</fullName>
+        <description>Language used in Invoice Document</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Language used in Invoice Document</inlineHelpText>
+        <label>Invoice Language</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Orders (Invoice Language)</relationshipLabel>
+        <relationshipName>Orders2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>InvoiceLayout__c</fullName>
+        <description>Invoice Document Layout Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Invoice Document Layout Type</inlineHelpText>
+        <label>Invoice Layout</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Orders (Invoice Layout)</relationshipLabel>
+        <relationshipName>Orders1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Email2__c</fullName>
+        <description>Backup Email Address for Invoice</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Backup Email Address for Invoice</inlineHelpText>
+        <label>Invoice Email (Backup)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice_Email__c</fullName>
+        <description>Email Address for receiving Invoices</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email Address for receiving Invoices</inlineHelpText>
+        <label>Invoice Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice_Recipient__c</fullName>
+        <description>PL Specific - Name of Invoice Recipient</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PL Specific - Name of Invoice Recipient</inlineHelpText>
+        <label>Invoice Recipient</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InvoicingAddress__c</fullName>
+        <description>Invoicing Address for new Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Invoicing Address for new Account</inlineHelpText>
+        <label>Invoicing Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Issue_Reason__c</fullName>
+        <description>Reason of Order creation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reason of Order creation</inlineHelpText>
+        <label>Issue Reason</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Update / Change of Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>LastAction__c</fullName>
+        <description>Last executed action (required for history tracking)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last executed action (required for history tracking)</inlineHelpText>
+        <label>Last Action</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LastOwner__c</fullName>
+        <description>Stores information about previous owner of the Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores information about previous owner of the Order</inlineHelpText>
+        <label>Last Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Last_Comment_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Corresponds to checkbox &quot;Send notification email&quot; on Order Managment panel</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Corresponds to checkbox &quot;Send notification email&quot; on Order Managment panel</inlineHelpText>
+        <label>Last Comment Notification</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Comment__c</fullName>
+        <description>Field storing last comment (required for notifications)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field storing last comment (required for notifications)</inlineHelpText>
+        <label>Last Comment</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Last_Comment_is_Public__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Marked if last comment was added as Public</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Marked if last comment was added as Public</inlineHelpText>
+        <label>Last Comment is Public</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_By_Ext_Contact_ID__c</fullName>
+        <description>Extranet User (SFDC Contact ID) which has modified record. Only id due to lookup limit on Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Extranet User (SFDC Contact ID) which has modified record. Only id due to lookup limit on Order</inlineHelpText>
+        <label>Last Modified by Extranet Contact ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_By_Ext_Contact_Name__c</fullName>
+        <description>Extranet User (SFDC Contact Name) which has modified record. Name to be displayed in link.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Extranet User (SFDC Contact Name) which has modified record. Name to be displayed in link.</inlineHelpText>
+        <label>Last Modified by Extranet Contact Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_By_Ext_Contact__c</fullName>
+        <description>Extranet User (SFDC Contact) which has modified record. Link instead of lookup due to limits reached</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Last_Modified_By_Ext_Contact_ID__c , Last_Modified_By_Ext_Contact_Name__c )</formula>
+        <inlineHelpText>Extranet User (SFDC Contact ) which has modified record</inlineHelpText>
+        <label>Last Modified by Extranet Contact</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_By_Ext_Txt__c</fullName>
+        <description>Extranet User (not represented in SFDC) which modified record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Extranet User (not represented in SFDC) which modified record</inlineHelpText>
+        <label>Last Modified by Extranet</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legal_Entity__c</fullName>
+        <description>Indicates which Legal Entity of GTS should be used for this Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates which Legal Entity of GTS should be used for this Billing Account</inlineHelpText>
+        <label>Legal Entity</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Limit__c</fullName>
+        <description>Limit of payment for provided Account Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Limit of payment for provided Account Number</inlineHelpText>
+        <label>Limit</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Line_1__c</fullName>
+        <description>First line for invoicing address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>First line for invoicing address</inlineHelpText>
+        <label>1st Line</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_2__c</fullName>
+        <description>Second line for invoincing address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Second line for invoincing address</inlineHelpText>
+        <label>2nd Line</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Link_to_CBCT_SK__c</fullName>
+        <description>Link to CBCT</description>
+        <externalId>false</externalId>
+        <formula>IF ( Calculation_Number__c&lt;&gt;&quot;&quot;,
+CASE( GTS_Location__c ,
+&quot;GTS Poland&quot;, HYPERLINK(&quot; https://pl-bct.in.gtsce.com/restricted/showCalculation-&quot; &amp; Calculation_Number__c,&quot;Open CBCT&quot;), 
+&quot;GTS Hungary&quot;, HYPERLINK(&quot; https://hu-bct.in.gtsce.com/restricted/showCalculation-&quot; &amp; Calculation_Number__c, &quot;Open CBCT&quot;), 
+&quot;GTS Slovakia&quot;, HYPERLINK(&quot; https://sk-bct.in.gtsce.com/restricted/showCalculation-&quot; &amp; Calculation_Number__c , &quot;Open CBCT&quot;),
+HYPERLINK(&quot; https://sk-bct.in.gtsce.com/restricted/showCalculation-&quot; &amp; Calculation_Number__c , &quot;Open CBCT&quot;)),&quot;No Calculation Number&quot;)</formula>
+        <inlineHelpText>Link to CBCT</inlineHelpText>
+        <label>Link to CBCT</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Link_to_CBCT__c</fullName>
+        <description>Link to CBCT</description>
+        <externalId>false</externalId>
+        <formula>Request__r.CBCT_Calculation__c</formula>
+        <inlineHelpText>Link to CBCT</inlineHelpText>
+        <label>Link to CBCT</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Master_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Master Order goups all related order i.e. in case of complex soultion in which its parts (Requests) should be delivered together</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Master Order goups all related order i.e. in case of complex soultion in which its parts (Requests) should be delivered together</inlineHelpText>
+        <label>Master Order</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Maturity_Type__c</fullName>
+        <description>Indicates if Maturity of Payment should be counted from Invoicing Day or from Invoice Delivery</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Maturity of Payment should be counted from Invoicing Day or from Invoice Delivery</inlineHelpText>
+        <label>Maturity Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Invoicing Day</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invoice Delivery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Maturity_of_Payment__c</fullName>
+        <description>Maturity of Payment in days</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Maturity of Payment in days</inlineHelpText>
+        <label>Maturity of Payment</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Minimum_Service_Period__c</fullName>
+        <description>Minimum time period in which customer is obliged to use the service, specified by contract.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Minimum time period in which customer is obliged to use the service, specified by contract.</inlineHelpText>
+        <label>Minimum Service Period [months]</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_Recurring_Price__c</fullName>
+        <description>Sum of order lines Monthly Recurring Prices</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sum of order lines Monthly Recurring Prices</inlineHelpText>
+        <label>Monthly Recurring Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>New_Billing_Account__c</fullName>
+        <description>Technical field. Stores identifier of a Billing Account created in Provisioning Process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field. Stores identifier of a Billing Account created in Provisioning Process</inlineHelpText>
+        <label>New Billing Account</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_circuits__c</fullName>
+        <description>Specifies circuit number, chosen on related Request record (IS orders only)</description>
+        <externalId>false</externalId>
+        <formula>Request__r.No_of_Circuits__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Specifies circuit number, chosen on related Request record (IS orders only)</inlineHelpText>
+        <label>No. of circuits</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Non_Recurring_Price__c</fullName>
+        <description>Non Recurring Prices sum of all related Order Lines</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Non Recurring Prices sum of all related Order Lines</inlineHelpText>
+        <label>Non Recurring Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>OE_Assignee__c</fullName>
+        <description>Order Entry User assigned to the Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order Entry User assigned to the Order</inlineHelpText>
+        <label>OE Assignee</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Offnet_onnet__c</fullName>
+        <externalId>false</externalId>
+        <label>Network</label>
+        <picklist>
+            <picklistValues>
+                <fullName>OffNet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OnNet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OnHoldEnd__c</fullName>
+        <description>Date/Time when last On Hold Status has ended</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date/Time when last On Hold Status has ended</inlineHelpText>
+        <label>On Hold End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>OnHoldReason__c</fullName>
+        <description>Reason of changing status to On Hold</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reason of changing status to On Hold</inlineHelpText>
+        <label>On Hold Reason</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>OnHoldStart__c</fullName>
+        <description>Date/Time when last On Hold status has been started</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date/Time when last On Hold status has been started</inlineHelpText>
+        <label>On Hold Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>OnHold_Current__c</fullName>
+        <description>Number of days for which order is in ON HOLD status</description>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Status__c, &apos;On Hold&apos;), NOW()- OnHoldStart__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Number of days for which order is in ON HOLD status</inlineHelpText>
+        <label>On Hold Current</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OnHold_Previous__c</fullName>
+        <description>Stores durations of previous on holds</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores durations of previous on holds</inlineHelpText>
+        <label>On Hold Previous</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OnHold_Total__c</fullName>
+        <description>Sum of all days in which order has been in ON HOLD status</description>
+        <externalId>false</externalId>
+        <formula>OnHold_Current__c +  OnHold_Previous__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Sum of all days in which order has been in ON HOLD status</inlineHelpText>
+        <label>On Hold Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opex_Monthly__c</fullName>
+        <description>Opex Monthly fees sum of all related Order Lines</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opex Monthly fees sum of all related Order Lines</inlineHelpText>
+        <label>Opex Monthly</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_One_off__c</fullName>
+        <description>Opex One-off fees sum of all related Order Lines</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opex One-off fees sum of all related Order Lines</inlineHelpText>
+        <label>Opex One-off</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Category__c</fullName>
+        <description>Request&apos;s Opportunity category</description>
+        <externalId>false</externalId>
+        <formula>Request__r.Opportunity_Category__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Request&apos;s Opportunity category</inlineHelpText>
+        <label>Opportunity Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Id__c</fullName>
+        <description>Link to Request&apos;s Opportunity</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;/&apos;+ Request__r.Opportunity_del__c, Request__r.Opportunity_del__r.Name, &apos;_top&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Link to Request&apos;s Opportunity</inlineHelpText>
+        <label>Opportunity Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Owner_Email__c</fullName>
+        <description>Opportunity Owner Email required for notification.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunity Owner Email required for notification.</inlineHelpText>
+        <label>Opportunity Owner Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Owner__c</fullName>
+        <description>Id of Opportunity Owner. Used fot comparion of Opp. Owner creator of Order.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Id of Opportunity Owner. Used fot comparion of Opp. Owner creator of Order.</inlineHelpText>
+        <label>Opportunity Owner</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_PLT__c</fullName>
+        <description>Added by Martin Slaby, 2011-08-12 14:56 without any descr.</description>
+        <externalId>false</externalId>
+        <label>Opportunity name (PLT)</label>
+        <length>164</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Stage__c</fullName>
+        <description>Stage of related Opportunity. Required for blocking edit possibility for Closed Won Opportunites</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stage of related Opportunity</inlineHelpText>
+        <label>Opportunity Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <description>Points to related Opportunity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Points to related Opportunity</inlineHelpText>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders_PC</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OrderCloseDate__c</fullName>
+        <description>When the last OrderLine is closed OCD of Order is set automatically with the same date.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When the last OrderLine is closed OCD of Order is set automatically with the same date.</inlineHelpText>
+        <label>Order Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OrderDuration__c</fullName>
+        <description>Order time duration in days. Calculated as a period of time from order creation till its closing.</description>
+        <externalId>false</externalId>
+        <formula>ClosedDate__c -  CreatedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Order time duration in days. Calculated as a period of time from order creation till its closing.</inlineHelpText>
+        <label>Order Duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OrderSigningDate__c</fullName>
+        <description>Order Signing Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>OSD - Order Signing Date, set manually by AM</inlineHelpText>
+        <label>Order Signing Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OrderType__c</fullName>
+        <description>Type of Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of Order</inlineHelpText>
+        <label>Order Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Quotation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Installation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Modification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disconnection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Suspension</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Release</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reactivation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Order_Completed_Date__c</fullName>
+        <description>Date when order was completed - used for reporting purpose.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when order was completed - used for reporting purpose.</inlineHelpText>
+        <label>Order Completed Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Order_Entry_Assignment__c</fullName>
+        <description>Date and Time when Order was sent to Order Entry</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date and Time when Order was sent to Order Entry</inlineHelpText>
+        <label>Order Entry Assignment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Order_Owner_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Owner Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Source__c</fullName>
+        <description>Source of created Order like external system i.e Extranet</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Source of created Order like external system i.e Extranet</inlineHelpText>
+        <label>Order Source</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Extranet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Account__c</fullName>
+        <description>Partner participating in sales process as assigned on Opportunity level.</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Partner_ID__c , Partner_Name__c )</formula>
+        <inlineHelpText>Partner participating in sales process as assigned on Opportunity level.</inlineHelpText>
+        <label>Partner Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_Email__c</fullName>
+        <description>Email as defined on Partner Account assigned to Opportunity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email as defined on Partner Account assigned to Opportunity</inlineHelpText>
+        <label>Partner Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_ID__c</fullName>
+        <description>Technical field. Id of Partner assigned on Opportunity level. Required to generat direct link to Partner Account on Order level</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field</inlineHelpText>
+        <label>Partner ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_Name__c</fullName>
+        <description>Partner Name to be displayed in link</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field</inlineHelpText>
+        <label>Partner Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PaymentMethod__c</fullName>
+        <description>Invoice Payment Method Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Invoice Payment Method Type</inlineHelpText>
+        <label>Payment Method</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Orders (Payment Method)</relationshipLabel>
+        <relationshipName>Orders4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PlannedBillingConfigurationEnd__c</fullName>
+        <description>Date, when Billing configuration is planned to end</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Billing configuration is planned to end</inlineHelpText>
+        <label>Planned Billing Configuration End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PlannedBillingConfigurationStart__c</fullName>
+        <description>Date, when Billing configuration is planned to start</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Billing configuration is planned to start</inlineHelpText>
+        <label>Planned Billing Configuration Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PlannedBillingStop__c</fullName>
+        <description>Date, when billing is planned to be stopped</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when billing is planned to be stopped</inlineHelpText>
+        <label>Planned Billing Stop</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PlannedDeinstallation__c</fullName>
+        <description>Date, when deinstallation is planned</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when deinstallation is planned</inlineHelpText>
+        <label>Planned Deinstallation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PlannedDisconnection__c</fullName>
+        <description>Date, when disconnection is planned</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when disconnection is planned</inlineHelpText>
+        <label>Planned Disconnection</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PlannedProvisioningEnd__c</fullName>
+        <description>Date, when Provisioning is expected to end</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Provisioning is expected to end</inlineHelpText>
+        <label>Planned Provisioning End</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PlannedProvisioningStart__c</fullName>
+        <description>Date, when Provisioning is expected to start</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Provisioning is expected to start</inlineHelpText>
+        <label>Planned Provisioning Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Installation_Date__c</fullName>
+        <description>Planned installation date after disconnection</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Planned installation date after disconnection</inlineHelpText>
+        <label>Planned Installation</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ProcessingDuration_NoOH__c</fullName>
+        <description>Order processing duration in days without periods when it has been ON HOLD or REJECTED status</description>
+        <externalId>false</externalId>
+        <formula>ProcessingDuration__c - OnHold_Total__c - Rejected_Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Order processing duration in days without periods when it has been ON HOLD or REJECTED status</inlineHelpText>
+        <label>Processing Duration (No OH)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProcessingDuration__c</fullName>
+        <description>Order processing time in days</description>
+        <externalId>false</externalId>
+        <formula>IF( ISNULL(FinishedDate__c) , NOW() - AcceptedDate__c, FinishedDate__c - AcceptedDate__c) - Rejected_Total__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Order processing time in days</inlineHelpText>
+        <label>Processing Duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_PLT__c</fullName>
+        <description>for platform licence use (added by Martin Slaby, 2011-08-12 14:55)</description>
+        <externalId>false</externalId>
+        <label>Product (PLT)</label>
+        <length>164</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <description>Relation to Product object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected Product</inlineHelpText>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProvisioningAcceptDate__c</fullName>
+        <description>Provisioning Accept Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PAD - Provisioning Accept Date set automatically at Order when PM accepts the Order (the moment, when Project Manager is assigned for the first time).</inlineHelpText>
+        <label>Provisioning Accept Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ProvisioningEntryDate__c</fullName>
+        <description>Provisioning Entry Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PED - Provisioning Entry Date set automatically when Order gets to ‘Awaiting Provisioning’ status</inlineHelpText>
+        <label>Provisioning Entry Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ProvisioningStatus__c</fullName>
+        <description>State of Provisioning</description>
+        <externalId>false</externalId>
+        <inlineHelpText>State of Provisioning</inlineHelpText>
+        <label>Provisioning Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Provisioning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Completion</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Provisioning_Email_Alias__c</fullName>
+        <description>Stores email alias to be used to send order comments in case of that no Project Manager is assigned. When PM is assigned then email is cleared from the field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores email alias to be used to send order comments in case of that no Project Manager is assigned. When PM is assigned then email is cleared from the field</inlineHelpText>
+        <label>Provisioning Email Alias</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rejected_End__c</fullName>
+        <description>Date &amp; Time when Order changed Status from Rejected</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date &amp; Time when Order changed Status from Rejected</inlineHelpText>
+        <label>Rejected End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Rejected_Last__c</fullName>
+        <description>Length of period when Order was on Rejected Status for the last time</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Status__c , &apos;Rejected&apos;), NOW() - Rejected_Start__c, Rejected_End__c - Rejected_Start__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Length of period when Order was on Rejected Status for the last time</inlineHelpText>
+        <label>Rejected Last</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rejected_Owner__c</fullName>
+        <description>Owner assigned when Status was Rejected</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Owner assigned when Status was Rejected</inlineHelpText>
+        <label>Rejected Owner</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rejected_Start__c</fullName>
+        <description>Date &amp; Time when Order changed Status to Rejected</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date &amp; Time when Order changed Status to Rejected</inlineHelpText>
+        <label>Rejected Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Rejected_Status__c</fullName>
+        <description>Status set when Order was rejected</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status set when Order was rejected</inlineHelpText>
+        <label>Rejected Status</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rejected_Total__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Total time spent on Rejected Status</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total time spent on Rejected Status</inlineHelpText>
+        <label>Rejected Total</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Order__c</fullName>
+        <description>Points to related Order, available for Requests and IS functionality</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Points to related Order, available for Requests and IS functionality</inlineHelpText>
+        <label>Related Order</label>
+        <referenceTo>COrder__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Remind_days__c</fullName>
+        <defaultValue>3</defaultValue>
+        <description>Specifies, how many days before due date the reminder should be sent</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies, how many days before due date the reminder should be sent</inlineHelpText>
+        <label>Remind days before</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reminder__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checked an automatic reminder will generate before due date when Order is not finished</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked an automatic reminder will generate before due date when Order is not finished</inlineHelpText>
+        <label>Reminder</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Reminder_date__c</fullName>
+        <description>Points the date when reminder should be send</description>
+        <externalId>false</externalId>
+        <formula>DueDate__c - Remind_days__c - 1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Points the date when reminder should be send</inlineHelpText>
+        <label>Reminder date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Reporting_Disconnection_Date__c</fullName>
+        <description>Specifies the date of disconnection. Actual one - if it is set, if not then Planned. Used for reporting purposes.</description>
+        <externalId>false</externalId>
+        <formula>IF( ISNULL( ActualDisconnection__c ),  PlannedDisconnection__c , ActualDisconnection__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Specifies the date of disconnection. Actual one - if it is set, if not then Planned. Used for reporting purposes.</inlineHelpText>
+        <label>Reporting Disconnection Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Reporting_Installation_Date__c</fullName>
+        <description>Specifies the installation date. Actual one - if it is set, if not then Planned. Used for reporting purposes.</description>
+        <externalId>false</externalId>
+        <formula>IF( ISNULL( Actual_Installation_Date__c ) ,  Planned_Installation_Date__c , Actual_Installation_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Specifies the installation date. Actual one - if it is set, if not then Planned. Used for reporting purposes.</inlineHelpText>
+        <label>Reporting Installation Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Request__c</fullName>
+        <description>Relation to Request object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Request object</inlineHelpText>
+        <label>Request</label>
+        <referenceTo>Request__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SPL_approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>SPL approved</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Type__c</fullName>
+        <description>Specifies the Retail or Wholesale type of sales. Used for reporting purposes.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the Retail or Wholesale type of sales. Used for reporting purposes.</inlineHelpText>
+        <label>Sales Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sent_Escalation__c</fullName>
+        <description>Points escalation level which should be used during next iteration.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field</inlineHelpText>
+        <label>Sent Escalation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Level 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Level 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Level 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ServiceBundle__c</fullName>
+        <description>Relation to Service Bundle object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected Service Bundle</inlineHelpText>
+        <label>Service Bundle</label>
+        <referenceTo>ServiceBundle__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ServiceComponent__c</fullName>
+        <description>Relation to Service Component object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected Service Component</inlineHelpText>
+        <label>Service Component</label>
+        <referenceTo>ServiceComponent__c</referenceTo>
+        <relationshipLabel>Orders</relationshipLabel>
+        <relationshipName>Orders</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_CID__c</fullName>
+        <description>Circuit ID from related Installed Service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Circuit ID from related Installed Service</inlineHelpText>
+        <label>Service CID</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Simplified_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies whether the order has been created from Simplified Order mechanism. Used in provisioning process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies whether the order has been created from Simplified Order mechanism.</inlineHelpText>
+        <label>Simplified Order</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_Account_ID__c</fullName>
+        <description>Source Customer ID required in case of Cession for attachment of Cession document to both customers.</description>
+        <externalId>false</externalId>
+        <label>Source Account ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source_Account_Name__c</fullName>
+        <description>Name of the Source Customer (Source Account) from which the service is transferd to Target Customer (Account)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the Source Customer (Source Account) from which the service is transferd to Target Customer (Account)</inlineHelpText>
+        <label>Source Account</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source_Account__c</fullName>
+        <description>Source Customer Name</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK (Source_Account_ID__c, Source_Account_Name__c )</formula>
+        <inlineHelpText>Source Customer Name - from which service is being transferd</inlineHelpText>
+        <label>Source Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <description>Order Stage</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order Stage</inlineHelpText>
+        <label>Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Provisioning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning &amp; Billing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Start_Billing_Customer__c</fullName>
+        <description>The date from which customer ishould be billed for service. To be set in Billing system</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date from which customer ishould be billed for service. To be set in Billing system</inlineHelpText>
+        <label>Start Billing Customer</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Status of Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of Order</inlineHelpText>
+        <label>Order Status</label>
+        <picklist>
+            <controllingField>OrderType__c</controllingField>
+            <picklistValues>
+                <fullName>New</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <controllingFieldValues>Downgrade</controllingFieldValues>
+                <controllingFieldValues>Modification</controllingFieldValues>
+                <controllingFieldValues>New Installation</controllingFieldValues>
+                <controllingFieldValues>New Service</controllingFieldValues>
+                <controllingFieldValues>Price Change</controllingFieldValues>
+                <controllingFieldValues>Quotation</controllingFieldValues>
+                <controllingFieldValues>Reactivation</controllingFieldValues>
+                <controllingFieldValues>Release</controllingFieldValues>
+                <controllingFieldValues>Renewal</controllingFieldValues>
+                <controllingFieldValues>Service Management</controllingFieldValues>
+                <controllingFieldValues>Suspension</controllingFieldValues>
+                <controllingFieldValues>Upgrade</controllingFieldValues>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Budgetary Quotation</fullName>
+                <controllingFieldValues>Quotation</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Firm Quotation</fullName>
+                <controllingFieldValues>Quotation</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted</fullName>
+                <controllingFieldValues>New Service</controllingFieldValues>
+                <controllingFieldValues>Renewal</controllingFieldValues>
+                <controllingFieldValues>Service Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <controllingFieldValues>Downgrade</controllingFieldValues>
+                <controllingFieldValues>Price Change</controllingFieldValues>
+                <controllingFieldValues>Release</controllingFieldValues>
+                <controllingFieldValues>Upgrade</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Hold</fullName>
+                <controllingFieldValues>Downgrade</controllingFieldValues>
+                <controllingFieldValues>Price Change</controllingFieldValues>
+                <controllingFieldValues>Release</controllingFieldValues>
+                <controllingFieldValues>Upgrade</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Cancellation</fullName>
+                <controllingFieldValues>Downgrade</controllingFieldValues>
+                <controllingFieldValues>Price Change</controllingFieldValues>
+                <controllingFieldValues>Release</controllingFieldValues>
+                <controllingFieldValues>Upgrade</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <controllingFieldValues>Downgrade</controllingFieldValues>
+                <controllingFieldValues>Modification</controllingFieldValues>
+                <controllingFieldValues>New Installation</controllingFieldValues>
+                <controllingFieldValues>New Service</controllingFieldValues>
+                <controllingFieldValues>Price Change</controllingFieldValues>
+                <controllingFieldValues>Reactivation</controllingFieldValues>
+                <controllingFieldValues>Release</controllingFieldValues>
+                <controllingFieldValues>Renewal</controllingFieldValues>
+                <controllingFieldValues>Service Management</controllingFieldValues>
+                <controllingFieldValues>Upgrade</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <controllingFieldValues>Downgrade</controllingFieldValues>
+                <controllingFieldValues>Modification</controllingFieldValues>
+                <controllingFieldValues>New Installation</controllingFieldValues>
+                <controllingFieldValues>New Service</controllingFieldValues>
+                <controllingFieldValues>Price Change</controllingFieldValues>
+                <controllingFieldValues>Quotation</controllingFieldValues>
+                <controllingFieldValues>Reactivation</controllingFieldValues>
+                <controllingFieldValues>Release</controllingFieldValues>
+                <controllingFieldValues>Renewal</controllingFieldValues>
+                <controllingFieldValues>Service Management</controllingFieldValues>
+                <controllingFieldValues>Suspension</controllingFieldValues>
+                <controllingFieldValues>Upgrade</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disconnected</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <controllingFieldValues>Downgrade</controllingFieldValues>
+                <controllingFieldValues>Price Change</controllingFieldValues>
+                <controllingFieldValues>Release</controllingFieldValues>
+                <controllingFieldValues>Suspension</controllingFieldValues>
+                <controllingFieldValues>Upgrade</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Awaiting Provisioning</fullName>
+                <controllingFieldValues>New Service</controllingFieldValues>
+                <controllingFieldValues>Renewal</controllingFieldValues>
+                <controllingFieldValues>Service Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Order Entry</fullName>
+                <controllingFieldValues>New Service</controllingFieldValues>
+                <controllingFieldValues>Renewal</controllingFieldValues>
+                <controllingFieldValues>Service Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <controllingFieldValues>New Service</controllingFieldValues>
+                <controllingFieldValues>Renewal</controllingFieldValues>
+                <controllingFieldValues>Service Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected Provisioning</fullName>
+                <controllingFieldValues>New Service</controllingFieldValues>
+                <controllingFieldValues>Renewal</controllingFieldValues>
+                <controllingFieldValues>Service Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deposit Check</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected Deposit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Technical_Contact__c</fullName>
+        <description>Person which needs to be contacted in case of any technical issues</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Person which needs to be contacted in case of any technical issues</inlineHelpText>
+        <label>Technical Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Orders (Technical Contact)</relationshipLabel>
+        <relationshipName>Orders1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Temp_New_Billing_Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Temp_New_Billing_Account</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Valid_To__c</fullName>
+        <description>Date until the Proposal Cost is valid.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date until the Proposal Cost is valid.</inlineHelpText>
+        <label>Valid To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>XML_Comments__c</fullName>
+        <description>Comments in XML</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field</inlineHelpText>
+        <label>XML Comments</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>flgComplete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Address Complete</description>
+        <externalId>false</externalId>
+        <label>Address Complete</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <label>Order</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>Status__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>Request__c</columns>
+        <columns>Stage__c</columns>
+        <columns>ProvisioningStatus__c</columns>
+        <columns>BillingStatus__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Awaiting_Costing</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>IS_Task__c</columns>
+        <columns>Request__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Request__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>COrder__c.DomesticOrder</value>
+        </filters>
+        <filters>
+            <field>OrderType__c</field>
+            <operation>equals</operation>
+            <value>Quotation</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </filters>
+        <label>Awaiting Costing</label>
+    </listViews>
+    <listViews>
+        <fullName>Awaiting_Provisioning</fullName>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>Account__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Awaiting Provisioning</value>
+        </filters>
+        <filters>
+            <field>Assigned_Project_Manager__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Awaiting Provisioning</label>
+    </listViews>
+    <listViews>
+        <fullName>CZ_Awaiting_Provisioning</fullName>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>Account__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>Head_Project_Manager__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Awaiting Provisioning</value>
+        </filters>
+        <filters>
+            <field>Assigned_Project_Manager__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>contains</operation>
+            <value>Czech</value>
+        </filters>
+        <label>CZ Awaiting Provisioning</label>
+    </listViews>
+    <listViews>
+        <fullName>CZ_Order_Entry</fullName>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>Status__c</columns>
+        <columns>Account__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Order Entry</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Rejected Provisioning</value>
+        </filters>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>contains</operation>
+            <value>Czech</value>
+        </filters>
+        <label>CZ Order Entry</label>
+    </listViews>
+    <listViews>
+        <fullName>Frontoffice_SK_new_order</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </filters>
+        <filters>
+            <field>CREATEDBY_USER</field>
+            <operation>equals</operation>
+            <value>Renata Binderova,Miriam Odelgova,Nela Ličková</value>
+        </filters>
+        <label>Frontoffice SK new order</label>
+        <sharedTo>
+            <rolesAndSubordinates>Front Office Manager SK</rolesAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>HU_Awaiting_Provisioning</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Account__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>OrderType__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>ProvisioningEntryDate__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Awaiting Provisioning</value>
+        </filters>
+        <filters>
+            <field>Assigned_Project_Manager__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>contains</operation>
+            <value>Hungary</value>
+        </filters>
+        <label>HU Awaiting Provisioning</label>
+    </listViews>
+    <listViews>
+        <fullName>HU_Order_Entry</fullName>
+        <booleanFilter>3 and (1 or 2)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>Status__c</columns>
+        <columns>Account__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>OrderCloseDate__c</columns>
+        <columns>ProvisioningAcceptDate__c</columns>
+        <columns>ProvisioningEntryDate__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Order Entry</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Rejected Provisioning</value>
+        </filters>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>contains</operation>
+            <value>Hungary</value>
+        </filters>
+        <label>HU Order Entry</label>
+    </listViews>
+    <listViews>
+        <fullName>HU_completed</fullName>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>Account__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Product__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>equals</operation>
+            <value>GTS Hungary</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <filters>
+            <field>OrderType__c</field>
+            <operation>equals</operation>
+            <value>New Service</value>
+        </filters>
+        <label>HU completed_NS</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Awaiting_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>Account__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>Assigned_Project_Manager__c</columns>
+        <columns>Head_Project_Manager__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Awaiting Provisioning</value>
+        </filters>
+        <label>My Awaiting Orders</label>
+    </listViews>
+    <listViews>
+        <fullName>My_In_Progress_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Request__c</columns>
+        <columns>ProvisioningStatus__c</columns>
+        <columns>BillingStatus__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>In Progress</value>
+        </filters>
+        <label>My In Progress Orders</label>
+    </listViews>
+    <listViews>
+        <fullName>My_New_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>Request__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </filters>
+        <label>My New Orders</label>
+    </listViews>
+    <listViews>
+        <fullName>My_On_Hold_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>OnHoldReason__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>On Hold</value>
+        </filters>
+        <label>My On Hold Orders</label>
+    </listViews>
+    <listViews>
+        <fullName>Orders_International</fullName>
+        <columns>NAME</columns>
+        <columns>Product__c</columns>
+        <columns>OrderType__c</columns>
+        <columns>Status__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>CustomerExpectedDelivery__c</columns>
+        <columns>Request__c</columns>
+        <columns>Stage__c</columns>
+        <columns>ProvisioningStatus__c</columns>
+        <filterScope>Queue</filterScope>
+        <label>Orders Wholesale International</label>
+        <queue>Orders Wholesale International</queue>
+    </listViews>
+    <listViews>
+        <fullName>PL_Awaiting_Provisioning</fullName>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>Account__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>Head_Project_Manager__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Awaiting Provisioning</value>
+        </filters>
+        <filters>
+            <field>Assigned_Project_Manager__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>contains</operation>
+            <value>Poland</value>
+        </filters>
+        <label>PL Awaiting Provisioning</label>
+    </listViews>
+    <listViews>
+        <fullName>PL_Order_Entry</fullName>
+        <booleanFilter>(1 OR 2) AND 3 AND 4</booleanFilter>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>Status__c</columns>
+        <columns>Account__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Order Entry</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Rejected Provisioning</value>
+        </filters>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>contains</operation>
+            <value>Poland</value>
+        </filters>
+        <filters>
+            <field>Case__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>PL Order Entry</label>
+        <sharedTo>
+            <rolesAndSubordinates>Order Entry Controller PL</rolesAndSubordinates>
+            <rolesAndSubordinates>Order Entry Manager PL</rolesAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Provisioning_Retail_PL</fullName>
+        <columns>NAME</columns>
+        <columns>Product__c</columns>
+        <columns>OrderType__c</columns>
+        <columns>Status__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>CustomerExpectedDelivery__c</columns>
+        <columns>Request__c</columns>
+        <columns>Stage__c</columns>
+        <columns>ProvisioningStatus__c</columns>
+        <filterScope>Queue</filterScope>
+        <label>Provisioning Retail PL</label>
+        <queue>Provisioning Retail PL</queue>
+    </listViews>
+    <listViews>
+        <fullName>SK_Awaiting_Provisioning</fullName>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>Account__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>Head_Project_Manager__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Awaiting Provisioning</value>
+        </filters>
+        <filters>
+            <field>Assigned_Project_Manager__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>equals</operation>
+            <value>GTS Slovakia</value>
+        </filters>
+        <label>SK Awaiting Provisioning</label>
+    </listViews>
+    <listViews>
+        <fullName>SK_Order_Entry</fullName>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <columns>NAME</columns>
+        <columns>OrderType__c</columns>
+        <columns>Status__c</columns>
+        <columns>Account__c</columns>
+        <columns>DueDate__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Order Entry</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Rejected Provisioning</value>
+        </filters>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>contains</operation>
+            <value>Slovakia</value>
+        </filters>
+        <label>SK Order Entry</label>
+    </listViews>
+    <listViews>
+        <fullName>Simplified_Orders</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Status__c</columns>
+        <columns>OrderType__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Simplified_Order__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Simplified Orders</label>
+    </listViews>
+    <nameField>
+        <displayFormat>ORD{000000000}</displayFormat>
+        <label>Order No.</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Orders</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>DomesticOrder</fullName>
+        <active>true</active>
+        <description>Record Type for Domestic Orders</description>
+        <label>Domestic Order</label>
+        <picklistValues>
+            <picklist>Billed_From__c</picklist>
+            <values>
+                <fullName>GTSHU ECHO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTSHU SCALA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BillingStatus__c</picklist>
+            <values>
+                <fullName>Billing Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Billing_Account_Type__c</picklist>
+            <values>
+                <fullName>Customer</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Calculation_Type__c</picklist>
+            <values>
+                <fullName>BCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Excel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price List</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CancellationReason__c</picklist>
+            <values>
+                <fullName>Customer changed the mind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer choose another service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Processing mistake</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical impossibility to deliver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Class_VAT__c</picklist>
+            <values>
+                <fullName>Company Outside EU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EU Company with VAT Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EU Company without VAT Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Locally Registered Company</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Collection_Profile__c</picklist>
+            <values>
+                <fullName>Profile 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Profile 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Profile 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commitment_Period__c</picklist>
+            <values>
+                <fullName>Definite period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indefinite period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indefinite period with minimum period for using</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Debtor_Group__c</picklist>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Detailed_Billing_Type__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Exchange_Rate_Method__c</picklist>
+            <values>
+                <fullName>Average Rate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rates from Previous Day</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Issue_Reason__c</picklist>
+            <values>
+                <fullName>New Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Update %2F Change of Order</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Legal_Entity__c</picklist>
+            <values>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Maturity_Type__c</picklist>
+            <values>
+                <fullName>Invoice Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Invoicing Day</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offnet_onnet__c</picklist>
+            <values>
+                <fullName>OffNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OnNet</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OrderType__c</picklist>
+            <values>
+                <fullName>New Service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quotation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Management</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Order_Source__c</picklist>
+            <values>
+                <fullName>Extranet</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ProvisioningStatus__c</picklist>
+            <values>
+                <fullName>In Completion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Provisioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Provisioning Completed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sales_Type__c</picklist>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sent_Escalation__c</picklist>
+            <values>
+                <fullName>Level 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Provisioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Provisioning %26 Billing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Awaiting Provisioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Budgetary Quotation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deposit Check</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Firm Quotation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Order Entry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected Deposit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected Provisioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>NewInstallation</fullName>
+        <active>true</active>
+        <description>Installation of completely new Service</description>
+        <label>New Installation</label>
+        <picklistValues>
+            <picklist>Billed_From__c</picklist>
+            <values>
+                <fullName>GTSHU ECHO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTSHU SCALA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BillingStatus__c</picklist>
+            <values>
+                <fullName>Billing Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Billing_Account_Type__c</picklist>
+            <values>
+                <fullName>Customer</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Calculation_Type__c</picklist>
+            <values>
+                <fullName>BCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Excel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price List</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CancellationReason__c</picklist>
+            <values>
+                <fullName>Customer changed the mind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer choose another service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Processing mistake</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical impossibility to deliver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Class_VAT__c</picklist>
+            <values>
+                <fullName>Company Outside EU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EU Company with VAT Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EU Company without VAT Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Locally Registered Company</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Collection_Profile__c</picklist>
+            <values>
+                <fullName>Profile 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Profile 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Profile 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commitment_Period__c</picklist>
+            <values>
+                <fullName>Definite period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indefinite period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indefinite period with minimum period for using</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Detailed_Billing_Type__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Exchange_Rate_Method__c</picklist>
+            <values>
+                <fullName>Average Rate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rates from Previous Day</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Issue_Reason__c</picklist>
+            <values>
+                <fullName>New Order</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Update %2F Change of Order</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Legal_Entity__c</picklist>
+            <values>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Maturity_Type__c</picklist>
+            <values>
+                <fullName>Invoice Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Invoicing Day</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offnet_onnet__c</picklist>
+            <values>
+                <fullName>OffNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OnNet</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OrderType__c</picklist>
+            <values>
+                <fullName>New Installation</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Order_Source__c</picklist>
+            <values>
+                <fullName>Extranet</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ProvisioningStatus__c</picklist>
+            <values>
+                <fullName>In Completion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Provisioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Provisioning Completed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sales_Type__c</picklist>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sent_Escalation__c</picklist>
+            <values>
+                <fullName>Level 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Provisioning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Cancellation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Entry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected Provisioning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>ServiceOrder</fullName>
+        <active>true</active>
+        <description>Modification of existing Service</description>
+        <label>Service Order</label>
+        <picklistValues>
+            <picklist>Billed_From__c</picklist>
+            <values>
+                <fullName>GTSHU ECHO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GTSHU SCALA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BillingStatus__c</picklist>
+            <values>
+                <fullName>Billing Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Billing_Account_Type__c</picklist>
+            <values>
+                <fullName>Customer</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Calculation_Type__c</picklist>
+            <values>
+                <fullName>BCT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Excel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price List</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>CancellationReason__c</picklist>
+            <values>
+                <fullName>Customer changed the mind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer choose another service</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Processing mistake</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Technical impossibility to deliver</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Class_VAT__c</picklist>
+            <values>
+                <fullName>Company Outside EU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EU Company with VAT Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EU Company without VAT Registration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Locally Registered Company</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Collection_Profile__c</picklist>
+            <values>
+                <fullName>Profile 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Profile 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Profile 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commitment_Period__c</picklist>
+            <values>
+                <fullName>Definite period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indefinite period</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indefinite period with minimum period for using</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Detailed_Billing_Type__c</picklist>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Exchange_Rate_Method__c</picklist>
+            <values>
+                <fullName>Average Rate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rates from Previous Day</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Issue_Reason__c</picklist>
+            <values>
+                <fullName>New Order</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Update %2F Change of Order</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Legal_Entity__c</picklist>
+            <values>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Maturity_Type__c</picklist>
+            <values>
+                <fullName>Invoice Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Invoicing Day</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offnet_onnet__c</picklist>
+            <values>
+                <fullName>OffNet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OnNet</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>OrderType__c</picklist>
+            <values>
+                <fullName>Disconnection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price Change</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suspension</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Order_Source__c</picklist>
+            <values>
+                <fullName>Extranet</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ProvisioningStatus__c</picklist>
+            <values>
+                <fullName>In Completion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Provisioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Provisioning Completed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sales_Type__c</picklist>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sent_Escalation__c</picklist>
+            <values>
+                <fullName>Level 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level 3</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Stage__c</picklist>
+            <values>
+                <fullName>Billing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Provisioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Provisioning %26 Billing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Cancellation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Entry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected Provisioning</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OrderType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>DueDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Request__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Stage__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Master_Order__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Related_Order__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.ALIAS</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Opportunity_Id__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Master_Order__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OrderType__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Request__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Related_Order__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Opportunity_Id__c</searchFilterFields>
+        <searchFilterFields>Request__c</searchFilterFields>
+        <searchResultsAdditionalFields>OrderType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DueDate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Opportunity_Id__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Request__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Stage__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Master_Order__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Related_Order__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>BAblocker</fullName>
+        <active>false</active>
+        <description>https://helpdeskce.in.gtsce.com/browse/CECOL-401</description>
+        <errorConditionFormula>IF(AND(OR(ISPICKVAL(OrderType__c, &quot;Service Management&quot;), 
+ISPICKVAL(OrderType__c, &quot;Renewal&quot;)), OR(NOT(ISBLANK( Billing_Account__c)), NOT(ISBLANK( Billing_Account_Name__c)))) , true , false)</errorConditionFormula>
+        <errorMessage>For Order Types RENEWAL and SERVICE MANAGEMENT it is not possible to select Billing Account.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>BankNameWithAccountNumber</fullName>
+        <active>true</active>
+        <description>Check, if Bank name has been selected then the Bank account number also has to be filled in</description>
+        <errorConditionFormula>AND(OR (AND(NOT (ISBLANK(Bank_Account_Number__c)), ISBLANK(Bank_Name__c)),AND ((ISBLANK(Bank_Account_Number__c)), NOT (ISBLANK(Bank_Name__c)))),  $RecordType.Name = &apos;Domestic Order&apos;)</errorConditionFormula>
+        <errorDisplayField>Bank_Name__c</errorDisplayField>
+        <errorMessage>If you select a Bank name you have to enter Bank Account Number. If you enter Bank Account Number you also have to choose Bank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>BillingAccountVSAccount</fullName>
+        <active>true</active>
+        <description>Verifies if selected BA belongs to correct Customer</description>
+        <errorConditionFormula>AND(Billing_Account__c != null,  Billing_Account__r.Account__c !=  Account__c )</errorConditionFormula>
+        <errorDisplayField>Billing_Account__c</errorDisplayField>
+        <errorMessage>Selected Billing Account belongs to different Customer</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CalculationChange</fullName>
+        <active>true</active>
+        <description>[PROV_STR] PROV_PL_304 CBCT</description>
+        <errorConditionFormula>IF(
+AND(ISCHANGED( Calculation_Number__c),
+NOT(ISPICKVAL( Status__c , &apos;New&apos;)),
+NOT(ISPICKVAL( Status__c , &apos;Rejected&apos;)),
+NOT(ISPICKVAL( Status__c , &apos;Order Entry&apos;)),
+NOT(ISPICKVAL( Status__c , &apos;Rejected Provisioning&apos;)))
+,true, false)</errorConditionFormula>
+        <errorMessage>You can not modify Calculation, when Order is in Provisioning.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cancellation_date_removal</fullName>
+        <active>true</active>
+        <description>Cancelation Date can be changed but not removed</description>
+        <errorConditionFormula>ISNULL(PRIORVALUE(Cancellation_Date__c)) = false &amp;&amp; ISNULL(Cancellation_Date__c) = true &amp;&amp; (ISPICKVAL( Status__c , &apos;In Cancellation&apos;) || ISPICKVAL( Status__c , &apos;Cancelled&apos;))</errorConditionFormula>
+        <errorDisplayField>Cancellation_Date__c</errorDisplayField>
+        <errorMessage>Cancelation Date can be changed but not removed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Change_Billing_Date_required_on_Close</fullName>
+        <active>true</active>
+        <description>Checks if Billing Date has been entered before closing</description>
+        <errorConditionFormula>AND(ISPICKVAL( Status__c , &apos;Completed&apos;), ISNULL( Change_Billing_Customer__c ), $RecordType.Name = &apos;Service Order&apos;)</errorConditionFormula>
+        <errorDisplayField>Change_Billing_Customer__c</errorDisplayField>
+        <errorMessage>Change Billing Customer Date is required when closing Order</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CheckBankAccountForPaymentMethod</fullName>
+        <active>true</active>
+        <description>If as a Payement method Direct debit has been selected then Bank name, Bank account number and limit can not be empty</description>
+        <errorConditionFormula>AND(PaymentMethod__r.Name = &apos;Direct Debit&apos; ,OR( ISNULL(Bank_Name__c) , ISNULL(Bank_Account_Number__c), ISNULL( Limit__c )),  $RecordType.Name = &apos;Domestic Order&apos;)</errorConditionFormula>
+        <errorDisplayField>PaymentMethod__c</errorDisplayField>
+        <errorMessage>If as a Payement method Direct debit has been selected then Bank name, Bank account number and limit can not be empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Email_Address_required_for_Delivery_Type</fullName>
+        <active>true</active>
+        <description>Email address must be given if Invoice Delivery EMAIL selected</description>
+        <errorConditionFormula>AND(OR( InvoiceDelivery__r.Value__c = &apos;EMAIL&apos;, InvoiceDelivery__r.Value__c = &apos;BOTH&apos;), ISBLANK( Invoice_Email__c ),  $RecordType.Name = &apos;Domestic Order&apos;)</errorConditionFormula>
+        <errorDisplayField>Invoice_Email__c</errorDisplayField>
+        <errorMessage>Please, provide email address for invoice delivery</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>HU_BillingFrom_Validation</fullName>
+        <active>true</active>
+        <description>Billing From Value on Existing BA and Order should be the same</description>
+        <errorConditionFormula>AND( 
+TEXT(Billing_Account__r.Billed_From__c) != TEXT(Billed_From__c), 
+NOT(ISBLANK( Billing_Account__c )), 
+GTS_Location__c = &apos;GTS Hungary&apos; 
+)</errorConditionFormula>
+        <errorMessage>Billed From value on selected Existing Billing Account should correspond to the one set on Order</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>If_Deposit_Required_is_checked</fullName>
+        <active>false</active>
+        <description>If Deposit Required is checked, Deposit Amount and Deposit Maturity Date can&apos;t be blank.</description>
+        <errorConditionFormula>AND((Deposit_Required__c=true),((ISBLANK(Deposit_Amount__c)) || (ISBLANK(Deposit_Maturity_Date__c))))</errorConditionFormula>
+        <errorMessage>If Deposit Required is checked, Deposit Amount and Deposit Maturity Date can not be blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>It_is_not_possible_to_modify</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (  $Profile.Name &lt;&gt;&quot;Intl. Operations Director&quot;,  not(isnull(Request__c)), PRIORVALUE(GTSCommitedDate__c) &lt;&gt;GTSCommitedDate__c,not(isnull( PRIORVALUE( GTSCommitedDate__c))))</errorConditionFormula>
+        <errorDisplayField>GTSCommitedDate__c</errorDisplayField>
+        <errorMessage>It´s not possible to change GTS commitedDate again after was filled. The permission to do that have just users with INOC Director profile</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Modification_of_Deposits_fields</fullName>
+        <active>false</active>
+        <description>If Status not equals: &apos;New&apos;, &apos;Budgetary Quotation&apos; or &apos;Firm Quotation&apos;, fields: &apos;Deposit Required&apos;, &apos;Deposit Amount&apos; and &apos;Deposit Maturity Date&apos; are read only.</description>
+        <errorConditionFormula>AND(AND( 
+NOT( ISPICKVAL(Status__c, &apos;New&apos;)), 
+NOT( ISPICKVAL(Status__c, &apos;Budgetary Quotation&apos;)), 
+NOT( ISPICKVAL(Status__c, &apos;Firm Quotation&apos;))) 
+, 
+OR( 
+ISCHANGED(Deposit_Required__c), 
+ISCHANGED(Deposit_Amount__c), 
+ISCHANGED(Deposit_Maturity_Date__c)) 
+)</errorConditionFormula>
+        <errorMessage>If Status not equals: &apos;New&apos;, &apos;Budgetary Quotation&apos; or &apos;Firm Quotation&apos;, fields: &apos;Deposit Required&apos;, &apos;Deposit Amount&apos; and &apos;Deposit Maturity Date&apos; can not be changed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Start_Billing_Date_required_on_Close</fullName>
+        <active>false</active>
+        <description>Checks if Billing Date has been entered before closing</description>
+        <errorConditionFormula>AND(ISPICKVAL( Status__c , &apos;Completed&apos;), ISNULL( Start_Billing_Customer__c ), $RecordType.Name = &apos;New Installation&apos;)</errorConditionFormula>
+        <errorDisplayField>Start_Billing_Customer__c</errorDisplayField>
+        <errorMessage>Start Billing Customer Date is required when closing Order</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>CancelOrder</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Cancel Order</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var ordStatus = &apos;{!COrder__c.Status__c}&apos;;
+var ordType = &apos;{!COrder__c.OrderType__c}&apos;;
+var ordId = &apos;{!COrder__c.Id}&apos;;
+var proceed_with_cancel = false;
+
+var validation_result = sforce.apex.execute(&quot;IntegrationOrder&quot;,&quot;validateCancel&quot;, {ordId:ordId, ordType:ordType, ordStatus:ordStatus });
+
+if(validation_result != null){
+if(validation_result[0] == &apos;OK&apos;){
+proceed_with_cancel = true;
+} else if(validation_result[0] == &apos;QA&apos;){
+if(confirm(validation_result[1])){
+proceed_with_cancel = true;
+}
+} else if(validation_result[0] == &apos;ERR&apos;){
+alert(validation_result[1]);
+}
+}
+
+if(proceed_with_cancel == true){
+var result = sforce.apex.execute(&quot;IntegrationOrder&quot;,&quot;processCancel&quot;, {ordId:ordId, ordType:ordType, ordStatus:ordStatus });
+if(result[0] == &apos;OK&apos;){
+alert(result[1]);
+location.reload(true);
+} else if(result[0] == &apos;TRNSFR&apos;){
+window.top.location.href = &quot;https://&quot; + window.top.location.host + result[1];
+} else {
+alert(result[1]);
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Cancel_Order</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Cancel Order</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/OrderSummaryPage?OrdId={!COrder__c.Id}&amp;RetId={!COrder__c.Id}&amp;bAcct=1&amp;bBAcct=1&amp;bOrdr=1&amp;bPrice=1&amp;bContr=1&amp;bCfg=1&amp;nActType=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Contract</fullName>
+        <availability>online</availability>
+        <description>button for creating agreements, annexes, service orders</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create Contract</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.location.href = &apos;apex/CreateNewContract?orderId={!COrder__c.Id}&apos;;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Quotation</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create Quotation</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var result = sforce.connection.query(&quot;select Id, Line_Type__c from OpportunityLineItem where OpportunityId = &apos;{!Opportunity.Id}&apos; and isDeleted = false and Assigned_to_Order__c = false&quot;); 
+//var result2 = sforce.connection.query(&quot;select Id, Financial_Status__c, Financial_Status__r.Value__c, Financial_Status__r.Name from Account where Id = &apos;{!Opportunity.AccountId}&apos;&quot;); 
+
+
+var products = result.getArray(&apos;records&apos;); 
+//var accounts = result2.getArray(&apos;records&apos;); 
+//var type = &quot;{!Opportunity.Type_Details__c}&quot;; 
+//var financialStatus = &apos;&apos;; 
+//if(accounts[0].Financial_Status__c != null){ 
+//	financialStatus = accounts[0].Financial_Status__r.Value__c; 
+//	} 
+//var proceed = true; 
+
+//if(financialStatus == &quot;S4&quot; || financialStatus == &quot;S4R&quot; || financialStatus == &quot;S5&quot; || financialStatus == &quot;S5R&quot; || financialStatus == &quot;KF&quot;){ 
+//	proceed = false; 
+//	alert(&apos;This Customer is blocked due to Financial Status (&apos; + accounts[0].Financial_Status__r.Name + &apos;). Order creation is not possible for this Status&apos;); 
+//} 
+
+//if(proceed){ 
+if(products.length == 0){ 
+alert(&apos;Either there are no Opportunity Products or all have already generated Orders. Please check.&apos;); 
+} else { 
+if (products.length == 1 &amp;&amp; products[0].Line_Type__c != &apos;New Service&apos; &amp;&amp; products[0].Line_Type__c != &apos;Service Migration&apos; &amp;&amp; products[0].Line_Type__c != &apos;Numbers Transfer&apos; &amp;&amp; products[0].Line_Type__c != &apos;Partial Numbers Transfer&apos; ) { 
+var oppId = &quot;{!Opportunity.Id}&quot;; 
+var validation_result = sforce.apex.execute(&quot;OrderAutoCreate&quot;,&quot;create&quot;, {OpportunityId:oppId}); 
+if(validation_result[0]== &apos;OK&apos;){ 
+location.reload(true); 
+} else { 
+alert(validation_result[1]); 
+} 
+} else { 
+window.location.href = &quot;https://&quot; + window.location.host + &quot;/apex/CreateOrderWizard?id={!Opportunity.Id}&quot;; 
+} 
+} 
+//}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_from_Opportunity_Data</fullName>
+        <availability>online</availability>
+        <description>Creates Order using Opportunity Data</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create Order</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var result = sforce.connection.query(&quot;select Id from OpportunityLineItem where OpportunityId = &apos;{!Opportunity.Id}&apos; and isDeleted = false&quot;);
+
+
+// ProductInstanceId__c
+//alert(&apos;{!OpportunityLineItem.Asset__c}&apos;);
+
+var products = result.getArray(&apos;records&apos;)
+
+if(products.length == 0){ 
+alert(&apos;Please add at least one Offer before creating an Order!&apos;);
+} else {
+var res = confirm(&quot;This will create a new Order. Do you want to continue?&quot;);
+
+if(res){
+
+var oppid = &quot;{!Opportunity.Id}&quot;;
+var quotation= &quot;false&quot;;
+
+sforce.apex.execute(&quot;OrderAutoCreate&quot;,&quot;create&quot;, {OpportunityId:oppid, isQuotation: quotation}); 
+
+//reload the current page 
+window.location.href = window.location.href; 
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Generate_Contract</fullName>
+        <availability>online</availability>
+        <description>Generates Contract from the Template</description>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Generate Contract</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.gtsenergis.pl/media/gtsenergis_pl.gif#filename.xxx</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Generate_Protocol</fullName>
+        <availability>online</availability>
+        <description>Generate Acceptance Protocol</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate Protocol</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.location.href = &apos;apex/CreateNewAcceptanceProtocol?orderId={!COrder__c.Id}&apos;;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Get_Invoicing_Address</fullName>
+        <availability>online</availability>
+        <description>Retrieves invoicing address from OSS</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Set Invoicing Address</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>function getRandomNum(lbound, ubound) 
+{ 
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound); 
+} 
+
+function getRandomChar() 
+{ 
+var numberChars = &quot;0123456789&quot;; 
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;; 
+var charSet = numberChars + alphaChars; 
+
+return charSet.charAt(getRandomNum(0, charSet.length)); 
+} 
+
+function getPassword(length) 
+{ 
+var pass = &quot;&quot;; 
+length++; 
+
+if (length &gt; 0) pass = pass + getRandomChar(); 
+
+for (var idx = 1; idx &lt; length; ++idx) 
+{ 
+pass = pass + getRandomChar(); 
+} 
+return pass; 
+} 
+
+var arr = window.parent.location.href.split(&quot;/&quot;); 
+var arr2 = arr[3].split(&quot;?&quot;); 
+var id = arr2[0]; 
+var str_password = getPassword(24); 
+
+window.top.location.href = &quot;https://&quot; + window.top.location.host + &quot;/apex/GetAddressFromOSS?objid=&quot; + id + &quot;&amp;hashId=&quot; + str_password;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Domestic_Order</fullName>
+        <availability>online</availability>
+        <description>Starts New Domestic Order creation</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Domestic Order</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/16.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/16.0/apex.js&quot;)} 
+
+var sRequest = &apos;{!CTask__c.RequestId__c}&apos;;
+
+if(sRequest != null &amp;&amp; sRequest != &apos;&apos;){
+window.location.href = &quot;https://&quot; + window.location.host + &quot;/apex/NewDomesticOrder?id={!CTask__c.Id}&amp;req_id={!CTask__c.RequestId__c}&quot;;
+} else {
+alert(&apos;Creation of Domestic Orders is allowed only from Costing Tasks created from Request!&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Select_Existing_Billing_Account</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Select Existing Billing Account</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.location.href = &apos;apex/SelectExistingBillingAccount?orderId={! COrder__c.Id }&apos;;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_to_Provisioning</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send to Order Entry/Provisioning</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var ordStatus = &apos;{!COrder__c.Status__c}&apos;;
+var ordType = &apos;{!COrder__c.OrderType__c}&apos;;
+var ordId = &apos;{!COrder__c.Id}&apos;;
+var proceed_with_submit = false;
+
+var validation_result = sforce.apex.execute(&quot;IntegrationOrder&quot;,&quot;validateSubmit&quot;, {ordId:ordId, ordType:ordType, ordStatus:ordStatus }); 
+
+if(validation_result != null){
+if(validation_result[0] == &apos;OK&apos;){
+proceed_with_submit = true;
+} else if(validation_result[0] == &apos;QA&apos;){
+if(confirm(validation_result[1])){
+proceed_with_submit = true;
+}
+} else if(validation_result[0] == &apos;ERR&apos;){
+alert(validation_result[1]);
+} 
+}
+
+if(proceed_with_submit == true){
+var result = sforce.apex.execute(&quot;IntegrationOrder&quot;,&quot;processSubmit&quot;, {ordId:ordId, ordType:ordType, ordStatus:ordStatus }); 
+if(result[0] == &apos;OK&apos;){
+alert(result[1]);
+location.reload(true);
+} else if(result[0] == &apos;TRNSFR&apos;){
+window.top.location.href = &quot;https://&quot; + window.top.location.host + result[1];
+} else {
+alert(result[1]);
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Transfer_Order_Lines</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Transfer Order Lines</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.location.href = &apos;apex/TransferOrderLines?orderId={! COrder__c.Id }&apos;;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Update_Order</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Update Order(s)</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)} 
+
+var caseId = &apos;{!Case.Id}&apos;; 
+
+var records = {!GETRECORDIDS($ObjectType.COrder__c)}; 
+
+if (records.length == 0) { 
+alert(&apos;You need to select at least one Order.&apos;); 
+} else { 
+var resultString = sforce.apex.execute(&quot;IntegrationOCTT_Extension&quot;,&quot;UpdateOrder&quot;, {ticketCrmId: caseId, orders: records}); 
+alert(resultString); 
+location.reload(true); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>View_Hierarchy</fullName>
+        <availability>online</availability>
+        <description>Displays Order Hierarchy</description>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>View Hierarchy</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>www.google.pl</url>
+    </webLinks>
+    <webLinks>
+        <fullName>View_Summary</fullName>
+        <availability>online</availability>
+        <description>Opens Summary Page for Order</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>View Summary</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/OrderSummaryPage?OrdId={!COrder__c.Id}&amp;RetId={!COrder__c.Id}&amp;bAcct=1&amp;bBAcct=1&amp;bOrdr=1&amp;bPrice=1&amp;bContr=1&amp;bCfg=1&amp;nActType=1</url>
+    </webLinks>
+</CustomObject>

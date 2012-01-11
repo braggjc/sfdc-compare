@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Contract Agreement stores information to be placed in printed version of Contract.</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Address</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Assigned_Telephone_Number__c</fullName>
+        <description>Telephone number assigned to the Subscriber by the Provider for the Service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Telephone number assigned to the Subscriber by the Provider for the Service</inlineHelpText>
+        <label>Assigned Telephone Number</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CContract__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract (custom)</label>
+        <referenceTo>CContract__c</referenceTo>
+        <relationshipLabel>Contract Agreements</relationshipLabel>
+        <relationshipName>Contract_Agreements</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Company_Name__c</fullName>
+        <description>Surname (Name of company)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Surname (Name of company)</inlineHelpText>
+        <label>Name / Company Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Connection_Bandwidth__c</fullName>
+        <externalId>false</externalId>
+        <label>Connection Bandwidth</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Term__c</fullName>
+        <externalId>false</externalId>
+        <formula>CContract__r.ContractTerm__c</formula>
+        <label>Contract Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Contract Agreements</relationshipLabel>
+        <relationshipName>Contract_Agreements</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Final_Provisions__c</fullName>
+        <externalId>false</externalId>
+        <label>Final Provisions</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>IP_VPN_Access__c</fullName>
+        <description>GTS Slovakia access node</description>
+        <externalId>false</externalId>
+        <inlineHelpText>GTS Slovakia access node</inlineHelpText>
+        <label>IP VPN Access</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>IP_VPN_Address__c</fullName>
+        <description>Site of installation (address)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Site of installation (address)</inlineHelpText>
+        <label>IP VPN Address</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>IP_VPN_Bandwidth__c</fullName>
+        <externalId>false</externalId>
+        <label>IP VPN Bandwidth</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IP_VPN_Connection__c</fullName>
+        <description>Means of connection</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Means of connection</inlineHelpText>
+        <label>IP VPN Connection</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>IP_VPN_Interface__c</fullName>
+        <externalId>false</externalId>
+        <label>IP VPN Interface</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>IP_VPN_Other_Parameters__c</fullName>
+        <externalId>false</externalId>
+        <label>IP VPN Other Parameters</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Invoicing_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoicing Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Contract Agreements</relationshipLabel>
+        <relationshipName>Contract_Agreements</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Invoicing_Street__c</fullName>
+        <externalId>false</externalId>
+        <formula>Invoicing_Address__r.Street_1__c &amp;&quot; &quot;&amp; Invoicing_Address__r.Street_2__c &amp;&quot; &quot;&amp; Invoicing_Address__r.Street_No__c</formula>
+        <label>Invoicing Street</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoicing_Town__c</fullName>
+        <externalId>false</externalId>
+        <formula>Invoicing_Address__r.City__c</formula>
+        <label>Invoicing Town</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoicing_ZIP__c</fullName>
+        <externalId>false</externalId>
+        <formula>Invoicing_Address__r.Postal_Code__c</formula>
+        <label>Invoicing ZIP</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Local_contract_number__c</fullName>
+        <externalId>false</externalId>
+        <formula>CContract__r.Local_contract_number__c</formula>
+        <label>Local contract number</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Parameters__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Parameters</label>
+        <length>2000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Point_A_Access_Node__c</fullName>
+        <description>Point A - GTS Slovakia access node</description>
+        <externalId>false</externalId>
+        <label>Point A Access Node</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Point_A_Address__c</fullName>
+        <description>Point A - site of installation (address)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Point A - site of installation (address)</inlineHelpText>
+        <label>Point A Address</label>
+        <length>500</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Point_A_Connection__c</fullName>
+        <description>Point A - means of connection</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Point A - means of connection</inlineHelpText>
+        <label>Point A Connection</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Point_A_Data_Interface__c</fullName>
+        <description>Point A interface – data services</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Point A interface – data services</inlineHelpText>
+        <label>Point A Data Interface</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Point_A_Phone_Interface__c</fullName>
+        <description>Point A interface – telephone services</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Point A interface – telephone services</inlineHelpText>
+        <label>Point A Phone Interface</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Point_B_Access_Node__c</fullName>
+        <description>Point B - GTS Slovakia access node</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Point B - GTS Slovakia access node</inlineHelpText>
+        <label>Point B Access Node</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Point_B_Address__c</fullName>
+        <description>Point B - site of installation (address)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Point B - site of installation (address)</inlineHelpText>
+        <label>Point B Address</label>
+        <length>500</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Point_B_Connection__c</fullName>
+        <description>Point B - means of connection</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Point B - means of connection</inlineHelpText>
+        <label>Point B Connection</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Point_B_Interface__c</fullName>
+        <description>Point B - interface</description>
+        <externalId>false</externalId>
+        <label>Point B Interface</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Provider_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Provider Address</label>
+        <length>500</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Provider_Banking_Instruction__c</fullName>
+        <description>Bank name and bank account number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bank name and bank account number</inlineHelpText>
+        <label>Provider Banking Instruction</label>
+        <length>500</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Provider_Company_Register__c</fullName>
+        <description>Provider registered in the Companies&apos; Register (from Provider&apos;s Country Related Data)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provider registered in the Companies&apos; Register (from Provider&apos;s Country Related Data)</inlineHelpText>
+        <label>Provider Company Register</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Provider_Company_Registration_ID__c</fullName>
+        <description>Company registration number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Company registration number</inlineHelpText>
+        <label>Provider Company Registration ID</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Provider_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Provider Email</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Provider_Fax__c</fullName>
+        <externalId>false</externalId>
+        <label>Provider Fax</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Provider_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Provider Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Provider_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Provider Phone</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Provider_Representing_Person__c</fullName>
+        <externalId>false</externalId>
+        <formula>CContract__r.CompanySigned__r.FirstName &amp;&quot; &quot;&amp; CContract__r.CompanySigned__r.LastName</formula>
+        <label>Provider Representing Person</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Provider_Signed_By__c</fullName>
+        <externalId>false</externalId>
+        <formula>CContract__r.CompanySigned__r.FirstName &amp;&quot; &quot;&amp; CContract__r.CompanySigned__r.LastName</formula>
+        <label>Provider Signed By</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Provider_Signed_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(CContract__r.CompanySignedDate__c)</formula>
+        <label>Provider Signed Date</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Provider_Tax_Registration_ID__c</fullName>
+        <description>VAT Number from Provider&apos;s Country Related data</description>
+        <externalId>false</externalId>
+        <inlineHelpText>VAT Number from Provider&apos;s Country Related data</inlineHelpText>
+        <label>Provider Tax Registration ID</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Special_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Special Terms</label>
+        <length>7000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Address__c</fullName>
+        <externalId>false</externalId>
+        <formula>CContract__r.Billing_Street_1__c &amp;
+
+
+IF (NOT(ISBLANK(CContract__r.Billing_Street_2__c)),&apos; &apos;&amp;CContract__r.Billing_Street_2__c ,&apos;&apos;) 
+
+
+
+&amp;&quot; &quot;&amp; CContract__r.Billing_Street_No__c &amp;&quot;, &quot;&amp; CContract__r.Billing_City__c &amp;&quot;, &quot; &amp; CContract__r.Billing_Postal__c &amp;
+
+
+
+IF (NOT(ISBLANK(CContract__r.Billing_State_Province__c)),&apos; &apos;&amp;CContract__r.Billing_State_Province__c,&apos;&apos;)
+
+
+
+
+&amp;&quot;, &quot;&amp;TEXT(CContract__r.Billing_Country__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Subscriber Address</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Banking_Instruction__c</fullName>
+        <externalId>false</externalId>
+        <formula>CContract__r.Account__r.BankName__r.Name  &amp;&quot;, &quot;&amp;  CContract__r.Account__r.Bank_account_number__c</formula>
+        <label>Subscriber Banking Instruction</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Company_Register__c</fullName>
+        <description>Provider registered in the Companies&apos; Register (from Provider&apos;s Country Related Data)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provider registered in the Companies&apos; Register (from Provider&apos;s Country Related Data)</inlineHelpText>
+        <label>Subscriber Company Register</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Company_Registration_ID__c</fullName>
+        <description>Supscriber&apos;s Company registration number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Supscriber&apos;s Company registration number</inlineHelpText>
+        <label>Subscriber Company Registration ID</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Subscriber Email</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Fax__c</fullName>
+        <externalId>false</externalId>
+        <formula>CContract__r.Account__r.Fax</formula>
+        <label>Subscriber Fax</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Financial_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Subscriber Financial Contact</label>
+        <length>500</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Name__c</fullName>
+        <description>Registration Customer Name</description>
+        <externalId>false</externalId>
+        <formula>CContract__r.Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Registration Customer Name</inlineHelpText>
+        <label>Subscriber Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>CContract__r.Account__r.Phone</formula>
+        <label>Subscriber Phone</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Representing_Person_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>CContract__r.CustomerSignedTitle__c</formula>
+        <label>Subscriber Representing Person Title</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Representing_Person__c</fullName>
+        <externalId>false</externalId>
+        <formula>CContract__r.CustomerSigned__r.FirstName &amp;&quot; &quot;&amp; CContract__r.CustomerSigned__r.LastName</formula>
+        <label>Subscriber Representing Person</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Sales_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Subscriber Sales Contact</label>
+        <length>500</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Signed_By__c</fullName>
+        <externalId>false</externalId>
+        <formula>CContract__r.CustomerSigned__r.FirstName &amp;&quot; &quot;&amp; CContract__r.CustomerSigned__r.LastName</formula>
+        <label>Subscriber Signed By</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Signed_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(CContract__r.CustomerSignedDate__c)</formula>
+        <label>Subscriber Signed Date</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Signed_In__c</fullName>
+        <externalId>false</externalId>
+        <formula>CContract__r.Billing_City__c</formula>
+        <label>Subscriber Signed In</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Signed_Title__c</fullName>
+        <externalId>false</externalId>
+        <formula>CContract__r.CustomerSignedTitle__c</formula>
+        <label>Subscriber Signed Title</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Tax_Registration_ID__c</fullName>
+        <description>VAT Number from Subscriber&apos;s Country Related Data</description>
+        <externalId>false</externalId>
+        <inlineHelpText>VAT Number from Subscriber&apos;s Country Related Data</inlineHelpText>
+        <label>Subscriber Tax Registration ID</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subscriber_Technical_Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Subscriber Technical Contact</label>
+        <length>500</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Telephone_Directory__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Customer agrees with publication of telephone numbers and other data in telephone directories</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer agrees with publication of telephone numbers and other data in telephone directories</inlineHelpText>
+        <label>Telephone Directory</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Telephone_Numbers__c</fullName>
+        <externalId>false</externalId>
+        <label>Telephone Numbers</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Type_Of_Circuit__c</fullName>
+        <externalId>false</externalId>
+        <label>Type Of Circuit</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type_Of_Service__c</fullName>
+        <externalId>false</externalId>
+        <label>Type Of Service</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Direct Voice-Public Telephone Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internet Access-Connection to Internet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leased Line-Lease of Data Circuits</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP VPN-Virtual Private Data Network</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Free Phone-Supp. Telephone Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shared Cost-Supp. Telephone Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Voice_Channels__c</fullName>
+        <description>Number of voice channels</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of voice channels</inlineHelpText>
+        <label>Voice Channels</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Voice_Service__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Voice Service</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Contract Agreement</label>
+    <nameField>
+        <label>Contract Agreement</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Contract Agreements</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Generate_English_PDF</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate English PDF</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.location.href = &apos;apex/GenerateContractAgreementEnglishPDF?id={!Contract_Agreement__c.Id}&apos;;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Generate_Slovak_PDF</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate Slovak PDF</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.location.href = &apos;apex/GenerateContractAgreementSlovakPDF?id={!Contract_Agreement__c.Id}&apos;;</url>
+    </webLinks>
+</CustomObject>

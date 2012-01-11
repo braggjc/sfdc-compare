@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores relation between Components and Generic Products under them</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Bundle__c</fullName>
+        <description>Relation to Main Product. Legacy field. Not used.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Main Product. Legacy field. Not used.</inlineHelpText>
+        <label>Bundle</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Component Generic Products</relationshipLabel>
+        <relationshipName>Component_Generic_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CBundle__c</fullName>
+        <externalId>false</externalId>
+        <label>Bundle</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Component Generic Products</relationshipLabel>
+        <relationshipName>Component_Generic_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Component_ID__c</fullName>
+        <description>Component Record Id for which relationship is created</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Component Record Id for which relationship is created</inlineHelpText>
+        <label>Component</label>
+        <referenceTo>Component__c</referenceTo>
+        <relationshipLabel>Component Generic Products</relationshipLabel>
+        <relationshipName>ComponentGenericProducts</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <trackHistory>false</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Component_Label_English__c</fullName>
+        <description>Related Component&apos;s display label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>Component_ID__r.Label_Eng__c</formula>
+        <inlineHelpText>Related Component&apos;s display label in the language specified.</inlineHelpText>
+        <label>Component Label (English)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Component_Label_Hungarian__c</fullName>
+        <description>Related Component&apos;s display label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>Component_ID__r.Label_HUN__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Related Component&apos;s display label in the language specified.</inlineHelpText>
+        <label>Component Label (Hungarian)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Component_Label_Polish__c</fullName>
+        <description>Related Component&apos;s display label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>Component_ID__r.Label_POL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Related Component&apos;s display label in the language specified.</inlineHelpText>
+        <label>Component Label (Polish)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Component_Label_Slovak__c</fullName>
+        <description>Related Component&apos;s display label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>Component_ID__r.Label_SVK__c</formula>
+        <inlineHelpText>Related Component&apos;s display label in the language specified.</inlineHelpText>
+        <label>Component Label (Slovak)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this item has been created in Billing system (during Bundle synchronization)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this item has been created in Billing system (during Bundle synchronization)</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GenericProduct_ID__c</fullName>
+        <description>Generic Product  Record Id for which relationship is created</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Generic Product  Record Id for which relationship is created</inlineHelpText>
+        <label>Generic Product</label>
+        <referenceTo>Generic_Product__c</referenceTo>
+        <relationshipLabel>Component Generic Products</relationshipLabel>
+        <relationshipName>ComponentGenericProducts</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <trackHistory>false</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Generic_Product_Label_English__c</fullName>
+        <description>Related Generic Product&apos;s display label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>GenericProduct_ID__r.Label_Eng__c</formula>
+        <inlineHelpText>Related Generic Product&apos;s display label in the language specified.</inlineHelpText>
+        <label>Generic Product Label (English)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generic_Product_Label_Hungarian__c</fullName>
+        <description>Related Generic Product&apos;s display label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>GenericProduct_ID__r.Label_HUN__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Related Generic Product&apos;s display label in the language specified.</inlineHelpText>
+        <label>Generic Product Label (Hungarian)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generic_Product_Label_Polish__c</fullName>
+        <description>Related Generic Product&apos;s display label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>GenericProduct_ID__r.Label_POL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Related Generic Product&apos;s display label in the language specified.</inlineHelpText>
+        <label>Generic Product Label (Polish)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generic_Product_Label_Slovak__c</fullName>
+        <description>Related Generic Product&apos;s display label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>GenericProduct_ID__r.Label_SVK__c</formula>
+        <inlineHelpText>Related Generic Product&apos;s display label in the language specified.</inlineHelpText>
+        <label>Generic Product Label (Slovak)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Child__c</fullName>
+        <description>Describes the number of GenericProduct children that can be selected during order configuration
+(Null value will disable this restriction)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describes the number of GenericProduct children that can be selected during order configuration
+(Null value will disable this restriction)</inlineHelpText>
+        <label>Max Child</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Copy_No__c</fullName>
+        <description>Describes the maximum number of copies of Generic Product on Component
+(Null value will specifiy the GenericProduct which can not be cloned on the Component)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Describes the maximum number of copies of Generic Product on Component
+(Null value will specifiy the GenericProduct which can not be cloned on the Component)</inlineHelpText>
+        <label>Max Copies No</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sequence__c</fullName>
+        <description>Defines order in which this item will be displayed in Product Configurator.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines order in which this item will be displayed in Product Configurator.</inlineHelpText>
+        <label>Sequence</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Unique Relationship identifier which can be used for data synchronization between diferent systems</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Unique Relationship identifier which can be used for data synchronization between diferent systems</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Synchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies whether the GP - especially PhoneLine has been created in Billing or not. (because the GP are in context of bundle, that wy the flag is on this relationship object);</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this definiton matches a definition in Billing system.</inlineHelpText>
+        <label>Synchronized</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Tariff_Requirement__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies whether the Tariffs has to be configured for GP (phoneLine) or not - added in SK RECOVERY Project</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies whether the Tariffs has to be configured for GP (phoneLine) or not</inlineHelpText>
+        <label>Tariff Requirement</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <label>Component Generic Product</label>
+    <nameField>
+        <label>Component Generic Product Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Component Generic Products</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

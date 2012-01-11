@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Bandwidth__c</fullName>
+        <description>Bandwidth</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bandwidth</inlineHelpText>
+        <label>Bandwidth</label>
+        <length>25</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CBCT_Calculation__c</fullName>
+        <description>CBCT Calculation</description>
+        <externalId>false</externalId>
+        <formula>Calculation_Version__r.CBCT_Calculation__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>CBCT Calculation</inlineHelpText>
+        <label>CBCT Calculation</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calculation_Version__c</fullName>
+        <description>Relation to Calculation Version</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Calculation Version</inlineHelpText>
+        <label>Calculation Version</label>
+        <referenceTo>Calculation_Version__c</referenceTo>
+        <relationshipLabel>Calculation Tasks Pricing</relationshipLabel>
+        <relationshipName>Calculation_Tasks_Pricing</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Capex_One_off__c</fullName>
+        <description>Capex One-off from Task Pricing</description>
+        <externalId>false</externalId>
+        <formula>Task_Pricing__r.Capex_One__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Capex One-off from Task Pricing</inlineHelpText>
+        <label>Capex One-off</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Capex_Re_useable__c</fullName>
+        <description>Capex Re-useable from Task Pricing</description>
+        <externalId>false</externalId>
+        <formula>Task_Pricing__r.Capex_Re_useable__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Capex Re-useable from Task Pricing</inlineHelpText>
+        <label>Capex Re-useable</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract_Length__c</fullName>
+        <description>Contract Length from Task Pricing</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Task_Pricing__r.Contract_Length__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Contract Length from Task Pricing</inlineHelpText>
+        <label>Contract Length</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Currency__c</fullName>
+        <description>Currency from Task Pricing</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Task_Pricing__r.CurrencyIsoCode)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Currency from Task Pricing</inlineHelpText>
+        <label>Currency</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Medium__c</fullName>
+        <description>Medium</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Medium</inlineHelpText>
+        <label>Medium</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opex_Monthly__c</fullName>
+        <description>Opex Monthly from Task Pricing</description>
+        <externalId>false</externalId>
+        <formula>Task_Pricing__r.Opex_Monthly__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Opex Monthly from Task Pricing</inlineHelpText>
+        <label>Opex Monthly</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opex_One_off__c</fullName>
+        <description>Opex One-off from Task Pricing</description>
+        <externalId>false</externalId>
+        <formula>Task_Pricing__r.Opex_One_Off__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Opex One-off from Task Pricing</inlineHelpText>
+        <label>Opex One-off</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <description>Product Name from Request</description>
+        <externalId>false</externalId>
+        <formula>Request__r.Product__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Product Name from Request</inlineHelpText>
+        <label>Product Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request__c</fullName>
+        <description>Related Request</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Request</inlineHelpText>
+        <label>Request</label>
+        <referenceTo>Request__c</referenceTo>
+        <relationshipLabel>Calculation Tasks Pricing</relationshipLabel>
+        <relationshipName>Calculation_Tasks_Pricing</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Task_Pricing__c</fullName>
+        <description>Related Task Pricing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Task Pricing</inlineHelpText>
+        <label>Task Pricing</label>
+        <referenceTo>CTask_Pricing__c</referenceTo>
+        <relationshipLabel>Calculation Tasks Pricing</relationshipLabel>
+        <relationshipName>Calculation_Tasks_Pricing</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Task__c</fullName>
+        <description>Related Task</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Task</inlineHelpText>
+        <label>Task</label>
+        <referenceTo>CTask__c</referenceTo>
+        <relationshipLabel>Calculation Tasks Pricing</relationshipLabel>
+        <relationshipName>Calculation_Tasks_Pricing</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>Calculation Task Pricing</label>
+    <nameField>
+        <label>Calculation Task Pricing  Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Calculation Tasks Pricing</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

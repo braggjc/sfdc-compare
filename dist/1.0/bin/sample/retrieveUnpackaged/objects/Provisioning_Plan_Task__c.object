@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Task Definition object</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>BH_Id__c</fullName>
+        <description>Business Hours object. This field is filled when calculating due dates.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Business Hours object. This field is filled when calculating due dates.</inlineHelpText>
+        <label>BH Id</label>
+        <referenceTo>BusinessHours</referenceTo>
+        <relationshipName>Provisioning_Plan_Tasks</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BH_Number__c</fullName>
+        <description>This field stores information about number of Business Hours in Business Day. This field is filled when calculating due dates.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field stores information about number of Business Hours in Business Day. This field is filled when calculating due dates.</inlineHelpText>
+        <label>BH_Number</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Circuit_Data__c</fullName>
+        <description>Details of OSS Circuit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Details of OSS Circuit</inlineHelpText>
+        <label>Circuit Data</label>
+        <referenceTo>Circuit_Data__c</referenceTo>
+        <relationshipLabel>Provisioning Plan Tasks</relationshipLabel>
+        <relationshipName>Provisioning_Plan_Tasks</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Circuit_GP__c</fullName>
+        <externalId>false</externalId>
+        <label>Circuit GP</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Circuit_ID__c</fullName>
+        <description>Id of OSS Circuit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Id of OSS Circuit</inlineHelpText>
+        <label>Circuit ID</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Circuit_Id_OSS_Link__c</fullName>
+        <description>con3: 
+HYPERLINK(&apos;http://dione1.gtsgroup.cz/sand_box/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c) 
+test: 
+HYPERLINK(&apos;http://dione1.gtsgroup.cz/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c) 
+prod: 
+HYPERLINK(&apos;http://dione1.gtsgroup.cz/idengine/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c)</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;http://dione1.gtsgroup.cz/idengine/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c)</formula>
+        <inlineHelpText>Link to Circuit in OSS</inlineHelpText>
+        <label>Circuit ID Link</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CompleteByType__c</fullName>
+        <externalId>false</externalId>
+        <label>CompleteByType</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Received Plus SLA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Order Due Date</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Complete_without_Acceptance__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Indicates if Manual Task should be Completed without additional creators Acceptance</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Manual Task should be Completed without additional creators Acceptance</inlineHelpText>
+        <label>Complete without Acceptance</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Component__c</fullName>
+        <description>Component that should be sent to external system</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Component that should be sent to external system</inlineHelpText>
+        <label>Component</label>
+        <referenceTo>Component__c</referenceTo>
+        <relationshipLabel>Provisioning Plan Tasks</relationshipLabel>
+        <relationshipName>Provisioning_Plan_Tasks</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Costing_Task__c</fullName>
+        <description>Relation to Costing task for this provisioning task.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Costing task for this provisioning task.</inlineHelpText>
+        <label>Costing Task</label>
+        <referenceTo>CTask__c</referenceTo>
+        <relationshipLabel>Provisioning Plan Tasks</relationshipLabel>
+        <relationshipName>Provisioning_Plan_Tasks</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Delay_Calculation__c</fullName>
+        <externalId>false</externalId>
+        <label>Delay Calculation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Hours</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Hours</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Delay_Hours__c</fullName>
+        <description>Number of hours of delay after which Task will be started.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of hours of delay after which Task will be started.</inlineHelpText>
+        <label>Delay Hours</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Delay__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checked, Task will start after certain delay</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, Task will start after certain delay</inlineHelpText>
+        <label>Delay</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>GC_Interval__c</fullName>
+        <externalId>false</externalId>
+        <label>GC Interval</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generic_Product__c</fullName>
+        <description>Generic Product for Automatic Provisioning</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Generic Product for Automatic Provisioning</inlineHelpText>
+        <label>Generic Product</label>
+        <referenceTo>Generic_Product__c</referenceTo>
+        <relationshipLabel>Provisioning Plan Tasks</relationshipLabel>
+        <relationshipName>Provisioning_Plan_Tasks</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Initial_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Instance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this is definition or instance of the task</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this is definition or instance of the task</inlineHelpText>
+        <label>Instance</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Interval__c</fullName>
+        <externalId>false</externalId>
+        <label>Interval</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Line__c</fullName>
+        <description>Order Line, for which this Instance of Task has been configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order Line, for which this Instance of Task has been configured</inlineHelpText>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>Provisioning Plan Tasks</relationshipLabel>
+        <relationshipName>Provisioning_Plan_Tasks</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Circuit_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Parent Circuit ID</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Provisioning_Plan__c</fullName>
+        <externalId>false</externalId>
+        <label>Provisioning Plan</label>
+        <referenceTo>Provisioning_Plan__c</referenceTo>
+        <relationshipLabel>Provisioning Plan Tasks</relationshipLabel>
+        <relationshipName>Provisioning_Plan_Tasks</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>QueueName__c</fullName>
+        <description>Queue, that the Task should be assigned to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Queue, that the Task should be assigned to</inlineHelpText>
+        <label>Queue Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Billing CZ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing HU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing PL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing RO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Care HTS SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Construction Department SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Costing CZ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Costing HU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Costing PL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Costing RO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Costing SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Care Department SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Network Department SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Document Department SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Front Office Department SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU ADSL Disconnection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Billing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Collocation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Data</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU DialUp</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Domain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Fiber</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Hosted Exchange&amp;Webhosting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Mailhosting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Microwave</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Provisioning Verification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Sales Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Sales Support BA Verification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU SDH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Technical LTO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Voice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Implement Department SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP Department SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal Department SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Logistics Department SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketing SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NOC SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Off-net Procurement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product Department SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning Retail CZ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning Retail HU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning Retail PL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning Retail RO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning Retail SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning WS International CZ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning WS International HU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning WS International PL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning WS International RO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning WS International SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchasing Departement SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Support CZ</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Support HU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Support PL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Support RO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Support SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SK_Voice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Solution Engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Voice TDM Department SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VOIP Department SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wireless Department SK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Billing WS Voice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL Collocation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL Engineering Switch</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL Field Engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL HMS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL Infrastructure</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL IP Network</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL Logistics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL Order Entry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL Netcontracts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL Radio</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL SDH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Registration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Queue_Id__c</fullName>
+        <description>ID of selected Queue</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of selected Queue</inlineHelpText>
+        <label>Queue Id</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region_B_Name__c</fullName>
+        <description>Field stores Region Name retireved from OSS through GET TASKS FROM OSS functionality. [PROV]_PL_008: Geografical Task assigning to Queues
+[https://helpdeskce.in.gtsce.com/browse/CECOLSVII-67]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Region B Name retrieved from OSS</inlineHelpText>
+        <label>Region B Name</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region_Name__c</fullName>
+        <description>Field stores Region Name retireved from OSS through GET TASKS FROM OSS functionality. [PROV]_PL_008: Geografical Task assigning to Queues</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Region A Name retrieved from OSS</inlineHelpText>
+        <label>Region A Name</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Required_for_Close__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Required for Close</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SI_Interval__c</fullName>
+        <externalId>false</externalId>
+        <label>SI Interval</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SLA_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>SLA Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Business Hours</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hours</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>Source Record Id</label>
+        <length>32</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Start_at_Datetime__c</fullName>
+        <description>Exact datetime of Task execution start</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Exact datetime of Task execution start</inlineHelpText>
+        <label>Start at Datetime</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Start_at__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checked, Task will be started at given datetime</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, Task will be started at given datetime</inlineHelpText>
+        <label>Start at</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Task_Assignee__c</fullName>
+        <description>User, that should be assigned to Task after creation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User, that should be assigned to Task after creation</inlineHelpText>
+        <label>Task Assignee</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Provisioning_Plan_Tasks</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Task_Description__c</fullName>
+        <description>Description, that will appear on created Task</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description, that will appear on created Task</inlineHelpText>
+        <label>Task Description</label>
+        <length>10000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Task_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Task Name</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Sequence__c</fullName>
+        <externalId>false</externalId>
+        <label>Task Sequence</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Task Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Manual Provisioning (New Install)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manual Provisioning (Modification)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manual Provisioning (Suspension)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manual Provisioning (Reactivation)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manual Provisioning (Disconnection)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Update of CSR Database</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Automatic Provisioning</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Automatic Provisioning (ST)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Number Activation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phone Number Release</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP Activation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP Unregistration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Verification of Billing Account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing Account Creation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Update of Billing Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning Verification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OSS Provisioning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Update OSS Circuit Status</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OSS Technology Plan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Extranet profile creation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hardware Request (PL)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yellowpages (PL)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Set Start Billing Date</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Component Provisioning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manual Billing (HU)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Request to eWęgorz (PL)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP Gate (PL)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billing Disconnection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Update of Billing Products - Source Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Execute OSS Action</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Set OSS Action</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Work_Group__c</fullName>
+        <externalId>false</externalId>
+        <label>Work Group</label>
+        <referenceTo>Work_Group__c</referenceTo>
+        <relationshipLabel>Provisioning Plan Tasks</relationshipLabel>
+        <relationshipName>Provisioning_Plan_Tasks</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>Provisioning Plan Task</label>
+    <nameField>
+        <displayFormat>PPT{000000000}</displayFormat>
+        <label>Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Provisioning Plan Tasks</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Task_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Task_Sequence__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Initial_Status__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Assignee_or_Queue_Required</fullName>
+        <active>true</active>
+        <description>Either Assignee or Queue is required for Task definition</description>
+        <errorConditionFormula>OR( 
+AND( 
+NOT(ISBLANK( Task_Assignee__c )), 
+NOT(ISPICKVAL( QueueName__c, &apos;&apos;)) 
+) 
+)</errorConditionFormula>
+        <errorMessage>Either Assignee or Queue is required for Task definition</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Component_Required_for_OSS_Task</fullName>
+        <active>false</active>
+        <description>Verifies if component was provided for OSS Task</description>
+        <errorConditionFormula>AND( ISPICKVAL( Task_Type__c , &apos;OSS Provisioning&apos;) , ISBLANK( Component__c ))</errorConditionFormula>
+        <errorDisplayField>Component__c</errorDisplayField>
+        <errorMessage>Component is required for OSS Provisioning Task</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Costing_Task_only_on_instance</fullName>
+        <active>false</active>
+        <description>Relation to costing task can be filled in  only on task instance.</description>
+        <errorConditionFormula>NOT(Provisioning_Plan__r.Instance__c)  &amp;&amp; NOT(ISBLANK( Costing_Task__c ))</errorConditionFormula>
+        <errorDisplayField>Costing_Task__c</errorDisplayField>
+        <errorMessage>Relation to costing task can be filled in  only on task instance.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Delay_Calculation</fullName>
+        <active>false</active>
+        <description>If Delay is checked, Delay Calculation must be filled</description>
+        <errorConditionFormula>AND( Delay__c = true, 
+NOT(
+OR(
+ISPICKVAL(Delay_Calculation__c,&apos;Hours&apos;), ISPICKVAL(Delay_Calculation__c,&apos;Business Hours&apos;)
+)
+)
+)</errorConditionFormula>
+        <errorDisplayField>Delay_Calculation__c</errorDisplayField>
+        <errorMessage>Delay Calculation is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Delay_Hours</fullName>
+        <active>false</active>
+        <description>If Delay is checked, Delay Hours must be filled</description>
+        <errorConditionFormula>AND( Delay__c = true, OR(ISBLANK(Delay_Hours__c),Delay_Hours__c = 0, Delay_Hours__c = null))</errorConditionFormula>
+        <errorDisplayField>Delay_Hours__c</errorDisplayField>
+        <errorMessage>Delay Hours is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Due_Date_instance_only</fullName>
+        <active>true</active>
+        <description>Due Date can be set on instance only.</description>
+        <errorConditionFormula>AND(Provisioning_Plan__r.Instance__c = false,NOT(ISBLANK( Due_Date__c)))</errorConditionFormula>
+        <errorDisplayField>Due_Date__c</errorDisplayField>
+        <errorMessage>Due Date can be set on Provisioning Plan instance only.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Due_Date_past</fullName>
+        <active>true</active>
+        <description>Due Date can not be set in past.</description>
+        <errorConditionFormula>Due_Date__c &lt; NOW()</errorConditionFormula>
+        <errorDisplayField>Due_Date__c</errorDisplayField>
+        <errorMessage>Due Date can not be set in past.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GP_for_Automatic_Provisioning_Required</fullName>
+        <active>true</active>
+        <description>Verifies that for Automatic Provisioning Tasks GP vas provided</description>
+        <errorConditionFormula>AND( ISPICKVAL( Task_Type__c , &apos;Automatic Provisioning&apos;),  ISBLANK( Generic_Product__c ) )</errorConditionFormula>
+        <errorDisplayField>Generic_Product__c</errorDisplayField>
+        <errorMessage>Generic Product is Required for Automatic Provisioning Tasks</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>GP_for_Yellowpages_Required</fullName>
+        <active>false</active>
+        <description>Verifies that for Yellowpages (PL) Tasks GP vas provided</description>
+        <errorConditionFormula>AND( ISPICKVAL( Task_Type__c , &apos;Yellowpages (PL)&apos;), ISBLANK( Generic_Product__c ) )</errorConditionFormula>
+        <errorDisplayField>Generic_Product__c</errorDisplayField>
+        <errorMessage>Generic Product is required for Yellowpages automatic ta</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OSS_Task_not_in_Task_Plan</fullName>
+        <active>false</active>
+        <description>OSS Task can not be added to Task Plan</description>
+        <errorConditionFormula>AND(Provisioning_Plan__r.RecordTypeId = &apos;01220000000Lgac&apos;, ISPICKVAL(Task_Type__c,&apos;OSS Provisioning&apos;))</errorConditionFormula>
+        <errorDisplayField>Task_Type__c</errorDisplayField>
+        <errorMessage>OSS Provisioning task can not be added to Task Plan</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Start_at_Datetime</fullName>
+        <active>false</active>
+        <description>If &quot;Start at&quot; is checked, &quot;Start at Datetime&quot; must be filled.</description>
+        <errorConditionFormula>AND( Provisioning_Plan__r.Instance__c = true,Start_at__c = true, ISBLANK(Start_at_Datetime__c ))</errorConditionFormula>
+        <errorDisplayField>Start_at_Datetime__c</errorDisplayField>
+        <errorMessage>Start at Date time is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Start_at_Instance</fullName>
+        <active>false</active>
+        <description>&quot;Start at&quot; can be set only for Provisioning Plan instance.</description>
+        <errorConditionFormula>AND(Provisioning_Plan__r.Instance__c = false, OR( Start_at__c = true, NOT(ISBLANK(Start_at_Datetime__c))))</errorConditionFormula>
+        <errorMessage>Start Datetime of task can be set only on Provisioning Plan instance.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Start_at_or_Delay</fullName>
+        <active>false</active>
+        <description>Only one option is vaid - either Start at or Delay</description>
+        <errorConditionFormula>AND(Provisioning_Plan__r.Instance__c = true,Delay__c = true,Start_at__c = true)</errorConditionFormula>
+        <errorMessage>Only one option can be selected - either &quot;Delay&quot; or &quot;Start at&quot;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Start_at_past</fullName>
+        <active>false</active>
+        <description>&quot;Start at&quot; can not be set in past</description>
+        <errorConditionFormula>AND(Provisioning_Plan__r.Instance__c = true,Start_at_Datetime__c &lt;= NOW())</errorConditionFormula>
+        <errorDisplayField>Start_at_Datetime__c</errorDisplayField>
+        <errorMessage>Start at Datetime must be in future</errorMessage>
+    </validationRules>
+</CustomObject>

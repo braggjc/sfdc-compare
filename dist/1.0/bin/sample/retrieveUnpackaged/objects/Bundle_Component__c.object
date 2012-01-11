@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Bundle_Label_English__c</fullName>
+        <description>Related Bundle&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>CBundle__r.Label_Eng__c</formula>
+        <inlineHelpText>Related Bundle&apos;s label in the language specified.</inlineHelpText>
+        <label>Bundle Label (English)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Label_Hungarian__c</fullName>
+        <description>Related Bundle&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>CBundle__r.Label_HUN__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Related Bundle&apos;s label in the language specified.</inlineHelpText>
+        <label>Bundle Label (Hungarian)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Label_Polish__c</fullName>
+        <description>Related Bundle&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>CBundle__r.Label_POL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Related Bundle&apos;s label in the language specified.</inlineHelpText>
+        <label>Bundle Label (Polish)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Label_Slovak__c</fullName>
+        <description>Related Bundle&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>CBundle__r.Label_SVK__c</formula>
+        <inlineHelpText>Related Bundle&apos;s label in the language specified.</inlineHelpText>
+        <label>Bundle Label (Slovak)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle__c</fullName>
+        <description>Relation to Main Product.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Main Product.</inlineHelpText>
+        <label>Bundle</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Bundle Components</relationshipLabel>
+        <relationshipName>Bundle_Components</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CBundle__c</fullName>
+        <description>Relation to Bundle.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Bundle.</inlineHelpText>
+        <label>Bundle</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Bundle Components</relationshipLabel>
+        <relationshipName>Bundle_Components</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Component_Label_English__c</fullName>
+        <description>Related Coponent&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>Component__r.Label_Eng__c</formula>
+        <inlineHelpText>Related Coponent&apos;s label in the language specified.</inlineHelpText>
+        <label>Component Label (English)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Component_Label_Hungarian__c</fullName>
+        <description>Related Coponent&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>Component__r.Label_HUN__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Related Coponent&apos;s label in the language specified.</inlineHelpText>
+        <label>Component Label (Hungarian)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Component_Label_Polish__c</fullName>
+        <description>Related Coponent&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>Component__r.Label_POL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Related Coponent&apos;s label in the language specified.</inlineHelpText>
+        <label>Component Label (Polish)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Component_Label_Slovak__c</fullName>
+        <description>Related Coponent&apos;s label in the language specified.</description>
+        <externalId>false</externalId>
+        <formula>Component__r.Label_SVK__c</formula>
+        <inlineHelpText>Related Coponent&apos;s label in the language specified.</inlineHelpText>
+        <label>Component Label (Slovak)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Component__c</fullName>
+        <description>Relation to Component.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Component.</inlineHelpText>
+        <label>Component</label>
+        <referenceTo>Component__c</referenceTo>
+        <relationshipLabel>Bundle Components</relationshipLabel>
+        <relationshipName>Bundle_Components</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Created in Billing</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Order__c</fullName>
+        <description>DAVO field - it is required in Billing; Indicates the order on which component (in context of bundle) will be printed on invoice document</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the order on which component (in context of bundle) will be printed on invoice document</inlineHelpText>
+        <label>Invoice Order</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Count__c</fullName>
+        <description>Maximum occurence of Component on  Bundle.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximum occurence of Component on  Bundle.</inlineHelpText>
+        <label>Max Count</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Min_Count__c</fullName>
+        <description>Minimum occurence of the Component on Bundle; If  minCount=1, then component is mandatory</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Minimum occurence of the Component on Bundle; If  minCount=1, then component is mandatory</inlineHelpText>
+        <label>Min Count</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sequence__c</fullName>
+        <description>Defines order in which this item will be displayed in Product Configurator.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines order in which this item will be displayed in Product Configurator.</inlineHelpText>
+        <label>Sequence</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Synchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this definiton matches a definition in Billing system.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this definiton matches a definition in Billing system.</inlineHelpText>
+        <label>Synchronized</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Transaction_Synchronization__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Technical field used during synchronization wyth external systems.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field used during synchronization wyth external systems.</inlineHelpText>
+        <label>Transaction Synchronization</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Bundle Component</label>
+    <nameField>
+        <label>Bundle Component</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Bundle Components</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>check_minCount_vs_MaxCount</fullName>
+        <active>true</active>
+        <description>checks if min &lt;= max count</description>
+        <errorConditionFormula>Min_Count__c &gt; Max_Count__c</errorConditionFormula>
+        <errorDisplayField>Min_Count__c</errorDisplayField>
+        <errorMessage>The Min Count cannot be greater than Max Count</errorMessage>
+    </validationRules>
+</CustomObject>

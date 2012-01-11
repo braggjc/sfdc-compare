@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Align_to_Billing_Cycle__c</fullName>
+        <description>Indicates if Pricing Item should be aligned to Billing Cycle (sales means it will be selected during configuration)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Pricing Item should be aligned to Billing Cycle (sales means it will be selected during configuration)</inlineHelpText>
+        <label>Align to Billing Cycle</label>
+        <picklist>
+            <picklistValues>
+                <fullName>never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>always</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>sales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Attribute_Set_Type__c</fullName>
+        <description>Related Attribute Set Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Attribute Set Type</inlineHelpText>
+        <label>Attribute Set Type</label>
+        <referenceTo>Attribute_Set_Type__c</referenceTo>
+        <relationshipLabel>Pricing Items</relationshipLabel>
+        <relationshipName>Pricing_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Cycle_Number__c</fullName>
+        <description>Indicates number of Billing Cycle, to which Pricing Item should be aligned</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates number of Billing Cycle, to which Pricing Item should be aligned</inlineHelpText>
+        <label>Billing Cycle Number</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Cycle__c</fullName>
+        <description>Cycle in which item is charged in Billing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Cycle in which item is charged in Billing.</inlineHelpText>
+        <label>Billing Cycle</label>
+        <picklist>
+            <picklistValues>
+                <fullName>monthly</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>quarterly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>half year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>annual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Binding_Period__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Bindind Period for the Pricing Item. If Binding Period matches Contract Term the Pricing Item is available in Product Configurator.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bindind Period for the Pricing Item. If Binding Period matches Contract Term the Pricing Item is available in Product Configurator.</inlineHelpText>
+        <label>Binding Period</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_to_Synchronize__c</fullName>
+        <description>Technical field used by synchronization mechanism. Used in case of desynchronization. Stores name of the Bundle that contains this pricing item and should be synchronized.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field used by synchronization mechanism. Used in case of desynchronization. Stores name of the Bundle that contains this pricing item and should be synchronized.</inlineHelpText>
+        <label>Bundle to Synchronize</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this item has been created in Billing system (during Bundle synchronization)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this item has been created in Billing system (during Bundle synchronization)</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Description_CZE__c</fullName>
+        <description>Description displayed in Product Configurator</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description displayed in Product Configurator</inlineHelpText>
+        <label>Description (Czech)</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Description_GBR__c</fullName>
+        <description>Description displayed in Product Configurator</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description displayed in Product Configurator</inlineHelpText>
+        <label>Description (English)</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Description_HUN__c</fullName>
+        <description>Description displayed in Product Configurator</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description displayed in Product Configurator</inlineHelpText>
+        <label>Description (Hungarian)</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Description_POL__c</fullName>
+        <description>Description displayed in Product Configurator</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description displayed in Product Configurator</inlineHelpText>
+        <label>Description (Polish)</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Description_ROU__c</fullName>
+        <description>Description displayed in Product Configurator</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description displayed in Product Configurator</inlineHelpText>
+        <label>Description (Romanian)</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Description_SVK__c</fullName>
+        <description>Description displayed in Product Configurator</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description displayed in Product Configurator</inlineHelpText>
+        <label>Description (Slovak)</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Dimension_Dictionary__c</fullName>
+        <externalId>false</externalId>
+        <label>Dimension Dictionary</label>
+        <referenceTo>Dimension_Dictionary__c</referenceTo>
+        <relationshipLabel>Pricing Items</relationshipLabel>
+        <relationshipName>Pricing_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Financial_Product__c</fullName>
+        <description>Financial Product for this Pricing Item</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Financial Product for this Pricing Item</inlineHelpText>
+        <label>Financial Product</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Pricing Items (Financial Product)</relationshipLabel>
+        <relationshipName>Pricing_Items2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>Products will be marked with multipicklist field GTS Location (GTS Poland, GTS Slovakia etc. ) mainly to separate Products for SK and other countries</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please choose countires for this product</inlineHelpText>
+        <label>GTS_Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>InvoiceDescriptionENG__c</fullName>
+        <description>Pricing Item description that is printed on invoice.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pricing Item description that is printed on invoice.</inlineHelpText>
+        <label>Invoice Description (English)</label>
+        <length>384</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>InvoiceDescriptionSVK__c</fullName>
+        <description>Pricing Item description that is printed on invoice.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Pricing Item description that is printed on invoice.</inlineHelpText>
+        <label>Invoice Description (Slovak)</label>
+        <length>384</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Invoice_Description_HU__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoice Description (Hungarian)</label>
+        <length>383</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>InvoicingAhead__c</fullName>
+        <defaultValue>1</defaultValue>
+        <description>Number of months that should be invoiced ahead</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of months that should be invoiced ahead</inlineHelpText>
+        <label>Months to Bill Ahead</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoicing_Category__c</fullName>
+        <description>Invoicing Category for Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Invoicing Category for Billing</inlineHelpText>
+        <label>Invoicing Category</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Pricing Items (Invoicing Category)</relationshipLabel>
+        <relationshipName>Pricing_Items1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Invoicing_Name__c</fullName>
+        <description>Name, that should be visible on the Invoice</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name, that should be visible on the Invoice</inlineHelpText>
+        <label>Invoicing Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_CZE__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Czech)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_Eng__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (English)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_HUN__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Hungarian)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_POL__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Polish)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_ROU__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Romanian)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Label_SVK__c</fullName>
+        <description>Display label stored in the language specified.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display label stored in the language specified.</inlineHelpText>
+        <label>Label (Slovak)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_AST__c</fullName>
+        <description>Technical field which will remember the last related AST, which should be disconnected in Durian. The field will be automatically clean after succesfull synchronization</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field for synchronization with Billing</inlineHelpText>
+        <label>Last AST</label>
+        <referenceTo>Attribute_Set_Type__c</referenceTo>
+        <relationshipLabel>Pricing Items (Last AST)</relationshipLabel>
+        <relationshipName>Pricing_Items1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MaximalDiscount__c</fullName>
+        <description>Maximal Discount percentage value that can be entered</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Maximal Discount percentage value that can be entered</inlineHelpText>
+        <label>Maximal Discount</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Type__c</fullName>
+        <description>How this price is billed (in advance, backwards)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How this price is billed (in advance, backwards)</inlineHelpText>
+        <label>Payment Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>in advance</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>backwards</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Previous_AST__c</fullName>
+        <description>Technical field, which stores the previously assigned AST</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field for synchronization with Billing</inlineHelpText>
+        <label>Previous AST</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Pricing_Item_For_Contract__c</fullName>
+        <description>Depending on value selected in this field, Pricing Item will be presented in certain part of printed Contract.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Depending on value selected in this field, Pricing Item will be presented in certain part of printed Contract.</inlineHelpText>
+        <label>Pricing Item For Contract</label>
+        <picklist>
+            <picklistValues>
+                <fullName>TEL_CONF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TEL_FEE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TEL_INS_SALE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TEL_RENT_FEE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Simplified_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Flag indicating if component will be displayed for Simplified Orders.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag indicating if component will be displayed for Simplified Orders.</inlineHelpText>
+        <label>Simplified Order</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Synchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this definiton matches a definition in Billing system.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this definiton matches a definition in Billing system.</inlineHelpText>
+        <label>Synchronized</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Temp_Label__c</fullName>
+        <description>Additional field for presenting Labels on PC definition page (VisualForce page RelatePricingItem); not filled;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tecnical field; not filled by users;</inlineHelpText>
+        <label>Temp Label</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>Type of Pricing Item (One-time Fee, Recurring Fee)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of Pricing Item (One-time Fee, Recurring Fee)</inlineHelpText>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>One-time Fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly Fee</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IntraCall</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Usage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Minimal Usage Fee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Credit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>UniqueName__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Tehcnical field used for validation of name field&apos;s uniqueness.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tehcnical field.</inlineHelpText>
+        <label>UniqueName</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Unit__c</fullName>
+        <description>Unit from SK Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unit from SK Billing</inlineHelpText>
+        <label>Unit</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Pricing Items (Unit)</relationshipLabel>
+        <relationshipName>Pricing_Items3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>VAT_Enum__c</fullName>
+        <description>Enumerator delivered by DAVO</description>
+        <externalId>false</externalId>
+        <inlineHelpText>VAT assigned by Billing</inlineHelpText>
+        <label>VAT</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Pricing Items</relationshipLabel>
+        <relationshipName>Pricing_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Valid_From__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <description>Date from which the Pricing Item is considered valid and appears in Product Configurator.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date from which the Pricing Item is considered valid and appears in Product Configurator.</inlineHelpText>
+        <label>Valid From</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Valid_To__c</fullName>
+        <defaultValue>Today()+365</defaultValue>
+        <description>Date until which the Pricing Item is considered valid and appears in Product Configurator</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date until which the Pricing Item is considered valid and appears in Product Configurator</inlineHelpText>
+        <label>Valid To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <label>Pricing Item</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Invoicing_Category__c</columns>
+        <columns>Attribute_Set_Type__c</columns>
+        <columns>Financial_Product__c</columns>
+        <columns>MaximalDiscount__c</columns>
+        <columns>VAT_Enum__c</columns>
+        <columns>InvoicingAhead__c</columns>
+        <columns>Unit__c</columns>
+        <columns>Dimension_Dictionary__c</columns>
+        <columns>Label_Eng__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>HU_Pricing_Items</fullName>
+        <columns>NAME</columns>
+        <columns>GTS_Location__c</columns>
+        <columns>Financial_Product__c</columns>
+        <columns>Label_Eng__c</columns>
+        <columns>Label_HUN__c</columns>
+        <columns>Label_POL__c</columns>
+        <columns>Unit__c</columns>
+        <columns>Valid_From__c</columns>
+        <columns>Valid_To__c</columns>
+        <columns>VAT_Enum__c</columns>
+        <columns>CURRENCY_ISO_CODE</columns>
+        <columns>Source_Record_Id__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>includes</operation>
+            <value>GTS Hungary</value>
+        </filters>
+        <label>HU_Pricing Items</label>
+    </listViews>
+    <nameField>
+        <displayFormat>PRI-{000000000}</displayFormat>
+        <label>Pricing Item Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Pricing Items</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Label_Eng__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Label_SVK__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Invoicing_Category__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Attribute_Set_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Financial_Product__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>MaximalDiscount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>VAT_Enum__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>InvoicingAhead__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Unit__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Label_Eng__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Label_SVK__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Attribute_Set_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Financial_Product__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Invoicing_Category__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>MaximalDiscount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Unit__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>VAT_Enum__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Label_Eng__c</searchFilterFields>
+        <searchFilterFields>Label_SVK__c</searchFilterFields>
+        <searchResultsAdditionalFields>Label_Eng__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Label_SVK__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Invoicing_Category__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>VAT_Enum__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Unit__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>MaximalDiscount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Financial_Product__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Attribute_Set_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CURRENCY_ISO_CODE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>DimensionDictionaryRequirement</fullName>
+        <active>false</active>
+        <errorConditionFormula>IF( ISBLANK(Dimension_Dictionary__c) , TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>Dimension_Dictionary__c</errorDisplayField>
+        <errorMessage>Dimension Dictionary is required in the Billing System!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TypeRequired</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( TEXT(Type__c)=&apos;&apos; ,TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>Type__c</errorDisplayField>
+        <errorMessage>Pricing Item Type has to be provided</errorMessage>
+    </validationRules>
+</CustomObject>

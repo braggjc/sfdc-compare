@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Tariffs configured for Service Bundle</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>CSR_ID__c</fullName>
+        <description>ID Of the Tariff in CSR Database</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID Of the Tariff in CSR Database</inlineHelpText>
+        <label>CSR ID</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Connection_Point__c</fullName>
+        <description>Indicates, whether the Tariff is for Incoming, Outgoing or Redirected traffic</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates, whether the Tariff is for Incoming, Outgoing or Redirected traffic</inlineHelpText>
+        <label>Connection Point</label>
+        <picklist>
+            <picklistValues>
+                <fullName>IN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OUT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>REDIR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Service_Bundle__c</fullName>
+        <description>Relation to Service Bundle, under which the Tariff was configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Service Bundle, under which the Tariff was configured</inlineHelpText>
+        <label>Service Bundle</label>
+        <referenceTo>ServiceBundle__c</referenceTo>
+        <relationshipLabel>Service Tariffs</relationshipLabel>
+        <relationshipName>Service_Tariffs</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Component__c</fullName>
+        <description>Relation to Service Component, under which the Tariff was configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Service Component, under which the Tariff was configured</inlineHelpText>
+        <label>Service Component</label>
+        <referenceTo>ServiceComponent__c</referenceTo>
+        <relationshipLabel>Service Tariffs</relationshipLabel>
+        <relationshipName>Service_Tariffs</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>ID from source system used during migration process</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID from source system used during migration process</inlineHelpText>
+        <label>Source Record ID</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Tariff__c</fullName>
+        <description>Relation to Tariff Definition</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Tariff Definition</inlineHelpText>
+        <label>Tariff</label>
+        <referenceTo>Tariff__c</referenceTo>
+        <relationshipLabel>Service Tariffs</relationshipLabel>
+        <relationshipName>Service_Tariffs</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>Service Tariff</label>
+    <nameField>
+        <displayFormat>STA{000000000}</displayFormat>
+        <label>Service Tariff</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Service Tariffs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

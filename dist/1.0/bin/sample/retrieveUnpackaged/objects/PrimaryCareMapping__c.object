@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <customSettingsVisibility>Protected</customSettingsVisibility>
+    <description>CARE_CZ_111 Primary_care_list</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>OCTT_Value__c</fullName>
+        <description>Value which should be send to OCTT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value which should be send to OCTT</inlineHelpText>
+        <label>OCTT Value</label>
+        <length>32</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>PrimaryCareMapping</label>
+</CustomObject>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>List of Directions available under specified Banding Model; only for Directions specified here it will be possible to define discounts</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Banding_Model_ID__c</fullName>
+        <description>BandingModel Record Id for which this Direction is available</description>
+        <externalId>false</externalId>
+        <inlineHelpText>BandingModel Record Id for which this Direction is available</inlineHelpText>
+        <label>BandingModel</label>
+        <referenceTo>Banding_Model__c</referenceTo>
+        <relationshipLabel>Directions</relationshipLabel>
+        <relationshipName>Directions</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Billing_ID__c</fullName>
+        <description>Id from Durian</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field for SK Billing</inlineHelpText>
+        <label>Billing ID</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Calendar_ID__c</fullName>
+        <description>ID of Calendar (TimeZone) in Billing System [PL specific information] 
+Implemented as a part of Release October (PRISRAII-42)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of Calendar (TimeZone) in Billing System [PL specific information]</inlineHelpText>
+        <label>Calendar ID</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Direction_ID__c</fullName>
+        <description>ID of Direction in Billing System [PL specific information] 
+Implemented as a part of Release October (PRISRAII-42)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of Direction in Billing System [PL specific information]</inlineHelpText>
+        <label>Direction ID</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name_SVK__c</fullName>
+        <description>Label</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Label</inlineHelpText>
+        <label>Name (SVK)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sequence_No__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Specifies the order in which Directions are displayed in Product Configurator - added in SK RECOVERY project</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the order in which Directions are displayed in Product Configurator</inlineHelpText>
+        <label>Sequence No</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Unique Source Record Id which can be used for data synchronization between different systems</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Unique Source Record Id which can be used for data synchronization between different systems</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>TimeZone__c</fullName>
+        <description>Time zone for this direction.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Time zone for this direction.</inlineHelpText>
+        <label>TimeZone</label>
+        <picklist>
+            <picklistValues>
+                <fullName>nerozlíšené</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>silné</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>slabé</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DuV silné</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DuV slabé</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DuV happy hour</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Unique_Direction_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Automatically Generated Direction ID (Direction ID + Calendar ID) used to verify uniqueness of this pair; Implemented as a part of Release October (PRISRAII-42)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Automatically Generated Direction ID (Direction ID + Calendar ID) used to verify uniqueness of this pair</inlineHelpText>
+        <label>Unique Direction ID</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Direction</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Directions</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>OBJECT_ID</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Banding_Model_ID__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OBJECT_ID</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Banding_Model_ID__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>OBJECT_ID</searchFilterFields>
+        <searchFilterFields>Banding_Model_ID__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Overrides View action</comment>
+        <content>SalesTypeOverride</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object used to define default Sales Type values for particular Lines of Business</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Line_of_Business__c</fullName>
+        <description>Line of Business for which given Sales Type should be applied</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Line of Business for which given Sales Type should be applied</inlineHelpText>
+        <label>Line of Business</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Sales Type Configuration</relationshipLabel>
+        <relationshipName>Sales_Type_Configuration</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Type__c</fullName>
+        <description>Type, that should be applied for given LOB</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type, that should be applied for given LOB</inlineHelpText>
+        <label>Sales Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RT*</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WS*</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <description>Relation to User, for whom given Sales Type is configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to User, for whom given Sales Type is configured</inlineHelpText>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Sales_Type_Configuration</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>Sales Type Configuration</label>
+    <nameField>
+        <displayFormat>STC{000000000}</displayFormat>
+        <label>Configuration ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Sales Type Configuration</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

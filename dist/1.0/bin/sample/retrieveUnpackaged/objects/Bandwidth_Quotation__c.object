@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>InDevelopment</deploymentStatus>
+    <description>Pricing for single Bandwidth selected on Request</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Bandwidth__c</fullName>
+        <description>Bandwidth</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bandwidth</inlineHelpText>
+        <label>Bandwidth</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_Recurring_Costs_1__c</fullName>
+        <description>Monthly Recurring Costs 1st column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Monthly Recurring Costs 1st column</inlineHelpText>
+        <label>Monthly Recurring Costs 1</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Recurring_Costs_2__c</fullName>
+        <description>Monthly Recurring Costs 2nd column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Monthly Recurring Costs 2nd column</inlineHelpText>
+        <label>Monthly Recurring Costs 2</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Recurring_Costs_3__c</fullName>
+        <description>Monthly Recurring Costs 3rd column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Monthly Recurring Costs 3rd column</inlineHelpText>
+        <label>Monthly Recurring Costs 3</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Recurring_Costs_5__c</fullName>
+        <description>Monthly Recurring Costs 5th column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Monthly Recurring Costs 5th column</inlineHelpText>
+        <label>Monthly Recurring Costs 5</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Recurring_Costs_6__c</fullName>
+        <description>Monthly Recurring Costs 6th column</description>
+        <externalId>false</externalId>
+        <label>Monthly Recurring Costs 6</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_Recurring_Costs_1__c</fullName>
+        <description>Non Recurring Costs 1st column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Non Recurring Costs 1st column</inlineHelpText>
+        <label>Non Recurring Costs 1</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_Recurring_Costs_2__c</fullName>
+        <description>Non Recurring Costs 2nd column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Non Recurring Costs 2nd column</inlineHelpText>
+        <label>Non Recurring Costs 2</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_Recurring_Costs_3__c</fullName>
+        <description>Non Recurring Costs 3rd column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Non Recurring Costs 3rd column</inlineHelpText>
+        <label>Non Recurring Costs 3</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_Recurring_Costs_5__c</fullName>
+        <description>Non Recurring Costs 5th column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Non Recurring Costs 5th column</inlineHelpText>
+        <label>Non Recurring Costs 5</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Non_Recurring_Costs_6__c</fullName>
+        <description>Non Recurring Costs 6th column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Non Recurring Costs 6th column</inlineHelpText>
+        <label>Non Recurring Costs 6</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Request_Quotation__c</fullName>
+        <description>Related Request Quotation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Request Quotation</inlineHelpText>
+        <label>Request Quotation</label>
+        <referenceTo>Request_Quotation__c</referenceTo>
+        <relationshipLabel>Pricings per Bandwidth</relationshipLabel>
+        <relationshipName>Bandwidths</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Selected_1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Selected 1st column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected 1st column</inlineHelpText>
+        <label>Selected 1</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Selected_2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Selected 2nd column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected 2nd column</inlineHelpText>
+        <label>Selected 2</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Selected_3__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Selected 3rd column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected 3rd column</inlineHelpText>
+        <label>Selected 3</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Selected_5__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Selected 5th column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected 5th column</inlineHelpText>
+        <label>Selected 5</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Selected_6__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Selected 6th column</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected 6th column</inlineHelpText>
+        <label>Selected 6</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Pricing per Bandwidth</label>
+    <nameField>
+        <label>Description</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Pricings per Bandwidth</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

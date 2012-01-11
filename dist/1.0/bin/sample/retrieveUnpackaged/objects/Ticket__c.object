@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Tickets from external TT System</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Account related to the Ticket</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Tickets</relationshipLabel>
+        <relationshipName>Tickets</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CaseLink__c</fullName>
+        <description>Opens existing Case  in TT System</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://occe.gtsce.com/helpdesk/edit_tt.php?read_only=true&amp;ticket_id=&quot; &amp;  Name , &quot;Go to Case&quot; , &quot;_blank&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Opens existing Case  in TT System</inlineHelpText>
+        <label>Case Link</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ClosedDate__c</fullName>
+        <description>Date when Ticket was Closed</description>
+        <externalId>false</externalId>
+        <label>Closed Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CreatedDate__c</fullName>
+        <description>Date when Ticket was created</description>
+        <externalId>false</externalId>
+        <label>Created Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DepartmentName__c</fullName>
+        <description>Name of the Department</description>
+        <externalId>false</externalId>
+        <label>Department Name</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FailureDuration__c</fullName>
+        <description>Duration of Failure</description>
+        <externalId>false</externalId>
+        <label>Failure Duration</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service__c</fullName>
+        <description>Service Related to the Ticket</description>
+        <externalId>false</externalId>
+        <label>Service</label>
+        <referenceTo>ServiceComponent__c</referenceTo>
+        <relationshipLabel>Tickets</relationshipLabel>
+        <relationshipName>Tickets</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SolverName__c</fullName>
+        <description>Person, who solves the Ticket</description>
+        <externalId>false</externalId>
+        <label>Solver Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subject__c</fullName>
+        <description>Subject of the Ticket</description>
+        <externalId>false</externalId>
+        <label>Subject</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TicketStatus__c</fullName>
+        <description>Status of the Ticket</description>
+        <externalId>false</externalId>
+        <label>Ticket Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Close</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Postponed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TicketType__c</fullName>
+        <description>Type of the Ticket</description>
+        <externalId>false</externalId>
+        <label>Ticket Type</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Ticket</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Service__c</columns>
+        <columns>TicketType__c</columns>
+        <columns>Subject__c</columns>
+        <columns>TicketStatus__c</columns>
+        <columns>DepartmentName__c</columns>
+        <columns>SolverName__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>ClosedDate__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Ticket ID</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Tickets</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Service__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>TicketType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Subject__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>TicketStatus__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>DepartmentName__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SolverName__c</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Service__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>TicketType__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Subject__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>TicketStatus__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>DepartmentName__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SolverName__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Account__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>TicketType__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>DepartmentName__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SolverName__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>TicketStatus__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Account__c</searchFilterFields>
+        <searchFilterFields>DepartmentName__c</searchFilterFields>
+        <searchFilterFields>TicketType__c</searchFilterFields>
+        <searchFilterFields>TicketStatus__c</searchFilterFields>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Service__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TicketType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Subject__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>TicketStatus__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>DepartmentName__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SolverName__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Closed_Date_Required</fullName>
+        <active>true</active>
+        <description>Closed Date is Required when Status set to Closed</description>
+        <errorConditionFormula>ISPICKVAL( TicketStatus__c , &apos;Close&apos;)  &amp;&amp;  ISNULL( ClosedDate__c )</errorConditionFormula>
+        <errorDisplayField>ClosedDate__c</errorDisplayField>
+        <errorMessage>Closed Date is Required for Closed Status</errorMessage>
+    </validationRules>
+</CustomObject>

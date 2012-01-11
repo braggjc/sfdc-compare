@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Information about OSS Circuits</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Circuit_GP__c</fullName>
+        <externalId>false</externalId>
+        <label>Circuit GP</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>L1__c</fullName>
+        <externalId>false</externalId>
+        <label>L1</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>L2__c</fullName>
+        <externalId>false</externalId>
+        <label>L2</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LI_A__c</fullName>
+        <description>Logical Interface [A]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Logical Interface [A]</inlineHelpText>
+        <label>LI_A</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LI_B__c</fullName>
+        <description>Logical Interface [B]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Logical Interface [B]</inlineHelpText>
+        <label>LI_B</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NAME__c</fullName>
+        <description>Circuit Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Circuit Name</inlineHelpText>
+        <label>NAME</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NE_A__c</fullName>
+        <description>Network Element [A]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Network Element [A]</inlineHelpText>
+        <label>NE_A</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NE_B__c</fullName>
+        <description>Network Element [B]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Network Element [B]</inlineHelpText>
+        <label>NE_B</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OSS_Link__c</fullName>
+        <description>Opens Circuit Details in new window</description>
+        <externalId>false</externalId>
+        <formula>IF(  NOT(ISBLANK(Name)) , HYPERLINK(&apos;http://dione1.gtsgroup.cz/idengine/ce_ie_circ/open.htm?rec_id=&apos;+ Name + &apos;&amp;gp_id=&apos; +  Circuit_GP__c , &apos;Open OSS&apos;, &apos;_blank&apos;), &apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Opens Circuit Details in new window</inlineHelpText>
+        <label>OSS Link</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PI_A__c</fullName>
+        <description>Physical Interface [A]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Physical Interface [A]</inlineHelpText>
+        <label>PI_A</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PI_B__c</fullName>
+        <description>Physical Interface [B]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Physical Interface [B]</inlineHelpText>
+        <label>PI_B</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POP_A__c</fullName>
+        <description>Point of Presence [A]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Point of Presence [A]</inlineHelpText>
+        <label>POP_A</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POP_B__c</fullName>
+        <description>Point of Presence [B]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Point of Presence [B]</inlineHelpText>
+        <label>POP_B</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region_B_Name__c</fullName>
+        <description>Field stores Region Name retireved from OSS through GET TASKS FROM OSS functionality. [PROV]_PL_008: Geografical Task assigning to Queues [https://helpdeskce.in.gtsce.com/browse/CECOLSVII-67]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Region B Name retrieved from OSS</inlineHelpText>
+        <label>Region B Name</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region_Name__c</fullName>
+        <description>Field stores Region Name retireved from OSS through GET TASKS FROM OSS functionality. [PROV]_PL_008: Geografical Task assigning to Queues</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Region A Name retrieved from OSS</inlineHelpText>
+        <label>Region A Name</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SP_A__c</fullName>
+        <externalId>false</externalId>
+        <label>SP_A</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SP_B__c</fullName>
+        <externalId>false</externalId>
+        <label>SP_B</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>STATUS__c</fullName>
+        <externalId>false</externalId>
+        <label>STATUS</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TECHNOLOGY__c</fullName>
+        <description>Circuit Technology</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Circuit Technology</inlineHelpText>
+        <label>TECHNOLOGY</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Circuit Data</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Circuit_GP__c</columns>
+        <columns>NAME</columns>
+        <columns>NAME__c</columns>
+        <columns>OSS_Link__c</columns>
+        <columns>TECHNOLOGY__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Circuit ID</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Circuits Data</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Refresh_from_OSS</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Refresh from OSS</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>var circuitId = &apos;{!Circuit_Data__c.Id}&apos;;
+var result = sforce.apex.execute(&quot;ProvisioningPlanOSS&quot;,&quot;refreshCircuitDataFromOSS&quot;, {circuitId:circuitId} );
+
+if(result[0]!=&quot;OK&quot;){
+alert(&quot;ERROR: &quot;+result[1]);
+}
+else{
+//alert(&quot;OK&quot;);
+location.reload(true);
+}
+
+//{ordId:ordId, ordStatus:ordStatus, action:&apos;submit&apos;}</url>
+    </webLinks>
+</CustomObject>

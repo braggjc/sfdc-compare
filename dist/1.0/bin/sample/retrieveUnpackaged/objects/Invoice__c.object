@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>ShowInvoice</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>BA invoices</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Billing_Account__r.Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Balance__c</fullName>
+        <externalId>false</externalId>
+        <label>Balance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Billing Account</label>
+        <referenceTo>Billing_Accounts__c</referenceTo>
+        <relationshipName>Invoices</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Batch__c</fullName>
+        <externalId>false</externalId>
+        <label>External Agency</label>
+        <length>120</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Currency__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(CurrencyIsoCode)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Currency</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>20000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Document_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Name</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Document_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Payment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Number</label>
+        <length>40</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoiced_Amount_Formatted__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK( Invoiced_Amount__c ) , &apos;&apos;, 
+IF( OR(CONTAINS(TEXT(Invoiced_Amount__c ), &apos;.&apos;), CONTAINS(TEXT(Invoiced_Amount__c ), &apos;,&apos;)) , SUBSTITUTE(TEXT(Invoiced_Amount__c ) , &apos; &apos;, &apos;&apos;), SUBSTITUTE(TEXT(Invoiced_Amount__c ) , &apos; &apos;, &apos;&apos;) + &apos;.00&apos;) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Invoiced Amount</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoiced_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoiced Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Invoicing_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoicing Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Issue_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Issue Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Partial_Payment__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Partial Payment</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Maturity_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Maturity Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PDF__c</fullName>
+        <description>PDF attachment</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( Document_Type__c , &apos;FV&apos;), HYPERLINK(&apos;https://emea.salesforce.com/apex/viewBillingDocument?id=&apos; + Name, &apos;PDF&apos; , &apos;_blank&apos;), &apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>PDF attachment</inlineHelpText>
+        <label>PDF</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Paid_Amount_Formatted__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK( Paid__c ) , &apos;&apos;, 
+IF( OR(CONTAINS(TEXT(Paid__c ), &apos;.&apos;), CONTAINS(TEXT(Paid__c ), &apos;,&apos;)) , SUBSTITUTE(TEXT(Paid__c ) , &apos; &apos;, &apos;&apos;), SUBSTITUTE(TEXT(Paid__c ) , &apos; &apos;, &apos;&apos;) + &apos;.00&apos;) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Paid Amount</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Paid__c</fullName>
+        <externalId>false</externalId>
+        <label>Paid Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Document__c</fullName>
+        <externalId>false</externalId>
+        <label>Parent Document</label>
+        <referenceTo>Invoice__c</referenceTo>
+        <relationshipLabel>Billing Documents</relationshipLabel>
+        <relationshipName>Billing_Documents</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Paid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Paid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <label>Billing Document</label>
+    <nameField>
+        <label>Document ID</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Billing Documents</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Generate_Report</fullName>
+        <availability>online</availability>
+        <description>Generates Report for BA</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate Report</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>window.open(&apos;https://cs2.salesforce.com/00OR0000000jTrE?pv0={!Billing_Accounts__c.Id}&apos;, &apos;_blank&apos;);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Get_PDF</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Get PDF</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://emea.salesforce.com/servlet/servlet.FileDownload?file=015T00000003a9U</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Request_Duplicate</fullName>
+        <availability>online</availability>
+        <description>Requests duplicate for selected Invoice</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Request Duplicate</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var records = {!GETRECORDIDS( $ObjectType.Invoice__c)}; 
+if (records.length != 1){ 
+alert(&apos;Please select exactly one Invoice to request Duplicate&apos;); 
+} else { 
+
+var result = sforce.connection.query(&quot;select Id, Document_Type__c, Billing_Account__c, Billing_Account__r.Name, Name from Invoice__c where Id = &apos;&quot; + records [0] + &quot;&apos;&quot;); 
+
+var invoices = result.getArray(&apos;records&apos;); 
+var docType = invoices[0].Document_Type__c; 
+var billingAccount = invoices[0].Billing_Account__r.Name; 
+var invoiceNum = invoices[0].Name; 
+
+if(docType != &apos;Invoice&apos; &amp;&amp; docType != &apos;FV&apos;){ 
+alert(&apos;Duplicate can be requested only for Invoice&apos;); 
+} else { 
+
+result = sforce.apex.execute(&quot;InvoiceManagement&quot;,&quot;requestDuplicate&quot;, {sBillingAccountID:billingAccount,sInvoiceID:invoiceNum}); 
+
+if (result==&apos;OK&apos;){ 
+alert(&apos;Request for new Duplicate succesfuly sent to Billing System&apos;); 
+window.location.href = window.location.href; 
+}else{ 
+alert(&apos;Request for duplicate was not sent: &apos;+result); 
+} 
+
+} 
+}</url>
+    </webLinks>
+</CustomObject>

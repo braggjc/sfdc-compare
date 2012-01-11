@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Service Component. Part of Service Bundle</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Address__c</fullName>
+        <description>Installation Address of the Service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Installation Address of the Service</inlineHelpText>
+        <label>Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>BillingEndDate__c</fullName>
+        <description>Date when the service has been terminated for Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when the service has been terminated for Billing</inlineHelpText>
+        <label>Billing End Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BillingStartDate__c</fullName>
+        <description>Date, when Billing for this Component was started</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when Billing for this Component was started</inlineHelpText>
+        <label>Billing Start Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BillingStatus__c</fullName>
+        <description>Status of this Component in Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of this Component in Billing System</inlineHelpText>
+        <label>Billing Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Preparation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Billed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Suspend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Billing_ID__c</fullName>
+        <description>External ID from Billing</description>
+        <externalId>true</externalId>
+        <label>Billing ID</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CSR_Id__c</fullName>
+        <description>ID of Service Component in CSR database</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of Service Component in CSR database</inlineHelpText>
+        <label>CSR Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CancelReason__c</fullName>
+        <description>Description of the reason, why the component was cancelled</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of the reason, why the component was cancelled</inlineHelpText>
+        <label>Cancel Reason</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Circuit_ID__c</fullName>
+        <description>Value of Circuit ID from Attributes under this Service Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Circuit ID from Attributes under this Service Component</inlineHelpText>
+        <label>Circuit ID</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Circuit_Id_OSS_Link__c</fullName>
+        <description>con3:
+HYPERLINK(&apos;http://dione1.gtsgroup.cz/sand_box/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c)
+test:
+HYPERLINK(&apos;http://dione1.gtsgroup.cz/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c)
+prod:
+HYPERLINK(&apos;http://dione1.gtsgroup.cz/idengine/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c)</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;http://dione1.gtsgroup.cz/idengine/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Circuit ID Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <description>Additional information provided by Technical Team</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional information provided by Technical Team</inlineHelpText>
+        <label>Comment</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ComponentDescription__c</fullName>
+        <description>Additional Description for Service Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional Description for Service Component</inlineHelpText>
+        <label>ComponentDescription</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Component__c</fullName>
+        <description>Relation to Component Definition</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Component Definition</inlineHelpText>
+        <label>Component</label>
+        <referenceTo>Component__c</referenceTo>
+        <relationshipLabel>Service Components</relationshipLabel>
+        <relationshipName>Service_Components</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CreatedBy__c</fullName>
+        <description>Creator of Service Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Creator of Service Component</inlineHelpText>
+        <label>Created By</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CreatedWhen__c</fullName>
+        <description>Date and time when Service Component was created</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date and time when Service Component was created</inlineHelpText>
+        <label>Created When</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_OCTT__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates whether Service Component has already been created in OCTT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether Service Component has already been created in OCTT</inlineHelpText>
+        <label>Created in OCTT</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EndDate__c</fullName>
+        <description>Date, when the service has been terminated technically (i.e. either switched to status Disconnected or Cancelled)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when the service has been terminated technically (i.e. either switched to status Disconnected or Cancelled)</inlineHelpText>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Full_ID__c</fullName>
+        <description>ID of Service Bundle used in migration process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of Service Bundle used in migration process</inlineHelpText>
+        <label>Full ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTS_Company_lookup__c</fullName>
+        <description>Indicates, whether one of GTSes is owner of this Service Bundle</description>
+        <externalId>false</externalId>
+        <formula>IF(ServiceBundle__r.Account__r.GTS_Company__c = true,&quot;Yes&quot;,&quot;No&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Indicates, whether one of GTSes is owner of this Service Bundle</inlineHelpText>
+        <label>GTS Company</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Link_to_OCTT__c</fullName>
+        <description>Direct Link to Service Component in OCTT System</description>
+        <externalId>false</externalId>
+        <formula>if(Created_in_OCTT__c, 
+if( $Organization.Id=&apos;00D200000008d5u&apos;,HYPERLINK(&quot;https://occe.gtsce.com/occe2cat/component/efind/SFDC/&quot; &amp; Full_ID__c , &quot;Click here&quot;, &quot;_blank&quot;), 
+HYPERLINK(&quot; https://demo.in.gtsgroup.cz/occe2cat/component/efind/SFDC/&quot; &amp; Full_ID__c , &quot;Click here&quot; , &quot;_blank&quot;)),&quot;&quot;)</formula>
+        <inlineHelpText>Direct Link to Service Component in OCTT System</inlineHelpText>
+        <label>Link to OCTT</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LocalReference__c</fullName>
+        <description>Reference to corresponding Service Bundle in Local System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reference to corresponding Service Bundle in Local System</inlineHelpText>
+        <label>Service ID / Local Reference</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LocalServiceName__c</fullName>
+        <description>Name of the Service from Local System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the Service from Local System</inlineHelpText>
+        <label>Local Service Name</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ModifiedBy__c</fullName>
+        <description>Last Modifier of the Service Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last Modifier of the Service Component</inlineHelpText>
+        <label>Modified By</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ModifiedWhen__c</fullName>
+        <description>Date and Time when Service Component was last modified</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date and Time when Service Component was last modified</inlineHelpText>
+        <label>Modified When</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Provider__c</fullName>
+        <description>Indicates GTS Country, that is provider of this Service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates GTS Country, that is provider of this Service</inlineHelpText>
+        <label>Provider</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SLAType__c</fullName>
+        <description>Type of SLA applicable for this Service Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of SLA applicable for this Service Component</inlineHelpText>
+        <label>SLA Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Plus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TOP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ServiceBundle__c</fullName>
+        <description>Relation to Service Bundle containing this Service Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Service Bundle containing this Service Component</inlineHelpText>
+        <label>Service Bundle</label>
+        <referenceTo>ServiceBundle__c</referenceTo>
+        <relationshipLabel>Service Components</relationshipLabel>
+        <relationshipName>Service_Components</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ServiceType__c</fullName>
+        <description>Type of the Service (relation to Product Component)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of the Service (relation to Product Component)</inlineHelpText>
+        <label>Service Type</label>
+        <referenceTo>ProductComponent__c</referenceTo>
+        <relationshipLabel>Service Components</relationshipLabel>
+        <relationshipName>Service_Components</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SourceRecordID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>ID of the Service Component from Local System</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of the Service Component from Local System</inlineHelpText>
+        <label>Source Record ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>SpecialConditions__c</fullName>
+        <description>If some special remarks toward service or SLA were specified, it should be stated here</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If some special remarks toward service or SLA were specified, it should be stated here</inlineHelpText>
+        <label>Special Conditions</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>StartDate__c</fullName>
+        <description>Date, when the component was technically started (i.e. switched to status Active)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when the component was technically started (i.e. switched to status Active)</inlineHelpText>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Status of the component, reflecting the lifecycle of the component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of the component, reflecting the lifecycle of the component</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Provisioning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Suspend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disconnected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ZDL_id__c</fullName>
+        <description>Service Component identifier to be used by PRW (PL specific information)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Service Component identifier to be used by PRW (PL specific information)</inlineHelpText>
+        <label>ZDL id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Service Component</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>StartDate__c</columns>
+        <columns>EndDate__c</columns>
+        <columns>Provider__c</columns>
+        <columns>Status__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>SC_PO</fullName>
+        <columns>NAME</columns>
+        <columns>LocalReference__c</columns>
+        <columns>SourceRecordID__c</columns>
+        <columns>LocalServiceName__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SourceRecordID__c</field>
+            <operation>startsWith</operation>
+            <value>SLO</value>
+        </filters>
+        <label>SC_PO</label>
+        <sharedTo/>
+    </listViews>
+    <nameField>
+        <displayFormat>SCM{000000000}</displayFormat>
+        <label>Component Reference</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Service Components</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>StartDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>EndDate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Provider__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>LocalReference__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>GTS_Company_lookup__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>StartDate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>EndDate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Provider__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <searchFilterFields>StartDate__c</searchFilterFields>
+        <searchFilterFields>EndDate__c</searchFilterFields>
+        <searchFilterFields>Provider__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>UPDATEDBY_USER</searchFilterFields>
+        <searchFilterFields>OBJECT_ID</searchFilterFields>
+        <searchFilterFields>Circuit_ID__c</searchFilterFields>
+        <searchFilterFields>LocalReference__c</searchFilterFields>
+        <searchResultsAdditionalFields>StartDate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>EndDate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Provider__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SourceRecordID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LocalReference__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ServiceBundle__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ServiceType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Billing_ID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CSR_Id__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Service_Type_Validation</fullName>
+        <active>false</active>
+        <description>Verifies if selected Product Component is Related to Correct Product</description>
+        <errorConditionFormula>AND((ServiceType__r.Product__c != ServiceBundle__r.BundleType__c),  NOT(ISBLANK(ServiceType__c)))</errorConditionFormula>
+        <errorDisplayField>ServiceType__c</errorDisplayField>
+        <errorMessage>Selected Service type is incorrect for related Bundle</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Service_Type_or_Component_Validation</fullName>
+        <active>true</active>
+        <description>Validates if either Service Type or Component has been selected</description>
+        <errorConditionFormula>ISBLANK(ServiceType__c) &amp;&amp; ISBLANK(Component__c)</errorConditionFormula>
+        <errorMessage>Service Type or Component is Required</errorMessage>
+    </validationRules>
+</CustomObject>

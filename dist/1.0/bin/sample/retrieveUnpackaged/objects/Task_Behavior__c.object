@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Date_Update__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Date Update</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>E_Mail_Workflow_Rule__c</fullName>
+        <externalId>false</externalId>
+        <label>E-Mail Workflow Rule</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Field_Update_Literal_Value__c</fullName>
+        <description>This is to be used as the string representation of any field update.  My guess is that we try various ways of casting this (expect string first, then cast as integer, then date, then date time) rather than using separate fields for each data type.</description>
+        <externalId>false</externalId>
+        <label>Field Update Literal Value</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Field_Update_Source_Field__c</fullName>
+        <externalId>false</externalId>
+        <label>Field Update Source Field</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Field_Update_Source_Object__c</fullName>
+        <externalId>false</externalId>
+        <label>Field Update Source Object</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Internal Service Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Netex Builder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OSP Builder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Special Pricing / ICB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>This Task</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Field_Update_Target_Field__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is used in conjunction with Task Behaviors that are Field Updates.</inlineHelpText>
+        <label>Field Update Target Field</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Field_Update_Target_Object__c</fullName>
+        <externalId>false</externalId>
+        <label>Field Update Target Object</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Internal Service Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Netex Builder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OSP Builder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Special Pricing / ICB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>This Task</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Location</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Provisioning_Plan_Task__c</fullName>
+        <externalId>false</externalId>
+        <label>Provisioning Plan Task</label>
+        <referenceTo>Provisioning_Plan_Task__c</referenceTo>
+        <relationshipLabel>Task Behaviors</relationshipLabel>
+        <relationshipName>Task_Behaviors</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>E-Mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Field Update</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Visualforce_Email_Template_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Visualforce Email Template ID</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Task Behavior</label>
+    <nameField>
+        <displayFormat>TB-{000000}</displayFormat>
+        <label>Task Behavior Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Task Behaviors</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

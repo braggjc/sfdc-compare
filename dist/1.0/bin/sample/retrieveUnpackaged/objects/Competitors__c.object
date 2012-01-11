@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Competitors, potential revenue data in relation to Customer Account.</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Agreement_End_Date__c</fullName>
+        <description>End Date of Agreement between Customer and Competitor</description>
+        <externalId>false</externalId>
+        <inlineHelpText>End Date of Agreement between Customer and Competitor</inlineHelpText>
+        <label>Agreement End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Competitor__c</fullName>
+        <description>Competitor Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Competitor Account</inlineHelpText>
+        <label>Competitor</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Competitors (Competitor)</relationshipLabel>
+        <relationshipName>Competitors1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer__c</fullName>
+        <description>Customer</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer</inlineHelpText>
+        <label>Customer</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Competitors</relationshipLabel>
+        <relationshipName>Competitors</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Line_of_Business__c</fullName>
+        <description>Line of Business</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Line of Business</inlineHelpText>
+        <label>Line of Business</label>
+        <picklist>
+            <picklistValues>
+                <fullName>VOICE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>INTERNET</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DATA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COLLOCATION</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOBILE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Potential_Revenue__c</fullName>
+        <description>Potential Monthly Revenue</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Potential Monthly Revenue</inlineHelpText>
+        <label>Monthly Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Remind_Before__c</fullName>
+        <description>How many month before Agreement End Date a reminder should be sent to Account Owner</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How many month before Agreement End Date a reminder should be sent to Account Owner</inlineHelpText>
+        <label>Remind Before</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <label>Competitor</label>
+    <nameField>
+        <displayFormat>CMP{000}</displayFormat>
+        <label>No</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Competitors</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Customer__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Competitor__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Line_of_Business__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Potential_Revenue__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Agreement_End_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Remind_Before__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Customer__c</searchFilterFields>
+        <searchFilterFields>Competitor__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

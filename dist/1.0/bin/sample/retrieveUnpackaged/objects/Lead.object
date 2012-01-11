@@ -1,0 +1,2072 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Account_Record_Type__c</fullName>
+        <description>Record Type for newly craeted Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Record Type for newly craeted Account</inlineHelpText>
+        <label>Account Record Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Company</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Residential</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Account_Validation__c</fullName>
+        <description>Coresponds to field on Account during conversion. Set automatically on Lead based on completness of Accout/Contact data required for proper creation of new Account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set automatically based on completness of Accout/Contact data.
+
+- Account Record Type
+- Company (Company/Partner)
+- ID Type
+- GTS Location
+- Segment (HOME=Residential)
+- First Name
+- Last Name
+- Email
+- Phone (Contact Phone or Mobile)
+- Mobile</inlineHelpText>
+        <label>Account Validation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Unverified</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Valid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invalid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_from_Lead__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Set corresponding field on newly created Account</description>
+        <externalId>false</externalId>
+        <label>Account from Lead</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AreaofInterest__c</fullName>
+        <externalId>false</externalId>
+        <label>Area of Interest</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Data</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Voice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Voice and Data</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>BusinessResidential__c</fullName>
+        <externalId>false</externalId>
+        <label>Business/Residential</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Residential</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CLLICode__c</fullName>
+        <externalId>false</externalId>
+        <label>CLLI Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Civil_Service__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Civil Service</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <description>Close Date for new Opportunity</description>
+        <externalId>false</externalId>
+        <label>Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_First_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact First Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Last_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Last Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Salutation__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Salutation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Mr.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ms.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mrs.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dr.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prof.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Correspondence_Address_OSS__c</fullName>
+        <description>Correspondence Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Correspondence Address from OSS</inlineHelpText>
+        <label>Correspondence Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Leads (Correspondence Address)</relationshipLabel>
+        <relationshipName>Leads1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CurrentLocalProvider__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Local Provider</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BellSouth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Business (none)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SBC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Verizon</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>DataProductRequested__c</fullName>
+        <externalId>false</externalId>
+        <label>Data Product Requested</label>
+        <picklist>
+            <picklistValues>
+                <fullName>T1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OC-48</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Frame Relay</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ATM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DSL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SONET</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>DistancetoCOkft__c</fullName>
+        <externalId>false</externalId>
+        <label>Distance to CO (kft)</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <description>Company email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Company email</inlineHelpText>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employees__c</fullName>
+        <externalId>false</externalId>
+        <label>Employees</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 - 4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 - 9</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - 19</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20 - 24</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>25 - 49</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>50 - 99</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>100 - 149</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>150 - 199</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>200 - 249</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>250 - 499</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>500 - 999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1000 - 1999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2000 - 2999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3000 - 3999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4000 - 4999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5000 - 9999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10000 - 19999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ExistingDataProvider__c</fullName>
+        <externalId>false</externalId>
+        <label>Existing Data Provider</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Provider 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provider 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provider 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ExistingLDProvider__c</fullName>
+        <externalId>false</externalId>
+        <label>Existing LD Provider</label>
+        <picklist>
+            <picklistValues>
+                <fullName>AT&amp;T</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MCI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SBC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sprint</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Verizon</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Worldcom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>GTS Location for new Opportunity. Currently it will always be GTS Slovakia</description>
+        <externalId>false</externalId>
+        <label>GTS Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Global</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Has_Address__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>To allow conversion of Lead to Account the chekbox Has Address on Account has to be marked even before the Address itself is added. This is due to validation rule preventing change of Account Validation to Valid if there is no Registration Address.</description>
+        <externalId>false</externalId>
+        <label>Has Address</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Identification_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>ID Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Identification_type__c</fullName>
+        <externalId>false</externalId>
+        <label>ID Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Company Registration Number</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EU VAT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tax ID</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Birth Number</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Name and Address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Industry</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Architectural Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Banks &amp; Financial Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chemistry &amp; Plastics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Economic &amp; Legal Advice</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Electricity &amp; Gas</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Electronics &amp; Optics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Entertainment &amp; Sports</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E-shop</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food &amp; Beverages</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food &amp; Lodging</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Glass &amp; Building Materials</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health &amp; Social Care</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information Systems &amp; Software</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Insurance Companies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leasing &amp; Rental</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketing &amp; Advertising</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Metallurgy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mining &amp; Quarrying</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Motor Vehicle Sales &amp; Servicing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-Profit Organizations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Financial Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Information Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Manufacturing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Professional Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Postal Services &amp; Logistics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Printing Works</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Production of Furniture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Production of Motor Vehicles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public Administration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Publishing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pumping Station</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Research &amp; Development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>State Institutions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Textiles &amp; Clothing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tobacco Products</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Transport &amp; Storage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Travel Agencies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TV &amp; Media Production</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Water Distribution &amp; Waste Disposal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wholesale &amp; Brokering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wood &amp; Paper Industry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>LATA__c</fullName>
+        <externalId>false</externalId>
+        <label>LATA</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LNPRequested__c</fullName>
+        <externalId>false</externalId>
+        <label>LNP Requested</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_By_Ext_Contact__c</fullName>
+        <description>Extranet User (SFDC Contact) which has modified record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Extranet User (SFDC Contact) which has modified record</inlineHelpText>
+        <label>Last Modified by Extranet Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Leads (Last Modified by Extranet Contact)</relationshipLabel>
+        <relationshipName>Leads1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_By_Ext_Txt__c</fullName>
+        <description>Extranet User (not represented in SFDC) which modified reord</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Extranet User (not represented in SFDC) which modified reord</inlineHelpText>
+        <label>Last Modified by Extranet</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Extranet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bought Database</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Close_Date__c</fullName>
+        <description>Planned date when Lead should be closed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Planned date when Lead should be closed</inlineHelpText>
+        <label>Lead Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lead_Notification_Email__c</fullName>
+        <defaultValue>&quot;izabela.krajewska-ciska@gtsenergis.pl&quot;</defaultValue>
+        <description>Field for storing email alias for Lead processing team. Dependant on GTS Location.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field for storing email alias for Lead processing team. Dependant on GTS Location.</inlineHelpText>
+        <label>Lead Notification Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Monthly Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>NACE__c</fullName>
+        <description>Statistical Classification of Economic Activities in the European Community, Rev. 2</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Statistical Classification of Economic Activities in the European Community, Rev. 2</inlineHelpText>
+        <label>NACE</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>NPA__c</fullName>
+        <externalId>false</externalId>
+        <label>NPA</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NXX__c</fullName>
+        <externalId>false</externalId>
+        <label>NXX</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Open_Lead_Date__c</fullName>
+        <description>Date when status of Lead is changed from Open</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when status of Lead is changed from Open</inlineHelpText>
+        <label>Open Lead Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opp_Close_Date__c</fullName>
+        <defaultValue>60</defaultValue>
+        <description>Number of days from current date (date of conversion) when Opportunity is planned to be Closed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of days from current date (date of conversion) when Opportunity is planned to be Closed.</inlineHelpText>
+        <label>Opp. Close Date in Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Description</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Record_Type__c</fullName>
+        <description>Record Type for newly craeted Opportunity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Record Type for newly craeted Opportunity</inlineHelpText>
+        <label>Opportunity Record Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Domestic</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Suspect</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Type_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Type Details</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New Service</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New Business</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Existing Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Leads (Partner Account)</relationshipLabel>
+        <relationshipName>Leads1</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Email__c</fullName>
+        <description>Email address from Partner Account which is related to Lead.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email address from Partner Account which is related to Lead.</inlineHelpText>
+        <label>Partner Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Partner_User__c</fullName>
+        <description>Relation to Partner User (Contact) who requested Lead creation</description>
+        <externalId>false</externalId>
+        <label>Partner User</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PrequalificationResult__c</fullName>
+        <externalId>false</externalId>
+        <label>Prequalification Result</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Definite</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waitlist</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Never</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Product 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product 4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product 5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product 6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product 7</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product 8</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PromotionCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Promotion Code</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RatePlanCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Rate Plan Code</label>
+        <picklist>
+            <picklistValues>
+                <fullName>A100001</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A100003</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>A100004</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rating</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Warm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Reason_Lost__c</fullName>
+        <description>Reason for closing Lead as Unqualified</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reason for closing Lead as Unqualified</inlineHelpText>
+        <label>Reason Lost</label>
+        <picklist>
+            <controllingField>Status</controllingField>
+            <picklistValues>
+                <fullName>Customer is not interested in GTS services</fullName>
+                <controllingFieldValues>Unqualified</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Time Limit Exceeded</fullName>
+                <controllingFieldValues>Unqualified</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Duplicity</fullName>
+                <controllingFieldValues>Unqualified</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wrongly created lead</fullName>
+                <controllingFieldValues>Unqualified</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Registration_Address_OSS__c</fullName>
+        <description>Registration Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Registration Address from OSS</inlineHelpText>
+        <label>Registration Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Leads</relationshipLabel>
+        <relationshipName>Leads</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Registration_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Address Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Replace_Addresses__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When marked addresses will be replaced when converting to existing Account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When marked addresses will be replaced when converting to existing Account.</inlineHelpText>
+        <label>Replace Addresses</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Role</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Business User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Decision Maker</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invoicing User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner Representative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SFGA__CorrelationID__c</fullName>
+        <defaultValue>&quot;none&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The Correlation ID Field is used by Salesforce for Google AdWords for automatic correlation of web information with new leads created through a standard web-to-lead form</description>
+        <externalId>false</externalId>
+        <label>CorrelationID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SFGA__Correlation_Data__c</fullName>
+        <defaultValue>&quot;none&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The Correlation Data field is designed for use by Salesforce for Google AdWords to store all relevant lead tracking information about a web generated lead</description>
+        <externalId>false</externalId>
+        <label>Correlation Data</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SFGA__Web_Source__c</fullName>
+        <defaultValue>&quot;none&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This field is designed for future use by Salesforce for Google AdWords as an alternative to the Lead Source field for web generated leads.</description>
+        <externalId>false</externalId>
+        <label>Web Source</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Type__c</fullName>
+        <description>BU1000 division. Who is owning revenue from opportunity, Retail or Wholesale.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>BU1000 division. Who is owning revenue from opportunity, Retail or Wholesale.</inlineHelpText>
+        <label>Sales Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Reteil</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Segment__c</fullName>
+        <description>Segment ... Potential Value
+
+ME ... 10000 &lt;= P
+LE+ ... 4000 &lt;= P &lt;= 10000
+LE ... 2000 &lt;= P &lt;= 4000
+SME+ ... 800 &lt;= P &lt;= 2000
+SME ... 200 &lt;= P &lt;= 800
+SOHO+ ... 80 &lt;= P &lt;= 200
+SOHO ... 0 &lt;= P &lt;= 80</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Segment ... Potential Value
+
+ME ... 10000 &lt;= P
+LE+ ... 4000 &lt;= P &lt;= 10000
+LE ... 2000 &lt;= P &lt;= 4000
+SME+ ... 800 &lt;= P &lt;= 2000
+SME ... 200 &lt;= P &lt;= 800
+SOHO+ ... 80 &lt;= P &lt;= 200
+SOHO ... 0 &lt;= P &lt;= 80</inlineHelpText>
+        <label>Segment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>SOHO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SOHO+</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SME</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SME+</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LE+</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ME</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WHSL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HOME</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <converted>false</converted>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Open</fullName>
+                <converted>false</converted>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contacted</fullName>
+                <converted>false</converted>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complete</fullName>
+                <converted>false</converted>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qualified</fullName>
+                <converted>true</converted>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unqualified</fullName>
+                <converted>false</converted>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Potential</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Responded</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Time_Remaining__c</fullName>
+        <description>Age in days counted from date when Lead changed status to Open</description>
+        <externalId>false</externalId>
+        <formula>IF( TEXT(Status)&lt;&gt;&quot;Qualified&quot; &amp;&amp; TEXT(Status)&lt;&gt;&quot;Unqualified&quot;&amp;&amp;TEXT(Status)&lt;&gt;&quot;New&quot; , Lead_Close_Date__c - TODAY() ,null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Age in days counted from date when Lead changed status to Open</inlineHelpText>
+        <label>Time Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Amount__c</fullName>
+        <description>Total Amount for new Opportunity</description>
+        <externalId>false</externalId>
+        <label>Total Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <controllingField>Account_Record_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Customer</fullName>
+                <controllingFieldValues>Company</controllingFieldValues>
+                <controllingFieldValues>Residential</controllingFieldValues>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Civil Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner</fullName>
+                <controllingFieldValues>Partner</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>VoiceProductRequested__c</fullName>
+        <externalId>false</externalId>
+        <label>Voice Product Requested</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Business Line</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trunk</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Centrex</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Residential Line</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <listViews>
+        <fullName>AllOpenLeads</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.STATE</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LEAD.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Qualified</value>
+        </filters>
+        <label>All Open Leads</label>
+    </listViews>
+    <listViews>
+        <fullName>Extranet_Leads_PL</fullName>
+        <columns>LEAD.COMPANY</columns>
+        <columns>FULL_NAME</columns>
+        <columns>Identification_Number__c</columns>
+        <columns>Identification_type__c</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>Partner_Account__c</columns>
+        <columns>Partner_User__c</columns>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>New,Completed</value>
+        </filters>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>equals</operation>
+            <value>GTS Poland</value>
+        </filters>
+        <filters>
+            <field>LEAD.LEAD_SOURCE</field>
+            <operation>equals</operation>
+            <value>Extranet</value>
+        </filters>
+        <label>Extranet Leads PL</label>
+        <sharedTo>
+            <rolesAndSubordinates>Domestic Sales Support Director PL</rolesAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>MyUnreadLeads</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.STATE</columns>
+        <columns>LEAD.PHONE</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>LEAD.RATING</columns>
+        <columns>LEAD.UNREAD</columns>
+        <columns>LEAD.STATUS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>LEAD.UNREAD</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>My Unread Leads</label>
+    </listViews>
+    <listViews>
+        <fullName>TodaysLeads</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.STATE</columns>
+        <columns>LEAD.EMAIL</columns>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LEAD.UNREAD</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>Today&apos;s Leads</label>
+    </listViews>
+    <validationRules>
+        <fullName>EU_VAT_format_for_GB</fullName>
+        <active>true</active>
+        <description>Rule checking EU_Vat format for GB</description>
+        <errorConditionFormula>AND( ISBLANK(Account__c),IF (
+AND (
+OR (
+ISPICKVAL (Account_Record_Type__c , &quot;Company&quot;), 
+ISPICKVAL (Account_Record_Type__c , &quot;Partner&quot;), 
+ISPICKVAL (Account_Record_Type__c , &quot;Person&quot;) 
+),
+ISPICKVAL (Identification_type__c , &quot;EU VAT&quot;),
+NOT (ISBLANK (Identification_Number__c) ),
+OR (CONTAINS (LEFT (Identification_Number__c , 4),&quot;GBHA&quot;),
+CONTAINS (LEFT (Identification_Number__c , 4),&quot;GBGD&quot;) )
+), 
+
+NOT (
+IF (
+LEN ( Identification_Number__c ) =7, 
+true, false) 
+),
+False 
+)
+)</errorConditionFormula>
+        <errorDisplayField>Identification_Number__c</errorDisplayField>
+        <errorMessage>EU Vat format not valid</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EU_VAT_format_for_IE</fullName>
+        <active>true</active>
+        <description>Rule validating EU VAT format for IE</description>
+        <errorConditionFormula>AND( ISBLANK(Account__c),IF (
+AND (
+OR (
+ISPICKVAL( Account_Record_Type__c,&quot;Company&quot;),
+ISPICKVAL( Account_Record_Type__c,&quot;Partner&quot;),
+ISPICKVAL( Account_Record_Type__c,&quot;Person&quot;)
+),
+ISPICKVAL (Identification_type__c , &quot;EU VAT&quot;) ,
+NOT (ISBLANK (Identification_Number__c) ),
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;IE&quot;)
+
+), 
+
+NOT ( 
+IF (
+LEN ( Identification_Number__c) =10, 
+true, false) 
+),
+False 
+))</errorConditionFormula>
+        <errorDisplayField>Identification_Number__c</errorDisplayField>
+        <errorMessage>EU Vat format not valid</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EU_VAT_format_for_RO</fullName>
+        <active>true</active>
+        <description>rule checking format for &quot;RO&quot; EU_VAT number</description>
+        <errorConditionFormula>AND( ISBLANK(Account__c),IF (
+AND (
+OR (
+ISPICKVAL( Account_Record_Type__c,&quot;Company&quot;),
+ISPICKVAL( Account_Record_Type__c,&quot;Partner&quot;), 
+ISPICKVAL( Account_Record_Type__c,&quot;Person&quot;)
+),
+ISPICKVAL (Identification_type__c , &quot;EU VAT&quot;) ,
+NOT (ISBLANK (Identification_Number__c) ),
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;RO&quot;)
+), 
+
+NOT ( 
+IF (
+AND (
+LEN ( Identification_Number__c ) &lt;=12, 
+LEN ( Identification_Number__c ) &gt;=4 ), 
+
+true, false) 
+),
+False 
+))</errorConditionFormula>
+        <errorDisplayField>Identification_Number__c</errorDisplayField>
+        <errorMessage>EU Vat format not valid</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EU_VAT_format_for_other_countries</fullName>
+        <active>true</active>
+        <description>Checking EU Vat format for: AT,BE,BG,CY,CZ,DK,EE,FI,FR,DE,EL,HU,IT,LV,LT,LU,MT,NL,PL,PT,SK,SI,ES,SE,GB</description>
+        <errorConditionFormula>AND( ISBLANK(Account__c),IF (
+AND (
+OR (
+ISPICKVAL(  Account_Record_Type__c ,&quot;Company&quot;),
+ISPICKVAL(  Account_Record_Type__c ,&quot;Partner&quot;),
+ISPICKVAL(  Account_Record_Type__c ,&quot;Person&quot;)
+),
+ISPICKVAL (Identification_type__c , &quot;EU VAT&quot;), 
+NOT (ISBLANK (Identification_Number__c) ),
+NOT (CONTAINS (LEFT (Identification_Number__c , 4),&quot;GBHA&quot;)),
+NOT (CONTAINS (LEFT (Identification_Number__c , 4),&quot;GBGD&quot;)), 
+OR 
+( CONTAINS (LEFT (Identification_Number__c , 2),&quot;AT&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;BE&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;BG&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;CY&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;CZ&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;DK&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;EE&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;FI&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;FR&quot;),
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;DE&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;EL&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;HU&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;IT&quot;), 
+CONTAINS (LEFT (Identification_Number__c, 2),&quot;LV&quot;), 
+CONTAINS (LEFT (Identification_Number__c, 2),&quot;LT&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;LU&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;MT&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;NL&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;PL&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;PT&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;SK&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;SI&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;ES&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;SE&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;GB&quot;) )
+), 
+
+NOT (
+IF (
+AND (
+LEN ( Identification_Number__c ) &lt;=14, 
+LEN ( Identification_Number__c ) &gt;=10 ), 
+
+true, false) 
+),
+False 
+))</errorConditionFormula>
+        <errorDisplayField>Identification_Number__c</errorDisplayField>
+        <errorMessage>EU Vat format not valid</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>EU_VAT_format_must_contain_country</fullName>
+        <active>true</active>
+        <description>Checking format of ID Number field for ID Type EU_Vat</description>
+        <errorConditionFormula>AND( ISBLANK(Account__c),IF (
+AND (
+OR (
+ISPICKVAL( Account_Record_Type__c , &quot;Company&quot;), 
+ISPICKVAL( Account_Record_Type__c , &quot;Partner&quot;), 
+ISPICKVAL( Account_Record_Type__c , &quot;Person&quot;)
+),
+ISPICKVAL (Identification_type__c , &quot;EU VAT&quot;), 
+NOT (ISBLANK (Identification_Number__c) ),
+NOT (
+OR ( 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;AT&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;BE&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;BG&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;CY&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;CZ&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;DK&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;EE&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;FI&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;FR&quot;),
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;DE&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;EL&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;HU&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;IT&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;LV&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;LT&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;LU&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;MT&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;NL&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;PL&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;PT&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;SK&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;SI&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;ES&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;SE&quot;), 
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;RO&quot;),
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;IE&quot;),
+CONTAINS (LEFT (Identification_Number__c , 2),&quot;GB&quot;) )
+)
+), 
+True,
+False 
+))</errorConditionFormula>
+        <errorDisplayField>Identification_Number__c</errorDisplayField>
+        <errorMessage>EU Vat format not valid</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>New_Account_Comoany</fullName>
+        <active>true</active>
+        <description>If no Existing Account and Account Type is set to &quot;Company&quot; or &quot;Partner&quot;, Company field must be filled.</description>
+        <errorConditionFormula>AND(OR(ISPICKVAL( Account_Record_Type__c ,&quot;Company&quot;),ISPICKVAL( Account_Record_Type__c ,&quot;Partner&quot;) ),ISBLANK( Company ))</errorConditionFormula>
+        <errorDisplayField>Company</errorDisplayField>
+        <errorMessage>Missing Company Name for Account Type &quot;Company&quot; or &quot;Partner&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>New_Account_ID_Number</fullName>
+        <active>true</active>
+        <description>If no existing Account and New Account ID Type is set, ID Number should be filled.</description>
+        <errorConditionFormula>AND(ISBLANK( Account__c ),NOT(ISPICKVAL( Identification_type__c,&quot;&quot; )),ISBLANK(  Identification_Number__c ))</errorConditionFormula>
+        <errorDisplayField>Identification_Number__c</errorDisplayField>
+        <errorMessage>Missing ID Number for New Account</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>New_Account_ID_Type</fullName>
+        <active>true</active>
+        <description>If no existing Account and New Account Record Type is &quot;Company&quot; or &quot;Partner&quot;, New Account ID Type  should be set.</description>
+        <errorConditionFormula>AND(ISBLANK( Account__c ),OR(ISPICKVAL(Account_Record_Type__c,&quot;Company&quot;),ISPICKVAL(Account_Record_Type__c,&quot;Partner&quot;)),   ISPICKVAL( Identification_type__c ,&quot;&quot;))</errorConditionFormula>
+        <errorDisplayField>Identification_type__c</errorDisplayField>
+        <errorMessage>Missing ID Type for New Account</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>New_Account_Name</fullName>
+        <active>true</active>
+        <description>If no existing Account, New Account name should be set.</description>
+        <errorConditionFormula>AND(ISBLANK( Account__c ),ISBLANK( LastName ))</errorConditionFormula>
+        <errorDisplayField>LastName</errorDisplayField>
+        <errorMessage>Missing Name for New Account</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>New_Account_Record_Type</fullName>
+        <active>true</active>
+        <description>If no existing Account, New Account Record Type name should be set.</description>
+        <errorConditionFormula>AND(ISBLANK( Account__c ),ISPICKVAL( Account_Record_Type__c,&quot;&quot; ))</errorConditionFormula>
+        <errorDisplayField>Account_Record_Type__c</errorDisplayField>
+        <errorMessage>Missing Account Record Type for New Account</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>New_Account_Type</fullName>
+        <active>true</active>
+        <description>If no existing Account and New Account Record Type is &quot;Company&quot; then New Account Type should be set.</description>
+        <errorConditionFormula>AND(ISBLANK( Account__c ),ISPICKVAL( Account_Record_Type__c,&quot;Company&quot; ),ISPICKVAL( Type__c ,&quot;&quot;))</errorConditionFormula>
+        <errorDisplayField>Type__c</errorDisplayField>
+        <errorMessage>Missing Type for New Account and Account Record Type &quot;Company&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>New_Personal_Account_First_Name</fullName>
+        <active>true</active>
+        <description>If no existing Account and New Account Record Type is &quot;Person&quot; then New Account First Name should be set.</description>
+        <errorConditionFormula>AND(ISBLANK( Account__c ),ISPICKVAL( Account_Record_Type__c,&quot;Residential&quot; ),ISBLANK( FirstName))</errorConditionFormula>
+        <errorDisplayField>FirstName</errorDisplayField>
+        <errorMessage>Missing First Name for New Account and Account Record Type &quot;Residential&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>New_Personal_Account_Salutation</fullName>
+        <active>true</active>
+        <description>If no existing Account and New Account Record Type is &quot;Person&quot; then New Account Salutation should be set.</description>
+        <errorConditionFormula>AND(ISBLANK( Account__c ),ISPICKVAL( Account_Record_Type__c,&quot;Residential&quot; ),ISPICKVAL( Salutation ,&quot;&quot;))</errorConditionFormula>
+        <errorDisplayField>Salutation</errorDisplayField>
+        <errorMessage>Missing Salutation for New Account and Account Record Type &quot;Residential&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Opportunity_Close_Date_date_or_days</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+OR( ISCHANGED(Opp_Close_Date__c) ,ISCHANGED(Close_Date__c)), 
+NOT(ISBLANK(Opp_Close_Date__c)) &amp;&amp; NOT(ISBLANK(Close_Date__c)) ||ISBLANK(Opp_Close_Date__c)&amp;&amp; ISBLANK(Close_Date__c)
+)</errorConditionFormula>
+        <errorMessage>One the fields &quot;Close Date&quot; or &quot;Opp. Close Date in Days&quot; has to have value and the other has to be empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Registration_Number_GTS_Hungary</fullName>
+        <active>true</active>
+        <description>Verification if registration number consists of 10 digits</description>
+        <errorConditionFormula>AND(ISBLANK(Account__c),ISPICKVAL( Identification_type__c , &apos;Company registration number&apos;),TEXT(GTS_Location__c)=&quot;GTS Hungary&quot; , OR(ISPICKVAL(Account_Record_Type__c,&apos;Company&apos;), ISPICKVAL(Account_Record_Type__c,&apos;Partner&apos;)), OR(NOT(ISNUMBER( Identification_Number__c )), LEN(Identification_Number__c ) != 10 ) )</errorConditionFormula>
+        <errorDisplayField>Identification_Number__c</errorDisplayField>
+        <errorMessage>Company Registration Number must consist of 10 digits. Remove all spaces, dashes or other special characters.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Registration_Number_GTS_Slovakia</fullName>
+        <active>true</active>
+        <description>Validates length of entered Number</description>
+        <errorConditionFormula>AND(ISBLANK(Account__c),ISPICKVAL( Identification_type__c , &apos;Company registration number&apos;),TEXT(GTS_Location__c)=&quot;GTS Slovakia&quot; , OR(ISPICKVAL(Account_Record_Type__c,&apos;Company&apos;), ISPICKVAL(Account_Record_Type__c,&apos;Partner&apos;)), OR(NOT(ISNUMBER( Identification_Number__c )), LEN(Identification_Number__c) != 8 ) )</errorConditionFormula>
+        <errorDisplayField>Identification_Number__c</errorDisplayField>
+        <errorMessage>Company Registration Number must consist of 8 digits. Remove all spaces, dashes or other special characters.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Registration_number_GTS_Czech_Rep</fullName>
+        <active>true</active>
+        <description>Verification if registration number for GTS Location Czech Rep consists of 8 digits</description>
+        <errorConditionFormula>AND(ISBLANK(Account__c),
+ISPICKVAL( Identification_type__c , &apos;Company registration number&apos;),
+TEXT(GTS_Location__c)=&quot;GTS Czech Rep&quot; ,
+OR(ISPICKVAL(Account_Record_Type__c,&apos;Company&apos;), ISPICKVAL(Account_Record_Type__c,&apos;Partner&apos;)), OR(NOT(ISNUMBER( Identification_Number__c )), LEN(Identification_Number__c) != 8 ) 
+)</errorConditionFormula>
+        <errorDisplayField>Identification_Number__c</errorDisplayField>
+        <errorMessage>Company Registration Number must consist of 8 digits. Remove all spaces, dashes or other special characters.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Tax_ID_GTS_Poland</fullName>
+        <active>false</active>
+        <description>Tax ID Number for PL must consist of 10 digits</description>
+        <errorConditionFormula>AND(ISBLANK(Account__c),ISPICKVAL( Identification_type__c , &apos;Tax ID&apos;),TEXT(GTS_Location__c)=&quot;GTS Poland&quot; , OR(ISPICKVAL(Account_Record_Type__c,&apos;Company&apos;), ISPICKVAL(Account_Record_Type__c,&apos;Partner&apos;)), OR(NOT(ISNUMBER( Identification_Number__c )), LEN(Identification_Number__c) != 10 ) )</errorConditionFormula>
+        <errorDisplayField>Identification_Number__c</errorDisplayField>
+        <errorMessage>Tax ID must consist of 10 digits. Remove all spaces, dashes or other special characters.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Convert</fullName>
+        <availability>online</availability>
+        <description>Custom Convert button</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Convert</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var id = &apos;{!Lead.Id}&apos;; 
+
+var resultString = sforce.apex.execute(&quot;LeadConversion&quot;,&quot;LeadConversion&quot;, {leadId: id}); 
+
+window.location = &quot;../lead/leadconvert.jsp?retURL=/&quot;+resultString+&quot;&amp;id=&quot;+resultString + &quot;&amp;nooppti=1&quot;;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>FindCampaignScript</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Find Campaign Script</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/appex/app.jsp?appParam=CallScripting&amp;page=campaign_list&amp;call_sid={!API.Session_ID}&amp;call_url={!API.Partner_Server_URL_70}&amp;eid={!Lead.Id}&amp;Lead_ID={!Lead.Id}&amp;Lead_FirstName={!Lead.FirstName}&amp;Lead_LastName={!Lead.LastName}&amp;Lead_Title={!Lead.Title}&amp;Lead_Company={!Lead.Company}&amp;Lead_Phone={!Lead.Phone}&amp;Lead_LeadSource={!Lead.LeadSource}&amp;Lead_Status={!Lead.Status}&amp;Lead_Owner_ID={!Lead.OwnerId}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>FindScripts</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Find Scripts</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/appex/app.jsp?appParam=CallScripting&amp;page=lead_list&amp;call_sid={!API.Session_ID}&amp;call_url={!API.Partner_Server_URL_70}&amp;eid={!Lead.Id}&amp;Lead_ID={!Lead.Id}&amp;Lead_FirstName={!Lead.FirstName}&amp;Lead_LastName={!Lead.LastName}&amp;Lead_Title={!Lead.Title}&amp;Lead_Company={!Lead.Company}&amp;Lead_Phone={!Lead.Phone}&amp;Lead_LeadSource={!Lead.LeadSource}&amp;Lead_Status={!Lead.Status}&amp;Lead_Owner_ID={!Lead.OwnerId}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Get_New_Address</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Get New Address</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>function getRandomNum(lbound, ubound)
+{
+     return (Math.floor(Math.random() * (ubound - lbound)) + lbound);
+}
+
+function getRandomChar() 
+{
+     var numberChars = &quot;0123456789&quot;;
+     var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;
+     var charSet = numberChars + alphaChars;
+
+     return charSet.charAt(getRandomNum(0, charSet.length));
+}
+
+function getPassword(length) 
+{
+     var pass = &quot;&quot;;
+     length++;
+
+     if (length &gt; 0) pass = pass + getRandomChar();
+
+     for (var idx = 1; idx &lt; length; ++idx) 
+     {
+          pass = pass + getRandomChar();
+     }
+     return pass;
+}
+
+var arr = window.parent.location.href.split(&quot;/&quot;); 
+var arr2 = arr[3].split(&quot;?&quot;); 
+var id = arr2[0]; 
+var str_password = getPassword(24);
+
+window.top.location.href = &quot;https://&quot; + window.top.location.host + &quot;/apex/GetAddressFromOSS?objid=&quot; + id + &quot;&amp;hashId=&quot; + str_password;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>HelpforScripts</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Help for Scripts</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/servlet/servlet.FileDownload?file=01530000000BYhF</url>
+        <width>600</width>
+    </webLinks>
+    <webLinks>
+        <fullName>map</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>map</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://maps.yahoo.com/py/maps.py?cn={!Lead_Country}&amp;csz={!Lead_City}+{!Lead_State}+{!Lead_PostalCode}+&amp;addr={!Lead_Address}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,1764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>NoBAManualCreation</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Billing Account object; contains information related to corresponding object in Billing System</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Relation to Account, that given Billing Account belongs to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Account, that given Billing Account belongs to</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Billing Accounts</relationshipLabel>
+        <relationshipName>Billing_accounts</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <trackHistory>false</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Apartment_No__c</fullName>
+        <description>Apartment Number, that is part of Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Apartment Number, that is part of Invoicing Address</inlineHelpText>
+        <label>Apartment No</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Balance_From__c</fullName>
+        <description>Balance for Billing Account for date specified in From Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Balance for Billing Account for date specified in From Date</inlineHelpText>
+        <label>Balance From</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Balance_To__c</fullName>
+        <description>Balance for Billing Account for date specified in To Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Balance for Billing Account for date specified in To Date</inlineHelpText>
+        <label>Balance To</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Balance__c</fullName>
+        <description>Current Balance of Billing Account (should be updated periodicaly by Billing System)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current Balance of Billing Account (should be updated periodicaly by Billing System)</inlineHelpText>
+        <label>Balance</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BankName__c</fullName>
+        <description>Name of the Bank that owns Bank Account provided for Directc Debit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the Bank that owns Bank Account provided for Directc Debit</inlineHelpText>
+        <label>Bank Name</label>
+        <referenceTo>Bank_Data__c</referenceTo>
+        <relationshipLabel>Billing Accounts</relationshipLabel>
+        <relationshipName>Billing_Accounts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bank_Account_Group__c</fullName>
+        <description>Bank Account Group - value for Billing System calculated based on Debtor Group</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Debtor_Group__c, &apos;&apos;) , &apos;&apos;, IF(ISPICKVAL(Debtor_Group__c, &apos;0&apos;), &apos;RED&apos;, IF(ISPICKVAL(Debtor_Group__c, &apos;30&apos;), &apos;GREEN&apos;, &apos;BLUE&apos;)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Bank Account Group - value for Billing System calculated based on Debtor Group</inlineHelpText>
+        <label>Bank Account Group</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bank_Account_Number_GTS__c</fullName>
+        <description>Number of Bank Account created for Customer for payments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Bank Account created for Customer for payments</inlineHelpText>
+        <label>Bank Account Number</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bank_Account_Number__c</fullName>
+        <description>Number of Customer&apos;s Bank Account, that should be used in case of Direct Debit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Customer&apos;s Bank Account, that should be used in case of Direct Debit</inlineHelpText>
+        <label>Bank Account Number</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bank_Code__c</fullName>
+        <description>Code of the Bank for selected Bank Name</description>
+        <externalId>false</externalId>
+        <formula>BankName__r.Bank_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Code of the Bank for selected Bank Name</inlineHelpText>
+        <label>Bank Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billed_From__c</fullName>
+        <description>Country specific field, used only by GTS Hungary. Specifies the system, where service should be billed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Country specific field, used only by GTS Hungary. Specifies the system, where service should be billed.</inlineHelpText>
+        <label>Billed From</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTSHU ECHO</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTSHU SCALA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Account_ID__c</fullName>
+        <description>ID of Billing Account in Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of Billing Account in Billing System</inlineHelpText>
+        <label>Billing Account ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Account_Name__c</fullName>
+        <description>Descriptive Name of Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Descriptive Name of Billing Account</inlineHelpText>
+        <label>Billing Account Name</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Account_Type__c</fullName>
+        <description>Type of Billing Account; this information will be sent to Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of Billing Account; this information will be sent to Billing System</inlineHelpText>
+        <label>Billing Account Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Email__c</fullName>
+        <description>Email Address for Detailed Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email Address for Detailed Billing</inlineHelpText>
+        <label>Billing Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_period__c</fullName>
+        <description>Indicates how often Invoice should be issued for given Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates how often Invoice should be issued for given Billing Account</inlineHelpText>
+        <label>Billing period</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Half-year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>One year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Building_Block__c</fullName>
+        <description>Building Number or Name; part of Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Building Number or Name; part of Invoicing Address</inlineHelpText>
+        <label>Building/Block</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <description>Business Unit Dimension for given Billing Account (used for revenue allocation)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Business Unit Dimension for given Billing Account (used for revenue allocation)</inlineHelpText>
+        <label>Business Unit</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Billing Accounts</relationshipLabel>
+        <relationshipName>Billing_Accounts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Case_in_Court__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Credit Check. Indicates if there is a case in court against this Customer</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Credit Check. Indicates if there is a case in court against this Customer</inlineHelpText>
+        <label>Case in Court</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Cession_of_Receivables__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Credit Check. Indicates if there was cession of receivables for given Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Credit Check. Indicates if there was cession of receivables for given Billing Account</inlineHelpText>
+        <label>Cession of Receivables</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <description>City - Part of Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>City - Part of Invoicing Address</inlineHelpText>
+        <label>City</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Class_VAT__c</fullName>
+        <description>VAT Class of Customer; information sent to Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>VAT Class of Customer; information sent to Billing System</inlineHelpText>
+        <label>Class VAT</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Billing Accounts (Class VAT)</relationshipLabel>
+        <relationshipName>Billing_Accounts6</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Collection_Email__c</fullName>
+        <description>Specifies email(s) that should be used for sending reminders in Colleaction process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies email(s) that should be used for sending reminders in Colleaction process</inlineHelpText>
+        <label>Collection Email</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Collection_Profile__c</fullName>
+        <description>Customer&apos;s Collection Profile that will be used in Collection Process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer&apos;s Collection Profile that will be used in Collection Process</inlineHelpText>
+        <label>Collection Profile</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Profile 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Profile 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Profile 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <description>Comment for any information related to this Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comment for any information related to this Billing Account</inlineHelpText>
+        <label>Comment</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Company_registration__c</fullName>
+        <description>Registration type for the Customer</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Registration type for the Customer</inlineHelpText>
+        <label>Company registration</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <description>Country of Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Country of Invoicing Address</inlineHelpText>
+        <label>Country</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Billing Account has already been created in Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Billing Account has already been created in Billing System</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Currency_Formula__c</fullName>
+        <description>Currency of Billing Account (formula, that is presented in View mode)</description>
+        <externalId>false</externalId>
+        <formula>TEXT(CurrencyIsoCode)</formula>
+        <inlineHelpText>Currency of Billing Account</inlineHelpText>
+        <label>Currency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Currency__c</fullName>
+        <description>Currency of Billing Account</description>
+        <externalId>false</externalId>
+        <formula>TEXT( CurrencyIsoCode )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Currency of Billing Account</inlineHelpText>
+        <label>Currency</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Class__c</fullName>
+        <description>Classification of Customer used by Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Classification of Customer used by Billing System</inlineHelpText>
+        <label>Customer Class</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Billing Accounts (Customer Class)</relationshipLabel>
+        <relationshipName>Billing_Accounts7</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Date_From_Request__c</fullName>
+        <description>This field is used for custom section &quot;Billing Documents Request&quot;. - CECOLSVI-213</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date From Request</inlineHelpText>
+        <label>Date From Request</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_From__c</fullName>
+        <description>Date from which billing Documents were retrieved</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date from which billing Documents were retrieved</inlineHelpText>
+        <label>Date From</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_To_Request__c</fullName>
+        <description>This field is used for custom section &quot;Billing Documents Request&quot;. - CECOLSVI-213</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date To Request</inlineHelpText>
+        <label>Date To Request</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_To__c</fullName>
+        <description>Date to which billing Documents were retrieved</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date to which billing Documents were retrieved</inlineHelpText>
+        <label>Date To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Debt_Collection_Process__c</fullName>
+        <description>Information about current step in Debt Collection Process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Information about current step in Debt Collection Process</inlineHelpText>
+        <label>Debt Collection Process</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Debtor_Group__c</fullName>
+        <description>ID of Debtor Group; Information for Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of Debtor Group; Information for Billing System</inlineHelpText>
+        <label>Debtor Group</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>30</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>90</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Desynchronization_Time__c</fullName>
+        <description>Date and Time when Account was desynchronized</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date and Time when Account was desynchronized</inlineHelpText>
+        <label>Desynchronization Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Desynchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates, that Billing Account data is desynchronized (data between SFDC and Billing System)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates, that Billing Account data is desynchronized (data between SFDC and Billing System)</inlineHelpText>
+        <label>Desynchronized</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Detailed_Billing_Type__c</fullName>
+        <description>Indicates if Detailed Billing should be delivered by Email or in Printed version</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Detailed Billing should be delivered by Email or in Printed version</inlineHelpText>
+        <label>Detailed Billing Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Printed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Direct_debit_mandate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Direct Debit Mandate was granted</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Direct Debit Mandate was granted</inlineHelpText>
+        <label>Direct debit mandate</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Do_not_desynchronize__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determines if any change on BA should trigger resynchronization.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines if any change on BA should trigger resynchronization.</inlineHelpText>
+        <label>Do_not_desynchronize</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Due_To_Limit__c</fullName>
+        <defaultValue>14</defaultValue>
+        <description>Maturity of payment (number of days) for generated Invoices</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Maturity of payment (number of days) for generated Invoices</inlineHelpText>
+        <label>Maturity of Payment</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Exchange_Rate_Method__c</fullName>
+        <description>Indicates what exchange rates should be used</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates what exchange rates should be used</inlineHelpText>
+        <label>Exchange Rate Method</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Rates from Previous Day</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Average Rate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Financial_Status_Icon__c</fullName>
+        <description>Graphical Indicator of Financial Status</description>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK(Financial_Status__c), &apos;&apos;, IF( OR( Financial_Status__r.Value__c = &apos;CS1&apos;, Financial_Status__r.Value__c = &apos;CS2&apos;, Financial_Status__r.Value__c = &apos;CS3&apos;, Financial_Status__r.Value__c = &apos;CS4&apos;, Financial_Status__r.Value__c = &apos;CS5&apos;, Financial_Status__r.Value__c = &apos;KF&apos;, Financial_Status__r.Value__c = &apos;NP&apos;), IMAGE(&apos;https://emea.salesforce.com/servlet/servlet.ImageServer?id=01520000000sxut&amp;oid=00D200000008d5u&amp;lastMod=1288005668000&apos;, &apos;Financial Status&apos;), IMAGE(&apos;https://emea.salesforce.com/servlet/servlet.ImageServer?id=01520000000vDSD&amp;oid=00D200000008d5u&amp;lastMod=1288005037000&apos;, &apos;Financial Status&apos;)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Graphical Indicator of Financial Status</inlineHelpText>
+        <label>Financial Status Indicator</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Financial_Status__c</fullName>
+        <description>Financial Status for given Billing Account (indicates if there are any payment problems)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Financial Status for given Billing Account (indicates if there are any payment problems)</inlineHelpText>
+        <label>Financial Status</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Billing Accounts (Financial Status)</relationshipLabel>
+        <relationshipName>Billing_Accounts5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Floor__c</fullName>
+        <description>Floor number - Part of Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Floor number - Part of Invoicing Address</inlineHelpText>
+        <label>Floor</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IBAN__c</fullName>
+        <description>International Bank Account Number for Direct Debit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>International Bank Account Number for Direct Debit</inlineHelpText>
+        <label>IBAN</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ID_Number__c</fullName>
+        <description>Identification Number from Account</description>
+        <externalId>false</externalId>
+        <formula>Account__r.Tax_Id__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Identification Number from Account</inlineHelpText>
+        <label>ID Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Identification_Number__c</fullName>
+        <description>Identification Number from Account</description>
+        <externalId>false</externalId>
+        <formula>Account__r.Tax_Id__c</formula>
+        <inlineHelpText>Identification Number from Account</inlineHelpText>
+        <label>Identification Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Income_account__c</fullName>
+        <description>Information about Income Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Information about Income Account</inlineHelpText>
+        <label>Income account</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Integration_Timestamp__c</fullName>
+        <description>Indicates date and time when last synchronization with Billing System happened</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates date and time when last synchronization with Billing System happened</inlineHelpText>
+        <label>Integration Timestamp</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>InvoiceDelivery__c</fullName>
+        <description>Invoice Delivery Method</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Invoice Delivery Method</inlineHelpText>
+        <label>Invoice Delivery</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Billing Accounts (Invoice Delivery)</relationshipLabel>
+        <relationshipName>Billing_Accounts4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>InvoiceLanguage__c</fullName>
+        <description>Language used in Invoice Document</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Language used in Invoice Document</inlineHelpText>
+        <label>Invoice Language</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Billing Accounts (Invoice Language)</relationshipLabel>
+        <relationshipName>Billing_Accounts2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>InvoiceLayout__c</fullName>
+        <description>Invoice Document Layout Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Invoice Document Layout Type</inlineHelpText>
+        <label>Invoice Layout</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Billing Accounts (Invoice Layout)</relationshipLabel>
+        <relationshipName>Billing_Accounts1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>InvoicePhase__c</fullName>
+        <description>Invoice Phase - Information for Billing Account calculated based on Debtor Group</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Debtor_Group__c, &apos;&apos;) , &apos;&apos;, IF(ISPICKVAL(Debtor_Group__c, &apos;3&apos;), &apos;1&apos;,IF(ISPICKVAL(Debtor_Group__c, &apos;30&apos;), &apos;10&apos;, IF(ISPICKVAL(Debtor_Group__c, &apos;2&apos;), &apos;2&apos;, IF(ISPICKVAL(Debtor_Group__c,&apos;90&apos;),&apos;90&apos;,&apos;3&apos;)))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Invoice Phase - Information for Billing Account calculated based on Debtor Group</inlineHelpText>
+        <label>Invoice Phase</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice_Additional_Info__c</fullName>
+        <description>Additional Information that should be visible on invoice</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional Information that should be visible on invoice</inlineHelpText>
+        <label>Invoice Additional Info</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Invoice_Email2__c</fullName>
+        <description>Backup Email Address for Invoice Delivery type set to Email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Backup Email Address for Invoice Delivery type set to Email</inlineHelpText>
+        <label>Invoice Email (Backup)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice_Email__c</fullName>
+        <description>Email Address for Invoice Delivery type set to Email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email Address for Invoice Delivery type set to Email</inlineHelpText>
+        <label>Invoice Email</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice_Recipient__c</fullName>
+        <description>PL Specific - Name of Invoice Recipient</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PL Specific - Name of Invoice Recipient</inlineHelpText>
+        <label>Invoice Recipient</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoices_Total__c</fullName>
+        <description>Total Amount of Invoices retrieved for Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Amount of Invoices retrieved for Billing Account</inlineHelpText>
+        <label>Invoices Total</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoicing_Day__c</fullName>
+        <defaultValue>1</defaultValue>
+        <description>Day of Month when Invoice should be generated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Day of Month when Invoice should be generated</inlineHelpText>
+        <label>Invoicing Day</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoicing_address__c</fullName>
+        <description>Invoicing Address for Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Invoicing Address for Billing Account</inlineHelpText>
+        <label>Invoicing Address</label>
+        <referenceTo>Address__c</referenceTo>
+        <relationshipLabel>Billing Accounts (Invoicing address)</relationshipLabel>
+        <relationshipName>Billing_Accounts1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Last_Refresh__c</fullName>
+        <description>Date &amp; Time when last request for Billing Documents was done</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date &amp; Time when last request for Billing Documents was done</inlineHelpText>
+        <label>Last Refresh</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Legal_Entity__c</fullName>
+        <description>PL Specific - Indicates which Legal Entity of GTS should be used for this Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>PL Specific - Indicates which Legal Entity of GTS should be used for this Billing Account</inlineHelpText>
+        <label>Legal Entity</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Limit__c</fullName>
+        <description>Amount Limit for Direct Debit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount Limit for Direct Debit</inlineHelpText>
+        <label>Limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_1__c</fullName>
+        <description>1st line of Invoicing Address extension, that should be printed on the invoice</description>
+        <externalId>false</externalId>
+        <inlineHelpText>1st line of Invoicing Address extension, that should be printed on the invoice</inlineHelpText>
+        <label>1st Line</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_2__c</fullName>
+        <description>2nd line of Invoicing Address extension, that should be printed on the invoice</description>
+        <externalId>false</externalId>
+        <inlineHelpText>2nd line of Invoicing Address extension, that should be printed on the invoice</inlineHelpText>
+        <label>2nd Line</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Maturity_Type__c</fullName>
+        <description>Indicates if Maturity of Payment should be counted from Invoicing Day or from Invoice Delivery</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Maturity of Payment should be counted from Invoicing Day or from Invoice Delivery</inlineHelpText>
+        <label>Maturity Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Invoicing Day</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invoice Delivery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Overdue_Balance__c</fullName>
+        <description>Amount of current overdue payments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount of current overdue payments</inlineHelpText>
+        <label>Overdue Balance</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Billing_Account__c</fullName>
+        <description>Parent Billing Account (allows building structure of Billing Accounts)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Parent Billing Account (allows building structure of Billing Accounts)</inlineHelpText>
+        <label>Parent Billing Account</label>
+        <referenceTo>Billing_Accounts__c</referenceTo>
+        <relationshipLabel>Related billing accounts</relationshipLabel>
+        <relationshipName>Billing_Accounts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Account__c</fullName>
+        <description>Partner selling to customer and which is entitled to sales comission in relatioon to this Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Partner selling to customer and which is entitled to sales comission in relatioon to this Billing Account</inlineHelpText>
+        <label>Partner Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Billing Accounts (Partner Account)</relationshipLabel>
+        <relationshipName>Billing_Accounts1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Code__c</fullName>
+        <description>Displays Partner Code stored on Partner Account related to this BA</description>
+        <externalId>false</externalId>
+        <formula>Partner_Account__r.Sales_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Displays Partner Code stored on Partner Account related to this BA</inlineHelpText>
+        <label>Partner Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PaymentMethod__c</fullName>
+        <description>Invoice Payment Method Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Invoice Payment Method Type</inlineHelpText>
+        <label>Payment Method</label>
+        <referenceTo>Enumerators__c</referenceTo>
+        <relationshipLabel>Billing Accounts (Payment Method)</relationshipLabel>
+        <relationshipName>Billing_Accounts3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Payments_Total__c</fullName>
+        <description>Total Amount of Payments for retrieved Invoices</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Amount of Payments for retrieved Invoices</inlineHelpText>
+        <label>Payments Total</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Postal_Code__c</fullName>
+        <description>Postal Code - Part of Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Postal Code - Part of Invoicing Address</inlineHelpText>
+        <label>Postal Code</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Price_List__c</fullName>
+        <defaultValue>&quot;1&quot;</defaultValue>
+        <description>Price List that should be used for this Billing Account - information for Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Price List that should be used for this Billing Account - information for Billing System</inlineHelpText>
+        <label>Price List</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RegistrationAddress__c</fullName>
+        <description>Registration Address from Account</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Account__r.ShippingStreet), &apos;&apos;, Account__r.ShippingStreet) +
+IF(ISBLANK(Account__r.ShippingCity), &apos;&apos;, &apos;, &apos; + Account__r.ShippingCity) +
+IF(ISBLANK(Account__r.ShippingPostalCode), &apos;&apos;, &apos;, &apos; + Account__r.ShippingPostalCode) +
+IF(ISBLANK(Account__r.ShippingCountry), &apos;&apos;, &apos;, &apos; + Account__r.ShippingCountry)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Registration Address from Account</inlineHelpText>
+        <label>Registration Address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Retail__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Specifies, whether the BA is retail or wholesale.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies, whether the BA is retail or wholesale.</inlineHelpText>
+        <label>Retail</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Room_No__c</fullName>
+        <description>Room Number - part if Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Room Number - part if Invoicing Address</inlineHelpText>
+        <label>Room No</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Code__c</fullName>
+        <description>Displays Sales Code entered on Sales User assigned to BA</description>
+        <externalId>false</externalId>
+        <formula>Sales_User__r.Sales_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Displays Sales Code entered on Sales User assigned to BA</inlineHelpText>
+        <label>Sales Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_User__c</fullName>
+        <description>GTS Sales Person assigned as owner of this Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>GTS Sales Person assigned as owner of this Billing Account</inlineHelpText>
+        <label>Sales User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Billing_Accounts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Signature__c</fullName>
+        <description>Reseller&apos;s Folder Id - should be set for Resellers according to the name of sFTP folder</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reseller&apos;s Folder Id - should be set for Resellers according to the name of sFTP folder</inlineHelpText>
+        <label>Reseller’s folder Id</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Id of Billing Account from source system (in case of migrated data)</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Id of Billing Account from source system (in case of migrated data)</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>SpecificSymbol__c</fullName>
+        <description>Bank Specific Symbol used as extension of Bank Name for Direct Debit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bank Specific Symbol used as extension of Bank Name for Direct Debit</inlineHelpText>
+        <label>Specific Symbol</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State_Province__c</fullName>
+        <description>State/Province of Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>State/Province of Invoicing Address</inlineHelpText>
+        <label>State/Province</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Status of Billing Account:
+New - newly created, awaits creation in Billing; 
+Pending - created in Provisioning Process; 
+Active - created in Billing, with some services active
+Inactive - created in Billling, but without services anymore</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of Billing Account:
+New - newly created, awaits creation in Billing; 
+Pending - created in Provisioning Process; 
+Active - created in Billing, with some services active
+Inactive - created in Billling, but without services anymore</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Street_1__c</fullName>
+        <description>First line for Street Name of Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>First line for Street Name of Invoicing Address</inlineHelpText>
+        <label>Street 1</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_2__c</fullName>
+        <description>Second line for Street Name of Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Second line for Street Name of Invoicing Address</inlineHelpText>
+        <label>Street 2</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Street_No__c</fullName>
+        <description>Street Number - part of Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Street Number - part of Invoicing Address</inlineHelpText>
+        <label>Street No</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Synchronization_Status__c</fullName>
+        <description>Status of synchronization between SFDC and Billing:
+none - there was no synchronization done yet or synchronization is not required
+retryable - there was error during synchronization; system will try again later
+nonretryable - there was fatal error during synchronization; system will not try again</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of sync between SFDC and Billing:
+none - there was no sync done yet or sync is not required
+retryable - there was error during sync; system will try again later
+nonretryable - there was fatal error during sync; system will not try again</inlineHelpText>
+        <label>Synchronization Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>none</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>retryable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>nonretryable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Tax_Id_Relation__c</fullName>
+        <description>Relation to Object storing Tax Identification Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Object storing Tax Identification Number</inlineHelpText>
+        <label>Tax Id Relation</label>
+        <referenceTo>Country_Related_Data__c</referenceTo>
+        <relationshipLabel>Billing Accounts (Tax Id Relation)</relationshipLabel>
+        <relationshipName>Billing_Accounts1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Tax_Identification_Number__c</fullName>
+        <description>Tax Identification Number from Related Account</description>
+        <externalId>false</externalId>
+        <formula>Tax_Id_Relation__r.Value__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Tax Identification Number from Related Account</inlineHelpText>
+        <label>Tax Identification Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VAT_Number_Relation__c</fullName>
+        <description>Relation to Object storing VAT Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Object storing VAT Number</inlineHelpText>
+        <label>VAT Number Relation</label>
+        <referenceTo>Country_Related_Data__c</referenceTo>
+        <relationshipLabel>Billing Accounts</relationshipLabel>
+        <relationshipName>Billing_Accounts</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>VAT_Number__c</fullName>
+        <description>VAT Number from related Account</description>
+        <externalId>false</externalId>
+        <formula>VAT_Number_Relation__r.Value__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>VAT Number from related Account</inlineHelpText>
+        <label>VAT Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VAT_code__c</fullName>
+        <description>VAT Code for given Billing Account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>VAT Code for given Billing Account</inlineHelpText>
+        <label>VAT code</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VIP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates VIP Customer</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates VIP Customer</inlineHelpText>
+        <label>VIP</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Wholesale__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates whether this is Wholesale Customer</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether this is Wholesale Customer</inlineHelpText>
+        <label>Wholesale</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>flgComplete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if additional Fields (Line 1 &amp; 2) should be printed on the Invoice as a part of Invoicing Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if additional Fields (Line 1 &amp; 2) should be printed on the Invoice as a part of Invoicing Address</inlineHelpText>
+        <label>Complete Address</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <label>Billing Account</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Bank_Account_Number__c</columns>
+        <columns>Billing_period__c</columns>
+        <columns>Status__c</columns>
+        <columns>Financial_Status_Icon__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Debtor_Group__c</columns>
+        <columns>InvoicePhase__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Desynchronized__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Desynchronized_Global</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Status__c</columns>
+        <columns>Created_in_Billing__c</columns>
+        <columns>Synchronization_Status__c</columns>
+        <columns>Desynchronization_Time__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Invoicing_address__c</columns>
+        <columns>Street_No__c</columns>
+        <columns>Street_1__c</columns>
+        <columns>City__c</columns>
+        <columns>Comment__c</columns>
+        <columns>RegistrationAddress__c</columns>
+        <columns>Currency_Formula__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Desynchronized__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Active,Inactive</value>
+        </filters>
+        <filters>
+            <field>Synchronization_Status__c</field>
+            <operation>equals</operation>
+            <value>none,retryable,nonretryable</value>
+        </filters>
+        <label>Desynchronized Global</label>
+    </listViews>
+    <listViews>
+        <fullName>HU_Desynchronized_BA</fullName>
+        <booleanFilter>1 AND ( 2 AND 3 )</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Desynchronized__c</columns>
+        <columns>Synchronization_Status__c</columns>
+        <columns>Invoicing_address__c</columns>
+        <columns>Billed_From__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>InvoiceLanguage__c</field>
+            <operation>equals</operation>
+            <value>Hungarian</value>
+        </filters>
+        <filters>
+            <field>Billed_From__c</field>
+            <operation>notContain</operation>
+            <value>GTSHU ECHO</value>
+        </filters>
+        <filters>
+            <field>Billed_From__c</field>
+            <operation>notContain</operation>
+            <value>GTSHU SCALA</value>
+        </filters>
+        <label>HU_BillingAccounts</label>
+    </listViews>
+    <listViews>
+        <fullName>blabla</fullName>
+        <booleanFilter>(1 AND 2) OR (3 AND 4)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Bank_Account_Number__c</columns>
+        <columns>BankName__c</columns>
+        <columns>PaymentMethod__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>BankName__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Bank_Account_Number__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Bank_Account_Number__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>BankName__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Wrong Bank Name or Code</label>
+        <sharedTo>
+            <groups>Administrators</groups>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>BAC{000000000}</displayFormat>
+        <label>Billing Account Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <namedFilters>
+        <fullName>Case_00N20000002h47hEAA</fullName>
+        <active>true</active>
+        <errorMessage>Selected BA does not belong to chosen Account.</errorMessage>
+        <field>Case.Billing_Account__c</field>
+        <filterItems>
+            <field>Billing_Accounts__c.Account__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <infoMessage>List is filtered to the Billing  Accounts which are assigned for selected Account.</infoMessage>
+        <isOptional>false</isOptional>
+        <name>Case_Billing Account</name>
+        <sourceObject>Case</sourceObject>
+    </namedFilters>
+    <pluralLabel>Billing Accounts</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Bank_Account_Number__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Billing_period__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Billing_Account_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Currency_Formula__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Billing_Account_Name__c</searchFilterFields>
+        <searchFilterFields>Account__c</searchFilterFields>
+        <searchResultsAdditionalFields>Billing_Account_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Business_Unit__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Billing_period__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Debtor_Group__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>InvoicePhase__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Identification_Number__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>BankAccountNameWithBANumber</fullName>
+        <active>true</active>
+        <description>Check, if Bank name has been selected then the Bank account number also has to be filled in</description>
+        <errorConditionFormula>OR (AND(NOT (ISBLANK(Bank_Account_Number__c)), ISBLANK(BankName__c)),AND ((ISBLANK(Bank_Account_Number__c)), NOT (ISBLANK(BankName__c))))</errorConditionFormula>
+        <errorDisplayField>BankName__c</errorDisplayField>
+        <errorMessage>If you select a Bank name you have to enter Bank account number. If you enter Bank account number you also have to choose bank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CheckBankAccountForPaymentMethod</fullName>
+        <active>true</active>
+        <description>If as a Payement method Direct debit has been selected then Bank name, Bank account number and limit can not be empty</description>
+        <errorConditionFormula>AND(PaymentMethod__r.Name = &apos;Direct debit&apos; ,OR( ISNULL(BankName__c) , ISNULL(Bank_Account_Number__c),  ISNULL( Limit__c )))</errorConditionFormula>
+        <errorDisplayField>PaymentMethod__c</errorDisplayField>
+        <errorMessage>Bank name, Bank account number and Limit are required if Direct debit is selected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CheckBankAccountForPaymentMethodBA</fullName>
+        <active>true</active>
+        <description>If as a Payment method Direct debit has been selected then Bank name, Bank account number and limit can not be empty</description>
+        <errorConditionFormula>AND(PaymentMethod__r.Name = &apos;Direct Debit&apos; ,OR( ISBLANK(BankName__c) , ISBLANK(Bank_Account_Number__c), ISBLANK( Limit__c )))</errorConditionFormula>
+        <errorDisplayField>PaymentMethod__c</errorDisplayField>
+        <errorMessage>If as a Payement method Direct debit has been selected then Bank name, Bank account number and limit can not be empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Check_Address_Complete</fullName>
+        <active>true</active>
+        <description>If Complete Address is marked it checks whether 1st Line and/or 2nd Line is filled in.</description>
+        <errorConditionFormula>IF( !ISPICKVAL( Account__r.GTS_Location_del__c, &apos;GTS Hungary&apos;)&amp;&amp;flgComplete__c = true &amp;&amp; IF(Line_1__c = &apos;&apos; &amp;&amp; Line_2__c = &apos;&apos;, true, false), true, false)</errorConditionFormula>
+        <errorMessage>You have to fill either 1st Line or 2nd Line when Complete Address is checked!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Debtor_Group_90_validation</fullName>
+        <active>true</active>
+        <description>Only Billing Manager SK is available to set DG90</description>
+        <errorConditionFormula>AND( 
+ISCHANGED(Debtor_Group__c), 
+ISPICKVAL( Debtor_Group__c, &apos;90&apos;) , $UserRole.Name !=&apos;Billing Manager SK&apos;)</errorConditionFormula>
+        <errorDisplayField>Debtor_Group__c</errorDisplayField>
+        <errorMessage>Only Billing Manager SK role is able to set Debtor Group 90</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Email_Address_required_for_Delivery_Type</fullName>
+        <active>true</active>
+        <description>Email address must be given if Invoice Delivery EMAIL selected</description>
+        <errorConditionFormula>AND(OR( InvoiceDelivery__r.Value__c  = &apos;EMAIL&apos;, InvoiceDelivery__r.Value__c  = &apos;BOTH&apos;), ISBLANK( Invoice_Email__c ))</errorConditionFormula>
+        <errorDisplayField>Invoice_Email__c</errorDisplayField>
+        <errorMessage>Please, provide email address for invoice delivery</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>HU_BlockBillingSystemChange</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL( Account__r.GTS_Location_del__c, &apos;GTS Hungary&apos;), NOT(ISNEW()), ISCHANGED( Billed_From__c ))</errorConditionFormula>
+        <errorMessage>You are not allowed to changed assigned Billing System, after BA creation</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>HU_BlockCurrencyChange</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL( Account__r.GTS_Location_del__c, &apos;GTS Hungary&apos;), NOT(ISNEW()), ISCHANGED( CurrencyIsoCode))</errorConditionFormula>
+        <errorMessage>You are not allowed to modify Billing Account Currency after its creation</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>HU_Invoice_delivery_check</fullName>
+        <active>true</active>
+        <description>checks the accepted method of invoice delivery for HU</description>
+        <errorConditionFormula>AND(ISPICKVAL( Account__r.GTS_Location_del__c, &apos;GTS Hungary&apos;),InvoiceDelivery__r.Name &lt;&gt;&apos;Printed Invoice&apos;)</errorConditionFormula>
+        <errorDisplayField>InvoiceDelivery__c</errorDisplayField>
+        <errorMessage>The selected Invoice delivery method is not supported in HU. Please correct. the supported value is: Printed Invoice.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>HU_invoice_language_check</fullName>
+        <active>true</active>
+        <description>Invoice language validation for Hungary</description>
+        <errorConditionFormula>IF(
+ISPICKVAL( Account__r.GTS_Location_del__c, &apos;GTS Hungary&apos;) &amp;&amp;
+if(
+OR((InvoiceLanguage__r.Name =&apos;English&apos;),(InvoiceLanguage__r.Name =&apos;Slovak&apos;)) ,true,false),true,false)</errorConditionFormula>
+        <errorDisplayField>InvoiceLanguage__c</errorDisplayField>
+        <errorMessage>The accepted invoice language for Hungary is: Hungarian. Please correct</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>HU_payment_method_check</fullName>
+        <active>true</active>
+        <description>Checks the allowed payment method for Hungary</description>
+        <errorConditionFormula>IF(
+ISPICKVAL( Account__r.GTS_Location_del__c, &apos;GTS Hungary&apos;) &amp;&amp;
+if(
+OR( PaymentMethod__r.Name=&apos;Payment Order&apos;) ,true,false),true,false)</errorConditionFormula>
+        <errorDisplayField>PaymentMethod__c</errorDisplayField>
+        <errorMessage>The selected Payment Method is not handled in Hungary. Please correct.
+Possible options are: Postal Payment Check, Bank Transfer or Direct Debit</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Modification_of_Active_Account_forbidden</fullName>
+        <active>true</active>
+        <description>It is not allowed to modify some fields above Pending status</description>
+        <errorConditionFormula>AND ( OR (TEXT ( PRIORVALUE( CurrencyIsoCode ) ) != TEXT (CurrencyIsoCode), PRIORVALUE(  Price_List__c  ) != Price_List__c ), NOT (ISPICKVAL( Status__c , &apos;Pending&apos;) ) )</errorConditionFormula>
+        <errorMessage>Fields Currency and Price list can be modified only on Pending status.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PL_Legal_Entity_required</fullName>
+        <active>true</active>
+        <description>Legal Entity required for PL</description>
+        <errorConditionFormula>ISPICKVAL( Legal_Entity__c, &apos;&apos;) &amp;&amp; ISPICKVAL( Account__r.GTS_Location_del__c , &apos;GTS Poland&apos;)</errorConditionFormula>
+        <errorDisplayField>Legal_Entity__c</errorDisplayField>
+        <errorMessage>Legal Entity is required</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>TaxId_VATNumber_mustBeFilledAtAccount</fullName>
+        <active>false</active>
+        <description>If any of those values for Account (Tax Identification Number or VAT Number) is missing, it should be required to provide it for Account before save of Billing Account.</description>
+        <errorConditionFormula>OR(Account__r.Tax_identification_number__c == &apos;&apos;, Account__r.VAT_number__c == &apos;&apos;)</errorConditionFormula>
+        <errorMessage>Before saving changes to Billing Account please fill: &quot;Tax Identification number&quot; and &quot;Vat number&quot; fields at Account object</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>disable_cmplfls_1st_2nd_line_for_HU</fullName>
+        <active>false</active>
+        <description>this rule informs users from hungary that they cannot set: Complete Address, 1st line and 2nd line for Hungarian BA</description>
+        <errorConditionFormula>IF( 
+ISPICKVAL( Account__r.GTS_Location_del__c, &apos;GTS Hungary&apos;) &amp;&amp;
+if(
+OR(flgComplete__c = true,Line_1__c&lt;&gt;&apos;&apos;,Line_2__c&lt;&gt;&apos;&apos;) ,true,false),true,false)</errorConditionFormula>
+        <errorMessage>You are not allowed to select Complete Address, 1st Line or 2nd Line for Hungarian accounts</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Collection_Events</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Collection Events</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/VindicationEventsHistory?id={!Billing_Accounts__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_in_Billing</fullName>
+        <availability>online</availability>
+        <description>Creates New Billing Account in Billing System</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create in Billing</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var sStatus = &quot;{!Billing_Accounts__c.Status__c}&quot;;
+var sAccountID = &quot;{!Billing_Accounts__c.Id}&quot;;
+
+if(sStatus == &apos;New&apos;){
+result=sforce.apex.execute(&quot;BillingAccountMethods&quot;,&quot;createBAInBilling&quot;, {sBillingAccountID:sAccountID});
+
+if(result == &apos;OK&apos;){
+alert(&apos;Creation of Billing Account Requested successfuly&apos;);
+window.location = window.location;
+} else {
+alert(result);
+}
+} else {
+alert(&apos;Only New Billing Account can be created directly in Billing System&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Refresh_Account_Balance</fullName>
+        <availability>online</availability>
+        <description>Refreshes Balance of Billing Account</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Refresh Account Balance</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var ba_id = &apos;{!Billing_Accounts__c.Id}&apos;;
+
+result=sforce.apex.execute(&quot;BillingAccountMethods&quot;,&quot;getBalance&quot;, {BillingAccountCRMId:ba_id});
+
+if (result==&apos;OK&apos;) {
+window.location.href = window.location.href;
+} else {
+alert(result);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Set_Invoicing_Address</fullName>
+        <availability>online</availability>
+        <description>Selects new Invoicing Address from OSS</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Set Invoicing Address</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>function getRandomNum(lbound, ubound) 
+{ 
+return (Math.floor(Math.random() * (ubound - lbound)) + lbound); 
+} 
+
+function getRandomChar() 
+{ 
+var numberChars = &quot;0123456789&quot;; 
+var alphaChars = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;; 
+var charSet = numberChars + alphaChars; 
+
+return charSet.charAt(getRandomNum(0, charSet.length)); 
+} 
+
+function getPassword(length) 
+{ 
+var pass = &quot;&quot;; 
+length++; 
+
+if (length &gt; 0) pass = pass + getRandomChar(); 
+
+for (var idx = 1; idx &lt; length; ++idx) 
+{ 
+pass = pass + getRandomChar(); 
+} 
+return pass; 
+} 
+
+var arr = window.parent.location.href.split(&quot;/&quot;); 
+var arr2 = arr[3].split(&quot;?&quot;); 
+var id = arr2[0]; 
+var str_password = getPassword(24); 
+
+window.top.location.href = &quot;https://&quot; + window.top.location.host + &quot;/apex/GetAddressFromOSS?objid=&quot; + id + &quot;&amp;hashId=&quot; + str_password;</url>
+    </webLinks>
+</CustomObject>

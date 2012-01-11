@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Fields for Request Import Templates</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>ColumnNo__c</fullName>
+        <description>Column Number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Column Number in the File</inlineHelpText>
+        <label>Column No</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieldType__c</fullName>
+        <description>Type of data expected in the File</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of data expected in the File</inlineHelpText>
+        <label>Field Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Date</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Number</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Text</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RelatedField__c</fullName>
+        <description>Field from Related Object that stores searched data</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field from Related Object that stores searched data</inlineHelpText>
+        <label>Related Field</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RelatedObject__c</fullName>
+        <description>Related Object from which the data should be retrieved</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Object from which ID should be retrieved</inlineHelpText>
+        <label>Related Object</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RequestTemplate__c</fullName>
+        <description>Request Import Template containing the field</description>
+        <externalId>false</externalId>
+        <label>Request Template</label>
+        <referenceTo>RequestTemplate__c</referenceTo>
+        <relationshipLabel>Template Fields</relationshipLabel>
+        <relationshipName>Request_Template_Fields</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Request_Field__c</fullName>
+        <description>Request Field to which information should be entered</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Request Field that will store the data</inlineHelpText>
+        <label>Request Field</label>
+        <length>80</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if data in the column is required</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if data in the column is required</inlineHelpText>
+        <label>Required</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Request Template Field</label>
+    <nameField>
+        <label>Field Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Request Template Fields</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Column_Number</fullName>
+        <active>true</active>
+        <description>Checks if entered Column Number is not lower than 1</description>
+        <errorConditionFormula>ColumnNo__c &lt; 1</errorConditionFormula>
+        <errorDisplayField>ColumnNo__c</errorDisplayField>
+        <errorMessage>Column Number must be higher than 0</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Related_Field_Required</fullName>
+        <active>true</active>
+        <description>Requires value in Related Field if Related Object is not empty</description>
+        <errorConditionFormula>AND(ISNULL(RelatedField__c),  NOT(ISNULL(RelatedObject__c)))</errorConditionFormula>
+        <errorDisplayField>RelatedField__c</errorDisplayField>
+        <errorMessage>Related Field is Required if Related Object was entered</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object used to store information for Biuro Numerów TPSA</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>BRANZA_ABONENTA_1__c</fullName>
+        <externalId>false</externalId>
+        <label>BRANZA_ABONENTA_1</label>
+        <length>99</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BRANZA_ABONENTA_2__c</fullName>
+        <externalId>false</externalId>
+        <label>BRANZA_ABONENTA_2</label>
+        <length>99</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BRANZA_ABONENTA_3__c</fullName>
+        <externalId>false</externalId>
+        <label>BRANZA_ABONENTA_3</label>
+        <length>99</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CSR_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>CSR ID</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DATA_WYKONANIA__c</fullName>
+        <externalId>false</externalId>
+        <label>DATA_WYKONANIA</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DODATEK_ULICY__c</fullName>
+        <externalId>false</externalId>
+        <label>DODATEK_ULICY</label>
+        <length>49</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Exported__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Exported</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GMINA__c</fullName>
+        <externalId>false</externalId>
+        <label>GMINA</label>
+        <length>49</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IMIE_ABONENTA_1__c</fullName>
+        <externalId>false</externalId>
+        <label>IMIE_ABONENTA_1</label>
+        <length>199</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IMIE_ABONENTA_2__c</fullName>
+        <externalId>false</externalId>
+        <label>IMIE_ABONENTA_2</label>
+        <length>199</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>INFO__c</fullName>
+        <externalId>false</externalId>
+        <label>INFO</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LACZNIK_NAZWISKA__c</fullName>
+        <externalId>false</externalId>
+        <label>LACZNIK_NAZWISKA</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LOKAL__c</fullName>
+        <externalId>false</externalId>
+        <label>LOKAL</label>
+        <length>19</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MIEJSCOWOSC__c</fullName>
+        <externalId>false</externalId>
+        <label>MIEJSCOWOSC</label>
+        <length>49</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NAZWA_ABONENTA__c</fullName>
+        <externalId>false</externalId>
+        <label>NAZWA_ABONENTA</label>
+        <length>199</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NAZWA_ULICY__c</fullName>
+        <externalId>false</externalId>
+        <label>NAZWA_ULICY</label>
+        <length>99</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NAZWISKO_ABONENTA_1__c</fullName>
+        <externalId>false</externalId>
+        <label>NAZWISKO_ABONENTA_1</label>
+        <length>199</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NAZWISKO_ABONENTA_2__c</fullName>
+        <externalId>false</externalId>
+        <label>NAZWISKO_ABONENTA_2</label>
+        <length>199</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NUMER_ABONENTA__c</fullName>
+        <externalId>false</externalId>
+        <label>NUMER_ABONENTA</label>
+        <length>19</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OBN_OSA__c</fullName>
+        <externalId>false</externalId>
+        <label>OBN_OSA</label>
+        <length>2</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PLATNIK_UZYTKOWNIK__c</fullName>
+        <externalId>false</externalId>
+        <label>PLATNIK_UZYTKOWNIK</label>
+        <length>2</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PNA_POSESJI__c</fullName>
+        <externalId>false</externalId>
+        <label>PNA_POSESJI</label>
+        <length>19</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POSESJA__c</fullName>
+        <externalId>false</externalId>
+        <label>POSESJA</label>
+        <length>19</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POSTAC_PK__c</fullName>
+        <externalId>false</externalId>
+        <label>POSTAC_PK</label>
+        <length>19</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POWIAT__c</fullName>
+        <externalId>false</externalId>
+        <label>POWIAT</label>
+        <length>49</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRZEDROSTEK_NAZWISKA__c</fullName>
+        <externalId>false</externalId>
+        <label>PRZEDROSTEK_NAZWISKA</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RODZAJ_ABONENTA__c</fullName>
+        <externalId>false</externalId>
+        <label>RODZAJ_ABONENTA</label>
+        <length>2</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RODZAJ_OPERACJI__c</fullName>
+        <externalId>false</externalId>
+        <label>RODZAJ_OPERACJI</label>
+        <length>3</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RODZAJ_URZADZENIA__c</fullName>
+        <externalId>false</externalId>
+        <label>RODZAJ_URZADZENIA</label>
+        <length>19</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SKROT_SIECI__c</fullName>
+        <externalId>false</externalId>
+        <label>SKROT_SIECI</label>
+        <length>9</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task__c</fullName>
+        <externalId>false</externalId>
+        <label>Task</label>
+        <referenceTo>CTask__c</referenceTo>
+        <relationshipLabel>Yellowpages</relationshipLabel>
+        <relationshipName>Yellowpages</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WOJEWODZTWO__c</fullName>
+        <externalId>false</externalId>
+        <label>WOJEWODZTWO</label>
+        <length>49</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>YellowpagesTP</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>RODZAJ_OPERACJI__c</columns>
+        <columns>NAZWA_ABONENTA__c</columns>
+        <columns>RODZAJ_URZADZENIA__c</columns>
+        <columns>POSTAC_PK__c</columns>
+        <columns>NUMER_ABONENTA__c</columns>
+        <columns>CSR_ID__c</columns>
+        <columns>Exported__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{00000000}</displayFormat>
+        <label>Id</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Yellowpages</pluralLabel>
+    <searchLayouts>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>Create_report_for_TP</listViewButtons>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Create_report_for_TP</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create report for TP</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+if (navigator.appName == &quot;Microsoft Internet Explorer&quot;) { 
+
+var records = new Array(); 
+var error = false; 
+records = sforce.apex.execute(&quot;IntegrationYellowpages&quot;,&quot;selectRecords&quot;,{error:error}); 
+var arr = new Array(); 
+var ids = new Array(); 
+
+if (records.length&gt;0) { 
+try { 
+var fso = new ActiveXObject(&quot;Scripting.FileSystemObject&quot;); 
+var s = fso.CreateTextFile(&quot;D:\\BiuroNumerow.txt&quot;, true); 
+for (i=0;i&lt;=records.length-1;i++) { 
+arr = records[i].split(&apos;-----&apos;); 
+s.WriteLine(arr[1]); 
+ids.push(arr[0]); 
+} 
+s.Close(); 
+
+} catch(err) { 
+txt=&quot;There was an error while creating file.\n\n&quot;; 
+txt+=&quot;Error description: &quot; + err.description + &quot;\n\n&quot;; 
+alert(txt); 
+error = true; 
+} 
+if (error != true) { 
+var result = sforce.apex.execute(&quot;IntegrationYellowpages&quot;,&quot;updateRecords&quot;,{ids:ids}); 
+if (result == &apos;OK&apos;) { 
+alert(&apos;Report created successfully.&apos;); 
+} else { 
+alert(&apos;Error while updating records. Please try again.&apos;); 
+} 
+} 
+
+} else { 
+alert(&apos;No records to export.&apos;); 
+} 
+
+} else { 
+alert(&apos;This function is supported in Internet Explorer only.&apos;); 
+}</url>
+    </webLinks>
+</CustomObject>

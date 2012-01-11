@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <content>NewEquipment</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>NewEquipment</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>NewEquipment</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object used to store equipment information used in Hardware Request tasks to create Logistics Order (ZDL)</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Action__c</fullName>
+        <externalId>false</externalId>
+        <label>Action</label>
+        <picklist>
+            <picklistValues>
+                <fullName>client installation</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>POP installation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>client deinstallation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>POP deinstallation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Barcode__c</fullName>
+        <externalId>false</externalId>
+        <label>Barcode</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Comment</label>
+        <length>2000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Costing_Item__c</fullName>
+        <description>CECOLSVI-5</description>
+        <externalId>false</externalId>
+        <label>Costing Item</label>
+        <referenceTo>SFDC_Costing_Item__c</referenceTo>
+        <relationshipLabel>Equipment</relationshipLabel>
+        <relationshipName>Equipment</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Document_Request_ID__c</fullName>
+        <description>ID of Request Document</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of Request Document</inlineHelpText>
+        <label>Document Request ID</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <description>Equipment name</description>
+        <externalId>false</externalId>
+        <label>Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Component__c</fullName>
+        <description>Order Component to which item should be related. Equipment installations only.</description>
+        <externalId>false</externalId>
+        <label>Order Component (installation only)</label>
+        <referenceTo>OrderComponent__c</referenceTo>
+        <relationshipLabel>Equipment</relationshipLabel>
+        <relationshipName>Equipment</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Provisioning_Plan_Task__c</fullName>
+        <externalId>false</externalId>
+        <label>Provisioning Plan Task</label>
+        <referenceTo>Provisioning_Plan_Task__c</referenceTo>
+        <relationshipLabel>Equipment</relationshipLabel>
+        <relationshipName>Equipment</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Selected_Components_SIDs__c</fullName>
+        <externalId>false</externalId>
+        <label>Selected Components SIDs</label>
+        <length>10000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Selected_Components__c</fullName>
+        <externalId>false</externalId>
+        <label>Selected Components</label>
+        <length>10000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Serial_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Serial Number</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Task__c</fullName>
+        <externalId>false</externalId>
+        <label>Task</label>
+        <referenceTo>CTask__c</referenceTo>
+        <relationshipLabel>Equipment</relationshipLabel>
+        <relationshipName>Equipment</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>Equipment</label>
+    <nameField>
+        <displayFormat>{000000}</displayFormat>
+        <label>Id</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Equipment</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Adding_to_OL_Task</fullName>
+        <active>false</active>
+        <description>Equipment can be added to &quot;Hardware Request&quot; Task only</description>
+        <errorConditionFormula>AND(NOT(ISBLANK( Task__c )),NOT(ISPICKVAL( Task__r.Type__c ,&apos;Hardware Request (PL)&apos;)))</errorConditionFormula>
+        <errorMessage>Equipment can be added to &quot;Hardware Request&quot; Task only.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Adding_to_Prov_Plan_Task</fullName>
+        <active>false</active>
+        <description>It&apos;s allowed to add equipment to Provisioning Plan Task type &quot;Hardware Request&quot; only.</description>
+        <errorConditionFormula>AND(NOT(ISBLANK(Provisioning_Plan_Task__c)),NOT(ISPICKVAL(Provisioning_Plan_Task__r.Task_Type__c,&apos;Hardware Request (PL)&apos;)))</errorConditionFormula>
+        <errorMessage>Equipment can be added to Hardware Request task only.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Order_Component_selection_1</fullName>
+        <active>false</active>
+        <description>Selected Order Component has to be related to proper Order Line (via Provisioning Plan Task)</description>
+        <errorConditionFormula>AND(NOT(ISBLANK( Order_Component__c)),NOT(ISBLANK( Provisioning_Plan_Task__c )),Order_Component__r.OrderLine__r.Id != Provisioning_Plan_Task__r.Provisioning_Plan__r.Order_Line__r.Id)</errorConditionFormula>
+        <errorDisplayField>Order_Component__c</errorDisplayField>
+        <errorMessage>Selected Order Component doesn&apos;t belong to the Order Line</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Order_Component_selection_2</fullName>
+        <active>false</active>
+        <description>Selected Order Component has to be related to proper Order Line (via OL Task)</description>
+        <errorConditionFormula>AND(NOT(ISBLANK(Order_Component__c)),NOT(ISBLANK(Task__c)),Order_Component__r.OrderLine__c != Task__r.Order_Line__c)</errorConditionFormula>
+        <errorDisplayField>Order_Component__c</errorDisplayField>
+        <errorMessage>Selected Order Component doesn&apos;t belong to the Order Line</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Provisioning_Plan_definition</fullName>
+        <active>false</active>
+        <description>Equipment can not be added to Provisioning Plan Task in Provisioning Plan definition (instance only)</description>
+        <errorConditionFormula>Provisioning_Plan_Task__r.Provisioning_Plan__r.Instance__c = false</errorConditionFormula>
+        <errorMessage>Equipment data can be added to Provisioning Plan instance only</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Service_Component_installation_only</fullName>
+        <active>false</active>
+        <description>Service Component should be selected for equipment installation only.</description>
+        <errorConditionFormula>AND(NOT(ISBLANK(Order_Component__c)),NOT(OR(ISPICKVAL( Action__c, &apos;client installation&apos;),ISPICKVAL( Action__c, &apos;POP installation&apos;))))</errorConditionFormula>
+        <errorDisplayField>Order_Component__c</errorDisplayField>
+        <errorMessage>Order Component can be selected for installations only.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Create_Logistics_Order</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create Logistics Order</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS( $ObjectType.Equipment__c )};
+
+var result = sforce.apex.execute(&quot;IntegrationLogistics&quot;,&quot;CreateLogisticsOrder&quot;, {records:records});
+
+if(result[0] == &apos;OK&apos;){
+alert(result[1]);
+location.reload(true);
+} else {
+alert(result[1]);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Generate_Equipment_from_Project_Cost</fullName>
+        <availability>online</availability>
+        <description>CECOLSVI-5</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate Equipment from Project Cost</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+var taskId = &apos;{!CTask__c.Id}&apos;;
+
+var result = sforce.apex.execute(&quot;IntegrationLogistics&quot;,&quot;GenerateEquipmentFromProjectCost&quot;, {taskId:taskId});
+
+if(result[0] == &apos;OK&apos;){
+alert(result[1]);
+location.reload(true);
+} else {
+alert(result[1]);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Get_names_for_barcodes</fullName>
+        <availability>online</availability>
+        <description>Getting name and Serial Number of equipment based on Barcode.</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Get names for barcodes</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS( $ObjectType.Equipment__c )};
+
+var result = sforce.apex.execute(&quot;IntegrationLogistics&quot;,&quot;GetNamesByBarcode&quot;, {records:records});
+
+if(result[0] == &apos;OK&apos;){
+alert(result[1]);
+location.reload(true);
+} else {
+alert(result[1]);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>window.location.href = &quot;https://&quot; + window.location.host + &quot;/apex/NewEquipment?taskid={! CTask__c.Id}&quot;;</url>
+    </webLinks>
+</CustomObject>

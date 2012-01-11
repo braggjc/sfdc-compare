@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Christmas_Present__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Benefits option. What is to be sent to this contact person as a form of benefit.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Benefits option. What is to be sent to this contact person as a form of benefit.</inlineHelpText>
+        <label>Christmas Present</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Type__c</fullName>
+        <description>Specifies type of Contact.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies type of Contact.</inlineHelpText>
+        <label>Contact Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchasing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Created_from_Extranet__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Contact has been created from Extranet</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Contact has been created from Extranet</inlineHelpText>
+        <label>Created from Extranet</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_OCTT__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If marked means that this contact has been created in OC:TT.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If marked means that this contact has been created in OC:TT.</inlineHelpText>
+        <label>Created in OCTT</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Email_Unique__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <description>Uniqueness of Email Address</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Uniqueness of Email Address</inlineHelpText>
+        <label>Email Unique</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>ExtranetCreated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Contact data has been sent to Extranet</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Contact data has been sent to Extranet</inlineHelpText>
+        <label>Created in Extranet</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ExtranetSynchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if contact is synchronized with Extranet</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if contact is synchronized with Extranet</inlineHelpText>
+        <label>Synchronized with Extranet</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Extranet_Role__c</fullName>
+        <description>Defines User&apos;s Role for Extranet</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines User&apos;s Role for Extranet</inlineHelpText>
+        <label>Extranet Role</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Customer Admin User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Regular User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer Regular User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer Admin User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regular Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner Administrator</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Extranet_User__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Contact is also Extranet User</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Contact is also Extranet User</inlineHelpText>
+        <label>Extranet User</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Full_ID__c</fullName>
+        <description>Stores case insensitive ID (18 characters) of record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores case insensitive ID (18 characters) of record.</inlineHelpText>
+        <label>Full ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Greeting_Card__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Benefits option. What is to be sent to this contact person as a form of benefit.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Benefits option. What is to be sent to this contact person as a form of benefit.</inlineHelpText>
+        <label>Greeting Card</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ID_Card_No__c</fullName>
+        <description>Identification Card Number for Partner Contacts</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identification Card Number for Partner Contacts</inlineHelpText>
+        <label>ID Card No.</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Integration_Timestamp__c</fullName>
+        <description>Stores information when this Contact has been last modified by integration.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores information when this Contact has been last modified by integration.</inlineHelpText>
+        <label>Integration Timestamp</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_By_Ext_Contact__c</fullName>
+        <description>Extranet User (SFDC Contact) which has modified record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Extranet User (SFDC Contact) which has modified record</inlineHelpText>
+        <label>Last Modified by Extranet Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Contacts</relationshipLabel>
+        <relationshipName>Contacts</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_By_Ext_Txt__c</fullName>
+        <description>Extranet User (not represented in SFDC) which modified reord</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Extranet User (not represented in SFDC) which modified reord</inlineHelpText>
+        <label>Last Modified by Extranet</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Extranet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Employee Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seminar - Internal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seminar - Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bought Database</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Link_to_OCTT__c</fullName>
+        <description>This is direct link to open this contact in OC:TT system.</description>
+        <externalId>false</externalId>
+        <formula>if(Created_in_OCTT__c, 
+if( $Organization.Id=&apos;00D200000008d5u&apos;,HYPERLINK(&quot;https://occe.gtsce.com/occe2cat/person/efind/SFDC/&quot; &amp; Full_ID__c , &quot;Click here&quot;, &quot;_blank&quot;), 
+HYPERLINK(&quot; https://demo.in.gtsgroup.cz/occe2cat/person/efind/SFDC/&quot; &amp; Full_ID__c , &quot;Click here&quot; , &quot;_blank&quot;)),&quot;&quot;)</formula>
+        <inlineHelpText>This is direct link to open this contact in OC:TT system.</inlineHelpText>
+        <label>Link to OCTT</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mobile_Unique__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Field for verification of mobile phone number field&apos;s uniqueness;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Techical field;</inlineHelpText>
+        <label>Mobile Unique</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Preferred_Language__c</fullName>
+        <description>Specifies in which language this contact prefer to communicate.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies in which language this contact prefer to communicate.</inlineHelpText>
+        <label>Preferred Language</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Czech</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>English</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>French</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>German</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hungarian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Polish</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Slovak</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Romanian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Primary_contact__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Defines which contact is primary for an account</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Only one contact should be selected as primary for an account</inlineHelpText>
+        <label>Primary</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <description>Role for Account Relation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Role for Account Relation</inlineHelpText>
+        <label>Role</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Business User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Decision Maker</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invoicing User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner Representative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Planned Work</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>If this contact has been migrated or created from other system this filed is storing it&apos;s ID in original system.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>If this contact has been migrated or created from other system this filed is storing it&apos;s ID in original system.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Determines status of Contact</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Synchronization_Log__c</fullName>
+        <description>Stores information about history of synchronization of this Contact with OC:TT system.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores information about history of synchronization of this Contact with OC:TT system.</inlineHelpText>
+        <label>Synchronization Log</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Synchronized_with_OCTT__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Added during Colorado Sprint 2;</description>
+        <externalId>false</externalId>
+        <label>Synchronized with OCTT</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Validity_End_Date__c</fullName>
+        <description>Validity End Date caluclated as Validity Start Date + Validity Period in months</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Validity End Date caluclated as Validity Start Date + Validity Period in months</inlineHelpText>
+        <label>Validity End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Validity_Period_months__c</fullName>
+        <description>Validity period for Power of Attorney</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Validity period for Power of Attorney</inlineHelpText>
+        <label>Validity Period [months]</label>
+        <picklist>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Validity_Start_Date__c</fullName>
+        <description>Validity period start date for Power of Attorney document</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Validity period start date for Power of Attorney document</inlineHelpText>
+        <label>Validity Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <listViews>
+        <fullName>AllContacts</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Contacts</label>
+    </listViews>
+    <listViews>
+        <fullName>Extranet_Users</fullName>
+        <columns>FULL_NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>CONTACT.TITLE</columns>
+        <columns>CONTACT.PHONE1</columns>
+        <columns>CONTACT.EMAIL</columns>
+        <columns>Extranet_User__c</columns>
+        <columns>Extranet_Role__c</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Extranet_User__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Extranet Users</label>
+    </listViews>
+    <namedFilters>
+        <fullName>Case_Contact</fullName>
+        <active>true</active>
+        <errorMessage>Contact&apos;s Account must match selected Account on the Case record.</errorMessage>
+        <field>Case.ContactId</field>
+        <filterItems>
+            <field>Contact.AccountId</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <infoMessage>Only Contacts from choosen Account are visible.</infoMessage>
+        <isOptional>false</isOptional>
+        <name>Case_Contact Name</name>
+        <sourceObject>Case</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>Lead_00N200000026MKoEAM</fullName>
+        <active>true</active>
+        <field>Lead.Partner_User__c</field>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Account.Id</field>
+            <operation>equals</operation>
+            <valueField>$Source.Partner_Account__c</valueField>
+        </filterItems>
+        <isOptional>true</isOptional>
+        <name>Lead_Partner User</name>
+        <sourceObject>Lead</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>Opportunity_00N20000002hRS7EAM</fullName>
+        <active>true</active>
+        <field>Opportunity.Customer_Commercial_Contact__c</field>
+        <filterItems>
+            <field>Contact.AccountId</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+        <name>Opportunity_Customer Commercial Contact</name>
+        <sourceObject>Opportunity</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>Opportunity_00N20000002hRSCEA2</fullName>
+        <active>true</active>
+        <field>Opportunity.Partner_User__c</field>
+        <filterItems>
+            <field>Contact.Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Partner</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+        <name>Opportunity_Partner User</name>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01I2000000069MqEAI_00N20000002hUWgEAM</fullName>
+        <active>true</active>
+        <field>ServiceBundle__c.Customer_Contact_outside_working_hours__c</field>
+        <filterItems>
+            <field>$Source.Account__c</field>
+            <operation>equals</operation>
+            <valueField>Contact.Account.Id</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+        <name>Service Bundle_Customer Contact outside</name>
+        <sourceObject>ServiceBundle__c</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01I2000000069MqEAI_00N20000002hUWlEAM</fullName>
+        <active>true</active>
+        <field>ServiceBundle__c.Customer_Contact_in_working_hours__c</field>
+        <filterItems>
+            <field>$Source.Account__c</field>
+            <operation>equals</operation>
+            <valueField>Contact.Account.Id</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+        <name>Service Bundle_Customer Contact in worki</name>
+        <sourceObject>ServiceBundle__c</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01I2000000069MqEAI_00N20000002hUWqEAM</fullName>
+        <active>true</active>
+        <field>ServiceBundle__c.Customer_Contact_in_an_emergency__c</field>
+        <filterItems>
+            <field>$Source.Account__c</field>
+            <operation>equals</operation>
+            <valueField>Contact.Account.Id</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+        <name>Service Bundle_Customer Contact in an em</name>
+        <sourceObject>ServiceBundle__c</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01I2000000069MqEAI_00N20000002wsBNEAY</fullName>
+        <active>true</active>
+        <field>ServiceBundle__c.Customer_Contact_in_an_emergency_A__c</field>
+        <filterItems>
+            <field>Contact.Account.Id</field>
+            <operation>equals</operation>
+            <valueField>$Source.Account__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Service Bundle_Customer Contact in an em</name>
+        <sourceObject>ServiceBundle__c</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01I2000000069MqEAI_00N20000002wsC1EAI</fullName>
+        <active>true</active>
+        <field>ServiceBundle__c.Customer_Contact_in_working_hours_A__c</field>
+        <filterItems>
+            <field>Contact.AccountId</field>
+            <operation>equals</operation>
+            <valueField>$Source.Account__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Service Bundle_Customer Contact outside</name>
+        <sourceObject>ServiceBundle__c</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01I2000000069MqEAI_00N20000002wsCaEAI</fullName>
+        <active>true</active>
+        <field>ServiceBundle__c.Customer_Contact_outside_working_hours_A__c</field>
+        <filterItems>
+            <field>$Source.Account__c</field>
+            <operation>equals</operation>
+            <valueField>Contact.AccountId</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Service Bundle_Customer Contact outside</name>
+        <sourceObject>ServiceBundle__c</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01I20000000H94iEAC_00N20000002hUJXEA2</fullName>
+        <active>true</active>
+        <field>OrderLine__c.Customer_Contact_in_working_hours__c</field>
+        <filterItems>
+            <field>$Source.Account__c</field>
+            <operation>equals</operation>
+            <valueField>Contact.Account.Id</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+        <name>Order Line_Customer Contact in working h</name>
+        <sourceObject>OrderLine__c</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01I20000000H94iEAC_00N20000002hUKoEAM</fullName>
+        <active>true</active>
+        <field>OrderLine__c.Customer_Contact_in_an_emergency__c</field>
+        <filterItems>
+            <field>$Source.Account__c</field>
+            <operation>equals</operation>
+            <valueField>Contact.Account.Id</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+        <name>Order Line_Customer Contact in an emerge</name>
+        <sourceObject>OrderLine__c</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01I20000000H94iEAC_00N20000002hULTEA2</fullName>
+        <active>true</active>
+        <field>OrderLine__c.Customer_Contact_outside_working_hours__c</field>
+        <filterItems>
+            <field>$Source.Account__c</field>
+            <operation>equals</operation>
+            <valueField>Contact.AccountId</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Order Line_Customer Contact outside work</name>
+        <sourceObject>OrderLine__c</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01I20000000H94iEAC_00N20000002wsJMEAY</fullName>
+        <active>true</active>
+        <field>OrderLine__c.Customer_Contact_in_working_hours_A__c</field>
+        <filterItems>
+            <field>Contact.AccountId</field>
+            <operation>equals</operation>
+            <valueField>$Source.Account__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Order Line_Customer Contact in an emerge</name>
+        <sourceObject>OrderLine__c</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01I20000000H94iEAC_00N20000002wsJREAY</fullName>
+        <active>true</active>
+        <field>OrderLine__c.Customer_Contact_outside_working_hours_A__c</field>
+        <filterItems>
+            <field>Contact.AccountId</field>
+            <operation>equals</operation>
+            <valueField>$Source.Account__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Order Line_Customer Contact outside work</name>
+        <sourceObject>OrderLine__c</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01I20000000HEenEAG_00N20000002wY8DEAU</fullName>
+        <active>true</active>
+        <field>CContract__c.Partner_Signed_By__c</field>
+        <filterItems>
+            <field>Contact.Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Partner</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.AccountId</field>
+            <operation>equals</operation>
+            <valueField>$Source.Partner_Signing__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Contract_Partner Signed By</name>
+        <sourceObject>CContract__c</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01IT0000000D7BPMA0_00NT00000018bgBMAQ</fullName>
+        <active>true</active>
+        <booleanFilter>(1 OR 3) AND 2</booleanFilter>
+        <field>OrderLine__c.Suppliers_Contact__c</field>
+        <filterItems>
+            <field>Contact.Account.Type</field>
+            <operation>equals</operation>
+            <value>Supplier</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <filterItems>
+            <field>Contact.Account.Supplier__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Order Line_Supplier&apos;s Contact</name>
+    </namedFilters>
+    <validationRules>
+        <fullName>Email_Phone_or_Mobile_required</fullName>
+        <active>true</active>
+        <description>for Contacts assigned to Company and Partner Accounts</description>
+        <errorConditionFormula>IF ( 
+	OR (
+		CONTAINS( Account.RecordTypeId , &quot;01220000000LWct&quot; ), 
+		CONTAINS( Account.RecordTypeId , &quot;01220000000LWcv&quot; ) 
+	),
+
+	AND (ISBLANK ( Email ), ISBLANK ( Phone ), ISBLANK ( MobilePhone ) ), 
+
+False)</errorConditionFormula>
+        <errorMessage>Either Phone or Mobile or Email field must be filled</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Extranet_Role_Vs_Account</fullName>
+        <active>false</active>
+        <description>Validates if  selected role corresponds to related Account</description>
+        <errorConditionFormula>((TEXT(Extranet_Role__c) = &quot;Customer Admin User&quot; || TEXT(Extranet_Role__c) = &quot;Customer Regular User&quot;) &amp;&amp; NOT(CONTAINS( Account.RecordTypeId,  &quot;01220000000LWct&quot;)) &amp;&amp;  NOT(CONTAINS( Account.RecordTypeId,  &quot;01220000000LX4P&quot;)))||
+((TEXT(Extranet_Role__c) = &quot;Dealer Admin User&quot; || TEXT(Extranet_Role__c) = &quot;Dealer  Regular User&quot;) &amp;&amp; (NOT(CONTAINS( Account.RecordTypeId,  &quot;01220000000LWcv&quot;)) ||   Account.Dealer__c =false))</errorConditionFormula>
+        <errorDisplayField>Extranet_Role__c</errorDisplayField>
+        <errorMessage>Extranet Role must correspond to Account:
+- Customer User  only for Comapny or Residential
+- Partner Dealer User only for Partner and chekbox Dealer set to true</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>asst_phone_number</fullName>
+        <active>false</active>
+        <errorConditionFormula>!BEGINS(  AssistantPhone , &quot;+&quot;)</errorConditionFormula>
+        <errorDisplayField>AssistantPhone</errorDisplayField>
+        <errorMessage>Phone number should start with &quot;+&quot; and be in international format.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>fax_number</fullName>
+        <active>false</active>
+        <errorConditionFormula>!BEGINS(  Fax , &quot;+&quot;)</errorConditionFormula>
+        <errorDisplayField>Fax</errorDisplayField>
+        <errorMessage>Fax number should start with &quot;+&quot; and be in international format</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>mobile_phone_number</fullName>
+        <active>false</active>
+        <errorConditionFormula>!BEGINS(  MobilePhone , &quot;+&quot;)</errorConditionFormula>
+        <errorDisplayField>MobilePhone</errorDisplayField>
+        <errorMessage>Phone number should start with &quot;+&quot; and be in international format</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>phone_number</fullName>
+        <active>false</active>
+        <errorConditionFormula>!BEGINS( Phone , &quot;+&quot;)</errorConditionFormula>
+        <errorDisplayField>Phone</errorDisplayField>
+        <errorMessage>Phone number should start with &quot;+&quot; and be in international format.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Disable_Extranet_User</fullName>
+        <availability>online</availability>
+        <description>Disables access to Extranet for the Contact</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Disable Extranet User</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)} 
+
+var ContactId = &apos;{!Contact.Id}&apos;; 
+var Action = &apos;Disable&apos;; 
+var ObjectType = &apos;Contact&apos;;
+var result; 
+
+result = sforce.apex.execute(&quot;ContactManagement&quot;,&quot;UpdateExtranetProfile&quot;,{inContactID:ContactId,inAction:Action,inObjectType:ObjectType}); 
+
+if (result[0] == &apos;0&apos;){ 
+alert(&quot;Extranet Profile has been disabled successfully&quot;); 
+location.reload(true); 
+} else { 
+alert(result[1]); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Enable_as_Extranet_User</fullName>
+        <availability>online</availability>
+        <description>Creates Extranet User for Contact</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Enable as Extranet User</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)} 
+
+var ContactId = &apos;{!Contact.Id}&apos;;
+var Action = &apos;Enable&apos;;
+var ObjectType = &apos;Contact&apos;;
+var result;
+
+result = sforce.apex.execute(&quot;ContactManagement&quot;,&quot;UpdateExtranetProfile&quot;,{inContactID:ContactId,inAction:Action,inObjectType: ObjectType}); 
+
+if (result[0] == &apos;0&apos;){ 
+ alert(&quot;Extranet Profile has been created successfully&quot;);
+ location.reload(true);
+} else {
+ alert(result[1]);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>FindScripts</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Find Scripts</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/appex/app.jsp?appParam=CallScripting&amp;page=contact_list&amp;call_sid={!API.Session_ID}&amp;call_url={!API.Partner_Server_URL_70}&amp;eid={!Contact.Id}&amp;Contact_ID={!Contact.Id}&amp;Contact_FirstName={!Contact.FirstName}&amp;Contact_LastName={!Contact.LastName}&amp;Contact_Title={!Contact.Title}&amp;Contact_Phone={!Contact.Phone}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>HelpforScripts</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Help for Scripts</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/servlet/servlet.FileDownload?file=01530000000BYhF</url>
+        <width>600</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Set_Primary</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Set Primary</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/apex.js&quot;)} 
+
+var records = {!GETRECORDIDS( $ObjectType.Contact )};
+if (records.length == 0) alert(&apos;Please select at least one contact.&apos;);
+else if (records.length &gt; 1 ) {
+    alert (&apos;Only one contact can be set to primary.&apos;);
+}
+
+else if (records.length == 1) {
+    var result = sforce.connection.query(&quot;Select Id,  Primary_contact__c from Contact where Primary_contact__c = true&quot;);
+
+    var contacts = result.getArray(&quot;records&quot;);
+
+    if (contacts.length&gt;0){
+        for (var i = 0; i &lt; contacts.length; i++){
+            var oldPrimaryContact = contacts[i];
+            oldPrimaryContact.Primary_contact__c = false;
+            sforce.connection.update([oldPrimaryContact]);
+        }
+    }
+
+    result = sforce.connection.query(&quot;Select Id,  Primary_contact__c from Contact where Id =&apos;&quot; + records[0] + &quot;&apos;&quot;);
+    var cont = result.getArray(&quot;records&quot;)[0]; 
+
+    cont.Primary_contact__c = true;
+    sforce.connection.update([cont]);
+
+    //reload the current page
+    window.location.href = window.location.href;
+
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Synchronize_with_Extranet</fullName>
+        <availability>online</availability>
+        <description>Synchronize Data with Extranet</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Synchronize with Extranet</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)} 
+
+var ContactId = &apos;{!Contact.Id}&apos;; 
+var Action = &apos;Sync&apos;; 
+var ObjectType = &apos;Contact&apos;;
+var result; 
+
+result = sforce.apex.execute(&quot;ContactManagement&quot;,&quot;UpdateExtranetProfile&quot;,{inContactID: ContactId,inAction:Action,inObjectType:ObjectType}); 
+
+if (result[0] == &apos;0&apos;){ 
+alert(&quot;Extranet Profile has been synchronized successfully&quot;); 
+location.reload(true); 
+} else { 
+alert(result[1]); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>map</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>map</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://maps.yahoo.com/py/maps.py?cn={!Contact_MailingCountry}&amp;csz={!Contact_MailingCity}+{!Contact_MailingState}+{!Contact_MailingPostalCode}+&amp;addr={!Contact_MailingAddress}</url>
+    </webLinks>
+</CustomObject>

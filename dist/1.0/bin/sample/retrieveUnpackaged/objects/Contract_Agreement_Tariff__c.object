@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Contract_Agreement__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Agreement</label>
+        <referenceTo>Contract_Agreement__c</referenceTo>
+        <relationshipLabel>Fees and Tariffs</relationshipLabel>
+        <relationshipName>Contract_Agreement_Tariffs</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Incoming_Tariff__c</fullName>
+        <description>Payments for incoming calls to the Supplementary Telephone Service Numbers</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Payments for incoming calls to the Supplementary Telephone Service Numbers</inlineHelpText>
+        <label>Incoming Tariff</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Order_Line__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>Contract Agreement Tariffs</relationshipLabel>
+        <relationshipName>Contract_Agreement_Tariffs</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Outgoing_Tariff__c</fullName>
+        <description>The sum depending on the amount of all Call-fees for all Calls effected during the Period determined on the basis of the Tariff applicable at time of provision of the Service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The sum depending on the amount of all Call-fees for all Calls effected during the Period determined on the basis of the Tariff applicable at time of provision of the Service</inlineHelpText>
+        <label>Outgoing Tariff</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Service_Activation_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Activation Fee</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Service_Monthly_Charge__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Monthly Charge</label>
+        <length>1000</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Telephone_Configuration_Label__c</fullName>
+        <description>Configuration of telephone/ATA/PBX</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Configuration of telephone/ATA/PBX</inlineHelpText>
+        <label>Telephone Configuration Label</label>
+        <referenceTo>PricingItem__c</referenceTo>
+        <relationshipLabel>Contract Agreement Tariffs (Telephone Configuration Label)</relationshipLabel>
+        <relationshipName>Contract_Agreement_Tariffs5</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Telephone_Configuration__c</fullName>
+        <externalId>false</externalId>
+        <label>Telephone Configuration</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Telephone_Fee_Label__c</fullName>
+        <description>The lump-sum fee for telephone/ATA/PBX</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The lump-sum fee for telephone/ATA/PBX</inlineHelpText>
+        <label>Telephone Fee Label</label>
+        <referenceTo>PricingItem__c</referenceTo>
+        <relationshipLabel>Contract Agreement Tariffs (Telephone Fee Label)</relationshipLabel>
+        <relationshipName>Contract_Agreement_Tariffs1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Telephone_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Telephone Fee</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Telephone_Installment_Sale_Label__c</fullName>
+        <description>Installment sale of telephone/ATA/PBX</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Installment sale of telephone/ATA/PBX</inlineHelpText>
+        <label>Telephone Installment Sale Label</label>
+        <referenceTo>PricingItem__c</referenceTo>
+        <relationshipLabel>Contract Agreement Tariffs (Telephone Installment Sale)</relationshipLabel>
+        <relationshipName>Contract_Agreement_Tariffs3</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Telephone_Installment_Sale__c</fullName>
+        <externalId>false</externalId>
+        <label>Telephone Installment Sale</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Telephone_Rental_Fee_Label__c</fullName>
+        <description>Monthly rental fee for telephone/ATA/PBX</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Monthly rental fee for telephone/ATA/PBX</inlineHelpText>
+        <label>Telephone Rental Fee Label</label>
+        <referenceTo>PricingItem__c</referenceTo>
+        <relationshipLabel>Contract Agreement Tariffs (Telephone Rental Fee Label)</relationshipLabel>
+        <relationshipName>Contract_Agreement_Tariffs4</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Telephone_Rental_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Telephone Rental Fee</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <label>Contract Agreement Tariff</label>
+    <nameField>
+        <label>Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Contract Agreement Tariffs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

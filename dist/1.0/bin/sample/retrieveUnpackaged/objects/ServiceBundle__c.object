@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object stores information about Service Bundles (services installed for Customers)</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>A_End__c</fullName>
+        <description>A End Address copied  from Order Line after provisioning is finished</description>
+        <externalId>false</externalId>
+        <inlineHelpText>A End Address copied  from Order Line after provisioning is finished</inlineHelpText>
+        <label>A-End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Relation to Account, that given Service Bundle belongs to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Account, that given Service Bundle belongs to</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Service Bundles</relationshipLabel>
+        <relationshipName>Service_Bundles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Average_MU__c</fullName>
+        <description>Average value of MU from three last months</description>
+        <externalId>false</externalId>
+        <formula>(MonthBefore1__c + MonthBefore2__c + MonthBefore3__c) / 3</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Average value of MU from three last months</inlineHelpText>
+        <label>Average MU</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BCT_Calculation__c</fullName>
+        <description>Number of BCT Calculation, that was used for this Service Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of BCT Calculation, that was used for this Service Bundle</inlineHelpText>
+        <label>BCT Calculation</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>B_End__c</fullName>
+        <description>B End Address copied form Order Line after provisioning is finished</description>
+        <externalId>false</externalId>
+        <inlineHelpText>B End Address copied form Order Line after provisioning is finished</inlineHelpText>
+        <label>B-End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Billed_From__c</fullName>
+        <description>Country specific field, used only by GTS Hungary. Specifies the system, where service should be billed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Country specific field, used only by GTS Hungary. Specifies the system, where service should be billed</inlineHelpText>
+        <label>Billed From</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTSHU ECHO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTSHU SCALA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Account__c</fullName>
+        <description>Billing Account, on which this Service Bundle is invoiced</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Billing Account, on which this Service Bundle is invoiced</inlineHelpText>
+        <label>Billing Account</label>
+        <referenceTo>Billing_Accounts__c</referenceTo>
+        <relationshipLabel>Service Bundles</relationshipLabel>
+        <relationshipName>Service_Bundles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Billing_ID__c</fullName>
+        <description>ID of this Service Bundle in Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of this Service Bundle in Billing System</inlineHelpText>
+        <label>Billing ID</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Start_Date__c</fullName>
+        <description>Date, when billing of this Service Bundle started</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date, when billing of this Service Bundle started</inlineHelpText>
+        <label>Billing Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BundleType__c</fullName>
+        <description>Relation to Main Product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Main Product</inlineHelpText>
+        <label>Main Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Service Bundles</relationshipLabel>
+        <relationshipName>Service_Bundles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bundle_MRR__c</fullName>
+        <description>Bundle Monthly Recurring Revenue</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Bundle Monthly Recurring Revenue</inlineHelpText>
+        <label>Bundle MRR</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CBundleType__c</fullName>
+        <description>Relation to Bundle object - indicates what type of Bundle is it</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Bundle object - indicates what type of Bundle is it</inlineHelpText>
+        <label>Bundle Type</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Service Bundles</relationshipLabel>
+        <relationshipName>Service_Bundles</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CContract__c</fullName>
+        <description>Contract related to this Service Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract related to this Service Bundle</inlineHelpText>
+        <label>Agreement No.</label>
+        <referenceTo>CContract__c</referenceTo>
+        <relationshipLabel>Service Bundles</relationshipLabel>
+        <relationshipName>Service_Bundles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CSRId__c</fullName>
+        <description>ID of this Service Bundle in CSR Database</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of this Service Bundle in CSR Database</inlineHelpText>
+        <label>CSRId</label>
+        <length>16</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Circuit_ID__c</fullName>
+        <description>Value of Circuit ID Attribute from Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Circuit ID Attribute from Component</inlineHelpText>
+        <label>Circuit ID</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Circuit_Id_OSS_Link__c</fullName>
+        <description>con3:
+HYPERLINK(&apos;http://dione1.gtsgroup.cz/sand_box/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c)
+test:
+HYPERLINK(&apos;http://dione1.gtsgroup.cz/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c)
+prod:
+HYPERLINK(&apos;http://dione1.gtsgroup.cz/idengine/ce_ie_circ/redir.htm?circ_name=&apos; + Circuit_ID__c , Circuit_ID__c)</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;http://dione1.gtsgroup.cz/idengine/ce_ie_circ/redir.htm?circ_name=&apos; +  Circuit_ID__c , Circuit_ID__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Value of Circuit ID Attribute from Component</inlineHelpText>
+        <label>Circuit ID Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <description>Comment entered by Technical Team</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Comment entered by Technical Team</inlineHelpText>
+        <label>Comment</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <description>Contract related to this Service Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract related to this Service Bundle</inlineHelpText>
+        <label>Contract</label>
+        <referenceTo>Contract</referenceTo>
+        <relationshipLabel>Service Bundles</relationshipLabel>
+        <relationshipName>Service_Bundles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contract_termination_notice__c</fullName>
+        <description>Contract termination notice [months]</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract termination notice [months]</inlineHelpText>
+        <label>Contract termination notice</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CreatedDate__c</fullName>
+        <defaultValue>NOW()</defaultValue>
+        <description>The date and time when the Bundle was created</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date and time when the Bundle was created</inlineHelpText>
+        <label>Created Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_OCTT__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Service Bundle has already been careted in OCTT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Service Bundle has already been careted in OCTT</inlineHelpText>
+        <label>Created in OCTT</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Currency_bill__c</fullName>
+        <description>Currency of Service Bundle</description>
+        <externalId>false</externalId>
+        <formula>text(CurrencyIsoCode)</formula>
+        <inlineHelpText>Currency of Service Bundle</inlineHelpText>
+        <label>Currency (billing)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Contact_in_an_emergency_A__c</fullName>
+        <description>Information about Customer&apos;s Contact in case of emergency (for A End)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Information about Customer&apos;s Contact in case of emergency (for A End)</inlineHelpText>
+        <label>Customer Contact in an emergency [A]</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Service Bundles (Customer Contact in an emergency [A])</relationshipLabel>
+        <relationshipName>Service_Bundles3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Contact_in_an_emergency__c</fullName>
+        <description>Information about Customer&apos;s Contact in case of emergency</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Information about Customer&apos;s Contact in case of emergency</inlineHelpText>
+        <label>Customer Contact in an emergency</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Service Bundles</relationshipLabel>
+        <relationshipName>Service_Bundles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Contact_in_working_hours_A__c</fullName>
+        <description>Information about Customer&apos;s Contact during working hours (for A End)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Information about Customer&apos;s Contact during working hours (for A End)</inlineHelpText>
+        <label>Customer Contact in working hours [A]</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Service Bundles (Customer Contact outside working hrs [A])</relationshipLabel>
+        <relationshipName>Service_Bundles4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Contact_in_working_hours__c</fullName>
+        <description>Information about Customer&apos;s Contact during working hours</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Information about Customer&apos;s Contact during working hours</inlineHelpText>
+        <label>Customer Contact in working hours</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Service Bundles (Customer Contact in working hours)</relationshipLabel>
+        <relationshipName>Service_Bundles1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Contact_outside_working_hours_A__c</fullName>
+        <description>Information about Customer&apos;s Contact outside working hours (for A End)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Information about Customer&apos;s Contact outside working hours (for A End)</inlineHelpText>
+        <label>Customer Contact outside working hrs [A]</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Service Bundles (Customer Contact outside working hrs [A])</relationshipLabel>
+        <relationshipName>Service_Bundles5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Contact_outside_working_hours__c</fullName>
+        <description>Information about Customer&apos;s Contact outside working hours</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Information about Customer&apos;s Contact outside working hours</inlineHelpText>
+        <label>Customer Contact outside working hours</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Service Bundles (Customer Contact outside working hours)</relationshipLabel>
+        <relationshipName>Service_Bundles2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Declared_MMU__c</fullName>
+        <description>Declared Monthly Minimum Usage during new service sale process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Declared Monthly Minimum Usage during new service sale process</inlineHelpText>
+        <label>Declared MMU</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Declared_MU__c</fullName>
+        <description>Declared Monthly Usage during new service sale process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Declared Monthly Usage during new service sale process</inlineHelpText>
+        <label>Declared MU</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Distance_Zone__c</fullName>
+        <description>Distance Zone for this Service Bundle.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Distance Zone for this Service Bundle.</inlineHelpText>
+        <label>Distance Zone</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EndDate__c</fullName>
+        <description>Date of termination (disconnection) of this Service Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of termination (disconnection) of this Service Bundle</inlineHelpText>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Full_ID__c</fullName>
+        <description>ID of this Service Bundle used in migration process</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of this Service Bundle used in migration process</inlineHelpText>
+        <label>Full ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>GTS Location taken from connected Account.</description>
+        <externalId>false</externalId>
+        <formula>Text( Account__r.GTS_Location_del__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>GTS Location taken from connected Account.</inlineHelpText>
+        <label>GTS Location</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_update_date__c</fullName>
+        <description>This date when the MRC, NRC fields were updated last time by external System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This date when the MRC, NRC fields were updated last time by external System</inlineHelpText>
+        <label>Last update date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Link_to_OCTT__c</fullName>
+        <description>Direct link to this Service Bundle in OCTT system</description>
+        <externalId>false</externalId>
+        <formula>if(Created_in_OCTT__c, 
+if( $Organization.Id=&apos;00D200000008d5u&apos;,HYPERLINK(&quot;https://occe.gtsce.com/occe2cat/bundle/efind/SFDC/&quot; &amp; Full_ID__c , &quot;Click here&quot;, &quot;_blank&quot;), 
+HYPERLINK(&quot; https://demo.in.gtsgroup.cz/occe2cat/bundle/efind/SFDC/&quot; &amp; Full_ID__c , &quot;Click here&quot; , &quot;_blank&quot;)),&quot;&quot;)</formula>
+        <inlineHelpText>Direct link to this Service Bundle in OCTT system</inlineHelpText>
+        <label>Link to OCTT</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LocalBundleName__c</fullName>
+        <description>Name of Service Bundle from Local System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of Service Bundle from Local System</inlineHelpText>
+        <label>Local Bundle Name</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LocalReference__c</fullName>
+        <description>Local Reference to Service Bundle / Service ID assigned for this Service Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Local Reference to Service Bundle / Service ID assigned for this Service Bundle</inlineHelpText>
+        <label>Service ID / Local Reference</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Local_Contract_Number__c</fullName>
+        <description>Contract Number from Local System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract Number from Local System</inlineHelpText>
+        <label>Local Contract Number</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Local_Contract_no__c</fullName>
+        <description>this text field allow user to search local contract number (it´s not possible to search by parent lookup field)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Contract Number from Local System</inlineHelpText>
+        <label>Local Contract no.</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loyality_Change_Date__c</fullName>
+        <description>Filled in in case of (Upgrade, Downgrade, Price Change, Technical Change) when commitment period has changed. Equals to OL Start Biling Date in case of listed modifications</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Filled in in case of (Upgrade, Downgrade, Price Change, Technical Change) when commitment period has changed. Equals to OL Start Biling Date in case of listed modifications</inlineHelpText>
+        <label>Loyality Change Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MRC_CopyOnly__c</fullName>
+        <description>this formula field goes around the SFDC issue that occurs when downloading RollUp Summary data into GTS CE Data Warehouse, it is visible only for BI_DWH profile, no Page Layout is using this field</description>
+        <externalId>false</externalId>
+        <formula>MRC__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MRC CopyOnly</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MRC__c</fullName>
+        <description>Monthly Recurring Charge</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Monthly Recurring Charge</inlineHelpText>
+        <label>MRC</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Minimum_Service_Period__c</fullName>
+        <description>Minimum Service Period (Number of Months)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Minimum Service Period (Number of Months)</inlineHelpText>
+        <label>Minimum Service Period [months]</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MonthBefore1__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Value of MU from month ago</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of MU from month ago</inlineHelpText>
+        <label>MonthBefore1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MonthBefore2__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Value of MU from two months ago</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of MU from two months ago</inlineHelpText>
+        <label>MonthBefore2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MonthBefore3__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Value of MU from three months ago</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of MU from three months ago</inlineHelpText>
+        <label>MonthBefore3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_Minimal_Usage__c</fullName>
+        <description>MMU - Contracted Monthly minimal usage for this Service Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MMU - Contracted Monthly minimal usage for this Service Bundle</inlineHelpText>
+        <label>Monthly Minimal Usage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_Usage__c</fullName>
+        <description>MU - Monthly Usage of Service, provided by Billing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MU - Monthly Usage of Service, provided by Billing.</inlineHelpText>
+        <label>Monthly Usage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NRC__c</fullName>
+        <description>Non Recurring Charge</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Non Recurring Charge</inlineHelpText>
+        <label>NRC</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Order_Line__c</fullName>
+        <description>Order Line responsible for creation of this Service Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order Line responsible for creation of this Service Bundle</inlineHelpText>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>Service Bundles</relationshipLabel>
+        <relationshipName>Service_Bundles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Partner_Account__c</fullName>
+        <description>CARE_SK_370 Automatic Retention Case</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CARE_SK_370 Automatic Retention Case</inlineHelpText>
+        <label>Partner Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Service Bundles (Partner Account)</relationshipLabel>
+        <relationshipName>Service_Bundles1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Partner__c</fullName>
+        <description>Partner assigned to Account, that owns this Service Bundle</description>
+        <externalId>false</externalId>
+        <formula>Account__r.Partner_Account__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Partner assigned to Account, that owns this Service Bundle</inlineHelpText>
+        <label>Partner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Person__c</fullName>
+        <description>Sales Person from Opportunity that Service Bundle was created from</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sales Person from Opportunity that Service Bundle was created from</inlineHelpText>
+        <label>Sales Person</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Service_Bundles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Type__c</fullName>
+        <description>Sales Type (Retail / Wholesale) copied from Order, that Service Bundle was created from</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sales Type (Retail / Wholesale) copied from Order, that Service Bundle was created from</inlineHelpText>
+        <label>Sales Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wholesale</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SelectLink__c</fullName>
+        <description>URL generated by the system, used for Bundle Selection functionality</description>
+        <externalId>false</externalId>
+        <inlineHelpText>URL generated by the system, used for Bundle Selection functionality</inlineHelpText>
+        <label>SelectLink</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SourceRecordID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>ID of Service Bundle from Source System used in migration process</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of Service Bundle from Source System used in migration process</inlineHelpText>
+        <label>Source Record ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Source_Service_Bundle__c</fullName>
+        <description>Indicates source Service Bundle in case this one was craeted based on some old one</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates source Service Bundle in case this one was craeted based on some old one</inlineHelpText>
+        <label>Source Service Bundle</label>
+        <referenceTo>ServiceBundle__c</referenceTo>
+        <relationshipLabel>Service Bundles</relationshipLabel>
+        <relationshipName>Service_Bundles</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Status of Service Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status of Service Bundle</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Provisioning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Suspend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disconnected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Term_Date_Type__c</fullName>
+        <description>Indicates type of Contract Termination period</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates type of Contract Termination period</inlineHelpText>
+        <label>Term Date Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Definite period</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Indefinite period</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Indefinite period with minimum period for using</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Term_End_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Term End date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Upsert__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Technical field used in data update from Billing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field used in data update from Billing.</inlineHelpText>
+        <label>Upsert</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Version_Number__c</fullName>
+        <description>Version of service bundle in CSR</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Version of service bundle in CSR</inlineHelpText>
+        <label>Version Number</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Service Bundle</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Account__c</columns>
+        <columns>CSRId__c</columns>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>CBundleType__c</columns>
+        <columns>BundleType__c</columns>
+        <columns>LocalBundleName__c</columns>
+        <columns>LocalReference__c</columns>
+        <columns>SourceRecordID__c</columns>
+        <columns>CreatedDate__c</columns>
+        <columns>EndDate__c</columns>
+        <columns>OBJECT_ID</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Empty_Products</fullName>
+        <columns>NAME</columns>
+        <columns>CBundleType__c</columns>
+        <columns>BundleType__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CBundleType__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Empty Products</label>
+    </listViews>
+    <listViews>
+        <fullName>MIG_BUNDLES</fullName>
+        <columns>NAME</columns>
+        <columns>CBundleType__c</columns>
+        <columns>Status__c</columns>
+        <columns>Billing_Account__c</columns>
+        <columns>Billing_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>BundleType__c</field>
+            <operation>equals</operation>
+            <value>HU_Migration</value>
+        </filters>
+        <filters>
+            <field>CBundleType__c</field>
+            <operation>equals</operation>
+            <value>HU_MIGRATION</value>
+        </filters>
+        <label>MIG_BUNDLES</label>
+    </listViews>
+    <nameField>
+        <displayFormat>BDL{000000000}</displayFormat>
+        <label>Reference</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <namedFilters>
+        <fullName>Case_00N200000026MKPEA2</fullName>
+        <active>true</active>
+        <errorMessage>Account on Service Bundle level must match selected Account on the Case record.</errorMessage>
+        <field>Case.Service_Bundle__c</field>
+        <filterItems>
+            <field>ServiceBundle__c.Account__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Case_Service Bundle</name>
+        <sourceObject>Case</sourceObject>
+    </namedFilters>
+    <namedFilters>
+        <fullName>nf_01IT0000000DA04MAG_00NT00000018VYkMAM</fullName>
+        <active>false</active>
+        <field>Migration_Order__c.Source_Service_Bundle__c</field>
+        <filterItems>
+            <field>ServiceBundle__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+        <name>Migration Order_Source Service Bundle</name>
+    </namedFilters>
+    <pluralLabel>Service Bundles</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>BundleType__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LocalBundleName__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LocalReference__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CContract__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>BundleType__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LocalBundleName__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LocalReference__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CContract__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>BundleType__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CreatedDate__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>BundleType__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Circuit_ID__c</searchFilterFields>
+        <searchFilterFields>CContract__c</searchFilterFields>
+        <searchResultsAdditionalFields>BundleType__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LocalBundleName__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LocalReference__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CSRId__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Circuit_ID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CContract__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>account_relation_check</fullName>
+        <active>false</active>
+        <description>It´s not possible change relation to account. It´s created based on Jan Schmidt request.</description>
+        <errorConditionFormula>ISCHANGED(Account__c)</errorConditionFormula>
+        <errorMessage>It´s not possible to change relation to another account.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Data_Update</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Data Update</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var sbId = &apos;{!ServiceBundle__c.Id}&apos;; 
+if (confirm(&apos;This will create a new Data Update Order. Do you want to continue?&apos;)) { 
+var callout_result = sforce.apex.execute(&quot;ModificationOrderMethods&quot;,&quot;createDataUpdateOrder&quot;, {serviceBundleId:sbId}); 
+if(callout_result[0] == &apos;0&apos;){ 
+alert(&apos;The new order has been successfully created.&apos;); 
+window.top.location.href = &quot;https://&quot; + window.top.location.host + &quot;/&quot; +callout_result[1]; 
+} else { 
+alert(callout_result[1]); 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Get_history_from_CSR</fullName>
+        <availability>online</availability>
+        <description>Getting Service Bundle, Component, Generic Product and Attributes&apos; history from CSR</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Get history from CSR</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var id = &apos;{!ServiceBundle__c.CSRId__c}&apos;;
+
+if (id == &apos;&apos;) {
+alert (&apos;This Service Bundle has no CSR ID&apos;);
+} else {
+window.top.location.href = &quot;/apex/CSRHistory?id=&quot; +id;
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Migration_Order</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Order Migration</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+
+var newUrl = &apos;{!URLFOR($Action.Migration_Order__c.New, Migration_Order__c.Id, null, true)}&apos;
+
+var completeUrl = newUrl +&apos;&amp;CF00N200000026MiR={!ServiceBundle__c.Name}&amp;CF00N200000026MiR_lkid={!ServiceBundle__c.Id}&apos; 
+
+
+window.parent.location.href = completeUrl</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Technical_Change</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Technical Change</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)} 
+
+var sbId = &apos;{!ServiceBundle__c.Id}&apos;; 
+var validation_result = sforce.apex.execute(&quot;ModificationOrderMethods&quot;,&quot;checkIfServiceBundleHasAnyActiveOrderLine&quot;, {sbId:sbId}); 
+if(validation_result == &apos;true&apos;){ 
+alert(&apos;There are already pending OrderLines for this Service Bundle. You can not create modification line until they are finished.&apos;); 
+}else{ 
+if (confirm(&apos;This will create a new Technical Change Order. Do you want to continue?&apos;)) { 
+var callout_result = sforce.apex.execute(&quot;ModificationOrderMethods&quot;,&quot;createTechnicalOrder&quot;, {serviceBundleId:sbId}); 
+if(callout_result[0] == &apos;0&apos;){ 
+alert(&apos;The new order has been successfully created.&apos;); 
+window.top.location.href = &quot;https://&quot; + window.top.location.host + &quot;/&quot; +callout_result[1]; 
+} else { 
+alert(callout_result[1]); 
+} 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>View_Structure</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>View Structure</masterLabel>
+        <openType>sidebar</openType>
+        <page>View_StructureforBundle</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

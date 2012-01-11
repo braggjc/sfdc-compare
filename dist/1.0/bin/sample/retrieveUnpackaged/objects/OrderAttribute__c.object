@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>ActionType__c</fullName>
+        <externalId>false</externalId>
+        <label>ActionType</label>
+        <picklist>
+            <picklistValues>
+                <fullName>create</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>update</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>delete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>AttributeInstanceId__c</fullName>
+        <externalId>false</externalId>
+        <label>AttributeInstanceId</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attribute__c</fullName>
+        <externalId>false</externalId>
+        <label>Attribute</label>
+        <referenceTo>Attribute__c</referenceTo>
+        <relationshipLabel>Order Attributes</relationshipLabel>
+        <relationshipName>R00N800000032iNkEAI</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BundleComponent__c</fullName>
+        <externalId>false</externalId>
+        <label>Bundle Component</label>
+        <referenceTo>Bundle_Component__c</referenceTo>
+        <relationshipLabel>Order Attributes</relationshipLabel>
+        <relationshipName>Order_Attributes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CSR_ID__c</fullName>
+        <externalId>true</externalId>
+        <label>CSR ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Attribute__r.Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if Attribute has already been installed in Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Attribute has already been installed in Billing</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>GenericProductAttribute__c</fullName>
+        <externalId>false</externalId>
+        <label>Generic Product Attribute</label>
+        <referenceTo>Generic_Product_Attribute__c</referenceTo>
+        <relationshipLabel>Order Attributes</relationshipLabel>
+        <relationshipName>Order_Attributes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OSS_Action_Execution_Result__c</fullName>
+        <description>What is the result of Executing or Cancelling related transaction in OSS</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the result of Executing or Cancelling related transaction in OSS</inlineHelpText>
+        <label>OSS Action Execution Result</label>
+        <picklist>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Success</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OSS_Action_Insert_Result__c</fullName>
+        <description>Determines what was the result of inserting planned activity into OSS for this attribute.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines what was the result of inserting planned activity into OSS for this attribute.</inlineHelpText>
+        <label>OSS Action Insert Result</label>
+        <picklist>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Success</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OSS_Transaction_ID__c</fullName>
+        <description>Field storing transaction ID of changes made in OSS in regards of numbers.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field storing transaction ID of changes made in OSS in regards of numbers.</inlineHelpText>
+        <label>OSS Transaction ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OSSid__c</fullName>
+        <description>Id of the attribute&apos;s value in OSS enumerator.</description>
+        <externalId>true</externalId>
+        <label>OSS Id</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OrderGenericProduct__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Generic Product</label>
+        <referenceTo>OrderGenericProduct__c</referenceTo>
+        <relationshipLabel>Order Attributes</relationshipLabel>
+        <relationshipName>Order_Attributes</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <trackHistory>false</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>OrderLine__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>Order Attributes</relationshipLabel>
+        <relationshipName>Order_Attributes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order_Tariff__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Tariff</label>
+        <referenceTo>OrderTariff__c</referenceTo>
+        <relationshipLabel>Order Attributes</relationshipLabel>
+        <relationshipName>Order_Attributes</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Value__c</fullName>
+        <description>Field storing previous value of attribute</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field storing previous value of attribute</inlineHelpText>
+        <label>Previous Value</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SFDC_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>SFDC_ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Skip_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Technical flag; indicates if OA, which is used for storing XML with tariffs and directions should involve or skip trigger mechanism which interpret saved XML and create OT and OD;</description>
+        <externalId>false</externalId>
+        <label>Skip Trigger</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_OSS_ID__c</fullName>
+        <description>Field containing source OSS ID used for phone number cessions and transfers.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field containing source OSS ID used for phone number cessions and transfers.</inlineHelpText>
+        <label>Source OSS ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Val__c</fullName>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Value_Fractions__c</fullName>
+        <description>XML with Fractions&apos; Billing IDs that should be sent to Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>XML with Fractions&apos; Billing IDs that should be sent to Billing</inlineHelpText>
+        <label>Value Fractions</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Order Attribute</label>
+    <nameField>
+        <label>Order Attribute Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Order Attributes</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

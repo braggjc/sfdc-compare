@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Profile_Name__c</fullName>
+        <description>Profile Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Profile Name</inlineHelpText>
+        <label>Profile Name</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role_Name__c</fullName>
+        <description>Role Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Role Name</inlineHelpText>
+        <label>Role Name</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Allowed For Due Dates Recalculation</label>
+</CustomObject>

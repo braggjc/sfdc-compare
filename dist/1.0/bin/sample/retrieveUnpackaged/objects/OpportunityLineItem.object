@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Another_Product_Specific_Information__c</fullName>
+        <description>Field to set value of Gross Margin connected with specific product: Equipment and Software</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field to set value of Gross Margin connected with specific product: Equipment and Software</inlineHelpText>
+        <label>Another Product Specific Information</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Asset__c</fullName>
+        <description>Relation to Asset. Asset object is not used - deprecated.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Asset. Asset object is not used - deprecated.</inlineHelpText>
+        <label>Asset</label>
+        <referenceTo>Asset</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_to_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if line has already been assigned to Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if line has already been assigned to Order</inlineHelpText>
+        <label>Assigned to Order</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Account__c</fullName>
+        <description>Link to Billing Account related to added Service Bundle</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;/&apos;+ Service_Bundle__r.Billing_Account__c , Service_Bundle__r.Billing_Account__r.Name , &apos;_top&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Billing Account of chosen Service Bundle</inlineHelpText>
+        <label>Billing Account</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Name__c</fullName>
+        <description>Bundle Name which corresponds to the one selected in Extranet</description>
+        <externalId>false</externalId>
+        <formula>CASE( Opportunity.GTS_Location__c ,
+&quot;GTS Poland&quot;, Bundle__r.Label_POL__c,
+&quot;GTS Hungary&quot;,Bundle__r.Label_HUN__c,
+&quot;GTS Romania&quot;, Bundle__r.Label_ROU__c,
+&quot;GTS Czech Rep&quot;, Bundle__r.Label_CZE__c,
+&quot;GTS Slovakia &quot;, Bundle__r.Label_SVK__c,
+null)</formula>
+        <inlineHelpText>Bundle Name which corresponds to the one selected in Extranet</inlineHelpText>
+        <label>Bundle Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle__c</fullName>
+        <description>Bundle relation. Filled in by Extranet.</description>
+        <externalId>false</externalId>
+        <label>Bundle</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CE_COLO_Product_definition__c</fullName>
+        <description>created by Martin Slaby, 2011-06-10 11:05 on Test</description>
+        <externalId>false</externalId>
+        <label>Ce-Colo Product Comment</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CancellationAmount__c</fullName>
+        <description>Amount of Cancelled Order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount of Cancelled Order</inlineHelpText>
+        <label>Cancellation Amount</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cancelled_in_provisioning__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicated cancellation during provisioning after sales documents are signed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicated cancellation during provisioning after sales documents are signed.</inlineHelpText>
+        <label>Cancelled Prov.</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Cancelled_in_provisioning_date__c</fullName>
+        <description>Date when line was marked as Cancelled Prov.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date when line was marked as Cancelled Prov.</inlineHelpText>
+        <label>Cancelled Prov. Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Capex_One_off__c</fullName>
+        <description>Derived from related Requests which are not cancelled and have checked Include into Amount checkbox</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Derived from related Requests which are not cancelled and have checked Include into Amount checkbox</inlineHelpText>
+        <label>Capex One-off</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex__c</fullName>
+        <description>Derived from related Requests which are not cancelled and have checked Include into Amount checkbox</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Derived from related Requests which are not cancelled and have checked Include into Amount checkbox</inlineHelpText>
+        <label>Capex</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_backbone__c</fullName>
+        <description>Derived from related Requests which are not cancelled and have checked Include into Amount checkbox</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Derived from related Requests which are not cancelled and have checked Include into Amount checkbox</inlineHelpText>
+        <label>Capex (backbone)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Capex_last_mile__c</fullName>
+        <description>Derived from related Requests which are not cancelled and have checked Include into Amount checkbox</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Derived from related Requests which are not cancelled and have checked Include into Amount checkbox</inlineHelpText>
+        <label>Capex (last mile)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Cash_Flow__c</fullName>
+        <description>Proposal Revenue - (Opex One–off + Opex Monthly* Contract Length) - Total Capex</description>
+        <externalId>false</externalId>
+        <formula>Proposal_Revenue__c  - (Opex_One_off__c +  Opex_Monthly__c * Length_of_Contract_Months__c)</formula>
+        <inlineHelpText>Proposal Revenue - (Opex One–off + Opex Monthly* Contract Length) - Total Capex</inlineHelpText>
+        <label>Cash Flow</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CeColo_AC_A__c</fullName>
+        <externalId>false</externalId>
+        <label>AC (A)</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CeColo_Product_definition__c</fullName>
+        <externalId>false</externalId>
+        <label>Product definition</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Antenna</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cabinet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cabinet 1/2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cabinet 1/3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cabinet Position</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hands &amp; Eyes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hardware</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Power</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Space - car</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Space - colocation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Space - office</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Space - storage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other - DC product</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other - Non DC product</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CeColo_Site__c</fullName>
+        <description>Created by Martin Slaby, 2011-08-02 07:48 on Test</description>
+        <externalId>false</externalId>
+        <label>Site</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CZ Brno</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZ Infigate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZ Koksární</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZ Nagano</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZ Sitel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZ Vinohradská</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Budaörs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Hauszmann</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Viktor Hugo</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL Piaseczno</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL Piekna</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RO Bucharest</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SK Bratislava</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>DC_a__c</fullName>
+        <externalId>false</externalId>
+        <label>DC (A)</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Primary use for AOM integration for Hungary.</inlineHelpText>
+        <label>Description</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Difference_in_Amount__c</fullName>
+        <description>Difference in Amount from relevant Request</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Difference in Amount from relevant Request</inlineHelpText>
+        <label>Difference in Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Distance_Zone__c</fullName>
+        <externalId>false</externalId>
+        <label>Distance Zone</label>
+        <picklist>
+            <picklistValues>
+                <fullName>National</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>International</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>First_Monthly_Recurring_Price__c</fullName>
+        <description>First Monthly Recurring Price - first non zero value in MRP filed is copied here</description>
+        <externalId>false</externalId>
+        <inlineHelpText>First Monthly Recurring Price - first non zero value in MRP filed is copied here</inlineHelpText>
+        <label>First Monthly Recurring Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GTS_Localisations__c</fullName>
+        <description>International Retail specific. Deprecated, not used</description>
+        <externalId>false</externalId>
+        <inlineHelpText>International Retail specific. Deprecated, not used</inlineHelpText>
+        <label>GTS Localizations</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Datanet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Energis</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Nextra</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Novera</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Telecom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Gross_Margin__c</fullName>
+        <description>Proposal Revenue - (Opex One-off + Opex Monthly*Contract Length)</description>
+        <externalId>false</externalId>
+        <formula>Proposal_Revenue__c  - (Opex_One_off__c + Opex_Monthly__c *Length_of_Contract_Months__c)</formula>
+        <inlineHelpText>Proposal Revenue - (Opex One-off + Opex Monthly*Contract Length)</inlineHelpText>
+        <label>Gross Margin</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Include_in_Revenue__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>When marked then amount will be included in MRD</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When marked then amount will be included in MRD</inlineHelpText>
+        <label>In Revenue</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Increamental_Monthly_Revenue__c</fullName>
+        <description>Incremental Monthly Revenue = MRP - Old MRP + MU - Old MU</description>
+        <externalId>false</externalId>
+        <formula>Monthly_Fee__c -Old_Monthly_Recurring_Price__c+ Monthly_Usage__c - Old_Monthly_Usage__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Incremental Monthly Revenue = MRP - Old MRP + MU - Old MU</inlineHelpText>
+        <label>Increamental Monthly Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Installation_Fee__c</fullName>
+        <description>Non Recurring Price</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Non Recurring Price - onetime charge that customer will have to pay for service</inlineHelpText>
+        <label>New Non Recurring Charge</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Integration_Timestamp__c</fullName>
+        <description>Integration specific. Stores data Date/Time</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Integration specific. Stores data Date/Time</inlineHelpText>
+        <label>Integration Timestamp</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Length_of_Contract_Months__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Expected Length of Contract in months</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Expected Length of Contract in months</inlineHelpText>
+        <label>Contract Length [months]</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_Type__c</fullName>
+        <description>Identifies type of action related to selected Product (New Installation, Modification, etc.)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identifies type of action related to selected Product (New Installation, Modification, etc.)</inlineHelpText>
+        <label>Line Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disconnection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Release</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Suspend</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Migration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Numbers Transfer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partial Numbers Transfer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Line_of_Business__c</fullName>
+        <description>Line of Business as defined on Product</description>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.Line_of_Business__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Line of Business as defined on Product</inlineHelpText>
+        <label>Line of Business</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Local_Product_Name__c</fullName>
+        <description>Name of local product as identified within local CRM system</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter name of local product as identified within local CRM system</inlineHelpText>
+        <label>Local Product Name</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MRD_in_dec__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  Monthly_Revenue_Delta__c&gt;0, &quot;Increase&quot;, IF(  Monthly_Revenue_Delta__c&lt;0, &quot;Decrease&quot;, IF(  Monthly_Revenue_Delta__c=0, &quot;No change&quot;,null )))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Increase, Decrease, No change</inlineHelpText>
+        <label>MRD(+/-)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Minimal_Monthly_Usage__c</fullName>
+        <description>Voice Services ONLY
+Monthly Minimal Usage – Contracted minimal monthly usage</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Voice Services ONLY
+Monthly Minimal Usage – Contracted minimal monthly usage</inlineHelpText>
+        <label>New Minimal Monthly Usage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Fee__c</fullName>
+        <description>Monthly Recurring Price</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Monthly Recurring Price that customer will pay for service</inlineHelpText>
+        <label>New Monthly Recurring Charge</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Revenue_Delta_MMU__c</fullName>
+        <description>Monthly Revenue Delta where voice part is based only on Monthly Minimal Usage</description>
+        <externalId>false</externalId>
+        <formula>Monthly_Fee__c - Old_Monthly_Recurring_Price__c + Minimal_Monthly_Usage__c  - Old_Minimal_Monthly_Usage__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Monthly Revenue Delta where voice part is based only on Monthly Minimal Usage
+MRP – Old MRP + MMU – Old MMU</inlineHelpText>
+        <label>Monthly Revenue Delta (MMU)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Revenue_Delta__c</fullName>
+        <description>Monthly Revenue Delta with Monthly Usage</description>
+        <externalId>false</externalId>
+        <formula>Monthly_Fee__c  - Old_Monthly_Recurring_Price__c  + Monthly_Usage__c - Old_Monthly_Usage__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Monthly Revenue Delta with Monthly Usage
+MRP – Old MRP + MU - Old MU</inlineHelpText>
+        <label>Monthly Revenue Delta</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Revenue__c</fullName>
+        <description>Monthly Revenue = MRP + MU</description>
+        <externalId>false</externalId>
+        <formula>Monthly_Usage__c + Monthly_Fee__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Monthly Revenue = MRP + MU</inlineHelpText>
+        <label>Monthly Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Monthly_Usage__c</fullName>
+        <description>Monthly Usage</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Voice Services ONLY
+Monthly Usage – estimated total monthly usage (includes minimal usage)</inlineHelpText>
+        <label>New Monthly Usage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>NRP_Contract_Lenght__c</fullName>
+        <description>field is used to calculate sales commissions 
+when Non recurring price is greater than or equal 3x(Monthly Recurring Price - Old Monthly Recurring Price) we should divide Non Recurring price by Contract Length and add that value to MRD</description>
+        <externalId>false</externalId>
+        <formula>IF(Length_of_Contract_Months__c=0, 0, IF( Installation_Fee__c &lt;  3 * ( Monthly_Fee__c  - Old_Monthly_Recurring_Price__c ) , 0, Installation_Fee__c  / Length_of_Contract_Months__c  ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Non Recurring Price/Contract Length</inlineHelpText>
+        <label>NRP/Contract Lenght</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Old_Minimal_Monthly_Usage__c</fullName>
+        <description>Old Minimal Monthly Usage</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Voice Services ONLY
+Old Monthly Minimal Usage</inlineHelpText>
+        <label>Old Minimal Monthly Usage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Old_Monthly_Recurring_Price__c</fullName>
+        <description>Old Monthly Recurring Price</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Currently paid monthly fee by customer.</inlineHelpText>
+        <label>Old Monthly Recurring Charge</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Old_Monthly_Usage__c</fullName>
+        <description>Old Monthly Usage</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Voice Services ONLY
+Estimated current Monthly Usage (before change)</inlineHelpText>
+        <label>Old Monthly Usage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_Monthly__c</fullName>
+        <description>Derived from related Requests which are not cancelled and have checked Include into Amount checkbox</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Derived from related Requests which are not cancelled and have checked Include into Amount checkbox</inlineHelpText>
+        <label>Opex Monthly</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opex_One_off__c</fullName>
+        <description>Derived from related Requests which are not cancelled and have checked Include into Amount checkbox</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Derived from related Requests which are not cancelled and have checked Include into Amount checkbox</inlineHelpText>
+        <label>Opex One-off</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Power_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Power Description</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Proposal_Revenue__c</fullName>
+        <description>NRP+MRP*Contract Length of releveant Requets (included into amount and not cancelled)</description>
+        <externalId>false</externalId>
+        <formula>Installation_Fee__c   + Monthly_Fee__c * Length_of_Contract_Months__c</formula>
+        <inlineHelpText>NRP+MRP*Contract Length (included into amount and not cancelled)</inlineHelpText>
+        <label>Proposal Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Reason__c</fullName>
+        <description>Reason for for Disconnection or Suspension of service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reason for for Disconnection or Suspension of service</inlineHelpText>
+        <label>Reason</label>
+        <picklist>
+            <controllingField>Line_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Billing problems</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning problems</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quality of service</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bad technical support</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low network capacity</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No network coverage</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bad sales care</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bad customer care</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Insufficient service features</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unbeatable price</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile converged offer</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other technology preferred</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Moving to competitor area</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Doubled billing</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Company closure</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Branch closure</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Global decision</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Debt collection</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No longer needed service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Terminated by GTS</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KIVS planned churn</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Temporary service</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reason not told</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service administrative closure</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>End-user disconnection</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Downsizing business</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Building own infrastructure</fullName>
+                <controllingFieldValues>Disconnection</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Renewal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Renewal can be used only with Upgrade, Downgrade, Price Change</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Renewal can be used only with Upgrade, Downgrade, Price Change</inlineHelpText>
+        <label>Renewal</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Price__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Deprecated. Not used</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deprecated. Not used</inlineHelpText>
+        <label>Sales Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Service_Bundle__c</fullName>
+        <description>Selected Installed Product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Selected Installed Product</inlineHelpText>
+        <label>Service Bundle</label>
+        <referenceTo>ServiceBundle__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Site__c</fullName>
+        <externalId>false</externalId>
+        <label>Site</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CZ Brno</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZ Infigate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZ Koksární</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZ Nagano</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZ Sitel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CZ Vinohradská</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Budaörs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Hauszmann</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HU Victor Hugo</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL Piaseczno</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PL Piekna</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RO Bucharest</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SK Bratislava</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <description>Id of record as in source system</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Id of record as in source system</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source_Service_Bundle__c</fullName>
+        <description>Service Bundle which is the source of the numbers to be transfered to Target Service</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Service Bundle which is the source of the numbers to be transfered to Target Service</inlineHelpText>
+        <label>Source Service Bundle</label>
+        <referenceTo>ServiceBundle__c</referenceTo>
+        <relationshipLabel>Opportunity Product (Source Service Bundle)</relationshipLabel>
+        <relationshipName>Opportunity_Product1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Source_System_Id_del__c</fullName>
+        <description>id of source system</description>
+        <externalId>false</externalId>
+        <inlineHelpText>id of source system</inlineHelpText>
+        <label>Source System Id</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <description>Expected Service Activation Date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter Expected Service Activation Date = Planned Start Billing Date</inlineHelpText>
+        <label>Exp. Service Activ.</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Total_Capex__c</fullName>
+        <description>Capex one-off+Capex</description>
+        <externalId>false</externalId>
+        <formula>Capex_One_off__c + Capex__c</formula>
+        <inlineHelpText>Capex one-off+Capex</inlineHelpText>
+        <label>Total Capex</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Incremental_Revenue__c</fullName>
+        <description>Total Incremental Revenue = NRP + Contract Length *(MRP-Old MRP +MU - Old MU)</description>
+        <externalId>false</externalId>
+        <formula>Installation_Fee__c + Length_of_Contract_Months__c *( Monthly_Fee__c - Old_Monthly_Recurring_Price__c + Monthly_Usage__c -Old_Monthly_Usage__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Incremental Revenue = NRP + Contract Length *(MRP-Old MRP +MU - Old MU)</inlineHelpText>
+        <label>Total Incremental Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Monthly_Fee__c</fullName>
+        <description>Quantity * UnitPrice</description>
+        <externalId>false</externalId>
+        <formula>Quantity  *  UnitPrice</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Quantity * UnitPrice</inlineHelpText>
+        <label>Total Monthly Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Revenue__c</fullName>
+        <description>Total Revenue = NRP + Contract Length x (MRP + MU)</description>
+        <externalId>false</externalId>
+        <formula>Installation_Fee__c + Length_of_Contract_Months__c *( Monthly_Fee__c + Monthly_Usage__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Revenue = NRP + Contract Length x (MRP + MU)</inlineHelpText>
+        <label>Total Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_product_value__c</fullName>
+        <description>Contract Length = 0
+- Non Recurring Price + Quantity * Monthly Fee * 12
+
+Contract Length &lt;&gt; 0
+- Non Recurring Price + Quantity * Monthly Fee  * Contract Length</description>
+        <externalId>false</externalId>
+        <formula>IF(Length_of_Contract_Months__c =0, Installation_Fee__c +  Quantity * UnitPrice * 12, Installation_Fee__c +  Quantity * UnitPrice * Length_of_Contract_Months__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Contract Length = 0
+- Non Recurring Price + Quantity * Monthly Fee * 12
+
+Contract Length &lt;&gt; 0
+- Non Recurring Price + Quantity * Monthly Fee  * Contract Length</inlineHelpText>
+        <label>Total value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Weighted_MRD__c</fullName>
+        <description>Weighted MRD = Monthly Revenue Delta * Probability (%) [from Opportunity]</description>
+        <externalId>false</externalId>
+        <formula>Monthly_Revenue_Delta__c * Opportunity.Probability</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Weighted MRD = Monthly Revenue Delta * Probability (%) [from Opportunity]</inlineHelpText>
+        <label>Weighted MRD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <validationRules>
+        <fullName>Block_Change_of_Monthly_Fee</fullName>
+        <active>true</active>
+        <description>Block_Change_of_Monthly_Fee</description>
+        <errorConditionFormula>IF ( ISCHANGED( Total_Monthly_Fee__c ) &amp;&amp; Total_Monthly_Fee__c &lt;&gt; 0 &amp;&amp; Total_Monthly_Fee__c &lt;&gt; Monthly_Revenue_Delta__c &amp;&amp;  Opportunity.RecordTypeId  = &quot;01220000000LWd0&quot;,True, False )</errorConditionFormula>
+        <errorMessage>Total Monthly Fee for Domestic Opportunities cannot be changed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Block_Change_of_Quantity</fullName>
+        <active>true</active>
+        <description>Block_Change_of_Quantity</description>
+        <errorConditionFormula>IF ( ISCHANGED( Quantity ) &amp;&amp; Quantity&lt;&gt;1 &amp;&amp; (Opportunity.RecordTypeId = &quot;01220000000LWd0&quot;|| Opportunity.RecordTypeId =&quot;01220000000LWrp&quot;) , True, False)</errorConditionFormula>
+        <errorMessage>Quantity cannot be changed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LineType_NewService_change_notallowed</fullName>
+        <active>true</active>
+        <description>Change of Line type from New Service to  any other is not allowed.</description>
+        <errorConditionFormula>AND( OR  (CONTAINS( Opportunity.RecordTypeId,&quot;01220000000LWd0&quot;), CONTAINS( Opportunity.RecordTypeId,&quot;01220000000LWrp&quot;)), ISCHANGED( Line_Type__c), PRIORVALUE(Line_Type__c)&lt;&gt;TEXT(Line_Type__c) , TEXT(PriorValue(Line_Type__c))= &quot;New Service&quot; )</errorConditionFormula>
+        <errorDisplayField>Line_Type__c</errorDisplayField>
+        <errorMessage>Change of Line Type from New Service to any other is not allowed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LineType_not_NewService_cantb_NewService</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(OR (CONTAINS( Opportunity.RecordTypeId,&quot;01220000000LWd0&quot;), CONTAINS( Opportunity.RecordTypeId,&quot;01220000000LWrp&quot;)), ISCHANGED( Line_Type__c), PRIORVALUE(Line_Type__c) &lt;&gt; &quot;New Service&quot;, TEXT(Line_Type__c)=&quot;New Service&quot;)</errorConditionFormula>
+        <errorDisplayField>Line_Type__c</errorDisplayField>
+        <errorMessage>For Line Types other than New Service (Upgrade, Downgrade, Price Change,...) change to New Service is not allowed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Line_Type_Restriction_for_Modification</fullName>
+        <active>true</active>
+        <errorConditionFormula>(ISCHANGED( Line_Type__c ) &amp;&amp; Assigned_to_Order__c = true &amp;&amp; 
+
+(ISPICKVAL( Line_Type__c, &quot;Upgrade&quot;) || 
+ISPICKVAL( Line_Type__c, &quot;Downgrade&quot;)|| 
+ISPICKVAL( Line_Type__c, &quot;Price Change&quot;)|| 
+ISPICKVAL( Line_Type__c, &quot;Technical Change&quot;)) &amp;&amp; 
+
+(!ISPICKVAL(PRIORVALUE(Line_Type__c),&quot;Upgrade&quot;) &amp;&amp; 
+!ISPICKVAL(PRIORVALUE(Line_Type__c),&quot;Downgrade&quot; )&amp;&amp; 
+!ISPICKVAL(PRIORVALUE(Line_Type__c),&quot;Price Change&quot;)&amp;&amp; 
+!ISPICKVAL(PRIORVALUE(Line_Type__c),&quot;Technical Change&quot;))) 
+
+||(ISCHANGED( Line_Type__c ) &amp;&amp; Assigned_to_Order__c = true &amp;&amp; 
+
+(!ISPICKVAL( Line_Type__c, &quot;Upgrade&quot;) &amp;&amp; 
+!ISPICKVAL( Line_Type__c, &quot;Downgrade&quot;)&amp;&amp; 
+!ISPICKVAL( Line_Type__c, &quot;Price Change&quot;)&amp;&amp; 
+!ISPICKVAL( Line_Type__c, &quot;Technical Change&quot;)) &amp;&amp; 
+
+(!ISPICKVAL(PRIORVALUE(Line_Type__c),&quot;Upgrade&quot;) &amp;&amp; 
+!ISPICKVAL(PRIORVALUE(Line_Type__c),&quot;Downgrade&quot; )&amp;&amp; 
+!ISPICKVAL(PRIORVALUE(Line_Type__c),&quot;Price Change&quot;)&amp;&amp; 
+!ISPICKVAL(PRIORVALUE(Line_Type__c),&quot;Technical Change&quot;))) 
+
+||(ISCHANGED( Line_Type__c ) &amp;&amp; Assigned_to_Order__c = true &amp;&amp; 
+
+(!ISPICKVAL( Line_Type__c, &quot;Upgrade&quot;) &amp;&amp; 
+!ISPICKVAL( Line_Type__c, &quot;Downgrade&quot;)&amp;&amp; 
+!ISPICKVAL( Line_Type__c, &quot;Price Change&quot;)&amp;&amp; 
+!ISPICKVAL( Line_Type__c, &quot;Technical Change&quot;)) &amp;&amp; 
+
+(ISPICKVAL(PRIORVALUE(Line_Type__c),&quot;Upgrade&quot;) || 
+ISPICKVAL(PRIORVALUE(Line_Type__c),&quot;Downgrade&quot; )|| 
+ISPICKVAL(PRIORVALUE(Line_Type__c),&quot;Price Change&quot;)|| 
+ISPICKVAL(PRIORVALUE(Line_Type__c),&quot;Technical Change&quot;)))</errorConditionFormula>
+        <errorDisplayField>Line_Type__c</errorDisplayField>
+        <errorMessage>Only change between Upgrade, Downgrade, Price Change, Technical Change is allowed!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Line_Type_vs_Opp_Type_Details</fullName>
+        <active>false</active>
+        <description>Line Type has to correspond to Opportunities Type Details field</description>
+        <errorConditionFormula>AND(NOT( $User.FirstName =&quot;System&quot;&amp;&amp; $User.LastName=&quot;Admin&quot; ),NOT(ISNEW()), ISCHANGED(Line_Type__c),
+OR(
+AND(TEXT(Opportunity.Type_Details__c)= &quot;New Service&quot;, NOT(TEXT(Line_Type__c) =&quot;New Service&quot;)),
+AND(TEXT(Opportunity.Type_Details__c) =&quot;Service Management&quot;, NOT(TEXT(Line_Type__c ) =&quot;Upgrade&quot; || TEXT(Line_Type__c ) =&quot;Downgrade&quot;|| TEXT(Line_Type__c )=&quot;Price Change&quot;|| TEXT(Line_Type__c ) =&quot;Suspend&quot;|| TEXT(Line_Type__c ) =&quot;Release&quot;|| TEXT(Line_Type__c )  =&quot;Disconnection&quot;|| TEXT(Line_Type__c )  =&quot;Technical Change&quot;)),
+AND(TEXT(Opportunity.Type_Details__c)=&quot;Renewal&quot;, NOT(TEXT(Line_Type__c )  =&quot;Upgrade&quot; || TEXT(Line_Type__c )  =&quot;Downgrade&quot;|| TEXT(Line_Type__c )  =&quot;Price Change&quot;))
+))</errorConditionFormula>
+        <errorDisplayField>Line_Type__c</errorDisplayField>
+        <errorMessage>Line Type has to correspond to Opportunities Type Details!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>OLD_Values_change</fullName>
+        <active>true</active>
+        <description>Old MRP Value, Old Monthly Usage and Old Minimal Monthly Usage cannot be changed or other than zero for New Service Opportunity</description>
+        <errorConditionFormula>And( 
+ISPICKVAL(Line_Type__c, &apos;New Service&apos;), 
+OR( 
+AND(Old_Monthly_Recurring_Price__c &lt;&gt; 0,not(ISNULL(Old_Monthly_Recurring_Price__c))), 
+AND(Old_Minimal_Monthly_Usage__c &lt;&gt; 0,not(ISNULL(Old_Minimal_Monthly_Usage__c))), 
+AND(Old_Monthly_Usage__c &lt;&gt; 0,not(ISNULL(Old_Monthly_Usage__c))) 
+) 
+)</errorConditionFormula>
+        <errorMessage>For the Line Type New Service the Old Monthly Recuring Price, Old Monthly Usage and Old Minimal Monthly Usage cannot be other than 0 or empty.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Opportunity_Product_Distance_Zone</fullName>
+        <active>true</active>
+        <description>Distance Zone has to correspond to value of Product&apos;s checkboxes: National and International.</description>
+        <errorConditionFormula>AND (Product2.International__c = true || Product2.National__c = true,
+(ISPICKVAL(Distance_Zone__c, &apos;--None--&apos;)  &amp;&amp;  (Product2.International__c = true  || Product2.National__c = true || Product2.International__c = true &amp;&amp; Product2.National__c = true)) ||
+(ISPICKVAL(Distance_Zone__c, &apos;National&apos;)  &amp;&amp; Product2.National__c = false) ||
+(ISPICKVAL(Distance_Zone__c, &apos;International&apos;) &amp;&amp; Product2.International__c = false))</errorConditionFormula>
+        <errorDisplayField>Distance_Zone__c</errorDisplayField>
+        <errorMessage>Sorry, but this value is not allowed for this product.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reason_Required</fullName>
+        <active>false</active>
+        <description>Reason is required for line type Disconnection and Suspend</description>
+        <errorConditionFormula>or(
+and(ISPICKVAL(Reason__c, &apos;&apos;), ISPICKVAL( Line_Type__c ,&apos;Disconnection&apos;)),
+and(ISPICKVAL(Reason__c, &apos;&apos;), ISPICKVAL( Line_Type__c ,&apos;Suspend&apos;))
+)</errorConditionFormula>
+        <errorDisplayField>Reason__c</errorDisplayField>
+        <errorMessage>The Reason is required for this line type.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Renewal_only_with_Up_Dowgrade_PriceChang</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( OR (CONTAINS( Opportunity.RecordTypeId,&quot;01220000000LWd0&quot;), CONTAINS( Opportunity.RecordTypeId,&quot;01220000000LWrp&quot;)), OR(ISCHANGED( Line_Type__c), ISCHANGED( Renewal__c )),  Renewal__c = true,  ( TEXT(Line_Type__c) &lt;&gt; &quot;Upgrade&quot; &amp;&amp; TEXT(Line_Type__c) &lt;&gt; &quot;Downgrade&quot;&amp;&amp; TEXT(Line_Type__c) &lt;&gt; &quot;Price Change&quot;))</errorConditionFormula>
+        <errorDisplayField>Line_Type__c</errorDisplayField>
+        <errorMessage>Renewal is allowed only with Upgrade, Downgrade or Price change</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Installed_Products</fullName>
+        <availability>online</availability>
+        <description>Adds Installed Bundles to Opportunity</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Installed Products</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>if(&apos;{!Opportunity.Type}&apos;==&apos;Existing Business&apos;){
+   window.location.href = &apos;apex/AccountInstalledProducts?id={!Opportunity.Id}&apos;;
+} else {
+   alert(&apos;Only Opportunities for Existing Business can use Installed Products&apos;);  
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Add_Products</fullName>
+        <availability>online</availability>
+        <description>Adds Products from Catalog or  Installed Bundles to Opportunity depending on Opportunity Type Details</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Products</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>window.location.href = &apos;apex/AddOpportunityProducts?id={!Opportunity.Id}&apos;;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Clone</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Clone</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/apex.js&quot;)} 
+
+var records = {!GETRECORDIDS( $ObjectType.OpportunityLineItem)};
+if (records.length == 0) alert(&apos;Please select at least one request quotation.&apos;);
+else if (records.length &gt; 0) {
+
+sforce.apex.execute(&quot;CloneOppLineItem&quot;,&quot;clone&quot;, {OppLineItemIds:records});
+
+//reload the current page
+window.location.href = window.location.href;
+
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Request</fullName>
+        <availability>online</availability>
+        <description>Initiates Request creation automatic process</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create Request</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS( $ObjectType.OpportunityLineItem)};
+
+if(records.length == 0){
+alert(&apos;Please choose at least one product.&apos;);
+} 
+else{
+if(sforce.apex.execute(&quot;RequestAutoCreate&quot;,&quot;CheckIfOpportunityIsClosed&quot;, {LineNumbersToCreate:records}) == &apos;Error&apos;){
+alert(&apos;You cannot create Request for already Closed Opportunity&apos;);
+}
+else{
+sforce.apex.execute(&quot;RequestAutoCreate&quot;,&quot;create&quot;, {LineNumbersToCreate:records});
+window.location.href = window.location.href;
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Edit_All</fullName>
+        <availability>online</availability>
+        <description>Allows to edit multiple Product at one time</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Edit All</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/OpportunityProducts_EditAll?id={!Opportunity.Id}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Tariff configured under Order Line</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Actiontype__c</fullName>
+        <description>Action set by Product Configurator; based on this appropriate actions will be executed in external systems</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Action set by Product Configurator; based on this appropriate actions will be executed in external systems</inlineHelpText>
+        <label>Actiontype</label>
+        <picklist>
+            <picklistValues>
+                <fullName>create</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>update</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>delete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>BundleComponent__c</fullName>
+        <description>Lookup to relation between Bundle and Component (used by Configurator to build tree structure)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to relation between Bundle and Component (used by Configurator to build tree structure)</inlineHelpText>
+        <label>Bundle Component</label>
+        <referenceTo>Bundle_Component__c</referenceTo>
+        <relationshipLabel>Order Tariffs</relationshipLabel>
+        <relationshipName>Order_Tariffs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CSR_ID__c</fullName>
+        <description>ID of the Tariff in CSR Database</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID of the Tariff in CSR Database</inlineHelpText>
+        <label>CSR ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ConnectionPoint__c</fullName>
+        <description>indicates connection point, that the Tariff was used for</description>
+        <externalId>false</externalId>
+        <inlineHelpText>indicates connection point, that the Tariff was used for</inlineHelpText>
+        <label>Connection Point</label>
+        <picklist>
+            <picklistValues>
+                <fullName>IN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OUT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>REDIR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OUTGOING</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>REDIRECT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates, whether the Tariff has already been created in Billing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates, whether the Tariff has already been created in Billing</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>OrderComponent__c</fullName>
+        <description>Lookup to relation between Order and Component (used by Configurator to build tree structure)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to relation between Order and Component (used by Configurator to build tree structure)</inlineHelpText>
+        <label>Order Component</label>
+        <referenceTo>OrderComponent__c</referenceTo>
+        <relationshipLabel>Order Tariffs</relationshipLabel>
+        <relationshipName>Order_Tariffs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OrderLine__c</fullName>
+        <description>Order Line, under which the Tariff was configured</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order Line, under which the Tariff was configured</inlineHelpText>
+        <label>Order Line</label>
+        <referenceTo>OrderLine__c</referenceTo>
+        <relationshipLabel>Order Tariffs</relationshipLabel>
+        <relationshipName>Order_Tariffs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>ID assigned by Product Configurator used later to update Tariff with any changes</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ID assigned by Product Configurator used later to update Tariff with any changes</inlineHelpText>
+        <label>SFDC_ID</label>
+        <length>128</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Special_Offer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this Tariff instance was copied from Special Offer.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this Tariff instance was copied from Special Offer.</inlineHelpText>
+        <label>Special Offer</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Tariff__c</fullName>
+        <description>Relation to Tariff Definition in Product Catalog</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Tariff Definition in Product Catalog</inlineHelpText>
+        <label>Tariff</label>
+        <referenceTo>Tariff__c</referenceTo>
+        <relationshipLabel>Order Tariffs</relationshipLabel>
+        <relationshipName>Order_Tariffs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <label>Order Tariff</label>
+    <nameField>
+        <label>Order Tariff Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Order Tariffs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

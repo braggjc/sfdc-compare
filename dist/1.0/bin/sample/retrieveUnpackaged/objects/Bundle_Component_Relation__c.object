@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Bundle__c</fullName>
+        <description>Relation to Bundle</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Bundle</inlineHelpText>
+        <label>Bundle</label>
+        <referenceTo>CProduct__c</referenceTo>
+        <relationshipLabel>Bundle Component Relations</relationshipLabel>
+        <relationshipName>Bundle_Component_Relations</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Component1__c</fullName>
+        <description>Relation to Component - main component in relation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Component - main component in relation</inlineHelpText>
+        <label>Component1</label>
+        <referenceTo>Component__c</referenceTo>
+        <relationshipLabel>Bundle Component Relations</relationshipLabel>
+        <relationshipName>Bundle_Component_Relations1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Component2__c</fullName>
+        <description>Relation to Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Component</inlineHelpText>
+        <label>Component2</label>
+        <referenceTo>Component__c</referenceTo>
+        <relationshipLabel>Bundle Component Relations (Component2)</relationshipLabel>
+        <relationshipName>Bundle_Component_Relations2</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Relation_Type__c</fullName>
+        <description>Type of relation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of relation</inlineHelpText>
+        <label>Relation Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Exclusion</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Requirement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Bundle Component Relation</label>
+    <nameField>
+        <displayFormat>BCR{000000000}</displayFormat>
+        <label>Bundle Component Relation Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Bundle Component Relations</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

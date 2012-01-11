@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Attribute Set Instances; related to Service Bundle, Service Component or Pricing Items</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Attribute_Set_Type__c</fullName>
+        <description>Lookup to Attribute Set Definition</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Lookup to Attribute Set Definition</inlineHelpText>
+        <label>Attribute Set Type</label>
+        <referenceTo>Attribute_Set_Type__c</referenceTo>
+        <relationshipLabel>Service Attribute Sets</relationshipLabel>
+        <relationshipName>Service_Attribute_Sets</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Billing_ID__c</fullName>
+        <description>ID of Attribute Set in Billing System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of Attribute Set in Billing System</inlineHelpText>
+        <label>Billing ID</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CSR_ID__c</fullName>
+        <description>ID of Attribute Set in CSR Database</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of Attribute Set in CSR Database</inlineHelpText>
+        <label>CSR ID</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Bundle__c</fullName>
+        <description>Id of Service Bundle, that this Attribute Set belongs to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Id of Service Bundle, that this Attribute Set belongs to</inlineHelpText>
+        <label>Service Bundle</label>
+        <referenceTo>ServiceBundle__c</referenceTo>
+        <relationshipLabel>Service Attribute Sets</relationshipLabel>
+        <relationshipName>Service_Attribute_Sets</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Component__c</fullName>
+        <description>Id of Service Component, that this Attribute Set belongs to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Id of Service Component, that this Attribute Set belongs to</inlineHelpText>
+        <label>Service Component</label>
+        <referenceTo>ServiceComponent__c</referenceTo>
+        <relationshipLabel>Service Attribute Sets</relationshipLabel>
+        <relationshipName>Service_Attribute_Sets1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_Pricing_Item__c</fullName>
+        <description>Id of Service Pricing Item, that this Attribute Set belongs to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Id of Service Pricing Item, that this Attribute Set belongs to</inlineHelpText>
+        <label>Service Pricing Item</label>
+        <referenceTo>Service_Pricing_Item__c</referenceTo>
+        <relationshipLabel>Service Attribute Sets</relationshipLabel>
+        <relationshipName>Service_Attribute_Sets</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>Service Attribute Set</label>
+    <nameField>
+        <label>Service Attribute Set Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Service Attribute Sets</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

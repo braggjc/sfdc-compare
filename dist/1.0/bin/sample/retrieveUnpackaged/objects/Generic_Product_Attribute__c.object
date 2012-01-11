@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores relation between Generic Products and Attributes</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>A_End_Interface__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Value of this attribute will be visible directly on Order Line in A-End Interface field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of this attribute will be visible directly on Order Line in A-End Interface field.</inlineHelpText>
+        <label>A-End Interface</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>A_End_Medium__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Value of this attribute will be visible directly on Order Line in A-End Medium field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of this attribute will be visible directly on Order Line in A-End Medium field.</inlineHelpText>
+        <label>A-End Medium</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>A_End__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Attribute containing A-End address</description>
+        <externalId>false</externalId>
+        <label>A-End</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Attribute_ID__c</fullName>
+        <description>Attribute Record Id for which relationship is created</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Attribute Record Id for which relationship is created</inlineHelpText>
+        <label>Attribute</label>
+        <referenceTo>Attribute__c</referenceTo>
+        <relationshipLabel>Generic Product Attributes</relationshipLabel>
+        <relationshipName>GenericProductAttributes</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <trackHistory>false</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Attribute_Label_English__c</fullName>
+        <description>Attribute Label (English)</description>
+        <externalId>false</externalId>
+        <formula>Attribute_ID__r.Label_Eng__c</formula>
+        <inlineHelpText>Attribute Label (English)</inlineHelpText>
+        <label>Attribute Label (English)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attribute_Label_Hungarian__c</fullName>
+        <externalId>false</externalId>
+        <formula>Attribute_ID__r.Label_HUN__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attribute Label (Hungarian)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attribute_Label_Polish__c</fullName>
+        <externalId>false</externalId>
+        <formula>Attribute_ID__r.Label_POL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Attribute Label (Polish)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attribute_Label_Slovak__c</fullName>
+        <description>Attribute Label (Slovak)</description>
+        <externalId>false</externalId>
+        <formula>Attribute_ID__r.Label_SVK__c</formula>
+        <inlineHelpText>Attribute Label (Slovak)</inlineHelpText>
+        <label>Attribute Label (Slovak)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>B_End__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Attribute containing B-End address</description>
+        <externalId>false</externalId>
+        <label>B-End</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bandwidth__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Value of this attribute will be visible directly on Order Line in Bandwidth field.</description>
+        <externalId>false</externalId>
+        <label>Bandwidth</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Circuit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates that Attribute stores Circuit ID.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates that Attribute stores Circuit ID.</inlineHelpText>
+        <label>Circuit</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Created in Billing</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ForInvoicing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>For Invoicing</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Generic_Product_Label_English__c</fullName>
+        <description>Generic Product Label (English)</description>
+        <externalId>false</externalId>
+        <formula>Generic_Product__r.Label_Eng__c</formula>
+        <inlineHelpText>Generic Product Label (English)</inlineHelpText>
+        <label>Generic Product Label (English)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generic_Product_Label_Hungarian__c</fullName>
+        <externalId>false</externalId>
+        <formula>Generic_Product__r.Label_HUN__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Generic Product Label (Hungarian)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generic_Product_Label_Polish__c</fullName>
+        <externalId>false</externalId>
+        <formula>Generic_Product__r.Label_POL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Generic Product Label (Polish)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generic_Product_Label_Slovak__c</fullName>
+        <description>Generic Product Label (Slovak)</description>
+        <externalId>false</externalId>
+        <formula>Generic_Product__r.Label_SVK__c</formula>
+        <inlineHelpText>Generic Product Label (Slovak)</inlineHelpText>
+        <label>Generic Product Label (Slovak)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generic_Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Generic Product</label>
+        <referenceTo>Generic_Product__c</referenceTo>
+        <relationshipLabel>Generic Product Attributes</relationshipLabel>
+        <relationshipName>Generic_Product_Attributes</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <trackHistory>false</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Interface__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Value of this attribute will be visible directly on Order Line in Interface field.</description>
+        <externalId>false</externalId>
+        <label>Interface</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Medium__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Value of this attribute will be visible directly on Order Line in Medium field.</description>
+        <externalId>false</externalId>
+        <label>Medium</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Phone_Number__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies if an attribute is used for storing phone numbers</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if an attribute is used for storing phone numbers</inlineHelpText>
+        <label>Phone Number</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies whether the attribute is required on GenericProduct or not</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies whether the attribute is required on GenericProduct or not</inlineHelpText>
+        <label>Required</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sequence__c</fullName>
+        <description>Defines order in which this item will be displayed in Product Configurator.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Defines order in which this item will be displayed in Product Configurator.</inlineHelpText>
+        <label>Sequence</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Unique identifier which can be used for data synchronization between diferent systems</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Unique identifier which can be used for data synchronization between diferent systems</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Synchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Synchronized</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Token_Name__c</fullName>
+        <description>name of token representing this attribute if this attribute is under specific generic product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>name of token representing this attribute if this attribute is under specific generic product</inlineHelpText>
+        <label>Token Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Token_Value__c</fullName>
+        <description>Specifies from where value for token should be taken.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies from where value for token should be taken.</inlineHelpText>
+        <label>Token Value</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Value</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Label</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Username__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Denotes an attribute that is used for usage measurement (there can be only one such flag defined for one Generic Product)</description>
+        <externalId>false</externalId>
+        <label>Username</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Voice_Type__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Specifies if an attribute is used for selecting Voice Type on Phone Line</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies if an attribute is used for selecting Voice Type on Phone Line</inlineHelpText>
+        <label>Voice Type</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>phoneNumberType__c</fullName>
+        <description>PL Billing for handling the same number on 2 different types of services</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field for PL Billing</inlineHelpText>
+        <label>Phone Number Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>default</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>INFO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PRS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <label>Generic Product Attribute</label>
+    <nameField>
+        <displayFormat>GPA-{000000000}</displayFormat>
+        <label>Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Generic Product Attributes</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Actiontype__c</fullName>
+        <externalId>false</externalId>
+        <label>Actiontype</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ADD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DEL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ComponentGenericProduct__c</fullName>
+        <externalId>false</externalId>
+        <label>Component Generic Product</label>
+        <referenceTo>Component_Generic_Product__c</referenceTo>
+        <relationshipLabel>Configured Generic Product</relationshipLabel>
+        <relationshipName>Configured_Generic_Product</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ConfiguredBundle__c</fullName>
+        <externalId>false</externalId>
+        <label>Configured Bundle</label>
+        <referenceTo>ConfiguredBundle__c</referenceTo>
+        <relationshipLabel>Configured Generic Product</relationshipLabel>
+        <relationshipName>Configured_Generic_Product</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ConfiguredComponent__c</fullName>
+        <externalId>false</externalId>
+        <label>Configured Component</label>
+        <referenceTo>ConfiguredComponent__c</referenceTo>
+        <relationshipLabel>Configured Generic Products</relationshipLabel>
+        <relationshipName>Configured_Generic_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GenericProductRelation__c</fullName>
+        <externalId>false</externalId>
+        <label>Generic Product Relation</label>
+        <referenceTo>Generic_Product_Relation__c</referenceTo>
+        <relationshipLabel>Configured Generic Product</relationshipLabel>
+        <relationshipName>Configured_Generic_Product</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GenericProduct__c</fullName>
+        <externalId>false</externalId>
+        <label>Generic Product</label>
+        <referenceTo>Generic_Product__c</referenceTo>
+        <relationshipLabel>Configured Generic Products (Generic Product)</relationshipLabel>
+        <relationshipName>Configured_Generic_Products1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ParentGenericProduct__c</fullName>
+        <externalId>false</externalId>
+        <label>Parent Generic Product</label>
+        <referenceTo>ConfiguredGenericProduct__c</referenceTo>
+        <relationshipLabel>Configured Generic Products</relationshipLabel>
+        <relationshipName>Configured_Generic_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <label>Configured Generic Product</label>
+    <nameField>
+        <label>Configured Generic Product Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Configured Generic Product</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

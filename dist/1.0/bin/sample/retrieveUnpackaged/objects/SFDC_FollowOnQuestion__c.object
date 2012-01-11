@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Junction object representing a list of follow on questions to ask for a given answer.</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Answer__c</fullName>
+        <description>The answer ID field in the junction object.</description>
+        <externalId>false</externalId>
+        <label>Answer</label>
+        <referenceTo>SFDC_Answer__c</referenceTo>
+        <relationshipLabel>Follow On Questions</relationshipLabel>
+        <relationshipName>R00N30000001OR5jEAG</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Help__c</fullName>
+        <externalId>false</externalId>
+        <formula>(HYPERLINK(&quot;/servlet/servlet.FileDownload?file=01530000000BYhF&quot;, &quot;Help for Scripts&quot;)) &amp; &quot; &quot; &amp; (IMAGE(&quot;/img/btn_help.gif&quot;, &quot;Help&quot;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Help for Scripts</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>QuestionOrder__c</fullName>
+        <externalId>false</externalId>
+        <label>QuestionOrder</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question__c</fullName>
+        <description>The question field on the junction object.</description>
+        <externalId>false</externalId>
+        <label>Question</label>
+        <referenceTo>SFDC_Questions__c</referenceTo>
+        <relationshipLabel>Follow On Questions</relationshipLabel>
+        <relationshipName>R00N30000001OR5iEAG</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Script__c</fullName>
+        <externalId>false</externalId>
+        <label>Script</label>
+        <referenceTo>SFDC_Script__c</referenceTo>
+        <relationshipLabel>Questions</relationshipLabel>
+        <relationshipName>R00N30000001OR5hEAG</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <label>FollowOnQuestion</label>
+    <nameField>
+        <displayFormat>FO-{000000}</displayFormat>
+        <label>Follow On Question ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>FollowOnQuestions</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Answer__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Question__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

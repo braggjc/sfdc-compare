@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Dictionary of Tariffs that can be used during configuration.</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Banding_Model_ID__c</fullName>
+        <description>Banding Model Record Id for this Tariff</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Banding Model Record Id for this Tariff</inlineHelpText>
+        <label>BandingModel</label>
+        <referenceTo>Banding_Model__c</referenceTo>
+        <relationshipLabel>Tariffs</relationshipLabel>
+        <relationshipName>Tariffs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Billing_ID__c</fullName>
+        <description>Identifier from Durian</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field; identifier from Billing system</inlineHelpText>
+        <label>Billing ID</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GTS_Location__c</fullName>
+        <description>GTS Locations assigned to this Tariff</description>
+        <externalId>false</externalId>
+        <inlineHelpText>GTS Locations assigned to this Tariff</inlineHelpText>
+        <label>GTS Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Simplified_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Flag indicating if tariff will be displayed for Simplified Orders.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag indicating if tariff will be displayed for Simplified Orders.</inlineHelpText>
+        <label>Simplified Order</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Unique Tariff Source Record Id, which will be used for pointing reference on every related object</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Unique Tariff Source Record Id, which will be used for pointing reference on every related object</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Tariff_Name_SVK__c</fullName>
+        <description>Label</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Label</inlineHelpText>
+        <label>Tariff Label</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>Type of Tariff</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of Tariff</inlineHelpText>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Incoming</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outgoing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Redirection</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Valid_From__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <description>Validity date of this tariff (if left empty the tariff is always valid); Validity is used for filtering available Tariffs in Product Configurator</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Validity date of this tariff (if left empty the tariff is always valid)</inlineHelpText>
+        <label>Valid From</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Valid_To__c</fullName>
+        <description>Validity date of this tariff (if left empty the tariff is always valid); Validity is used for filtering available Tariffs in Product Configurator</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Validity date of this tariff (if left empty the tariff is always valid)</inlineHelpText>
+        <label>Valid To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <label>Tariff</label>
+    <listViews>
+        <fullName>All</fullName>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Banding_Model_ID__c</columns>
+        <columns>GTS_Location__c</columns>
+        <columns>Billing_ID__c</columns>
+        <columns>Type__c</columns>
+        <columns>Valid_From__c</columns>
+        <columns>Valid_To__c</columns>
+        <columns>CURRENCY_ISO_CODE</columns>
+        <columns>Tariff_Name_SVK__c</columns>
+        <columns>Source_Record_Id__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>equals</operation>
+            <value>GTS Slovakia</value>
+        </filters>
+        <filters>
+            <field>GTS_Location__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>All SK</label>
+    </listViews>
+    <nameField>
+        <label>Tariff Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Tariffs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

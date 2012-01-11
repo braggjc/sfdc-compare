@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object storing information about requests for external agency</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Account__c</fullName>
+        <description>Related Customer</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Related Customer</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Credit Checking History</relationshipLabel>
+        <relationshipName>Credit_Checking_History</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Guid__c</fullName>
+        <description>ID of the requested Report</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of the requested Report</inlineHelpText>
+        <label>Guid</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <description>Opportunity, for which the Report was requested</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Opportunity, for which the Report was requested</inlineHelpText>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Credit Checking History</relationshipLabel>
+        <relationshipName>Credit_Checking_History</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Profile__c</fullName>
+        <description>Profile used within Request</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Profile used within Request</inlineHelpText>
+        <label>Profile</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Received_Status__c</fullName>
+        <description>Status received in the Response</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Status received in the Response</inlineHelpText>
+        <label>Received Status</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requested_By__c</fullName>
+        <description>User, who requested the Report</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User, who requested the Report</inlineHelpText>
+        <label>Requested By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Credit_Checking_History</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Requested_On__c</fullName>
+        <description>Date and Time when Report was Requested</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date and Time when Report was Requested</inlineHelpText>
+        <label>Requested On</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Response_Received_On__c</fullName>
+        <description>Date and Time when response was received</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date and Time when response was received</inlineHelpText>
+        <label>Response Received On</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <label>Credit Checking History</label>
+    <nameField>
+        <displayFormat>CCH{000000000}</displayFormat>
+        <label>Entry Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Credit Checking History</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores relations between Attribute Set Type and Attribute</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Attribute_Label_English__c</fullName>
+        <description>Technical field: contains Attribute&apos;s label in a specified language.</description>
+        <externalId>false</externalId>
+        <formula>Attribute__r.Label_Eng__c</formula>
+        <inlineHelpText>Technical field: contains Attribute&apos;s label in a specified language.</inlineHelpText>
+        <label>Attribute Label (English)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attribute_Label_Hungarian__c</fullName>
+        <description>Technical field: contains Attribute&apos;s label in a specified language.</description>
+        <externalId>false</externalId>
+        <formula>Attribute__r.Label_HUN__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Technical field: contains Attribute&apos;s label in a specified language.</inlineHelpText>
+        <label>Attribute Label (Hungarian)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attribute_Label_Polish__c</fullName>
+        <description>Technical field: contains Attribute&apos;s label in a specified language.</description>
+        <externalId>false</externalId>
+        <formula>Attribute__r.Label_POL__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Technical field: contains Attribute&apos;s label in a specified language.</inlineHelpText>
+        <label>Attribute Label (Polish)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attribute_Label_Slovak__c</fullName>
+        <description>Technical field: contains Attribute&apos;s label in a specified language.</description>
+        <externalId>false</externalId>
+        <formula>Attribute__r.Label_SVK__c</formula>
+        <inlineHelpText>Technical field: contains Attribute&apos;s label in a specified language.</inlineHelpText>
+        <label>Attribute Label (Slovak)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attribute_Set_Type__c</fullName>
+        <description>Relation to Attribute Set Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Attribute Set Type</inlineHelpText>
+        <label>Attribute Set Type</label>
+        <referenceTo>Attribute_Set_Type__c</referenceTo>
+        <relationshipLabel>Attribute Set Type Relations</relationshipLabel>
+        <relationshipName>Attribute_Set_Type_Relations</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <trackHistory>false</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Attribute_Type__c</fullName>
+        <defaultValue>&quot;STRING&quot;</defaultValue>
+        <description>Enumerator in Durian : AttributeSet/attributeType - not used in SFDC; During the conf call, STRING value has been approved as default;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enumerator in Durian : AttributeSet/attributeType - not used in SFDC</inlineHelpText>
+        <label>Attribute Type</label>
+        <length>32</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Attribute__c</fullName>
+        <description>Relation to Attribute definition.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Relation to Attribute definition.</inlineHelpText>
+        <label>Attribute</label>
+        <referenceTo>Attribute__c</referenceTo>
+        <relationshipLabel>Attribute Set Type Relations</relationshipLabel>
+        <relationshipName>Attribute_Set_Type_Relations</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <trackHistory>false</trackHistory>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Created_in_Billing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this item has been created in Billing system (during Bundle synchronization)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this item has been created in Billing system (during Bundle synchronization)</inlineHelpText>
+        <label>Created in Billing</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Data_Length__c</fullName>
+        <defaultValue>64</defaultValue>
+        <description>Field not used in this object level in SFDC but required by Durian; Length of the value string - up to 64 characters</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tehcnical field for SK: not used in SFDC, but required by Durian.</inlineHelpText>
+        <label>Data Length</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Description of value - it is shown in Durian GUI</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of value - it is shown in Durian GUI</inlineHelpText>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Count__c</fullName>
+        <defaultValue>1</defaultValue>
+        <description>DAVO field: Maximum occurence. If maxCount &gt; 1, the attribute is a multivalue one.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field for SK: Maximum occurence (maxCount &gt;1 =&gt; multivalue attribute).</inlineHelpText>
+        <label>Max Count</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Min_Count__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>DAVO field: Minimum occurence of the attribute minCount=1 =&gt; attribute is mandatory</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field for SK: Minimum occurence of the attribute (minCount=1 =&gt; attribute is mandatory)</inlineHelpText>
+        <label>Min Count</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Note__c</fullName>
+        <description>DAVO field: Long description for administrative purposes only;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Technical field for SK: long description for administrative purposes only.</inlineHelpText>
+        <label>Note</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Technical field used for migration between environments.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Technical field used for migration between environments.</inlineHelpText>
+        <label>Source Record Id</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Synchronized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates if this definiton matches a definition in Billing system.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if this definiton matches a definition in Billing system.</inlineHelpText>
+        <label>Synchronized</label>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <label>Attribute Set Type Relation</label>
+    <nameField>
+        <displayFormat>ASTR-{000000000}</displayFormat>
+        <label>Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Attribute Set Type Relations</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

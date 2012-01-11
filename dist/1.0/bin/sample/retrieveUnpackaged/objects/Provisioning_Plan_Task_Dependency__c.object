@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <content>ProvisioningPlanTaskDependency</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>ProvisioningPlanTaskDependency</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>ProvisioningPlanTaskDependency</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Holds dependency definition for defined Prov Plan tasks</description>
+    <enableActivities>false</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Dependency_Action__c</fullName>
+        <externalId>false</externalId>
+        <label>Dependency Action</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Finish to start</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Finish to finish</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Start to start</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Start to finish</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Dependency_Type__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select Provisioning Plan for Intra-Workflow dependency, select Provisioning Plan Dependency for Inter-Workflow dependencies.</inlineHelpText>
+        <label>Dependency Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Provisioning Plan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Provisioning Plan Dependency</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Dependent_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Provisioning_Plan__c = Dependent_Task__r.Provisioning_Plan__c , HYPERLINK( &apos;/&apos;+ Dependent_Task__c , Dependent_Task__r.Name+&apos; - &apos;+Dependent_Task_Name__c ), HYPERLINK( &apos;/&apos;+ Dependent_Task__c , Dependent_Task__r.Name+&apos; - &apos;+Dependent_Task_Name__c+&apos; (&apos;+ Dependent_Task__r.Provisioning_Plan__r.Name +&apos; - &apos; + Dependent_Task__r.Provisioning_Plan__r.Plan_Name__c +&apos;)&apos; ))</formula>
+        <label>Dependent Task Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dependent_Task_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Dependent_Task__r.Task_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dependent Task Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dependent_Task__c</fullName>
+        <externalId>false</externalId>
+        <label>Dependent Task</label>
+        <referenceTo>Provisioning_Plan_Task__c</referenceTo>
+        <relationshipLabel>Dependency On</relationshipLabel>
+        <relationshipName>Predecessor</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Predecessor_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Provisioning_Plan__c = Predecessor__r.Provisioning_Plan__c , HYPERLINK( &apos;/&apos;+Predecessor__c , Predecessor__r.Name+&apos; - &apos;+Predecessor_Task_Name__c ), HYPERLINK( &apos;/&apos;+Predecessor__c , Predecessor__r.Name+&apos; - &apos;+Predecessor_Task_Name__c+&apos; (&apos;+ Predecessor__r.Provisioning_Plan__r.Name +&apos; - &apos;+ Predecessor__r.Provisioning_Plan__r.Plan_Name__c +&apos;)&apos; ))</formula>
+        <label>Predecessor Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Predecessor_Task_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Predecessor__r.Task_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Predecessor Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Predecessor__c</fullName>
+        <externalId>false</externalId>
+        <label>Predecessor</label>
+        <referenceTo>Provisioning_Plan_Task__c</referenceTo>
+        <relationshipLabel>Predecessor To</relationshipLabel>
+        <relationshipName>Dependency</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Provisioning_Plan_Dependency__c</fullName>
+        <externalId>false</externalId>
+        <label>Provisioning Plan Dependency</label>
+        <referenceTo>Provisioning_Plan_Dependency__c</referenceTo>
+        <relationshipLabel>Provisioning Plan Task Dependencies</relationshipLabel>
+        <relationshipName>Provisioning_Plan_Task_Dependencies</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Provisioning_Plan__c</fullName>
+        <externalId>false</externalId>
+        <label>Provisioning Plan</label>
+        <referenceTo>Provisioning_Plan__c</referenceTo>
+        <relationshipLabel>Provisioning Plan Task Dependencies</relationshipLabel>
+        <relationshipName>Provisioning_Plan_Task_Dependencies</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Source_Record_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>Source Record Id</label>
+        <length>32</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Provisioning Plan Task Dependency</label>
+    <nameField>
+        <displayFormat>PTD{000000000}</displayFormat>
+        <label>Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Provisioning Plan Task Dependencies</pluralLabel>
+    <recordTypes>
+        <fullName>Provisioning_Plan</fullName>
+        <active>true</active>
+        <label>Provisioning Plan</label>
+        <picklistValues>
+            <picklist>Dependency_Action__c</picklist>
+            <values>
+                <fullName>Finish to finish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finish to start</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Start to finish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Start to start</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dependency_Type__c</picklist>
+            <values>
+                <fullName>Provisioning Plan</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Provisioning_Plan_Dependency</fullName>
+        <active>false</active>
+        <label>Provisioning Plan Dependency</label>
+        <picklistValues>
+            <picklist>Dependency_Action__c</picklist>
+            <values>
+                <fullName>Finish to finish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finish to start</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Start to finish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Start to start</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Dependency_Type__c</picklist>
+            <values>
+                <fullName>Provisioning Plan Dependency</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Predecessor_Task_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Predecessor__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Dependent_Task__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Dependent_Task_Name__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Predecessor__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Predecessor_Task_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Dependent_Task__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Dependent_Task_Name__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Predecessor__c</searchFilterFields>
+        <searchFilterFields>Predecessor_Task_Name__c</searchFilterFields>
+        <searchFilterFields>Dependent_Task__c</searchFilterFields>
+        <searchFilterFields>Dependent_Task_Name__c</searchFilterFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Require_Provisioning_Plan</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (
+      ISPICKVAL(Dependency_Type__c,&apos;Provisioning Plan&apos;),
+      ISNULL( Provisioning_Plan__c )
+)</errorConditionFormula>
+        <errorDisplayField>Provisioning_Plan__c</errorDisplayField>
+        <errorMessage>Provisioning Plan is required for &quot;Provisioning Plan&quot; Dependency Types.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Require_Provisioning_Plan_Dependency</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (
+    ISPICKVAL(Dependency_Type__c, &quot;Provisioning Plan Dependency&quot;),
+   ISNULL( Provisioning_Plan_Dependency__c )
+)</errorConditionFormula>
+        <errorDisplayField>Provisioning_Plan_Dependency__c</errorDisplayField>
+        <errorMessage>Provisioning Plan Dependency is required for &quot;Provisioning Plan Dependency&quot; dependency types.</errorMessage>
+    </validationRules>
+</CustomObject>

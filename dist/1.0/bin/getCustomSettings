@@ -1,0 +1,14 @@
+<config>
+	<Enviroment>
+		<envName>test</envName><!-- if change this you must change this name in getCustomSettings.bat !!! -->
+		<userName>l.skrodzki@gtsce.com.develop4</userName>
+		<passwd>lukskrodz2PLbE8zVT1wx30wlV71hRGuJZD</passwd>
+		<url>https://cs2-api.salesforce.com/services/Soap/c/22.0/00DP000000062Wu/0DF20000000LyJe</url><!-- this is the URL of server -->
+	</Enviroment>
+	<Enviroment>
+		<envName>prod</envName><!-- if change this you must change this name in getCustomSettings.bat !!! -->
+		<userName>b.walczak@gtsce.com</userName>
+		<passwd>dupa.997a6QSDOhEbCypwXrzygharJ55</passwd>
+		<url>https://eu0-api.salesforce.com/services/Soap/c/22.0/00DP000000062Wu/0DF20000000LyJe</url><!-- this is the URL of server -->
+	</Enviroment>
+</config>

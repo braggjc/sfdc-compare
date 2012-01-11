@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Regional Opportunity - GTS CE level</description>
+    <enableActivities>true</enableActivities>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Account_Contact__c</fullName>
+        <description>Contact Person of assigned Account</description>
+        <externalId>false</externalId>
+        <label>Account Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Regional Opportunities</relationshipLabel>
+        <relationshipName>R00N20000001S0stEAC</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <description>AcounT realted to Regional Opportunity</description>
+        <externalId>false</externalId>
+        <label>Account Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Regional Opportunities</relationshipLabel>
+        <relationshipName>R00N20000001S0qsEAC</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CS_Manager_Involvement__c</fullName>
+        <externalId>false</externalId>
+        <label>CS Manager Involvement (%)</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <description>Planned or actual date when  Regional Opportunity is closed</description>
+        <externalId>false</externalId>
+        <label>Close Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>REgional Opportunity description</description>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>GTS_Locations__c</fullName>
+        <description>Locations of GTS branches</description>
+        <externalId>false</externalId>
+        <label>GTS Locations</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Monthly_Amount__c</fullName>
+        <description>Monthly Amount</description>
+        <externalId>false</externalId>
+        <label>Monthly Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityCategory__c</fullName>
+        <description>Indicates if Opportunity is managed by CS or GSM team</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates if Opportunity is managed by CS or GSM team</inlineHelpText>
+        <label>Opportunity Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Cross-Selling</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regional Project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityOwnership__c</fullName>
+        <description>Specifies who is owner and responsible for the Opportunity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies who is owner and responsible for the Opportunity</inlineHelpText>
+        <label>Opportunity Ownership</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Austria</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Germany</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Initiator__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Initiator</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GTS Czech Rep</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Hungary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Slovakia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Poland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GTS Romania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Austria</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Germany</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name__c</fullName>
+        <description>Descriptive Name of Regional Opportunity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use the following naming convention:
+Voice_Data_..._SK_RO_..._08_1 (which means services Voice, Data for Slovakia and Romania. Opportunity created in year 08 number of opportunity 1)</inlineHelpText>
+        <label>Opportunity Name</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Probability__c</fullName>
+        <defaultValue>0.1</defaultValue>
+        <description>Estimated probablility of successful deal closure</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stage - Probaility range (from) - (to)%
+
+Suspect - 0% - 10%
+Prospect - 0% - 30%
+Proposal - 10% - 50%
+Negotiations - 20% - 90%
+Contract Signature - 30% - 100%
+Closed Won - 100%
+Closed Lost - 0%</inlineHelpText>
+        <label>Probability (%)</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Product_Interest__c</fullName>
+        <description>List of Products that Customer is or might be  interested in</description>
+        <externalId>false</externalId>
+        <label>Product Interest</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Data Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internet Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Voice Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICT Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hosting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Reason_Lost_Comments__c</fullName>
+        <description>Free text description of reason for losing regional opportunity</description>
+        <externalId>false</externalId>
+        <label>Reason Lost Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Reason_Lost__c</fullName>
+        <description>Reson of  losing Regional Opportunity</description>
+        <externalId>false</externalId>
+        <label>Reason Lost</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Convergent offer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On net price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Off net price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical solution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unavailable locality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Insufficient capacity in GTS network</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Demand canceled by customer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wrongly created OPP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product Issues</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No feedback</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <description>Current processing Stage of Regional Opportunity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stage - Probaility % - Range
+Suspect	1%	/rng: 0% - 10%
+Prospect	10%	/rng: 0% - 30%
+Proposal	30%	/rng: 10% - 50%
+Negotiations	50%	/rng: 20% - 90%
+Contract Signature	80%	/rng: 30% - 100%
+Closed Won	100%	/rng: 100%
+Closed Lost	0%</inlineHelpText>
+        <label>Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Suspect</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contract Signature</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Total_Amount__c</fullName>
+        <description>Total Amount for Regional Opportunity</description>
+        <externalId>false</externalId>
+        <label>Total Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Monthly_Revenue_Delta__c</fullName>
+        <description>Field value calculated &amp; entered manually on the basis of Monthly Revenue Delta from connected opportunities</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field value calculated &amp; entered manually on the basis of Monthly Revenue Delta from connected opportunities</inlineHelpText>
+        <label>Total Monthly Revenue Delta</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <label>Regional Opportunity</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity_Name__c</columns>
+        <columns>Account_Name__c</columns>
+        <columns>Total_Amount__c</columns>
+        <columns>Monthly_Amount__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Probability__c</columns>
+        <columns>Close_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Regional_Opportunities</fullName>
+        <columns>NAME</columns>
+        <columns>Opportunity_Name__c</columns>
+        <columns>Account_Name__c</columns>
+        <columns>Total_Amount__c</columns>
+        <columns>Monthly_Amount__c</columns>
+        <columns>Stage__c</columns>
+        <columns>Probability__c</columns>
+        <columns>Close_Date__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Regional Opportunities</label>
+    </listViews>
+    <nameField>
+        <displayFormat>ROP{000000000}</displayFormat>
+        <label>Opportunity No</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Regional Opportunities</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Opportunity_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Account_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Monthly_Amount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_Amount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Stage__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Close_Date__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Opportunity_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Account_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Monthly_Amount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Total_Amount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Stage__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Close_Date__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Opportunity_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Account_Name__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Opportunity_Name__c</searchFilterFields>
+        <searchFilterFields>Account_Name__c</searchFilterFields>
+        <searchResultsAdditionalFields>Opportunity_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Account_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Monthly_Amount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Total_Amount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Stage__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Close_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Reason_Lost_Comment_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (ISPICKVAL(Stage__c , &quot;Closed Lost&quot;), Reason_Lost_Comments__c =null )</errorConditionFormula>
+        <errorDisplayField>Reason_Lost_Comments__c</errorDisplayField>
+        <errorMessage>If The Stage equals &quot;Closed Lost&quot; the &quot;Reason Lost Comments&quot; is a required field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reason_Lost_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND ( ISPICKVAL(Stage__c , &quot;Closed Lost&quot;), ISPICKVAL(Reason_Lost__c, &quot;&quot;))</errorConditionFormula>
+        <errorDisplayField>Reason_Lost__c</errorDisplayField>
+        <errorMessage>If the stage equals &quot;Closed Lost&quot;, then the Reason Lost field is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validation_of_Percentages_RETAIL</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(ISPICKVAL(Stage__c, &quot;Suspect&quot;), (Probability__c &lt;0) || (Probability__c &gt; 0.10),
+IF(ISPICKVAL(Stage__c, &quot;Prospect&quot;), (Probability__c &lt; 0) || (Probability__c &gt; 0.30),
+IF(ISPICKVAL(Stage__c, &quot;Proposal&quot;), (Probability__c &lt;0.10) || (Probability__c &gt; 0.50),
+IF(ISPICKVAL(Stage__c, &quot;Negotiation&quot;), (Probability__c &lt; 0.20) || (Probability__c &gt; 0.90),
+IF(ISPICKVAL(Stage__c, &quot;Contract Signature&quot;), (Probability__c &lt;0.30) || (Probability__c &gt; 1),
+false)))))</errorConditionFormula>
+        <errorDisplayField>Probability__c</errorDisplayField>
+        <errorMessage>Wrong Probability Value for selected Stage Please change</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>max_100percent</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(
+   CS_Manager_Involvement__c &gt; 1.0,
+   CS_Manager_Involvement__c &lt; 0.0
+)</errorConditionFormula>
+        <errorDisplayField>CS_Manager_Involvement__c</errorDisplayField>
+        <errorMessage>The value must be between 0-100%.</errorMessage>
+    </validationRules>
+</CustomObject>
