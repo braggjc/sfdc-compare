@@ -7,6 +7,8 @@ import java.util.LinkedList;
 import java.util.Locale;
 import java.util.Map;
 
+import pl.skrodzki.sfdc.compare.object.Difference;
+
 import jxl.CellView;
 import jxl.Workbook;
 import jxl.WorkbookSettings;
@@ -36,7 +38,7 @@ public class WriteExcel {
 
 	public void write(
 			String filename,
-			HashMap<String, HashMap<String, HashMap<String, Compare.Difference>>> toWrite) {
+			HashMap<String, HashMap<String, HashMap<String, Difference>>> toWrite) {
 		this.inputFile = filename;
 		LinkedList<String> sheets = new LinkedList<String>();
 		LinkedList<String> columns = new LinkedList<String>();
@@ -91,17 +93,10 @@ public class WriteExcel {
 		try {
 			write(columns, sheets, values, columnsSize);
 		} catch (WriteException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// mastertag
-		// properties
-		// diff1
-		// diff2
-
 	}
 
 	public void write(LinkedList<String> columns, LinkedList<String> sheets,
