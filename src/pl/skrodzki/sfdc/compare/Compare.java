@@ -1,5 +1,7 @@
 package pl.skrodzki.sfdc.compare;
 
+import pl.skrodzki.sfdc.compare.object.*;
+
 import java.io.File;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -13,113 +15,43 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class Compare {
-
-	public class Difference {
-		String first;
-		String second;
-
-		public String toString() {
-			return "\nfirst: " + first + " \nsecond: " + second;
-		}
-	}
-
-	@SuppressWarnings("rawtypes")
-	public class Picklist implements Comparable {
-		String masterName;
-		String picklistName;
-		LinkedList<String> values;
-
-		@Override
-		public String toString() {
-			String result = "";
-			for (String s : this.values) {
-				result += s + "\n";
-			}
-			return result;
-		}
-
-		@Override
-		public int compareTo(Object arg0) {
-			Picklist first = (Picklist) this;
-			Picklist second = (Picklist) arg0;
-			if (!(first.picklistName.equalsIgnoreCase(second.picklistName) && first.masterName
-					.equalsIgnoreCase(second.masterName)))
-				return -1;
-
-			for (String s : first.values) {
-				if (!second.values.contains(s))
-					return -1;
-			}
-			for (String s : second.values) {
-				if (!first.values.contains(s))
-					return -1;
-			}
-			return 0;
-		}
-	}
-
-	public class Request {
-		String compType;
-		ObjectDescription object;
-	}
-
-	public class ObjectDescription {
-		String masterTag;
-		String inputFolder;
-		String resultFile;
-		String fileExtension;
-		LinkedList<String> properties;
-		boolean isPicklist = false;
-	}
-
-	public class parseResult {
-		String masterTagTagValue;
-		HashMap<String, String> tagValues;
-	}
-
 	String pathToFirstEnv, pathToSecondEnv, resultPath;
 	LinkedList<String> mode;
 	LinkedList<String> whichObjects;
 	LinkedList<Request> listOfRequests;
 	boolean allObjects = false;
 	boolean printFiles = true;
+	public Compare(){
+		this.listOfRequests = new LinkedList<Request>();
+		this.mode = new LinkedList<String>();
+		this.whichObjects = new LinkedList<String>();
+		readConfig();
 
-	public static void main() {
-		Compare comp = new Compare();
-		comp.listOfRequests = new LinkedList<Request>();
-		comp.mode = new LinkedList<String>();
-		comp.whichObjects = new LinkedList<String>();
-
-		comp = readConfig();
-
-		if (checkConfig(comp)) {
-			if (!comp.printFiles)
+		if (checkConfig(this)) {
+			if (!this.printFiles)
 				System.out.printf("Working...");
-			for (int s = 0; s < comp.listOfRequests.size(); s++)
-				for (int c = 0; c < comp.mode.size(); c++)
-					if (comp.listOfRequests.get(s).compType
-							.equalsIgnoreCase(comp.mode.get(c)))
-						compareFields(comp, s,
-								comp.listOfRequests.get(s).object.isPicklist);
+			for (int s = 0; s < this.listOfRequests.size(); s++)
+				for (int c = 0; c < this.mode.size(); c++)
+					if (this.listOfRequests.get(s).compType
+							.equalsIgnoreCase(this.mode.get(c)))
+						this.compareFields(s,
+								this.listOfRequests.get(s).object.isPicklist);
 		}
 
 		System.out.println();
-		System.out.println("DONE");
-
-		// comparePicklists("C:\\compare\\config3","C:\\compare\\test");
-		// parsePicklist(filename);
+		System.out.println("DONE");		
 	}
 
-	public static void compareFields(Compare comp, int iReqNum,
+	public void compareFields(int iReqNum,
 			boolean isPicklist) {
 
 		int childrenLimit = 0;
 		HashMap<String, HashMap<String, HashMap<String, Difference>>> comparisionResult = new HashMap<String, HashMap<String, HashMap<String, Difference>>>();
 
-		File dirFirstEnv = new File(comp.pathToFirstEnv + "\\"
-				+ comp.listOfRequests.get(iReqNum).object.inputFolder);
-		File dirSecondEnv = new File(comp.pathToSecondEnv + "\\"
-				+ comp.listOfRequests.get(iReqNum).object.inputFolder);
+		File dirFirstEnv = new File(this.pathToFirstEnv + "\\"
+				+ this.listOfRequests.get(iReqNum).object.inputFolder);
+		File dirSecondEnv = new File(this.pathToSecondEnv + "\\"
+				+ this.listOfRequests.get(iReqNum).object.inputFolder);
 
 		// which objects compare?
 		String[] children = dirFirstEnv.list();
@@ -129,12 +61,12 @@ public class Compare {
 					+ "\" not found!");
 			return;
 		}
-		if (!comp.allObjects) {
-			childrenLimit = comp.whichObjects.size();
+		if (!this.allObjects) {
+			childrenLimit = this.whichObjects.size();
 			for (int c = 0; c < childrenLimit; c++) {
 				children[c] = "";
-				children[c] = comp.whichObjects.get(c) + "."
-						+ comp.listOfRequests.get(iReqNum).object.fileExtension;
+				children[c] = this.whichObjects.get(c) + "."
+						+ this.listOfRequests.get(iReqNum).object.fileExtension;
 			}
 		} else
 			childrenLimit = children.length;
@@ -150,29 +82,29 @@ public class Compare {
 		// First Env
 		for (int i = 0; i < childrenLimit; i++) {
 			String filename = children[i];
-			if (!comp.printFiles) {
+			if (!this.printFiles) {
 				if (i % 8 == 0)
 					System.out.printf(".");
 			}
 			firstEnvResult.put(
 					filename,
-					parseObject(comp.listOfRequests.get(iReqNum).compType,
-							comp.listOfRequests.get(iReqNum).object.masterTag,
-							comp.listOfRequests.get(iReqNum).object.properties,
-							dirFirstEnv + "\\" + filename, comp.printFiles));
+					parseObject(this.listOfRequests.get(iReqNum).compType,
+							this.listOfRequests.get(iReqNum).object.masterTag,
+							this.listOfRequests.get(iReqNum).object.properties,
+							dirFirstEnv + "\\" + filename, this.printFiles));
 			if (isPicklist)
 				firstEnvPicklist
 						.put(filename,
 								parsePicklist(
-										comp.listOfRequests.get(iReqNum).compType,
+										this.listOfRequests.get(iReqNum).compType,
 										dirFirstEnv + "\\" + filename,
-										comp.printFiles));
+										this.printFiles));
 		}
 
 		// if allObjects list all files in secondEnv folder
 		String[] children_temp = children;
 		children = null;
-		if (comp.allObjects) {
+		if (this.allObjects) {
 			children = dirSecondEnv.list();
 			if (children == null) {
 				System.out.println();
@@ -187,25 +119,25 @@ public class Compare {
 		// Second Env
 		for (int i = 0; i < childrenLimit; i++) {
 			String filename = children[i];
-			if (!comp.printFiles) {
+			if (!this.printFiles) {
 				if (i % 8 == 0)
 					System.out.printf(".");
 			}
 			secondEnvResult.put(
 					filename,
-					parseObject(comp.listOfRequests.get(iReqNum).compType,
-							comp.listOfRequests.get(iReqNum).object.masterTag,
-							comp.listOfRequests.get(iReqNum).object.properties,
-							dirSecondEnv + "\\" + filename, comp.printFiles));
+					parseObject(this.listOfRequests.get(iReqNum).compType,
+							this.listOfRequests.get(iReqNum).object.masterTag,
+							this.listOfRequests.get(iReqNum).object.properties,
+							dirSecondEnv + "\\" + filename, this.printFiles));
 			if (isPicklist)
 				secondEnvPicklist
 						.put(filename,
 								parsePicklist(
-										comp.listOfRequests.get(iReqNum).compType,
+										this.listOfRequests.get(iReqNum).compType,
 										dirSecondEnv + "\\" + filename,
-										comp.printFiles));
+										this.printFiles));
 		}
-		if (!comp.printFiles)
+		if (!this.printFiles)
 			System.out.println();
 		// ===========================PICKLISTS======================================
 		if (isPicklist) {
@@ -223,7 +155,7 @@ public class Compare {
 
 							if ((firstEnvPicklist.get(s).get(ss)
 									.compareTo(secondEnvPicklist.get(s).get(ss))) != 0) {
-								Difference newDiff = comp.new Difference();
+								Difference newDiff = new Difference();
 								newDiff.first = firstEnvPicklist.get(s).get(ss)
 										.toString();
 								newDiff.second = secondEnvPicklist.get(s)
@@ -251,54 +183,54 @@ public class Compare {
 			// System.out.println(picklistCompResult);
 			WriteExcel test = new WriteExcel();
 			if (!picklistCompResult.isEmpty()) {
-				if (comp.listOfRequests.get(iReqNum).compType
+				if (this.listOfRequests.get(iReqNum).compType
 						.equalsIgnoreCase("rules")) {
 					test.write(
-							comp.resultPath
+							this.resultPath
 									+ "\\"
-									+ comp.listOfRequests.get(iReqNum).object.resultFile
+									+ this.listOfRequests.get(iReqNum).object.resultFile
 									+ "_actions_criteriaItems" + ".xls",
 							picklistCompResult);
 					System.out.println();
 					System.out.println("DIFFERENCES BETWEEN "
-							+ comp.listOfRequests.get(iReqNum).compType
+							+ this.listOfRequests.get(iReqNum).compType
 									.toUpperCase()
 							+ " ACTIONS/CRITERIA_ITEMS FOUND AND SAVED TO:");
 					System.out
-							.println(comp.resultPath
+							.println(this.resultPath
 									+ "\\"
-									+ comp.listOfRequests.get(iReqNum).object.resultFile
+									+ this.listOfRequests.get(iReqNum).object.resultFile
 									+ "_actions_criteriaItems" + ".xls");
 				} else {
 					test.write(
-							comp.resultPath
+							this.resultPath
 									+ "\\"
-									+ comp.listOfRequests.get(iReqNum).object.resultFile
+									+ this.listOfRequests.get(iReqNum).object.resultFile
 									+ "_picklists" + ".xls", picklistCompResult);
 					System.out.println();
 					System.out.println("DIFFERENCES BETWEEN "
-							+ comp.listOfRequests.get(iReqNum).compType
+							+ this.listOfRequests.get(iReqNum).compType
 									.toUpperCase()
 							+ " PICKLISTS FOUND AND SAVED TO:");
 					System.out
-							.println(comp.resultPath
+							.println(this.resultPath
 									+ "\\"
-									+ comp.listOfRequests.get(iReqNum).object.resultFile
+									+ this.listOfRequests.get(iReqNum).object.resultFile
 									+ "_picklists" + ".xls");
 				}
 
 			} else {
-				if (comp.listOfRequests.get(iReqNum).compType
+				if (this.listOfRequests.get(iReqNum).compType
 						.equalsIgnoreCase("rules")) {
 					System.out.println();
 					System.out.println("NO DIFFERENCES BETWEEN "
-							+ comp.listOfRequests.get(iReqNum).compType
+							+ this.listOfRequests.get(iReqNum).compType
 									.toUpperCase()
 							+ " ACTIONS/CRITERIA_ITEMS FOUND");
 				} else {
 					System.out.println();
 					System.out.println("NO DIFFERENCES BETWEEN "
-							+ comp.listOfRequests.get(iReqNum).compType
+							+ this.listOfRequests.get(iReqNum).compType
 									.toUpperCase() + " PICKLISTS FOUND");
 				}
 			}
@@ -320,7 +252,7 @@ public class Compare {
 						// ystem.out.println("PR " + pr);
 						HashMap<String, Difference> res3 = new HashMap<String, Difference>();
 						for (String ss : firstEnvResult.get(s).get(pr).keySet()) {
-							Difference diff = comp.new Difference();
+							Difference diff = new Difference();
 							if (secondEnvResult.get(s).get(pr).containsKey(ss)) {
 								diff.first = firstEnvResult.get(s).get(pr)
 										.get(ss);
@@ -358,28 +290,28 @@ public class Compare {
 		WriteExcel test = new WriteExcel();
 		if (!comparisionResult.isEmpty()) {
 			test.write(
-					comp.resultPath
+					this.resultPath
 							+ "\\"
-							+ comp.listOfRequests.get(iReqNum).object.resultFile
+							+ this.listOfRequests.get(iReqNum).object.resultFile
 							+ ".xls", comparisionResult);
 			System.out.println();
 			System.out.println("DIFFERENCES BETWEEN "
-					+ comp.listOfRequests.get(iReqNum).compType.toUpperCase()
+					+ this.listOfRequests.get(iReqNum).compType.toUpperCase()
 					+ " IN FILES FOUND AND SAVED TO:");
-			System.out.println(comp.resultPath + "\\"
-					+ comp.listOfRequests.get(iReqNum).object.resultFile
+			System.out.println(this.resultPath + "\\"
+					+ this.listOfRequests.get(iReqNum).object.resultFile
 					+ ".xls");
 		} else {
 			System.out.println();
 			System.out.println("NO DIFFERENCES BETWEEN "
-					+ comp.listOfRequests.get(iReqNum).compType.toUpperCase()
+					+ this.listOfRequests.get(iReqNum).compType.toUpperCase()
 					+ " IN FILES FOUND");
 		}
 		System.out.println();
 
 	}
 
-	public static HashMap<String, HashMap<String, String>> parseObject(
+	public HashMap<String, HashMap<String, String>> parseObject(
 			String compType, String masterTagTag, LinkedList<String> tags,
 			String filename, boolean printFiles) {
 
@@ -475,11 +407,9 @@ public class Compare {
 
 			NodeList nodeLst = doc.getElementsByTagName(compType);
 
-			Compare comp = new Compare();
-
 			for (int s = 0; s < nodeLst.getLength(); s++) {
 
-				Picklist tempres = comp.new Picklist();
+				Picklist tempres = new Picklist();
 
 				Node fstNode = nodeLst.item(s);
 				Element fstElmnt2 = (Element) fstNode;
@@ -517,7 +447,7 @@ public class Compare {
 
 						Element fstNmElmnt = (Element) fstNmElmntLst
 								.item(pickID);
-						Picklist res = comp.new Picklist();
+						Picklist res = new Picklist();
 						res.masterName = tempres.masterName;
 
 						if (fstNmElmnt == null)
@@ -633,7 +563,7 @@ public class Compare {
 					for (int pickID = 0; pickID < fstNmElmntLst.getLength(); pickID++) {
 
 						fstNmElmnt = (Element) fstNmElmntLst.item(pickID);
-						Picklist res = comp.new Picklist();
+						Picklist res = new Picklist();
 						res.masterName = tempres.masterName;
 
 						if (fstNmElmnt == null)
@@ -679,13 +609,12 @@ public class Compare {
 		return result;
 	}
 
-	public static Compare readConfig() {
+	public void readConfig() {
 
-		Compare comp = new Compare();
-		comp.listOfRequests = new LinkedList<Request>();
-		comp.mode = new LinkedList<String>();
-		comp.whichObjects = new LinkedList<String>();
-		comp.allObjects = false;
+		this.listOfRequests = new LinkedList<Request>();
+		this.mode = new LinkedList<String>();
+		this.whichObjects = new LinkedList<String>();
+		this.allObjects = false;
 
 		try {
 			File file = new File("config.xml");
@@ -713,30 +642,30 @@ public class Compare {
 					NodeList lstNm = lstNmElmnt.getChildNodes();
 					String sValue = "" + ((Node) lstNm.item(0)).getNodeValue();
 					if (sKeyName.equalsIgnoreCase("1stPath")) {
-						comp.pathToFirstEnv = sValue;
+						this.pathToFirstEnv = sValue;
 					} else if (sKeyName.equalsIgnoreCase("2ndPath")) {
-						comp.pathToSecondEnv = sValue;
+						this.pathToSecondEnv = sValue;
 					} else if (sKeyName.equalsIgnoreCase("objects")) {
 						if (sValue.equalsIgnoreCase("*"))
-							comp.allObjects = true;
+							this.allObjects = true;
 						else {
-							comp.whichObjects.add(sValue);
+							this.whichObjects.add(sValue);
 						}
 					} else if (sKeyName.equalsIgnoreCase("mode")) {
-						comp.mode.add(checkTag(sValue));
+						this.mode.add(checkTag(sValue));
 					} else if (sKeyName.equalsIgnoreCase("resultPath")) {
-						comp.resultPath = sValue;
+						this.resultPath = sValue;
 					} else if (sKeyName.equalsIgnoreCase("printFiles")
 							&& sValue.equalsIgnoreCase("no"))
-						comp.printFiles = false;
+						this.printFiles = false;
 
 				}
 			}
 
 			// ---------FIELDS----------------------------
 			nodeLst = doc.getElementsByTagName("fields");
-			Request req = comp.new Request();
-			req.object = comp.new ObjectDescription();
+			Request req = new Request();
+			req.object = new ObjectDescription();
 			req.compType = "fields";
 
 			Node currentNode = nodeLst.item(0);
@@ -782,13 +711,13 @@ public class Compare {
 							+ ((Node) lstNm.item(0)).getNodeValue()));
 				}
 
-				comp.listOfRequests.add(req);
+				this.listOfRequests.add(req);
 			}
 
 			// ---------WEBLINKS----------------------------
 			nodeLst = doc.getElementsByTagName("webLinks");
-			req = comp.new Request();
-			req.object = comp.new ObjectDescription();
+			req = new Request();
+			req.object = new ObjectDescription();
 			req.compType = "webLinks";
 
 			currentNode = nodeLst.item(0);
@@ -834,13 +763,13 @@ public class Compare {
 							+ ((Node) lstNm.item(0)).getNodeValue()));
 				}
 
-				comp.listOfRequests.add(req);
+				this.listOfRequests.add(req);
 			}
 
 			// ---------RECORDTYPES----------------------------
 			nodeLst = doc.getElementsByTagName("recordTypes");
-			req = comp.new Request();
-			req.object = comp.new ObjectDescription();
+			req = new Request();
+			req.object = new ObjectDescription();
 			req.compType = "recordTypes";
 
 			currentNode = nodeLst.item(0);
@@ -886,12 +815,12 @@ public class Compare {
 							+ ((Node) lstNm.item(0)).getNodeValue()));
 				}
 
-				comp.listOfRequests.add(req);
+				this.listOfRequests.add(req);
 			}
 			// ---------VALIDATIONRULES----------------------------
 			nodeLst = doc.getElementsByTagName("validationRules");
-			req = comp.new Request();
-			req.object = comp.new ObjectDescription();
+			req = new Request();
+			req.object = new ObjectDescription();
 			req.compType = "validationRules";
 
 			currentNode = nodeLst.item(0);
@@ -937,13 +866,13 @@ public class Compare {
 							+ ((Node) lstNm.item(0)).getNodeValue()));
 				}
 
-				comp.listOfRequests.add(req);
+				this.listOfRequests.add(req);
 			}
 
 			// ---------CUSTOMSETTINGS----------------------------
 			nodeLst = doc.getElementsByTagName("customSettings");
-			req = comp.new Request();
-			req.object = comp.new ObjectDescription();
+			req = new Request();
+			req.object = new ObjectDescription();
 			req.compType = "customSettings";
 
 			currentNode = nodeLst.item(0);
@@ -1015,13 +944,13 @@ public class Compare {
 				// lstNm.item(0)).getNodeValue()));
 				// }
 
-				comp.listOfRequests.add(req);
+				this.listOfRequests.add(req);
 			}
 
 			// ---------WORKFLOWS----------------------------
 			nodeLst = doc.getElementsByTagName("workflows");
-			Request masterReq = comp.new Request();
-			masterReq.object = comp.new ObjectDescription();
+			Request masterReq = new Request();
+			masterReq.object = new ObjectDescription();
 			masterReq.compType = "workflows";
 
 			currentNode = nodeLst.item(0);
@@ -1056,8 +985,8 @@ public class Compare {
 				masterReq.object.properties = new LinkedList<String>();
 				for (int s = 0; s < crrntNmElmntLst.getLength(); s++) {
 
-					req = comp.new Request();
-					req.object = comp.new ObjectDescription();
+					req = new Request();
+					req.object = new ObjectDescription();
 					Element lstNmElmnt = (Element) crrntNmElmntLst.item(s);
 
 					if (lstNmElmnt != null
@@ -1094,15 +1023,15 @@ public class Compare {
 						req.object.resultFile = masterReq.object.resultFile
 								+ "_" + req.compType;
 
-						comp.listOfRequests.add(req);
+						this.listOfRequests.add(req);
 					}
 				}
 
-				// comp.listOfRequests.add(masterReq);
-				for (int y = 0; y < comp.mode.size(); y++) {
-					if (comp.mode.get(y).equalsIgnoreCase("workflows")) {
+				// this.listOfRequests.add(masterReq);
+				for (int y = 0; y < this.mode.size(); y++) {
+					if (this.mode.get(y).equalsIgnoreCase("workflows")) {
 						for (int z = 0; z < masterReq.object.properties.size(); z++) {
-							comp.mode.add(masterReq.object.properties.get(z));
+							this.mode.add(masterReq.object.properties.get(z));
 						}
 					}
 				}
@@ -1112,7 +1041,6 @@ public class Compare {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return comp;
 	}
 
 	public static boolean checkConfig(Compare comp) {
