@@ -1,0 +1,1 @@
+Easly comparing of differences  between enviroments of salesforce
